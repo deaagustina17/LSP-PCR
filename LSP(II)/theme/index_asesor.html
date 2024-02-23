@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <!-- theme meta -->
+    <meta name="theme-name" content="quixlab" />
+  
+    <title>LSP PCR</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <!-- Pignose Calender -->
+    <link href="./plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
+    <!-- Chartist -->
+    <link rel="stylesheet" href="./plugins/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
+    <!-- Custom Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+                <!-- <a href="index.html">
+                    <span class="brand-title">
+                        <img src="images/logo_lsp1.png">
+                    </span>
+                </a> -->
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">    
+            <div class="header-content clearfix">
+                <div class="header-right">
+                    <ul class="clearfix">
+                        <li class="icons dropdown">
+                            <div class="user-img c-pointer position-relative"   data-toggle="dropdown">
+                                <span class="activity active"></span>
+                                <img src="images/user/1.png" height="40" width="40" alt="">
+                            </div>
+                            <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="nk-sidebar">           
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <!-- <li class="nav-label">Dashboard</li> -->
+                    <li>
+                            <a href="index_asesor.html" aria-expanded="false">
+                            <span class="nav-text">Surat Tugas</span>
+                            </a>
+                    </li>
+                    <li>
+                        <a href="keputusan_asesor.html" aria-expanded="false">
+                            <span class="nav-text">Keputusan Sertifikasi</span>
+                        </a>
+                </li>
+                <li>
+                    <a href="laporan_asesor.html" aria-expanded="false">
+                        <span class="nav-text">Laporan Pleno</span>
+                    </a>
+            </li>
+            <li>
+            <a href="umpanbalik_asesor.html" aria-expanded="false">
+                <span class="nav-text">Umpan Balik</span>
+            </a>
+        </li>
+                </ul>
+            </div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>Surat Tugas</h4>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Nama Asesor</th>
+                                                <th>Bidang</th>
+                                                <th>Nama Asesi</th>
+                                                <th>Tanggal</th>
+                                                <th>Tempat</th>
+                                                <th>Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>DNS</td>
+                                                <td>Database Programming Supervisor</td>
+                                                <td>Dea Agustina</td>
+                                                <td>03-Maret-2024</td>
+                                                <td>Lab 230</td>
+                                                <td><span>
+                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa-solid fa-download"></i></a>
+                                                    <!-- <a href="#" data-toggle="tooltip" data-placement="top" title="Close"><i class="fa fa-close color-danger"></i></a> -->
+                                                </span>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td>DNS</td>
+                                                <td>Database Programming Supervisor</td>
+                                                <td>Yokie Trisannerson</td>
+                                                <td>27-Maret-2024</td>
+                                                <td>Lab 230</td>
+                                                <td><span>
+                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa-solid fa-download"></i></a>
+                                                    <!-- <a href="#" data-toggle="tooltip" data-placement="top" title="Close"><i class="fa fa-close color-danger"></i></a> -->
+                                                </span>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /# card -->
+                    </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <!-- <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
+            </div>
+        </div> -->
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="plugins/common/common.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/gleek.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+
+    <!-- Chartjs -->
+    <script src="./plugins/chart.js/Chart.bundle.min.js"></script>
+    <!-- Circle progress -->
+    <script src="./plugins/circle-progress/circle-progress.min.js"></script>
+    <!-- Datamap -->
+    <script src="./plugins/d3v3/index.js"></script>
+    <script src="./plugins/topojson/topojson.min.js"></script>
+    <script src="./plugins/datamaps/datamaps.world.min.js"></script>
+    <!-- Morrisjs -->
+    <script src="./plugins/raphael/raphael.min.js"></script>
+    <script src="./plugins/morris/morris.min.js"></script>
+    <!-- Pignose Calender -->
+    <script src="./plugins/moment/moment.min.js"></script>
+    <script src="./plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+    <!-- ChartistJS -->
+    <script src="./plugins/chartist/js/chartist.min.js"></script>
+    <script src="./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+
+
+
+    <script src="./js/dashboard/dashboard-1.js"></script>
+
+</body>
+
+</html>

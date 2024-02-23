@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Masuk</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Untuk membuat konten berada di tengah vertikal */
+      font-family: 'Poppins', sans-serif;
+    }
+    /* CSS untuk desain elemen */
+    .container {
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .signin-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 40px;
+      font-size: 16px;
+      background-color: #B1D0FF;
+      color: #000000;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s; /* Transisi untuk perubahan warna */
+    }
+    /* Efek perubahan warna saat dihover */
+    .signin-button:hover {
+      background-color: #699BF7; /* Ubah dengan warna yang diinginkan saat dihover */
+    }
+    /* Mengatur margin antara teks dan gambar */
+    .signin-button img {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Tampilkan gambar -->
+  <img src="images/logo_lsp1.png" alt="Gambar" width="250">
+
+  <!-- Tampilkan tombol Sign In with Google -->
+  <div>
+    <button class="signin-button" onclick="signInWithGoogle()">
+      <img src="images/google.png" width="20">
+      <span>Sign In with Google</span>
+    </button>
+  </div>
+</div>
+
+<script>
+  function signInWithGoogle() {
+    // Logika autentikasi dengan Google di sini
+  }
+</script>
+
+</body>
+</html>
