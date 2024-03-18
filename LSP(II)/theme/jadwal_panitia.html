@@ -92,35 +92,27 @@
       <!--**********************************
             Header start
         ***********************************-->
-      <div class="header">
-        <div class="header-content clearfix">
-          <div class="header-right">
-            <ul class="clearfix">
-              <li class="icons dropdown">
-                <div
-                  class="user-img c-pointer position-relative"
-                  data-toggle="dropdown"
-                >
-                  <span class="activity active"></span>
-                  <img src="images/user/1.png" height="40" width="40" alt="" />
-                </div>
-                <div
-                  class="drop-down dropdown-profile animated fadeIn dropdown-menu"
-                >
-                  <div class="dropdown-content-body">
-                    <ul>
-                      <li>
-                        <a href="page-login.html"
-                          ><i class="icon-key"></i> <span>Logout</span></a
-                        >
+        <div class="header">    
+          <div class="header-content clearfix">
+              <div class="header-right">
+                  <ul class="clearfix">
+                      <li class="icons dropdown">
+                          <div class="user-img c-pointer position-relative"   data-toggle="dropdown">
+                              <span class="activity active"></span>
+                              <img src="images/user/1.png" height="40" width="40" alt="">
+                          </div>
+                          <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
+                              <div class="dropdown-content-body">
+                                  <ul>
+                                      <!-- <li><a href="/LSP/masuk.html"><i class="icon-key"></i> <span>Logout</span></a></li> -->
+                                      <li><a href="file:///D:/SEMESTER%208/PA/LSP%20PCR/LSP/masuk.html"><i class="icon-key"></i> <span>Keluar</span></a></li>
+                                  </ul>
+                              </div>
+                          </div>
                       </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
+                  </ul>
+              </div>
           </div>
-        </div>
       </div>
       <!--**********************************
             Header end ti-comment-alt
@@ -225,6 +217,18 @@
                     class="btn btn-dark mb-2"
                     ><i class="ti-plus f-s-12 m-r-5"></i> Tambah</a
                   >
+                  <div class="col-md-12">
+                    <label class="control-label">Upload Jadwal Asesmen</label>
+                    <div class="button-icon">
+                      <input
+                        type="file"
+                        class="form-control-file"
+                        id="exampleFormControlFile1"
+                        accept=".xlsx"
+                      />
+                    </div>
+                  </div>
+                  
                   <div class="table-responsive">
                     <table
                       class="table table-striped table-bordered zero-configuration"
@@ -232,6 +236,7 @@
                       <thead>
                         <tr>
                           <th>Batch</th>
+                          <th>Bidang</th>
                           <th>Nama Asesi</th>
                           <th>Asesor</th>
                           <th>Tanggal</th>
@@ -243,6 +248,7 @@
                       <tbody>
                         <tr>
                           <td>1</td>
+                          <td>Database Programming Supervisor</td>
                           <td>Dea Agustina</td>
                           <td>DNS</td>
                           <td>26 Maret 2024</td>
@@ -288,6 +294,24 @@
                                       type="text"
                                       name="category-batch"
                                     />
+                                  </div>
+                                  <div class="col-md-12">
+                                    <label class="control-label">Bidang</label>
+                                    <select
+                                      class="form-control form-white"
+                                      data-placeholder="Bidang"
+                                      name="category-bidang"
+                                    >
+                                      <option value="bidang1">Database Programming Supervisor</option>
+                                      <option value="bidang2">Network Administrator Muda</option>
+                                      <option value="bidang3">Programmer</option>
+                                      <option value="bidang4">Teknisi Madya Jaringan Komputer</option>
+                                      <option value="bidang5">Pengoperasian Peralatan Kelistrikan Dan Elektronika Berbasis Programmable Logic Controller (PLC) </option>
+                                      <option value="bidang6">Plate Welder </option>
+                                      <option value="bidang7">Pengoperasian Instrumentasi Proses Kontrol</option>
+                                      <option value="bidang8">Teknisi Akuntansi Pratama</option>
+                                      <option value="bidang9">Welding Inspector Standar</option>
+                                    </select>
                                   </div>
                                 </div>
                                 <div class="row">
