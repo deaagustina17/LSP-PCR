@@ -104,16 +104,21 @@
                             <span class="nav-text">Keputusan Sertifikasi</span>
                         </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="laporan_asesor.html" aria-expanded="false">
                         <span class="nav-text">Laporan Pleno</span>
                     </a>
-            </li>
-            <li>
-            <a href="umpanbalik_asesor.html" aria-expanded="false">
-                <span class="nav-text">Umpan Balik</span>
-            </a>
-        </li>
+                </li> -->
+                <li>
+                    <a href="umpanbalik_asesor.html" aria-expanded="false">
+                        <span class="nav-text">Umpan Balik</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="dokumensertifikasi_asesor.html" aria-expanded="false">
+                        <span class="nav-text">Dokumen Sertifikasi Asesor</span>
+                    </a>
+                </li>
                 </ul>
             </div>
         </div>
@@ -155,7 +160,7 @@
                                                         <span class="slider"></span>
                                                     </label>
                                                 </td>
-                                                <td>Kompoten</td>
+                                                <td>Tidak Kompoten</td>
                                                 <td><span>
                                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil color-muted m-r-5"></i></a>
                                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Close"><i class="fa fa-close color-danger"></i></a>
@@ -171,7 +176,7 @@
                                                         <span class="slider"></span>
                                                     </label>
                                                 </td>
-                                                <td>Kompoten</td>
+                                                <td>Tidak Kompoten</td>
                                                 <td><span>
                                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil color-muted m-r-5"></i></a>
                                                     <a href="#" data-toggle="tooltip" data-placement="top" title="Close"><i class="fa fa-close color-danger"></i></a>
@@ -238,6 +243,31 @@
 
 
     <script src="./js/dashboard/dashboard-1.js"></script>
+
+
+    <script>
+        function onOff1() {
+          var checkbox = document.getElementById("checkbox1");
+  
+          if (checkbox.checked) {
+            document.getElementById("hasil1").innerHTML = "Kompeten";
+          } else {
+            document.getElementById("hasil1").innerHTML = "Tidak Kompeten";
+          }
+        }
+      </script>
+  
+      <script>
+        function onOff2() {
+          var checkbox = document.getElementById("checkbox2");
+  
+          if (checkbox.checked) {
+            document.getElementById("hasil2").innerHTML = "Kompeten";
+          } else {
+            document.getElementById("hasil2").innerHTML = "Tidak Kompeten";
+          }
+        }
+      </script>
 
 </body>
 
