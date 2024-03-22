@@ -102,7 +102,6 @@
 
       <!--**********************************
             Header start
-
         ***********************************-->
         <div class="nk-sidebar">           
           <div class="nk-nav-scroll">
@@ -203,7 +202,10 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Data Dokumen Sertifikasi Asesor</h4>
+                  <h4 class="card-title">Data Asesor</h4>
+                  <!-- <div class="col-auto">
+                                    <button class="btn btn-dark mb-2">Tambah</button>
+                                </div> -->
                   <a
                     href="index_panitia.html"
                     data-toggle="modal"
@@ -217,27 +219,22 @@
                     >
                       <thead>
                         <tr>
-                          <th>NIP</th>
-                          <th>Bidang</th>
-                          <th>Tanggal Berlaku</th>
-                          <th>Tanggal Habis Berlaku</th>
-                          <th>Upload</th>
+                          <th>Nama Lengkap</th>
+                          <th>Inisial</th>
+                          <th>Jenis Kelamin</th>
                           <th>Aksi</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>123123</td>
-                          <td>Database Programming Supervisor</td>
-                          <td>20 Maret 2024</td>
-                          <td>20 Maret 2027</td>
-                          <td></td>
+                          <td>Dini Nurmalasari, S.T., M.T</td>
+                          <td>DNS</td>
+                          <td>Perempuan</td>
                           <td>
                             <span>
                               <a
                                 href="#"
-                                data-toggle="edit"
-                                data-target="#add-edit"
+                                data-toggle="tooltip"
                                 data-placement="top"
                                 title="Edit"
                                 ><i class="fa fa-pencil color-muted m-r-5"></i
@@ -249,10 +246,16 @@
                                 title="Hapus"
                                 ><i class="fa fa-trash-o color-danger"></i
                               ></a>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="Detail"
+                                ><i class="fa fa-info-circle color-danger"></i
+                              ></a>
                             </span>
                           </td>
                         </tr>
-                        
                       </tbody>
                       <!-- Modal Add Category -->
                       <div class="modal fade none-border" id="add-category">
@@ -260,53 +263,24 @@
                           <div class="modal-content">
                             <div class="modal-header">
                               <h4 class="modal-title">
-                                <strong>Tambah Data Dokumen SK</strong>
+                                <strong>Tambah Data Admin</strong>
                               </h4>
                             </div>
                             <div class="modal-body">
                               <form>
                                 <div class="row">
                                   <div class="col-md-12">
-                                    <label class="control-label">Tahun</label>
+                                    <label class="control-label">Email</label>
                                     <input
                                       class="form-control form-white"
-                                      placeholder="Masukkan email"
+                                      placeholder="Masukkan Email"
                                       type="text"
-                                      name="category-tahun"
+                                      name="category-email"
                                     />
                                   </div>
                                   <div class="col-md-12">
-                                    <label class="control-label">Nama SK</label>
-                                    <input
-                                      class="form-control form-white"
-                                      placeholder="Masukkan email"
-                                      type="text"
-                                      name="category-nama_sk"
-                                    />
-                                  </div>
-                                  <div class="col-md-6">
                                     <label class="control-label"
-                                      >Jenis SK</label
-                                    >
-                                    <select
-                                      class="form-control form-white"
-                                      data-placeholder="Jenis SK"
-                                      name="category-jenis_sk"
-                                    >
-                                      <option value="jenis_sk1">
-                                        jenis_sk1
-                                      </option>
-                                      <option value="jenis_sk2">
-                                        jenis_sk2
-                                      </option>
-                                      <option value="jenis_sk3">
-                                        jenis_sk3
-                                      </option>
-                                    </select>
-                                  </div>
-                                  <div class="col-md-12">
-                                    <label class="control-label"
-                                      >Upload SK</label
+                                      >Tanda Tangan</label
                                     >
                                     <div class="form-group row">
                                       <div class="card">
@@ -321,6 +295,17 @@
                                       </div>
                                     </div>
                                   </div>
+                                  <!-- <div class="col-md-6">
+                                                                <label class="control-label">Choose Category Color</label>
+                                                                <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
+                                                                    <option value="success">Success</option>
+                                                                    <option value="danger">Danger</option>
+                                                                    <option value="info">Info</option>
+                                                                    <option value="pink">Pink</option>
+                                                                    <option value="primary">Primary</option>
+                                                                    <option value="warning">Warning</option>
+                                                                </select>
+                                                            </div> -->
                                 </div>
                               </form>
                             </div>
@@ -344,97 +329,16 @@
                         </div>
                       </div>
                       <!-- END MODAL -->
-
-                      <!-- Modal Add Edit -->
-                      <div class="modal fade none-border" id="add-edit">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h4 class="modal-title">
-                                <strong>Tambah Data Dokumen SK</strong>
-                              </h4>
-                            </div>
-                            <div class="modal-body">
-                              <form>
-                                <div class="row">
-                                  <div class="col-md-12">
-                                    <label class="control-label">Tahun</label>
-                                    <input
-                                      class="form-control form-white"
-                                      placeholder="Masukkan email"
-                                      type="text"
-                                      name="category-tahun"
-                                    />
-                                  </div>
-                                  <div class="col-md-12">
-                                    <label class="control-label">Nama SK</label>
-                                    <input
-                                      class="form-control form-white"
-                                      placeholder="Masukkan email"
-                                      type="text"
-                                      name="category-nama_sk"
-                                    />
-                                  </div>
-                                  <div class="col-md-6">
-                                    <label class="control-label"
-                                      >Jenis SK</label
-                                    >
-                                    <select
-                                      class="form-control form-white"
-                                      data-placeholder="Jenis SK"
-                                      name="category-jenis_sk"
-                                    >
-                                      <option value="jenis_sk1">
-                                        jenis_sk1
-                                      </option>
-                                      <option value="jenis_sk2">
-                                        jenis_sk2
-                                      </option>
-                                      <option value="jenis_sk3">
-                                        jenis_sk3
-                                      </option>
-                                    </select>
-                                  </div>
-                                  <div class="col-md-12">
-                                    <label class="control-label"
-                                      >Upload SK</label
-                                    >
-                                    <!-- <div class="form-group row"> -->
-                                    <!-- <div class="card"> -->
-                                    <div class="button-icon">
-                                      <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
-                                      <input
-                                        type="file"
-                                        class="form-control-file"
-                                        id="exampleFormControlFile1"
-                                      />
-                                    </div>
-                                    <!-- </div> -->
-                                    <!-- </div> -->
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
-                            <div class="modal-footer">
-                              <button
-                                type="button"
-                                class="btn btn-default waves-effect"
-                                data-dismiss="modal"
-                              >
-                                Tutup
-                              </button>
-                              <button
-                                type="button"
-                                class="btn btn-danger waves-effect waves-light save-category"
-                                data-dismiss="modal"
-                              >
-                                Simpan
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- END MODAL -->
+                      <!-- <tfoot>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Age</th>
+                                                <th>Start date</th>
+                                                <th>Salary</th>
+                                            </tr>
+                                        </tfoot> -->
                     </table>
                   </div>
                 </div>

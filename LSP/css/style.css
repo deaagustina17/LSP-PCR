@@ -5,6 +5,13 @@ body {
   overflow-x: hidden;
 }
 
+/* header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+} */
+
+
 .layout_padding {
   padding: 90px 0;
 }
