@@ -210,10 +210,11 @@
                   <!-- <div class="col-auto">
                                     <button class="btn btn-dark mb-2">Tambah</button>
                                 </div> -->
+                                <!-- data-toggle="modal"
+                    data-target="#add-category" -->
                   <a
-                    href="index_panitia.html"
-                    data-toggle="modal"
-                    data-target="#add-category"
+                    href="tambahumpanbalik_panitia.html"
+                    
                     class="btn btn-dark mb-2"
                     ><i class="ti-plus f-s-12 m-r-5"></i> Tambah</a
                   >
@@ -238,7 +239,7 @@
                           <td>
                             <span>
                               <a
-                                href="#"
+                                href="editumpanbalik_panitia.html"
                                 data-toggle="tooltip"
                                 data-placement="top"
                                 title="Edit"
@@ -250,6 +251,13 @@
                                 data-placement="top"
                                 title="Hapus"
                                 ><i class="fa fa-trash-o color-danger"></i
+                              ></a>
+                              <a
+                                href="detailumpanbalik_panitia.html"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="Detail"
+                                ><i class="fa fa-info-circle color-danger"></i
                               ></a>
                             </span>
                           </td>
@@ -263,7 +271,7 @@
                           <td>
                             <span>
                               <a
-                                href="#"
+                                href="editumpanbalik_panitia.html"
                                 data-toggle="tooltip"
                                 data-placement="top"
                                 title="Edit"
@@ -276,6 +284,13 @@
                                 data-placement="top"
                                 title="Hapus"
                                 ><i class="fa fa-trash-o color-danger"></i
+                              ></a>
+                              <a
+                                href="detailumpanbalik_panitia.html"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="Detail"
+                                ><i class="fa fa-info-circle color-danger"></i
                               ></a>
                             </span>
                           </td>
@@ -295,35 +310,134 @@
                                 <div class="row">
                                   <div class="col-md-12">
                                     <label class="control-label"
-                                      >Komponen</label
+                                      >Tanggal SK</label
                                     >
-                                    <input
-                                      class="form-control form-white"
-                                      placeholder="Masukkan komponen"
-                                      type="text"
-                                      name="category-email"
-                                    />
+                                    <div class="row">
+                                      <div class="col-md-8">
+                                        <div class="example">
+                                          <div class="input-group">
+                                            <input
+                                              type="text"
+                                              class="form-control"
+                                              id="datepicker-autoclose"
+                                              placeholder="mm/dd/yyyy"
+                                            />
+                                            <span class="input-group-append"
+                                              ><span class="input-group-text"
+                                                ><i
+                                                  class="mdi mdi-calendar-check"
+                                                ></i></span
+                                            ></span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
+
                                   <div class="col-md-12">
-                                    <label class="control-label">Hasil</label>
+                                    <label class="control-label"
+                                      >Aspek yang ditinjau
+                                    </label>
                                     <input
                                       class="form-control form-white"
-                                      placeholder="Masukkan hasil"
+                                      placeholder="Masukkan aspek yang ditinjau"
                                       type="text"
-                                      name="category-email"
+                                      name="category-aspek"
                                     />
                                   </div>
-                                  <!-- <div class="col-md-6">
-                                                                <label class="control-label">Choose Category Color</label>
-                                                                <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
-                                                                    <option value="success">Success</option>
-                                                                    <option value="danger">Danger</option>
-                                                                    <option value="info">Info</option>
-                                                                    <option value="pink">Pink</option>
-                                                                    <option value="primary">Primary</option>
-                                                                    <option value="warning">Warning</option>
-                                                                </select>
-                                                            </div> -->
+
+                                  <div class="col-md-6">
+                                    <label class="control-label">Jawaban</label>
+                                    <select
+                                      class="form-control form-white"
+                                      data-placeholder="Jawaban"
+                                      name="category-jawaban"
+                                    >
+                                      <option value="jawaban1">
+                                        Validitas
+                                      </option>
+                                      <option value="jawaban2">Reliabel</option>
+                                      <option value="jawaban3">
+                                        Fleksibel
+                                      </option>
+                                      <option value="jawaban4">Adil</option>
+                                    </select>
+                                  </div>
+
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >Rekomendasi untuk peningkatan
+                                    </label>
+                                    <textarea
+                                      class="form-control h-150px"
+                                      rows="6"
+                                      id="comment"
+                                    ></textarea>
+                                  </div>
+
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >Aspek yang ditinjau
+                                    </label>
+                                    <input
+                                      class="form-control form-white"
+                                      placeholder="Masukkan aspek yang ditinjau"
+                                      type="text"
+                                      name="category-aspek"
+                                    />
+                                  </div>
+
+                                  <div class="col-md-6">
+                                    <label class="control-label">Jawaban</label>
+                                    <select
+                                      class="form-control form-white"
+                                      data-placeholder="Jawaban"
+                                      name="category-jawaban"
+                                    >
+                                      <option value="jawaban1">
+                                        Task Skills
+                                      </option>
+                                      <option value="jawaban2">
+                                        Task Management Skills
+                                      </option>
+                                      <option value="jawaban3">
+                                        Contingency Management Skills
+                                      </option>
+                                      <option value="jawaban4">
+                                        Job Role/ Environment Skills
+                                      </option>
+                                      <option value="jawaban5">
+                                        Transfer Skills
+                                      </option>
+                                    </select>
+                                  </div>
+
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >Rekomendasi untuk peningkatan
+                                    </label>
+                                    <textarea
+                                      class="form-control h-150px"
+                                      rows="6"
+                                      id="comment"
+                                    ></textarea>
+                                  </div>
+
+                                  <div class="row">
+                                    <div class="col-md-12">
+                                      <label class="control-label"
+                                        >Tanda Tangan Asesi</label
+                                      >
+
+                                      <div class="button-icon">
+                                        <input
+                                          type="file"
+                                          class="form-control-file"
+                                          id="exampleFormControlFile1"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </form>
                             </div>

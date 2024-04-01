@@ -341,15 +341,6 @@
                               <form>
                                 <div class="row">
                                   <div class="col-md-12">
-                                    <label class="control-label">Asesi</label>
-                                    <input
-                                      class="form-control form-white"
-                                      placeholder="Masukkan Asesi"
-                                      type="text"
-                                      name="category-batch"
-                                    />
-                                  </div>
-                                  <div class="col-md-12">
                                     <label class="control-label">Batch</label>
                                     <input
                                       class="form-control form-white"
@@ -361,40 +352,6 @@
 
                                   <div class="col-md-12">
                                     <label class="control-label">Bidang</label>
-                                    <select
-                                      class="form-control form-white"
-                                      data-placeholder="Bidang"
-                                      name="category-bidang"
-                                    >
-                                      <option value="apl01">
-                                        <span
-                                          class="badge badge-pill badge-warning"
-                                          >Approved APL 01</span
-                                        >
-                                      </option>
-                                      <option value="apl02">
-                                        <span
-                                          class="badge badge-pill badge-warning"
-                                          >Approved APL 02</span
-                                        >
-                                      </option>
-                                      <option value="asesmen">
-                                        <span
-                                          class="badge badge-pill badge-warning"
-                                          >Melakukan Asesmen</span
-                                        >
-                                      </option>
-                                      <option value="tolak">
-                                        <span
-                                          class="badge badge-pill badge-warning"
-                                          >Tidak diterima</span
-                                        >
-                                      </option>
-                                    </select>
-                                  </div>
-
-                                  <div class="col-md-12">
-                                    <label class="control-label">Status</label>
                                     <select
                                       class="form-control form-white"
                                       data-placeholder="Bidang"
@@ -432,157 +389,218 @@
                                       </option>
                                     </select>
                                   </div>
+
+                                  <div class="col-md-12">
+                                    <h6>a. Data Pribadi</h6>
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        <label class="control-label"
+                                          >Nama Lengkap</label
+                                        >
+                                        <input
+                                          class="form-control form-white"
+                                          placeholder="Masukkan Nama Lengkap"
+                                          type="text"
+                                          name="category-nama"
+                                        />
+                                      </div>
+
+                                      <div class="col-md-12">
+                                        <label class="control-label"
+                                          >No. KTP/NIK</label
+                                        >
+                                        <input
+                                          class="form-control form-white"
+                                          placeholder="Masukkan No. KTP/NIK"
+                                          type="text"
+                                          name="category-noktp"
+                                        />
+                                      </div>
+
+                                      <div class="col-md-12">
+                                        <label class="control-label"
+                                          >Tempat/Tgl.Lahir</label
+                                        >
+                                        <!-- <input
+                                          class="form-control form-white"
+                                          placeholder="Masukkan Nama Lengkap"
+                                          type="text"
+                                          name="category-nama"
+                                        /> -->
+                                      </div>
+
+                                      <div class="col-md-6">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-ttl"
+                                          name="val-ttl"
+                                          placeholder="Masukkan Tempat/Tgl.Lahir"
+                                        />
+                                      </div>
+                                      <div class="col-md-6">
+                                        <div class="input-group">
+                                          <input
+                                            type="text"
+                                            class="form-control"
+                                            id="datepicker-autoclose"
+                                            placeholder="mm/dd/yyyy"
+                                          />
+                                          <span class="input-group-append"
+                                            ><span class="input-group-text"
+                                              ><i
+                                                class="mdi mdi-calendar-check"
+                                              ></i></span
+                                          ></span>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-md-6">
+                                        <label class="control-label"
+                                          >Jenis Kelamin</label
+                                        >
+                                        <select
+                                          class="form-control form-white"
+                                          data-placeholder="Jenis Kelamin"
+                                          name="category-jk"
+                                        >
+                                          <option value="jenis_jk1">
+                                            Laki - Laki
+                                          </option>
+                                          <option value="jenis_jk2">
+                                            Perempuan
+                                          </option>
+                                        </select>
+                                      </div>
+
+                                      <div class="col-md-12">
+                                        <label class="control-label"
+                                          >Kebangsaan
+                                        </label>
+                                        <input
+                                          class="form-control form-white"
+                                          placeholder="Masukkan Kebangsaan "
+                                          type="text"
+                                          name="category-kebangsaan"
+                                        />
+                                      </div>
+                                      <div class="col-md-12">
+                                        <label class="control-label"
+                                          >Alamat rumah (Domisili Saat
+                                          ini)</label
+                                        >
+                                        <input
+                                          class="form-control form-white"
+                                          placeholder="Masukkan Alamat rumah (Domisili Saat ini)"
+                                          type="text"
+                                          name="category-alamatrumahdomisili"
+                                        />
+                                      </div>
+                                      <div class="col-md-12">
+                                        <label class="control-label"
+                                          >Alamat rumah (Sesuai KTP)</label
+                                        >
+                                        <input
+                                          class="form-control form-white"
+                                          placeholder="Masukkan Alamat rumah (Sesuai KTP)"
+                                          type="text"
+                                          name="category-alamatktp"
+                                        />
+                                      </div>
+                                      <div class="col-md-6">
+                                        <label class="control-label"
+                                          >Kelurahan/Desa (Sesuai KTP)</label
+                                        >
+                                        <select
+                                          class="form-control form-white"
+                                          data-placeholder="Kelurahan/Desa (Sesuai KTP)"
+                                          name="category-jk"
+                                        >
+                                          <option value="jenis_jk1">
+                                            Laki - Laki
+                                          </option>
+                                          <option value="jenis_jk2">
+                                            Perempuan
+                                          </option>
+                                        </select>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <label class="control-label"
+                                          >Jenis Kelamin</label
+                                        >
+                                        <select
+                                          class="form-control form-white"
+                                          data-placeholder="Jenis Kelamin"
+                                          name="category-jk"
+                                        >
+                                          <option value="jenis_jk1">
+                                            Laki - Laki
+                                          </option>
+                                          <option value="jenis_jk2">
+                                            Perempuan
+                                          </option>
+                                        </select>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                      <label class="control-label"
+                                        >Status</label
+                                      >
+                                      <select
+                                        class="form-control form-white"
+                                        data-placeholder="Bidang"
+                                        name="category-bidang"
+                                      >
+                                        <option value="apl01">
+                                          <span
+                                            class="badge badge-pill badge-warning"
+                                            >Approved APL 01</span
+                                          >
+                                        </option>
+                                        <option value="apl02">
+                                          <span
+                                            class="badge badge-pill badge-warning"
+                                            >Approved APL 02</span
+                                          >
+                                        </option>
+                                        <option value="asesmen">
+                                          <span
+                                            class="badge badge-pill badge-warning"
+                                            >Melakukan Asesmen</span
+                                          >
+                                        </option>
+                                        <option value="tolak">
+                                          <span
+                                            class="badge badge-pill badge-warning"
+                                            >Tidak diterima</span
+                                          >
+                                        </option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="modal-footer">
+                                  <button
+                                    type="button"
+                                    class="btn btn-default waves-effect"
+                                    data-dismiss="modal"
+                                  >
+                                    Tutup
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="btn btn-danger waves-effect waves-light save-category"
+                                    data-dismiss="modal"
+                                  >
+                                    Simpan
+                                  </button>
                                 </div>
                               </form>
-                            </div>
-                            <div class="modal-footer">
-                              <button
-                                type="button"
-                                class="btn btn-default waves-effect"
-                                data-dismiss="modal"
-                              >
-                                Tutup
-                              </button>
-                              <button
-                                type="button"
-                                class="btn btn-danger waves-effect waves-light save-category"
-                                data-dismiss="modal"
-                              >
-                                Simpan
-                              </button>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <!-- END MODAL -->
-
-                      <!-- Modal Add Edit -->
-                      <div class="modal fade none-border" id="add-edit">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h4 class="modal-title">
-                                <strong>Edit Data Pendaftaran</strong>
-                              </h4>
-                            </div>
-                            <div class="modal-body">
-                              <form>
-                                <div class="row">
-                                  <div class="col-md-12">
-                                    <label class="control-label">Asesi</label>
-                                    <input
-                                      class="form-control form-white"
-                                      placeholder="Masukkan Asesi"
-                                      type="text"
-                                      name="category-batch"
-                                    />
-                                  </div>
-                                  <div class="col-md-12">
-                                    <label class="control-label">Batch</label>
-                                    <input
-                                      class="form-control form-white"
-                                      placeholder="Masukkan Batch"
-                                      type="text"
-                                      name="category-batch"
-                                    />
-                                  </div>
-
-                                  <div class="col-md-12">
-                                    <label class="control-label">Bidang</label>
-                                    <select
-                                      class="form-control form-white"
-                                      data-placeholder="Bidang"
-                                      name="category-bidang"
-                                    >
-                                      <option value="apl01">
-                                        <span
-                                          class="badge badge-pill badge-warning"
-                                          >Approved APL 01</span
-                                        >
-                                      </option>
-                                      <option value="apl02">
-                                        <span
-                                          class="badge badge-pill badge-warning"
-                                          >Approved APL 02</span
-                                        >
-                                      </option>
-                                      <option value="asesmen">
-                                        <span
-                                          class="badge badge-pill badge-warning"
-                                          >Melakukan Asesmen</span
-                                        >
-                                      </option>
-                                      <option value="tolak">
-                                        <span
-                                          class="badge badge-pill badge-warning"
-                                          >Tidak diterima</span
-                                        >
-                                      </option>
-                                    </select>
-                                  </div>
-
-                                  <div class="col-md-12">
-                                    <label class="control-label">Status</label>
-                                    <select
-                                      class="form-control form-white"
-                                      data-placeholder="Bidang"
-                                      name="category-bidang"
-                                    >
-                                      <option value="bidang1">
-                                        Database Programming Supervisor
-                                      </option>
-                                      <option value="bidang2">
-                                        Network Administrator Muda
-                                      </option>
-                                      <option value="bidang3">
-                                        Programmer
-                                      </option>
-                                      <option value="bidang4">
-                                        Teknisi Madya Jaringan Komputer
-                                      </option>
-                                      <option value="bidang5">
-                                        Pengoperasian Peralatan Kelistrikan Dan
-                                        Elektronika Berbasis Programmable Logic
-                                        Controller (PLC)
-                                      </option>
-                                      <option value="bidang6">
-                                        Plate Welder
-                                      </option>
-                                      <option value="bidang7">
-                                        Pengoperasian Instrumentasi Proses
-                                        Kontrol
-                                      </option>
-                                      <option value="bidang8">
-                                        Teknisi Akuntansi Pratama
-                                      </option>
-                                      <option value="bidang9">
-                                        Welding Inspector Standar
-                                      </option>
-                                    </select>
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
-                            <div class="modal-footer">
-                              <button
-                                type="button"
-                                class="btn btn-default waves-effect"
-                                data-dismiss="modal"
-                              >
-                                Tutup
-                              </button>
-                              <button
-                                type="button"
-                                class="btn btn-danger waves-effect waves-light save-category"
-                                data-dismiss="modal"
-                              >
-                                Simpan
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- END MODAL -->
                     </table>
                   </div>
                 </div>
@@ -590,8 +608,124 @@
             </div>
           </div>
         </div>
-        <!-- #/ container -->
       </div>
+    </div>
+    <!-- END MODAL -->
+
+    <!-- Modal Add Edit -->
+    <div class="modal fade none-border" id="add-edit">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">
+              <strong>Edit Data Pendaftaran</strong>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="col-md-12">
+                  <label class="control-label">Asesi</label>
+                  <input
+                    class="form-control form-white"
+                    placeholder="Masukkan Asesi"
+                    type="text"
+                    name="category-batch"
+                  />
+                </div>
+                <div class="col-md-12">
+                  <label class="control-label">Batch</label>
+                  <input
+                    class="form-control form-white"
+                    placeholder="Masukkan Batch"
+                    type="text"
+                    name="category-batch"
+                  />
+                </div>
+
+                <div class="col-md-12">
+                  <label class="control-label">Bidang</label>
+                  <select
+                    class="form-control form-white"
+                    data-placeholder="Bidang"
+                    name="category-bidang"
+                  >
+                    <option value="apl01">
+                      <span class="badge badge-pill badge-warning"
+                        >Approved APL 01</span
+                      >
+                    </option>
+                    <option value="apl02">
+                      <span class="badge badge-pill badge-warning"
+                        >Approved APL 02</span
+                      >
+                    </option>
+                    <option value="asesmen">
+                      <span class="badge badge-pill badge-warning"
+                        >Melakukan Asesmen</span
+                      >
+                    </option>
+                    <option value="tolak">
+                      <span class="badge badge-pill badge-warning"
+                        >Tidak diterima</span
+                      >
+                    </option>
+                  </select>
+                </div>
+
+                <div class="col-md-12">
+                  <label class="control-label">Status</label>
+                  <select
+                    class="form-control form-white"
+                    data-placeholder="Bidang"
+                    name="category-bidang"
+                  >
+                    <option value="bidang1">
+                      Database Programming Supervisor
+                    </option>
+                    <option value="bidang2">Network Administrator Muda</option>
+                    <option value="bidang3">Programmer</option>
+                    <option value="bidang4">
+                      Teknisi Madya Jaringan Komputer
+                    </option>
+                    <option value="bidang5">
+                      Pengoperasian Peralatan Kelistrikan Dan Elektronika
+                      Berbasis Programmable Logic Controller (PLC)
+                    </option>
+                    <option value="bidang6">Plate Welder</option>
+                    <option value="bidang7">
+                      Pengoperasian Instrumentasi Proses Kontrol
+                    </option>
+                    <option value="bidang8">Teknisi Akuntansi Pratama</option>
+                    <option value="bidang9">Welding Inspector Standar</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-default waves-effect"
+              data-dismiss="modal"
+            >
+              Tutup
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger waves-effect waves-light save-category"
+              data-dismiss="modal"
+            >
+              Simpan
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- END MODAL -->
+
+      <!-- #/ container -->
+
       <!--**********************************
                 Content body end
             ***********************************-->

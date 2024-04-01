@@ -1,211 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    
     <!-- theme meta -->
     <meta name="theme-name" content="quixlab" />
-  
+
     <title>LSP PCR</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/logo_lsp1.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/logo_lsp1.png"
+    />
     <!-- Pignose Calender -->
-    <link href="./plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
+    <link
+      href="./plugins/pg-calendar/css/pignose.calendar.min.css"
+      rel="stylesheet"
+    />
     <!-- Chartist -->
-    <link rel="stylesheet" href="./plugins/chartist/css/chartist.min.css">
-    <link rel="stylesheet" href="./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="./plugins/chartist/css/chartist.min.css" />
+    <link
+      rel="stylesheet"
+      href="./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css"
+    />
     <!-- Custom Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <!--*******************
         Preloader start
     ********************-->
     <div id="preloader">
-        <div class="loader">
-            <svg class="circular" viewBox="25 25 50 50">
-                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
-            </svg>
-        </div>
+      <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+          <circle
+            class="path"
+            cx="50"
+            cy="50"
+            r="20"
+            fill="none"
+            stroke-width="3"
+            stroke-miterlimit="10"
+          />
+        </svg>
+      </div>
     </div>
     <!--*******************
         Preloader end
     ********************-->
 
-    
     <!--**********************************
         Main wrapper start
     ***********************************-->
     <div id="main-wrapper">
-
-        <!--**********************************
+      <!--**********************************
             Nav header start
         ***********************************-->
-        <div class="nav-header">
-            <a href="index.html">
-                <span class="brand-title">
-                    <img src="images/logo_lsp1.png" width="120" height="auto">
-                </span>
-            </a>
-        </div>
-        <!--**********************************
+      <div class="nav-header">
+        <a href="index.html">
+          <span class="brand-title">
+            <img src="images/logo_lsp1.png" width="120" height="auto" />
+          </span>
+        </a>
+      </div>
+      <!--**********************************
             Nav header end
         ***********************************-->
 
-        <!--**********************************
+      <!--**********************************
             Header start
         ***********************************-->
-        <div class="header">    
-            <div class="header-content clearfix">
-                <div class="header-right">
-                    <ul class="clearfix">
-                        <li class="icons dropdown">
-                            <div class="user-img c-pointer position-relative"   data-toggle="dropdown">
-                                <span class="activity active"></span>
-                                <img src="images/user/1.png" height="40" width="40" alt="">
-                            </div>
-                            <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
-                                <div class="dropdown-content-body">
-                                    <ul>
-                                        <!-- <li><a href="/LSP/masuk.html"><i class="icon-key"></i> <span>Logout</span></a></li> -->
-                                        <li><a href="file:///D:/SEMESTER%208/PA/LSP%20PCR/LSP/masuk.html"><i class="icon-key"></i> <span>Keluar</span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+      <div class="header">
+        <div class="header-content clearfix">
+          <div class="header-right">
+            <ul class="clearfix">
+              <li class="icons dropdown">
+                <div
+                  class="user-img c-pointer position-relative"
+                  data-toggle="dropdown"
+                >
+                  <span class="activity active"></span>
+                  <img src="images/user/1.png" height="40" width="40" alt="" />
                 </div>
-            </div>
+                <div
+                  class="drop-down dropdown-profile animated fadeIn dropdown-menu"
+                >
+                  <div class="dropdown-content-body">
+                    <ul>
+                      <!-- <li><a href="/LSP/masuk.html"><i class="icon-key"></i> <span>Logout</span></a></li> -->
+                      <li>
+                        <a
+                          href="file:///D:/SEMESTER%208/PA/LSP%20PCR/LSP/masuk.html"
+                          ><i class="icon-key"></i> <span>Keluar</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <!--**********************************
+      </div>
+      <!--**********************************
             Header end ti-comment-alt
         ***********************************-->
 
-        <!--**********************************
+      <!--**********************************
             Sidebar start
         ***********************************-->
-        <div class="nk-sidebar">           
-            <div class="nk-nav-scroll">
-                <ul class="metismenu" id="menu">
-                    <!-- <li class="nav-label">Dashboard</li> -->
-                    <li>
-                            <a href="index_asesor.html" aria-expanded="false">
-                            <span class="nav-text">Surat Tugas</span>
-                            </a>
-                    </li>
-                    <li>
-                        <a href="keputusan_asesor.html" aria-expanded="false">
-                            <span class="nav-text">Keputusan Sertifikasi</span>
-                        </a>
-                </li>
-                <!-- <li>
+      <div class="nk-sidebar">
+        <div class="nk-nav-scroll">
+          <ul class="metismenu" id="menu">
+            <!-- <li class="nav-label">Dashboard</li> -->
+            <li>
+              <a href="index_asesor.html" aria-expanded="false">
+                <span class="nav-text">Surat Tugas</span>
+              </a>
+            </li>
+            <li>
+              <a href="keputusan_asesor.html" aria-expanded="false">
+                <span class="nav-text">Keputusan Sertifikasi</span>
+              </a>
+            </li>
+            <!-- <li>
                     <a href="laporan_asesor.html" aria-expanded="false">
                         <span class="nav-text">Laporan Pleno</span>
                     </a>
                 </li> -->
-                <li>
-                    <a href="umpanbalik_asesor.html" aria-expanded="false">
-                        <span class="nav-text">Umpan Balik</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="dokumensertifikasi_asesor.html" aria-expanded="false">
-                        <span class="nav-text">Dokumen Sertifikasi Asesor</span>
-                    </a>
-                </li>
-                </ul>
-            </div>
+            <li>
+              <a href="umpanbalik_asesor.html" aria-expanded="false">
+                <span class="nav-text">Umpan Balik</span>
+              </a>
+            </li>
+            <li>
+              <a href="dokumensertifikasi_asesor.html" aria-expanded="false">
+                <span class="nav-text">Dokumen Sertifikasi Asesor</span>
+              </a>
+            </li>
+          </ul>
         </div>
-        <!--**********************************
+      </div>
+      <!--**********************************
             Sidebar end
         ***********************************-->
 
-        <!--**********************************
+      <!--**********************************
             Content body start
         ***********************************-->
-        <div class="content-body">
+      <div class="content-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-title">
+                    <h4>Laporan Pleno</h4>
+                  </div>
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Nama Asesi</th>
+                          <th>Bidang</th>
+                          <th>Rekomendasi</th>
+                          <th>Hasil</th>
+                          <th>Aksi</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Dea Agustina</td>
+                          <td>Database Programming Supervisor</td>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox" />
+                              <span class="slider"></span>
+                            </label>
+                          </td>
+                          <td>Tidak Kompoten</td>
+                          <td>
+                            <span>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="Edit"
+                                ><i class="fa fa-pencil color-muted m-r-5"></i
+                              ></a>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="Close"
+                                ><i class="fa fa-close color-danger"></i
+                              ></a>
+                            </span>
+                          </td>
+                        </tr>
 
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="card-title">
-                                    <h4>Laporan Pleno</h4>
-                                </div>
-                                <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>Nama Asesi</th>
-                                                <th>Bidang</th>
-                                                <th>Rekomendasi</th>
-                                                <th>Hasil</th>
-                                                <th>Aksi</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Dea Agustina</td>
-                                                <td>Database Programming Supervisor</td>
-                                                <td>
-                                                    <label class="switch">
-                                                        <input type="checkbox">
-                                                        <span class="slider"></span>
-                                                    </label>
-                                                </td>
-                                                <td>Tidak Kompoten</td>
-                                                <td><span>
-                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil color-muted m-r-5"></i></a>
-                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Close"><i class="fa fa-close color-danger"></i></a>
-                                                </span>
-                                            </tr>
-                                            
-                                            <tr>
-                                                <td>Yokie Trisannerson/td>
-                                                <td>Database Programming Supervisor</td>
-                                                <td>
-                                                    <label class="switch">
-                                                        <input type="checkbox">
-                                                        <span class="slider"></span>
-                                                    </label>
-                                                </td>
-                                                <td>Tidak Kompoten</td>
-                                                <td><span>
-                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil color-muted m-r-5"></i></a>
-                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Close"><i class="fa fa-close color-danger"></i></a>
-                                                </span>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /# card -->
-                    </div>
+                        <tr>
+                          <td>Yokie Trisannerson/td></td>
+                          <td>Database Programming Supervisor</td>
+                          <td>
+                            <label class="switch">
+                              <input type="checkbox" />
+                              <span class="slider"></span>
+                            </label>
+                          </td>
+                          <td>Tidak Kompoten</td>
+                          <td>
+                            <span>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="Edit"
+                                ><i class="fa fa-pencil color-muted m-r-5"></i
+                              ></a>
+                              <a
+                                href="#"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="Close"
+                                ><i class="fa fa-close color-danger"></i
+                              ></a>
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- /# card -->
             </div>
-            <!-- #/ container -->
+          </div>
         </div>
-        <!--**********************************
+        <!-- #/ container -->
+      </div>
+      <!--**********************************
             Content body end
         ***********************************-->
-        
-        
-        <!--**********************************
+
+      <!--**********************************
             Footer start
         ***********************************-->
-        <!-- <div class="footer">
+      <!-- <div class="footer">
             <div class="copyright">
                 <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
             </div>
         </div> -->
-        <!--**********************************
+      <!--**********************************
             Footer end
         ***********************************-->
     </div>
@@ -240,35 +291,30 @@
     <script src="./plugins/chartist/js/chartist.min.js"></script>
     <script src="./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
 
-
-
     <script src="./js/dashboard/dashboard-1.js"></script>
 
+    <script>
+      function onOff1() {
+        var checkbox = document.getElementById("checkbox1");
+
+        if (checkbox.checked) {
+          document.getElementById("hasil1").innerHTML = "Kompeten";
+        } else {
+          document.getElementById("hasil1").innerHTML = "Tidak Kompeten";
+        }
+      }
+    </script>
 
     <script>
-        function onOff1() {
-          var checkbox = document.getElementById("checkbox1");
-  
-          if (checkbox.checked) {
-            document.getElementById("hasil1").innerHTML = "Kompeten";
-          } else {
-            document.getElementById("hasil1").innerHTML = "Tidak Kompeten";
-          }
-        }
-      </script>
-  
-      <script>
-        function onOff2() {
-          var checkbox = document.getElementById("checkbox2");
-  
-          if (checkbox.checked) {
-            document.getElementById("hasil2").innerHTML = "Kompeten";
-          } else {
-            document.getElementById("hasil2").innerHTML = "Tidak Kompeten";
-          }
-        }
-      </script>
+      function onOff2() {
+        var checkbox = document.getElementById("checkbox2");
 
-</body>
-
+        if (checkbox.checked) {
+          document.getElementById("hasil2").innerHTML = "Kompeten";
+        } else {
+          document.getElementById("hasil2").innerHTML = "Tidak Kompeten";
+        }
+      }
+    </script>
+  </body>
 </html>

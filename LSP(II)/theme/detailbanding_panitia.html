@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>LSP PCR</title>
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/logo_lsp1.png"
+    />
+    <!-- Custom Stylesheet -->
+    <link
+      href="./plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
+      rel="stylesheet"
+    />
+    <!-- Page plugins css -->
+    <link
+      href="./plugins/clockpicker/dist/jquery-clockpicker.min.css"
+      rel="stylesheet"
+    />
+    <!-- Color picker plugins css -->
+    <link
+      href="./plugins/jquery-asColorPicker-master/css/asColorPicker.css"
+      rel="stylesheet"
+    />
+    <!-- Date picker plugins css -->
+    <link
+      href="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
+    <!-- Daterange picker plugins css -->
+    <link
+      href="./plugins/timepicker/bootstrap-timepicker.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./plugins/bootstrap-daterangepicker/daterangepicker.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./plugins/tables/css/datatable/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+      <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+          <circle
+            class="path"
+            cx="50"
+            cy="50"
+            r="20"
+            fill="none"
+            stroke-width="3"
+            stroke-miterlimit="10"
+          />
+        </svg>
+      </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+      <!--**********************************
+            Nav header start
+        ***********************************-->
+      <div class="nav-header">
+        <a href="index_panitia.html">
+          <span class="brand-title">
+            <img src="images/logo_lsp1.png" width="120" height="auto" />
+          </span>
+        </a>
+      </div>
+      <!--**********************************
+              Nav header end
+          ***********************************-->
+
+      <!--**********************************
+              Header start
+          ***********************************-->
+      <div class="header">
+        <div class="header-content clearfix">
+          <div class="header-right">
+            <ul class="clearfix">
+              <li class="icons dropdown">
+                <div
+                  class="user-img c-pointer position-relative"
+                  data-toggle="dropdown"
+                >
+                  <span class="activity active"></span>
+                  <img src="images/user/1.png" height="40" width="40" alt="" />
+                </div>
+                <div
+                  class="drop-down dropdown-profile animated fadeIn dropdown-menu"
+                >
+                  <div class="dropdown-content-body">
+                    <ul>
+                      <!-- <li><a href="/LSP/masuk.html"><i class="icon-key"></i> <span>Logout</span></a></li> -->
+                      <li>
+                        <a
+                          href="file:///D:/SEMESTER%208/PA/LSP%20PCR/LSP/masuk.html"
+                          ><i class="icon-key"></i> <span>Keluar</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--**********************************
+            Nav header end
+        ***********************************-->
+
+      <!--**********************************
+            Header start
+        ***********************************-->
+      <div class="nk-sidebar">
+        <div class="nk-nav-scroll">
+          <ul class="metismenu" id="menu">
+            <!-- <li class="nav-label">Dashboard</li> -->
+            <li>
+              <a href="dataadmin_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Admin</span>
+              </a>
+            </li>
+            <li >
+              <a href="dataasesor_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Asesor</span>
+              </a>
+            </li>
+            <li>
+              <a href="index_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Mahasiswa</span>
+              </a>
+            </li>
+            <li>
+              <a href="dataskema_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Skema</span>
+              </a>
+            </li>
+            <li>
+              <a href="pendaftaranskema_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Pendaftaran Skema</span>
+              </a>
+            </li>
+            <li>
+              <a href="pendaftaran_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Pendaftaran</span>
+              </a>
+            </li>
+            <li>
+              <a href="jadwal_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Jadwal Asesmen</span>
+              </a>
+            </li>
+            <!-- <li>
+                      <a href="surattugas_panitia.html" aria-expanded="false">
+                      <span class="nav-text">Data Surat Tugas</span>
+                      </a>
+                  </li> -->
+            <li>
+              <a href="keputusan_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Keputusan Sertifikasi</span>
+              </a>
+            </li>
+            <li>
+              <a href="laporan_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Laporan Pleno</span>
+              </a>
+            </li>
+            <li class="active">
+              <a href="banding_panitia.html" aria-expanded="false">
+                <span class="nav-text"
+                  >Data Banding Atas Keputusan Sertifikasi</span
+                >
+              </a>
+            </li>
+            <li>
+              <a href="umpanbalik_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Umpan Balik</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="pengajuansertifikat_panitia.html" aria-expanded="false">
+                <span class="nav-text">Pengajuan Sertifikat</span>
+              </a>
+            </li>
+            <li>
+              <a href="dokumensertifikasi_panitia.html" aria-expanded="false">
+                <span class="nav-text">Dokumen Sertifikasi Asesor</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+      <!--**********************************
+            Content body start
+        ***********************************-->
+      <div class="content-body">
+        <!-- row -->
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="form-validation">
+                    <form class="form-valide" action="#" method="post">
+                      <a
+                        href="banding_panitia.html"
+                        class="list-group-item border-0 p-r-0"
+                        ><i
+                          class="fa fa-chevron-left font-18 align-middle mr-2"
+                        ></i
+                        >Kembali</a
+                      >
+                      <h4 class="card-title">Detail Data Banding Atas Keputusan Sertifikasi</h4>
+                      <div class="basic-form">
+                        <form>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Nama Asesi</label>
+                            <div class="col-sm-10">
+                              <input
+                                type="asesi"
+                                class="form-control"
+                                placeholder=""
+                              />
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Nama Asesor</label>
+                            <div class="col-sm-10">
+                              <input
+                                type="asesor"
+                                class="form-control"
+                                placeholder=""
+                              />
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Tanggal</label>
+                            <div class="col-md-8">
+                              <div class="example">
+                                <div class="input-group">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="datepicker-autoclose"
+                                    placeholder="mm/dd/yyyy"
+                                  />
+                                  <span class="input-group-append"
+                                    ><span class="input-group-text"
+                                      ><i class="mdi mdi-calendar-check"></i></span
+                                  ></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+      
+                          <!-- <div class="card-title">
+                            <h4>Table Striped</h4>
+                          </div> -->
+                          <div class="table-responsive">
+                            <table class="table table-striped">
+                              <thead>
+                                <tr>
+                                  <th>
+                                    Jawablah dengan Ya atau Tidak
+                                    pertanyaan-pertanyaan berikut ini :
+                                  </th>
+                                  <th>Ya</th>
+                                  <th>Tidak</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    Apakah Proses Banding telah dijelaskan kepada
+                                    Anda?
+                                  </td>
+                                  <td>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input
+                                          type="checkbox"
+                                          class="form-check-input"
+                                          id="checkbox1"
+                                          name="checkbox1"
+                                        />
+                                      </label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input
+                                          type="checkbox"
+                                          class="form-check-input"
+                                          id="checkbox2"
+                                          name="checkbox2"
+                                        />
+                                      </label>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    Apakah Anda telah mendiskusikan Banding dengan
+                                    Asesor?
+                                  </td>
+                                  <td>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input
+                                          type="checkbox"
+                                          class="form-check-input"
+                                          id="checkbox3"
+                                          name="checkbox3"
+                                        />
+                                      </label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input
+                                          type="checkbox"
+                                          class="form-check-input"
+                                          id="checkbox4"
+                                          name="checkbox4"
+                                        />
+                                      </label>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    Apakah Anda mau melibatkan “orang lain” membantu
+                                    Anda dalam Proses Banding?
+                                  </td>
+                                  <td>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input
+                                          type="checkbox"
+                                          class="form-check-input"
+                                          id="checkbox5"
+                                          name="checkbox5"
+                                        />
+                                      </label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input
+                                          type="checkbox"
+                                          class="form-check-input"
+                                          id="checkbox6"
+                                          name="checkbox6"
+                                        />
+                                      </label>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+      
+                          <h6>
+                            Banding ini diajukan atas Keputusan Asesmen yang dibuat
+                            terhadap Skema Sertifikasi (Kualifikasi/Klaster/Okupasi)
+                            berikut :
+                          </h6>
+                          <br />
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label"
+                              >Skema Sertifikasi</label
+                            >
+                            <div class="col-sm-10">
+                              <input
+                                type="asesi"
+                                class="form-control"
+                                placeholder=""
+                              />
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label"
+                              >No. Skema Sertifikasi :</label
+                            >
+                            <div class="col-sm-10">
+                              <input
+                                type="asesi"
+                                class="form-control"
+                                placeholder=""
+                              />
+                            </div>
+                          </div>
+      
+                          <h6>Banding ini diajukan atas alasan sebagai berikut :</h6>
+                          <textarea
+                            class="form-control h-150px"
+                            rows="6"
+                            id="comment"
+                          ></textarea>
+      
+                          <br />
+                          <h6>
+                            Anda mempunyai hak mengajukan banding jika Anda menilai
+                            proses asesmen tidak sesuai SOP dan tidak memenuhi Prinsip
+                            Asesmen.
+                          </h6>
+      
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label"
+                              >Tanda Tangan Asesi</label
+                            >
+                            <div class="button-icon">
+                              <input
+                                type="file"
+                                class="form-control-file"
+                                id="exampleFormControlFile1"
+                              />
+                            </div>
+      
+                            <label class="col-sm-2 col-form-label">Tanggal</label>
+                            <div class="col-md-4">
+                              <div class="example">
+                                <div class="input-group">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="datepicker-autoclose"
+                                    placeholder="mm/dd/yyyy"
+                                  />
+                                  <span class="input-group-append"
+                                    ><span class="input-group-text"
+                                      ><i class="mdi mdi-calendar-check"></i></span
+                                  ></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+      
+                          <!-- <label class="col-sm-2 col-form-label">Tanggal/label>
+                            <div class="col-sm-4">
+                              <input
+                                type="asesi"
+                                class="form-control"
+                                placeholder=""
+                              />
+                            </div> -->
+      
+                          <br />
+                          <!-- Button trigger modal -->
+                          <button
+                            type="button"
+                            class="btn btn-dark mb-2"
+                            data-toggle="modal"
+                            data-target="#exampleModal"
+                          >
+                            Kirim
+                          </button>
+      
+                          <!-- Modal -->
+                          <div
+                            class="modal fade"
+                            id="exampleModal"
+                            tabindex="-1"
+                            role="dialog"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true"
+                          >
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">
+                                    Banding Atas Keputusan Sertifikasi
+                                  </h5>
+                                  <button
+                                    type="button"
+                                    class="close"
+                                    data-dismiss="modal"
+                                    aria-label="Tutup"
+                                  >
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                <div class="modal-body">
+                                  Pastikan Data di isi dengan benar
+                                </div>
+                                <div class="modal-footer">
+                                  <button
+                                    type="button"
+                                    class="btn btn-secondary"
+                                    data-dismiss="modal"
+                                  >
+                                    Tutup
+                                  </button>
+                                  <button type="button" class="btn btn-primary">
+                                    Simpan
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- #/ container -->
+      </div>
+      <!--**********************************
+            Content body end
+        ***********************************-->
+
+      <!--**********************************
+            Footer start
+        ***********************************-->
+      <!-- <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
+            </div>
+        </div> -->
+      <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="plugins/common/common.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/gleek.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+
+    <script src="./plugins/tables/js/jquery.dataTables.min.js"></script>
+    <script src="./plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
+    <script src="./plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
+
+    <script src="./plugins/moment/moment.js"></script>
+    <script src="./plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <!-- Clock Plugin JavaScript -->
+    <script src="./plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
+    <!-- Color Picker Plugin JavaScript -->
+    <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
+    <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
+    <script src="./plugins/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+    <!-- Date Picker Plugin JavaScript -->
+    <script src="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- Date range Plugin JavaScript -->
+    <script src="./plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <script src="./js/plugins-init/form-pickers-init.js"></script>
+  </body>
+</html>

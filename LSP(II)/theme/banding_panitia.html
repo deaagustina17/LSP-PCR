@@ -14,6 +14,34 @@
     />
     <!-- Custom Stylesheet -->
     <link
+      href="./plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
+      rel="stylesheet"
+    />
+    <!-- Page plugins css -->
+    <link
+      href="./plugins/clockpicker/dist/jquery-clockpicker.min.css"
+      rel="stylesheet"
+    />
+    <!-- Color picker plugins css -->
+    <link
+      href="./plugins/jquery-asColorPicker-master/css/asColorPicker.css"
+      rel="stylesheet"
+    />
+    <!-- Date picker plugins css -->
+    <link
+      href="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
+    <!-- Daterange picker plugins css -->
+    <link
+      href="./plugins/timepicker/bootstrap-timepicker.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./plugins/bootstrap-daterangepicker/daterangepicker.css"
+      rel="stylesheet"
+    />
+    <link
       href="./plugins/tables/css/datatable/dataTables.bootstrap4.min.css"
       rel="stylesheet"
     />
@@ -213,9 +241,8 @@
                                     <button class="btn btn-dark mb-2">Tambah</button>
                                 </div> -->
                   <a
-                    href="index_panitia.html"
-                    data-toggle="modal"
-                    data-target="#add-category"
+                    href="tambahbanding_panitia.html"
+                    
                     class="btn btn-dark mb-2"
                     ><i class="ti-plus f-s-12 m-r-5"></i> Tambah</a
                   >
@@ -235,15 +262,13 @@
                       <tbody>
                         <tr>
                           <td>
-                            Apakah Proses Banding telah dijelaskan kepada
-                              Anda?
+                            Apakah Proses Banding telah dijelaskan kepada Anda?
                           </td>
                           <td>
                             <span>
                               <a
-                                href="#"
-                                data-toggle="modal"
-                                data-target="#add-edit"
+                                href="editbanding_panitia.html"
+                                
                                 data-placement="top"
                                 title="Edit"
                                 ><i class="fa fa-pencil color-muted m-r-5"></i
@@ -255,18 +280,25 @@
                                 title="Hapus"
                                 ><i class="fa fa-trash-o color-danger"></i
                               ></a>
+                              <a
+                                href="detailbanding_panitia.html"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="Detail"
+                                ><i class="fa fa-info-circle color-danger"></i
+                              ></a>
                             </span>
                           </td>
                         </tr>
                         <tr>
-                          <td>Apakah Anda telah mendiskusikan Banding dengan
-                            Asesor?</td>
+                          <td>
+                            Apakah Anda telah mendiskusikan Banding dengan
+                            Asesor?
+                          </td>
                           <td>
                             <span>
                               <a
-                                href="#"
-                                data-toggle="modal"
-                                data-target="#add-edit"
+                                href="editbanding_panitia.html"
                                 data-placement="top"
                                 title="Edit"
                                 ><i class="fa fa-pencil color-muted m-r-5"></i
@@ -278,6 +310,13 @@
                                 data-placement="top"
                                 title="Hapus"
                                 ><i class="fa fa-trash-o color-danger"></i
+                              ></a>
+                              <a
+                                href="detailbanding_panitia.html"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="Detail"
+                                ><i class="fa fa-info-circle color-danger"></i
                               ></a>
                             </span>
                           </td>
@@ -326,34 +365,157 @@
 
                                 <div class="row">
                                   <div class="col-md-12">
-                                  <label class="control-label"
-                                    >Tanggal SK</label
-                                  >
-                                  <div class="row">
-                                    <div class="col-md-8">
-                                      <div class="example">
-                                        <div class="input-group">
-                                          <input
-                                            type="text"
-                                            class="form-control"
-                                            id="datepicker-autoclose"
-                                            placeholder="mm/dd/yyyy"
-                                          />
-                                          <span class="input-group-append"
-                                            ><span class="input-group-text"
-                                              ><i
-                                                class="mdi mdi-calendar-check"
-                                              ></i></span
-                                          ></span>
+                                    <label class="control-label"
+                                      >Tanggal SK</label
+                                    >
+                                    <div class="row">
+                                      <div class="col-md-8">
+                                        <div class="example">
+                                          <div class="input-group">
+                                            <input
+                                              type="text"
+                                              class="form-control"
+                                              id="datepicker-autoclose"
+                                              placeholder="mm/dd/yyyy"
+                                            />
+                                            <span class="input-group-append"
+                                              ><span class="input-group-text"
+                                                ><i
+                                                  class="mdi mdi-calendar-check"
+                                                ></i></span
+                                            ></span>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                                 </div>
+
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >Jawablah dengan Ya atau Tidak
+                                      pertanyaan-pertanyaan berikut ini :
+                                    </label>
+                                    <input
+                                      class="form-control form-white"
+                                      placeholder="Masukkan Pertanyaan"
+                                      type="text"
+                                      name="category-pertanyaan"
+                                    />
+                                  </div>
                                 </div>
-                                
 
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <label class="control-label">Jawaban</label>
+                                    <select
+                                      class="form-control form-white"
+                                      data-placeholder="Jawaban"
+                                      name="category-jawaban"
+                                    >
+                                      <option value="jawaban1">Ya</option>
+                                      <option value="jawaban2">Tidak</option>
+                                    </select>
+                                  </div>
+                                </div>
 
+                                <h6>
+                                  Banding ini diajukan atas Keputusan Asesmen
+                                  yang dibuat terhadap Skema Sertifikasi
+                                  (Kualifikasi/Klaster/Okupasi) berikut :
+                                </h6>
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >Skema Sertifikasi
+                                    </label>
+                                    <input
+                                      class="form-control form-white"
+                                      placeholder="Masukkan Skema Sertifikasi"
+                                      type="text"
+                                      name="category-skemasertifikasi"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >No. Skema Sertifikasi :
+                                    </label>
+                                    <input
+                                      class="form-control form-white"
+                                      placeholder="Masukkan No. Skema Sertifikasi :"
+                                      type="text"
+                                      name="category-noskema"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >Banding ini diajukan atas alasan sebagai
+                                      berikut :
+                                    </label>
+                                    <textarea
+                                      class="form-control h-150px"
+                                      rows="6"
+                                      id="comment"
+                                    ></textarea>
+                                  </div>
+                                </div>
+
+                                <h6>
+                                  Anda mempunyai hak mengajukan banding jika
+                                  Anda menilai proses asesmen tidak sesuai SOP
+                                  dan tidak memenuhi Prinsip Asesmen.
+                                </h6>
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >Tanda Tangan Asesi</label
+                                    >
+
+                                    <div class="button-icon">
+                                      <input
+                                        type="file"
+                                        class="form-control-file"
+                                        id="exampleFormControlFile1"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <br />
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >Tanggal SK</label
+                                    >
+                                    <div class="row">
+                                      <div class="col-md-8">
+                                        <div class="example">
+                                          <div class="input-group">
+                                            <input
+                                              type="text"
+                                              class="form-control"
+                                              id="datepicker-autoclose"
+                                              placeholder="mm/dd/yyyy"
+                                            />
+                                            <span class="input-group-append"
+                                              ><span class="input-group-text"
+                                                ><i
+                                                  class="mdi mdi-calendar-check"
+                                                ></i></span
+                                            ></span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </form>
                             </div>
                             <div class="modal-footer">
@@ -427,5 +589,21 @@
     <script src="./plugins/tables/js/jquery.dataTables.min.js"></script>
     <script src="./plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
     <script src="./plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
+
+    <script src="./plugins/moment/moment.js"></script>
+    <script src="./plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <!-- Clock Plugin JavaScript -->
+    <script src="./plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
+    <!-- Color Picker Plugin JavaScript -->
+    <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
+    <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
+    <script src="./plugins/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+    <!-- Date Picker Plugin JavaScript -->
+    <script src="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- Date range Plugin JavaScript -->
+    <script src="./plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <script src="./js/plugins-init/form-pickers-init.js"></script>
   </body>
 </html>
