@@ -13,7 +13,7 @@ body {
 
 
 .layout_padding {
-  padding: 90px 0;
+  padding: 50px 0;
 }
 
 .layout_padding2 {
@@ -115,13 +115,21 @@ a:focus {
   color: #699BF7;
 }
 
+
 .header_section .header_bottom {
-  background-color: #699BF7;
+  background-color: #ffffff;
 }
 
 .header_section .header_bottom .container-fluid {
   padding-right: 25px;
   padding-left: 25px;
+}
+
+.header_section {
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
 }
 
 .navbar-brand {
@@ -140,13 +148,13 @@ a:focus {
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   padding: 3px 15px;
   margin: 10px 15px;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
   text-transform: uppercase;
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link {
-  color: #252525;
+  color: #699BF7;
 }
 
 .custom_nav-container .nav_search-btn {
@@ -255,7 +263,7 @@ a:focus {
 }
 
 .quote_btn-container a {
-  color: #ffffff;
+  color: #000000;
   margin-right: 25px;
   text-transform: uppercase;
 }
@@ -265,7 +273,7 @@ a:focus {
 }
 
 .quote_btn-container a:hover {
-  color: #252525;
+  color: #699BF7;
 }
 
 /*end header section*/

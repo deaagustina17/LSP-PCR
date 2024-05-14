@@ -1,320 +1,440 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css"
+    />
+    <title>LSP PCR</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/logo_lsp1.png"
+    />
 
-<head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
-  <title>LSP</title>
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!--owl slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- font awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!-- nice select -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+      integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4="
+      crossorigin="anonymous"
+    />
+    <!-- datepicker -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"
+    />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+  </head>
 
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <body>
+    <div class="hero_area">
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="header_bottom">
+          <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container">
+              <a class="navbar-brand" href="dashboard.html">
+                <img src="images/logo_lsp1.png" alt="" />
+              </a>
 
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-  <!-- nice select -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
-  <!-- datepicker -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css">
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class=""> </span>
+              </button>
 
-</head>
-
-<body>
-
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="header_bottom">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="dashboard.html">
-              <img src="images/logo_lsp1.png" alt="">
-            </a>
-
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""> </span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <div class="d-flex mr-auto flex-column flex-lg-row align-items-center">
-                <ul class="navbar-nav  ">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="dashboard.html">Beranda<span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="skema.html">Skema Sertifikasi</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Hubungi Kami</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="quote_btn-container">
-                <a href="masuk.html">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  <span>
-                    Masuk
-                  </span>
-                </a>
-                <!-- <a href="">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div
+                  class="d-flex mr-auto flex-column flex-lg-row align-items-center"
+                >
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="dashboard.html"
+                        >Beranda<span class="sr-only">(current)</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="skema.html"
+                        >Skema Sertifikasi</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Hubungi Kami</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="quote_btn-container">
+                  <a href="masuk.html">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <span> Masuk </span>
+                  </a>
+                  <!-- <a href="">
                   <i class="fa fa-user" aria-hidden="true"></i>
                   <span>
                     Sign Up
                   </span>
                 </a> -->
-                <!-- <form class="form-inline">
+                  <!-- <form class="form-inline">
                   <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                     <i class="fa fa-search" aria-hidden="true"></i>
                   </button>
                 </form> -->
+                </div>
               </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- end header section -->
+      <!-- slider section -->
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="text-center">
+              <img
+                class="d-block w-100"
+                src="images/pcr.jpg"
+                alt="First slide"
+              />
             </div>
-          </nav>
+          </div>
+          <div class="carousel-item">
+            <div class="text-center">
+              <img
+                class="d-block w-100"
+                src="images/pcr1.jpg"
+                alt="Second slide"
+              />
+            </div>
+          </div>
+          <!-- <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Third slide">
+    </div> -->
         </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-    </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="images/pcr.jpg" alt="First slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="images/pcr1.jpg" alt="Second slide">
-        </div>
-        <!-- <div class="carousel-item">
-          <img class="d-block w-100" src="..." alt="Third slide">
-        </div> -->
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      <!-- end slider section -->
     </div>
-    <!-- end slider section -->
-  </div>
-
-  <section class="book_section layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <form>
-            <h4>
-              Database Programming Supervisor
-            </h4>
-            <div style="text-align: justify;">
-              Skema sertifikasi Supervisor Pemrogram Database (Database Programmer Supervisor) adalah skema Kemasan yang digunakan mengacu pada Standar Kompetensi Kerja Nasional Indonesia berdasarkan Keputusan Menteri Ketenagakerjaan Republik Indonesia Nomor 282 tahun 2016 tentang Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori Informasi dan Komunikasi Golongan Pokok Aktivitas Pemrograman, Konsultasi Komputer dan Kegiatan Yang Berhubungan Dengan Itu (YBDI) Bidang Software Development Subbidang Pemrograman dan Buku Daftar Unit Kompetensi Okupasi Dalam Kerangka Kualifikasi Nasional Indonesia Bidang Teknologi Informasi dan Komunikasi (TIK), Kominfo 2018.
-            </div>
-            <div class="d-flex justify-content-end">
-              <button type="submit" class="btn">Daftar</button>
-              &nbsp;
-              <!-- <button type="submit" class="btn">Lihat Detail</button> -->
-              <!-- <a href="masuk.html" class="btn" role="button">Daftar</a>
+    <section class="book_section layout_padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <form style="border: 1px solid #ffffff; border-radius: 20px; padding: 20px;">
+            <form>
+              <h4>Database Programming Supervisor</h4>
+              <div style="text-align: justify">
+                Skema sertifikasi Supervisor Pemrogram Database (Database
+                Programmer Supervisor) adalah skema Kemasan yang digunakan
+                mengacu pada Standar Kompetensi Kerja Nasional Indonesia
+                berdasarkan Keputusan Menteri Ketenagakerjaan Republik Indonesia
+                Nomor 282 tahun 2016 tentang Penetapan Standar Kompetensi Kerja
+                Nasional Indonesia Kategori Informasi dan Komunikasi Golongan
+                Pokok Aktivitas Pemrograman, Konsultasi Komputer dan Kegiatan
+                Yang Berhubungan Dengan Itu (YBDI) Bidang Software Development
+                Subbidang Pemrograman dan Buku Daftar Unit Kompetensi Okupasi
+                Dalam Kerangka Kualifikasi Nasional Indonesia Bidang Teknologi
+                Informasi dan Komunikasi (TIK), Kominfo 2018.
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn">Daftar</button>
+                &nbsp;
+                <!-- <button type="submit" class="btn">Lihat Detail</button> -->
+                <!-- <a href="masuk.html" class="btn" role="button">Daftar</a>
               <a href="detail.html" class="btn" role="button">Lihat Detail</a> -->
-            </div>
-          </form>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <br>
-    <!-- 2 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <form>
-            <h4>
-              Network Administrator Muda
-            </h4>
-            <div style="text-align: justify;">
-              Skema sertifikasi Network Administrator Muda (Junior Network Administrator) adalah skema Kemasan yang digunakan mengacu pada Standar Kompetensi Kerja Nasional Indonesia berdasarkan Keputusan Menteri Ketenagakerjaan Republik Indonesia Nomor 321 tahun 2016 tentang Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori Informasi dan Komunikasi Golongan Pokok Telekomunikasi Bidang Jaringan Komputer dan Buku Daftar Unit Kompetensi Okupasi Dalam Kerangka Kualifikasi Nasional Indonesia Bidang Teknologi Informasi dan Komunikasi (TIK), Kominfo 2018.
-            </div>
-            <div class="d-flex justify-content-end">
-              <button type="submit" class="btn">Daftar</button>
-              &nbsp;
-              <!-- <button type="submit" class="btn">Lihat Detail</button> -->
-            </div>
-          </form>
+      <br />
+      <!-- 2 -->
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <form style="border: 1px solid #ffffff; border-radius: 20px; padding: 20px;">
+            <form>
+              <h4>Network Administrator Muda</h4>
+              <div style="text-align: justify">
+                Skema sertifikasi Network Administrator Muda (Junior Network
+                Administrator) adalah skema Kemasan yang digunakan mengacu pada
+                Standar Kompetensi Kerja Nasional Indonesia berdasarkan
+                Keputusan Menteri Ketenagakerjaan Republik Indonesia Nomor 321
+                tahun 2016 tentang Penetapan Standar Kompetensi Kerja Nasional
+                Indonesia Kategori Informasi dan Komunikasi Golongan Pokok
+                Telekomunikasi Bidang Jaringan Komputer dan Buku Daftar Unit
+                Kompetensi Okupasi Dalam Kerangka Kualifikasi Nasional Indonesia
+                Bidang Teknologi Informasi dan Komunikasi (TIK), Kominfo 2018.
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn">Daftar</button>
+                &nbsp;
+                <!-- <button type="submit" class="btn">Lihat Detail</button> -->
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <br>
-    <!-- 3 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <form>
-            <h4>
-              Programmer
-            </h4>
-            <div style="text-align: justify;">
-              Skema sertifikasi Pemrogram (Programmer) adalah skema yang mengacu pada Standar Kompetensi Kerja Nasional Indonesia berdasarkan Keputusan Menteri Ketenagakerjaan Republik Indonesia Nomor 282 tahun 2016 tentang Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori Informasi dan Komunikasi Golongan Pokok Aktivitas Pemrograman, Konsultasi Komputer dan Kegiatan Yang Berhubungan Dengan Itu (YBDI) Bidang Software Development Subbidang Pemrograman dan Buku Daftar Unit Kompetensi Okupasi Dalam Kerangka Kualifikasi Nasional Indonesia Bidang Teknologi Informasi dan Komunikasi (TIK)            
-            </div>
-            <div class="d-flex justify-content-end">
-              <button type="submit" class="btn">Daftar</button>
-              &nbsp;
-              <!-- <button type="submit" class="btn">Lihat Detail</button> -->
-            </div>
-          </form>
+      <br />
+      <!-- 3 -->
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <form style="border: 1px solid #ffffff; border-radius: 20px; padding: 20px;">
+            <form>
+              <h4>Programmer</h4>
+              <div style="text-align: justify">
+                Skema sertifikasi Pemrogram (Programmer) adalah skema yang
+                mengacu pada Standar Kompetensi Kerja Nasional Indonesia
+                berdasarkan Keputusan Menteri Ketenagakerjaan Republik Indonesia
+                Nomor 282 tahun 2016 tentang Penetapan Standar Kompetensi Kerja
+                Nasional Indonesia Kategori Informasi dan Komunikasi Golongan
+                Pokok Aktivitas Pemrograman, Konsultasi Komputer dan Kegiatan
+                Yang Berhubungan Dengan Itu (YBDI) Bidang Software Development
+                Subbidang Pemrograman dan Buku Daftar Unit Kompetensi Okupasi
+                Dalam Kerangka Kualifikasi Nasional Indonesia Bidang Teknologi
+                Informasi dan Komunikasi (TIK)
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn">Daftar</button>
+                &nbsp;
+                <!-- <button type="submit" class="btn">Lihat Detail</button> -->
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <br> 
-    <!-- 4 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <form>
-            <h4>
-              Teknisi Madya Jaringan Komputer 
-            </h4>
-            <div style="text-align: justify;">
-              Skema sertifikasi Teknisi Madya Jaringan Komputer adalah skema Kemasan yang digunakan mengacu pada Standar Kompetensi Kerja Nasional Indonesia berdasarkan Keputusan Menteri Ketenagakerjaan Republik Indonesia Nomor 321 tahun 2016 tentang Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori Informasi dan Komunikasi Golongan Pokok Telekomunikasi Bidang Jaringan Komputer dan Buku Daftar Unit Kompetensi Okupasi Dalam Kerangka Kualifikasi Nasional Indonesia Bidang Teknologi Informasi dan Komunikasi (TIK)
-            </div>
-            <div class="d-flex justify-content-end">
-              <button type="submit" class="btn">Daftar</button>
-              &nbsp;
-              <!-- <button type="submit" class="btn">Lihat Detail</button> -->
-            </div>
-          </form>
+      <br />
+      <!-- 4 -->
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <form style="border: 1px solid #ffffff; border-radius: 20px; padding: 20px;">
+            <form>
+              <h4>Teknisi Madya Jaringan Komputer</h4>
+              <div style="text-align: justify">
+                Skema sertifikasi Teknisi Madya Jaringan Komputer adalah skema
+                Kemasan yang digunakan mengacu pada Standar Kompetensi Kerja
+                Nasional Indonesia berdasarkan Keputusan Menteri Ketenagakerjaan
+                Republik Indonesia Nomor 321 tahun 2016 tentang Penetapan
+                Standar Kompetensi Kerja Nasional Indonesia Kategori Informasi
+                dan Komunikasi Golongan Pokok Telekomunikasi Bidang Jaringan
+                Komputer dan Buku Daftar Unit Kompetensi Okupasi Dalam Kerangka
+                Kualifikasi Nasional Indonesia Bidang Teknologi Informasi dan
+                Komunikasi (TIK)
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn">Daftar</button>
+                &nbsp;
+                <!-- <button type="submit" class="btn">Lihat Detail</button> -->
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <br> 
-    <!-- 5 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <form>
-            <h4>
-              Pengoperasian Peralatan Kelistrikan Dan Elektronika Berbasis Programmable Logic Controller (PLC) 
-            </h4>
-            <div style="text-align: justify;">
-              Skema sertifikasi Pengoperasian Peralatan Kelistrikan Dan Elektronika Berbasis Programmable Logic Controller (PLC) adalah skema yang pada Standar Kompetensi Kerja Nasional Indonesia berdasarkan Keputusan Menteri Perindustrian Republik Indonesia Nomor 49 Tahun 2018 tentang Penetapan Kerangka Kualifikasi Nasional Indonesia Bidang Otomasi industri. 
-            </div>
-            <div class="d-flex justify-content-end">
-              <button type="submit" class="btn">Daftar</button>
-              &nbsp;
-              <!-- <button type="submit" class="btn">Lihat Detail</button> -->
-            </div>
-          </form>
+      <br />
+      <!-- 5 -->
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <form style="border: 1px solid #ffffff; border-radius: 20px; padding: 20px;">
+            <form>
+              <h4>
+                Pengoperasian Peralatan Kelistrikan Dan Elektronika Berbasis
+                Programmable Logic Controller (PLC)
+              </h4>
+              <div style="text-align: justify">
+                Skema sertifikasi Pengoperasian Peralatan Kelistrikan Dan
+                Elektronika Berbasis Programmable Logic Controller (PLC) adalah
+                skema yang pada Standar Kompetensi Kerja Nasional Indonesia
+                berdasarkan Keputusan Menteri Perindustrian Republik Indonesia
+                Nomor 49 Tahun 2018 tentang Penetapan Kerangka Kualifikasi
+                Nasional Indonesia Bidang Otomasi industri.
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn">Daftar</button>
+                &nbsp;
+                <!-- <button type="submit" class="btn">Lihat Detail</button> -->
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <br> 
-    <!-- 6 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <form>
-            <h4>
-              Plate Welder 
-            </h4>
-            <div style="text-align: justify;">
-              Skema sertifikasi Plate Welder adalah skema yang digunakan mengacu kepada keputusan Menteri Ketenagakerjaan Republik Indonesia Nomor 98 Tahun 2018 tentang penetapan Standar kompetensi Kerja Nasional  Indonesia (SKKNI) Kategori Golongan Pokok Industri Logam Dasar Bidang Jasa Pembuatan Barang Barang Dari Logam Sub Bidang Pengelasan, dan Peraturan Menteri Perindustrian Republik Indonesia Nomor 50 Tahun 2018 tentang penerapan kerangka kualifikasi nasional Indonesia (KKNI) bidang jasa pembuatan barang – barang dari logam subbidang pengelasan.
-            </div>
-            <div class="d-flex justify-content-end">
-              <button type="submit" class="btn">Daftar</button>
-              &nbsp;
-              <!-- <button type="submit" class="btn">Lihat Detail</button> -->
-            </div>
-          </form>
+      <br />
+      <!-- 6 -->
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <form style="border: 1px solid #ffffff; border-radius: 20px; padding: 20px;">
+            <form>
+              <h4>Plate Welder</h4>
+              <div style="text-align: justify">
+                Skema sertifikasi Plate Welder adalah skema yang digunakan
+                mengacu kepada keputusan Menteri Ketenagakerjaan Republik
+                Indonesia Nomor 98 Tahun 2018 tentang penetapan Standar
+                kompetensi Kerja Nasional Indonesia (SKKNI) Kategori Golongan
+                Pokok Industri Logam Dasar Bidang Jasa Pembuatan Barang Barang
+                Dari Logam Sub Bidang Pengelasan, dan Peraturan Menteri
+                Perindustrian Republik Indonesia Nomor 50 Tahun 2018 tentang
+                penerapan kerangka kualifikasi nasional Indonesia (KKNI) bidang
+                jasa pembuatan barang – barang dari logam subbidang pengelasan.
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn">Daftar</button>
+                &nbsp;
+                <!-- <button type="submit" class="btn">Lihat Detail</button> -->
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <br> 
-    <!-- 7 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <form>
-            <h4>
-              Pengoperasian Instrumentasi Proses Kontrol 
-            </h4>
-            <div style="text-align: justify;">
-              Skema sertifikasi kompetensi kerja pengoperasian alat ukur merupakan skema sertifikasi yang telah dikembangkan berdasarkan kebutuhan industri dan regulasi. Skema sertifikasi yang dirumuskan adalah skema sertifikasi klaster, yang terdiri dari tiga unit kompetensi dan sudah diidentifikasi atas kebutuhan industri pada pekerjaan teknisi Instrumentasi Tingkat 2 dan Pengawas.
-            </div>
-            <div class="d-flex justify-content-end">
-              <button type="submit" class="btn">Daftar</button>
-              &nbsp;
-              <!-- <button type="submit" class="btn">Lihat Detail</button> -->
-            </div>
-          </form>
+      <br />
+      <!-- 7 -->
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <form style="border: 1px solid #ffffff; border-radius: 20px; padding: 20px;">
+            <form>
+              <h4>Pengoperasian Instrumentasi Proses Kontrol</h4>
+              <div style="text-align: justify">
+                Skema sertifikasi kompetensi kerja pengoperasian alat ukur
+                merupakan skema sertifikasi yang telah dikembangkan berdasarkan
+                kebutuhan industri dan regulasi. Skema sertifikasi yang
+                dirumuskan adalah skema sertifikasi klaster, yang terdiri dari
+                tiga unit kompetensi dan sudah diidentifikasi atas kebutuhan
+                industri pada pekerjaan teknisi Instrumentasi Tingkat 2 dan
+                Pengawas.
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn">Daftar</button>
+                &nbsp;
+                <!-- <button type="submit" class="btn">Lihat Detail</button> -->
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <br> 
-    <!-- 8 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <form>
-            <h4>
-              Teknisi Akuntansi Pratama 
-            </h4>
-            <div style="text-align: justify;">
-              Skema sertifikasi Teknisi Akuntansi Pratama adalah skema digunakan mengacu pada Standar Kompetensi Kerja Nasional Indonesia berdasarkan Keputusan Menteri Tenaga Kerja dan Transmigrasi Republik Indonesia Nomor 182 tahun 2013 Tentang Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori Jasa Profesional, Ilmiah dan Teknis Golongan Pokok Jasa Hukum dan Akuntansi Golongan Jasa Akuntansi, Pembukuan dan Pemeriksaan, Konsultasi Pajak Kelompok Usaha Teknisi Akuntansi.
-            </div>
-            <div class="d-flex justify-content-end">
-              <button type="submit" class="btn">Daftar</button>
-              &nbsp;
-              <!-- <button type="submit" class="btn">Lihat Detail</button> -->
-            </div>
-          </form>
+      <br />
+      <!-- 8 -->
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <form style="border: 1px solid #ffffff; border-radius: 20px; padding: 20px;">
+            <form>
+              <h4>Teknisi Akuntansi Pratama</h4>
+              <div style="text-align: justify">
+                Skema sertifikasi Teknisi Akuntansi Pratama adalah skema
+                digunakan mengacu pada Standar Kompetensi Kerja Nasional
+                Indonesia berdasarkan Keputusan Menteri Tenaga Kerja dan
+                Transmigrasi Republik Indonesia Nomor 182 tahun 2013 Tentang
+                Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori
+                Jasa Profesional, Ilmiah dan Teknis Golongan Pokok Jasa Hukum
+                dan Akuntansi Golongan Jasa Akuntansi, Pembukuan dan
+                Pemeriksaan, Konsultasi Pajak Kelompok Usaha Teknisi Akuntansi.
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn">Daftar</button>
+                &nbsp;
+                <!-- <button type="submit" class="btn">Lihat Detail</button> -->
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <br> 
-    <!-- 9 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <form>
-            <h4>
-              Welding Inspector Standar 
-            </h4>
-            <div style="text-align: justify;">
-              Skema sertifikasi Welding Inspector Standard adalah skema yang digunakan mengacu kepada keputusan Menteri Ketenagakerjaan Republik Indonesia Nomor 98 Tahun 2018 tentang penetapan Standar kompetensi Kerja Nasional Indonesia (SKKNI) Kategori Golongan Pokok Industri Logam Dasar Bidang Jasa Pembuatan Barang Barang Dari Logam Sub Bidang Pengelasan, dan Peraturan Menteri Perindustrian Republik Indonesia Nomor 50 Tahun 2018 tentang penerapan kerangka kualifikasi nasional Indonesia (KKNI) bidang jasa pembuatan barang – barang dari logam subbidang pengelasan.
-            </div>
-            <div class="d-flex justify-content-end">
-              <button type="submit" class="btn">Daftar</button>
-              &nbsp;
-              <!-- <button type="submit" class="btn">Lihat Detail</button> -->
-            </div>
-          </form>
+      <br />
+      <!-- 9 -->
+      <!-- <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <form style="border: 1px solid #ffffff; border-radius: 20px; padding: 20px;">
+            <form>
+              <h4>Welding Inspector Standar</h4>
+              <div style="text-align: justify">
+                Skema sertifikasi Welding Inspector Standard adalah skema yang
+                digunakan mengacu kepada keputusan Menteri Ketenagakerjaan
+                Republik Indonesia Nomor 98 Tahun 2018 tentang penetapan Standar
+                kompetensi Kerja Nasional Indonesia (SKKNI) Kategori Golongan
+                Pokok Industri Logam Dasar Bidang Jasa Pembuatan Barang Barang
+                Dari Logam Sub Bidang Pengelasan, dan Peraturan Menteri
+                Perindustrian Republik Indonesia Nomor 50 Tahun 2018 tentang
+                penerapan kerangka kualifikasi nasional Indonesia (KKNI) bidang
+                jasa pembuatan barang – barang dari logam subbidang pengelasan.
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn">Daftar</button>
+                &nbsp;
+                <button type="submit" class="btn">Lihat Detail</button>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-    </div>
-    <br> 
-  </section>
+      </div> -->
+      <br />
+    </section>
 
-
-
-  <!-- client section -->
-  <!-- <section class="client_section layout_padding">
+    <!-- client section -->
+    <!-- <section class="client_section layout_padding">
     <div class="container">
       <div class="heading_container">
         <h2>
@@ -393,74 +513,70 @@
       </div>
     </div>
   </section> -->
-  <!-- end client section -->
+    <!-- end client section -->
 
-  <!-- contact section -->
-  <section class="contact_section layout_padding-bottom">
-    <div class="container">
-      <br><br><br><br>
-      <!-- <div class="heading_container">
+    <!-- contact section -->
+    <section class="contact_section layout_padding-bottom">
+      <div class="container">
+        <br /><br /><br /><br />
+        <!-- <div class="heading_container">
         <h2>
           Get In Touch
         </h2>
       </div> -->
-      <div class="row">
-        <div class="col-md-5">
-          <div class="form_container">
-            <form action="">
-              <div>
-                <input type="text" placeholder="Nama Lengkap" />
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div class="col-md-5">
-          <div class="form_container">
-            <form action="">
-              <div>
-                <input type="text" placeholder="Email" />
-              </div>
-            </form>
-          </div>
-        </div>
-
-        <div class="col-md-1">
-          <div class="form_container">
-              <div class="ukuran-ikon">
-                <span class="mdi mdi-map-marker-outline"></span>
-              </div>
-          </div>
-        </div>
-        <div class="col-md-1">
-          <div class="form_container">
-            <p>Jl. Umbansari (Patin) No.1 Rumbai, Pekanbaru, Riau 28265</p>
-          </div>
-        </div>
-
-          <div class="col-md-10">
+        <div class="row">
+          <div class="col-md-5">
             <div class="form_container">
               <form action="">
                 <div>
-                  <input type="text" placeholder="Isi" />
-                  
+                  <input type="text" placeholder="Nama Lengkap" />
                 </div>
-                
-                <div class="btn_box">
-                  <button>
-                    Kirim
-                  </button>
-                </div>
+              </form>
+            </div>
+          </div>
 
+          <div class="col-md-5">
+            <div class="form_container">
+              <form action="">
+                <div>
+                  <input type="text" placeholder="Email" />
+                </div>
               </form>
             </div>
           </div>
 
           <div class="col-md-1">
             <div class="form_container">
-                <div class="ukuran-ikon">
-                  <span class="mdi mdi-email"></span>
+              <div class="ukuran-ikon">
+                <span class="mdi mdi-map-marker-outline"></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="form_container">
+              <p>Jl. Umbansari (Patin) No.1 Rumbai, Pekanbaru, Riau 28265</p>
+            </div>
+          </div>
+
+          <div class="col-md-10">
+            <div class="form_container">
+              <form action="">
+                <div>
+                  <input type="text" placeholder="Isi" />
                 </div>
+
+                <div class="btn_box">
+                  <button>Kirim</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-md-1">
+            <div class="form_container">
+              <div class="ukuran-ikon">
+                <span class="mdi mdi-email"></span>
+              </div>
             </div>
           </div>
           <div class="col-md-1">
@@ -468,12 +584,12 @@
               <p>lsp@pcr.ac.id</p>
             </div>
           </div>
-    </div><br><br>
-  </section>
-  <!-- end contact section -->
+        </div>
+        <br /><br />
+        <!-- end contact section -->
 
-  <!-- info section -->
-  <!-- <section class="info_section ">
+        <!-- info section -->
+        <!-- <section class="info_section ">
     <div class="container">
       <div class="info_top">
         <div class="info_logo">
@@ -612,18 +728,15 @@
       </div>
     </div>
   </section> -->
-  <!-- end info_section -->
+        <!-- end info_section -->
 
-
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <p>
-        &copy; 2023 LSP POLITEKNIK CALTEX RIAU
-      </p>
-    </div>
-  </footer>
-  <!-- <footer class="footer_section">
+        <!-- footer section -->
+        <!-- <footer class="footer_section">
+          <div class="container">
+            <p>&copy; 2023 LSP POLITEKNIK CALTEX RIAU</p>
+          </div>
+        </footer> -->
+        <!-- <footer class="footer_section">
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved By
@@ -631,22 +744,25 @@
       </p>
     </div>
   </footer> -->
-  <!-- footer section -->
+        <!-- footer section -->
 
-  <!-- jQery -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.js"></script>
-  <!-- nice select -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
-  <!-- owl slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <!-- datepicker -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
-  <!-- custom js -->
-  <script src="js/custom.js"></script>
-
-
-</body>
-
+        <!-- jQery -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <!-- bootstrap js -->
+        <script src="js/bootstrap.js"></script>
+        <!-- nice select -->
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
+          integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo="
+          crossorigin="anonymous"
+        ></script>
+        <!-- owl slider -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <!-- datepicker -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+        <!-- custom js -->
+        <script src="js/custom.js"></script>
+      </div>
+    </section>
+  </body>
 </html>
