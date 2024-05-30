@@ -91,12 +91,11 @@
       <!--**********************************
             Nav header start
         ***********************************-->
-      <div class="nav-header">
-        <a href="index.html">
-          <span class="brand-title">
-            <img src="images/logo_lsp1.png" width="120" height="auto" />
-          </span>
-        </a>
+      <div class="nav-header text-center">
+        <!-- <a href="index.html"> -->
+        <span class="brand-title">
+          <img src="images/logo_lsp1.png" width="100" height="auto" />
+        </span>
       </div>
       <!--**********************************
             Nav header end
@@ -260,7 +259,7 @@
                     ><i class="fa fa-chevron-left font-18 align-middle mr-2"></i
                     >Kembali</a
                   >
-                  
+
                   <div class="card">
                     <div class="card-body">
                       <h4>Detail Data Pendaftaran</h4>
@@ -1063,7 +1062,7 @@
                     <div class="card-content">
                       <div class="sweetalert m-t-30">
                         <button class="btn btn-dark mb-2 btn sweet-confirm">
-                          Daftar
+                          Approved
                         </button>
                       </div>
                     </div>
@@ -1140,7 +1139,7 @@
       document.querySelector(".sweet-confirm").onclick = function () {
         swal(
           {
-            title: "Apakah data telah sesuai?",
+            title: "Apakah ingin mengapproved data?",
             // text: "You will not be able to recover this imaginary file !!",
             type: "warning",
             showCancelButton: !0,
@@ -1149,7 +1148,7 @@
             closeOnConfirm: !1,
           },
           function () {
-            swal("Berhasil !!", "Berhasil terdaftar", "success");
+            swal("Berhasil !!", "Berhasil approved", "success");
           }
         );
       };

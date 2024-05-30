@@ -7579,7 +7579,9 @@ sub {
   z-index: 999;
   left: auto; }
 
+/*header untuk logo lsp*/
 .nav-header {
+  padding: 10px 35px;
   height: 5rem;
   width: 15.1875rem;
   display: inline-block;
@@ -8177,8 +8179,8 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
         transition: none; }
       .nk-sidebar .metismenu > li:hover i, .nk-sidebar .metismenu > li:focus i, .nk-sidebar .metismenu > li.active i {
         color: #464a53 !important; }
-      .nk-sidebar .metismenu > li:hover span, .nk-sidebar .metismenu > li:focus span, .nk-sidebar .metismenu > li.active span {
-        color: #464a53; }
+      /* .nk-sidebar .metismenu > li:hover span, .nk-sidebar .metismenu > li:focus span, .nk-sidebar .metismenu > li.active span {
+        color: #464a53; } */ /*warna tulisan*/
       .nk-sidebar .metismenu > li:hover > a {
         background: #F3F1FA;
         color: #699BF7; }
@@ -8186,7 +8188,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
         background: #F3F1FA;
         color: #464a53; }
       .nk-sidebar .metismenu > li.active ul a {
-        color: #464a53; }
+        color: #464a53; } 
       .nk-sidebar .metismenu > li a > i {
         font-size: 0.95rem;
         display: inline-block;
@@ -14010,7 +14012,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
   padding-right: 15rem; }
 
 [data-nav-headerbg="color_1"] .nav-header {
-  background-color: #699BF7; }
+  background-color: #FFFFFF; }
 
 [data-nav-headerbg="color_2"] .nav-header {
   background-color: #27394F !important; }
@@ -14040,7 +14042,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
   background-color: #558b2f !important; }
 
 [data-headerbg="color_1"] .header {
-  background-color: #fff; }
+  background-color: #fff; } /*warna atas*/
 
 [data-headerbg="color_2"] .header, [data-headerbg="color_2"] .header-left input {
   background-color: #27394F !important;
