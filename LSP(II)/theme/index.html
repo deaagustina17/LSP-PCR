@@ -29,6 +29,40 @@
     />
     <!-- Custom Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+    <style>
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #fff;
+      }
+
+      .hamburger {
+        font-size: 24px;
+        cursor: pointer;
+        border: none;
+        background: none;
+      }
+
+      .navside {
+        width: 250px;
+        background-color: #f4f4f4;
+        height: 100vh; /* Memastikan navside memiliki tinggi penuh */
+        position: fixed; /* Memastikan navside tetap di tempat */
+        left: -250px; /* Mulai di luar layar */
+        transition: left 0.3s ease;
+      }
+
+      .navside.active {
+        left: 0; /* Geser navside ke tempatnya */
+      }
+
+      .main-content {
+        margin-left: 250px; /* Menghindari tumpang tindih dengan navside */
+        padding: 20px;
+      }
+    </style>
   </head>
 
   <body>
@@ -104,6 +138,19 @@
               </li>
             </ul>
           </div>
+          <div class="navbar">
+            <button id="hamburger" class="hamburger">&#9776;</button>
+            <div class="profile">
+              <!-- Profile content -->
+            </div>
+          </div>
+          <div id="navside" class="navside">
+            <!-- Konten navside -->
+          </div>
+          <div class="main-content">
+            <!-- Konten utama -->
+          </div>
+          <script src="scripts.js"></script>
         </div>
       </div>
       <!--**********************************
@@ -113,7 +160,7 @@
       <!--**********************************
             Sidebar start
         ***********************************-->
-      <div class="nk-sidebar">
+      <div class="nk-sidebar" id="navside">
         <div class="nk-nav-scroll">
           <ul class="metismenu" id="menu">
             <!-- <li class="nav-label">Dashboard</li> -->
@@ -337,5 +384,34 @@
     <script src="./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
 
     <script src="./js/dashboard/dashboard-1.js"></script>
+    <script src="path/to/your/script.js"></script>
+    <!-- <script>
+      function toggleSidebar() {
+          document.querySelector('.nk-sidebar').classList.toggle('show');
+      }
+      document.querySelector('.menu-icon').addEventListener('click', function() {
+    document.querySelector('.navside').classList.toggle('active');
+});
+  </script> -->
+    <!-- <script>
+      // Definisikan fungsi toggleSidebar
+      function toggleSidebar() {
+        document.getElementById("navside").classList.toggle("active");
+      }
+
+      // Tambahkan event listener untuk ikon hamburger
+      document
+        .getElementById("menu-icon")
+        .addEventListener("click", toggleSidebar);
+    </script> -->
+    <script>
+      // Definisikan fungsi toggleSidebar
+      document
+        .getElementById("hamburger")
+        .addEventListener("click", function () {
+          var navside = document.getElementById("navside");
+          navside.classList.toggle("active");
+        });
+    </script>
   </body>
 </html>
