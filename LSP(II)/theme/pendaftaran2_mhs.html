@@ -91,12 +91,12 @@
       <!--**********************************
             Nav header start
         ***********************************-->
-        <div class="nav-header text-center">
-          <!-- <a href="index.html"> -->
-          <span class="brand-title">
-            <img src="images/logo_lsp1.png" width="100" height="auto" />
-          </span>
-        </div>
+      <div class="nav-header text-center">
+        <!-- <a href="index.html"> -->
+        <span class="brand-title">
+          <img src="images/logo_lsp1.png" width="100" height="auto" />
+        </span>
+      </div>
       <!--**********************************
             Nav header end
         ***********************************-->
@@ -108,9 +108,9 @@
         <div class="header-content clearfix">
           <div class="nav-control">
             <div class="hamburger">
-                <span class="toggle-icon"><i class="icon-menu"></i></span>
+              <span class="toggle-icon"><i class="icon-menu"></i></span>
             </div>
-        </div>
+          </div>
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
@@ -228,8 +228,7 @@
                                       program
                                     </th>
                                   </tr>
-                                    
-                                  </tr>
+
                                   <tr>
                                     <th>
                                       Dapatkah saya membuat dokumen kode program
@@ -2164,6 +2163,66 @@
                 </div>
 
                 <div class="card-body">
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"
+                      >Tanda Tangan Asesi</label
+                    >
+                    <div class="button-icon">
+                      <input
+                        type="file"
+                        class="form-control-file"
+                        id="exampleFormControlFile1"
+                      />
+                    </div>
+
+                    <label class="col-sm-2 col-form-label">Tanggal</label>
+                    <div class="col-md-4">
+                      <div class="example">
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="datepicker-autoclose"
+                            placeholder="mm/dd/yyyy"
+                          />
+                          <span class="input-group-append"
+                            ><span class="input-group-text"
+                              ><i class="mdi mdi-calendar-check"></i></span
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"
+                      >Tanda Tangan Asesor</label
+                    >
+                    <div class="button-icon">
+                      <input
+                        type="file"
+                        class="form-control-file"
+                        id="exampleFormControlFile1"
+                      />
+                    </div>
+
+                    <label class="col-sm-2 col-form-label">Tanggal</label>
+                    <div class="col-md-4">
+                      <div class="example">
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="datepicker-autoclose"
+                            placeholder="mm/dd/yyyy"
+                          />
+                          <span class="input-group-append"
+                            ><span class="input-group-text"
+                              ><i class="mdi mdi-calendar-check"></i></span
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="card-content">
                     <div class="sweetalert m-t-30">
                       <button class="btn btn-dark mb-2 btn sweet-message">
@@ -2360,6 +2419,20 @@
           }
         );
       };
+    </script>
+    <script>
+      document
+        .getElementById("checkbox1")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox2").checked = false;
+        });
+    </script>
+     <script>
+      document
+        .getElementById("checkbox2")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox1").checked = false;
+        });
     </script>
   </body>
 </html>

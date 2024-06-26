@@ -19,6 +19,7 @@
         body, html {
             height: 100%;
             margin: 0;
+            font-family: 'Poppins', sans-serif;
         }
         .hero_area {
             display: flex;
@@ -38,7 +39,7 @@
             box-shadow: 0 0 10px #0000001a;
             text-align: center;
             width: 400px;
-            height: 450px;
+            height: 520px;
         }
         .login-container h2, .login-container h3 {
             color: #fff;
@@ -57,7 +58,7 @@
             margin: 10px 0;
             text-decoration: underline;
         }
-        .login-container .btn-google {
+        .login-container .btn-login {
             background-color: #4285f4;
             color: #fff;
             border: none;
@@ -65,9 +66,41 @@
             border-radius: 5px;
             cursor: pointer;
             margin: 10px 0;
+            width: 100%;
         }
-        .btn-google:hover {
+        .login-container .btn-login:hover {
             background-color: #357ae8;
+        }
+        .login-container .btn-google {
+            background-color: #db4437;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+            width: 100%;
+        }
+        .login-container .btn-google:hover {
+            background-color: #c23321;
+        }
+        .or-separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            margin: 20px 0;
+        }
+        .or-separator::before, .or-separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #fff;
+        }
+        .or-separator::before {
+            margin-right: .25em;
+        }
+        .or-separator::after {
+            margin-left: .25em;
         }
     </style>
 </head>
@@ -117,9 +150,9 @@
                 <input type="email" placeholder="Username" required>
                 <input type="password" placeholder="Kata Sandi" required>
                 <a href="#" class="forgot-password">Lupa Kata Sandi? Klik disini</a>
-                <div>
-                    <button class="btn btn-google">Masuk dengan Google</button>
-                </div>
+                <button class="btn-login">Login</button>
+                <div class="or-separator">atau</div>
+                <button class="btn-google">Masuk dengan Google</button>
             </div>
         </div>
     </div>

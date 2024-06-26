@@ -46,6 +46,28 @@
       rel="stylesheet"
     />
     <link href="css/style.css" rel="stylesheet" />
+    <style>
+      /* CSS untuk mempercantik tombol */
+      #downloadBtn {
+        background-color: transparent; /* Background transparan */
+        border: 2px solid #ffffff; /* Border hijau */
+        color: #000000; /* Warna teks hijau */
+        /* padding: 15px 32px; */
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        /* margin: 4px 2px; */
+        cursor: pointer;
+        border-radius: 2px; /* Sudut membulat */
+        transition: background-color 0.3s, color 0.3s; /* Animasi perubahan warna latar belakang dan teks */
+      }
+
+      #downloadBtn:hover {
+        background-color: #ffffff; /* Warna latar belakang saat hover */
+        color: #759bff; /* Warna teks saat hover */
+      }
+    </style>
   </head>
 
   <body>
@@ -95,9 +117,9 @@
         <div class="header-content clearfix">
           <div class="nav-control">
             <div class="hamburger">
-                <span class="toggle-icon"><i class="icon-menu"></i></span>
+              <span class="toggle-icon"><i class="icon-menu"></i></span>
             </div>
-        </div>
+          </div>
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
@@ -312,6 +334,8 @@
                           />
                         </div>
                       </div> -->
+                      <button id="downloadBtn">Download File Excel</button>
+
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label"
                           >Upload Jadwal Asesmen</label
@@ -324,7 +348,6 @@
                           />
                         </div>
                       </div>
-
                       <div class="table-responsive">
                         <table
                           class="table table-striped table-bordered zero-configuration"
@@ -810,5 +833,28 @@
     <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 
     <script src="./js/plugins-init/form-pickers-init.js"></script>
+    <script>
+      // JavaScript untuk menangani aksi unduh
+      document
+        .getElementById("downloadBtn")
+        .addEventListener("click", function () {
+          // URL file yang akan diunduh
+          const fileUrl = "path/to/your/file.txt"; // Ganti dengan URL file Anda
+          // Nama file yang akan disimpan
+          const fileName = "downloaded_file.txt"; // Ganti dengan nama file Anda
+
+          // Membuat elemen anchor (link)
+          const a = document.createElement("a");
+          a.href = fileUrl;
+          a.download = fileName;
+
+          // Memasukkan elemen anchor ke dalam dokumen
+          document.body.appendChild(a);
+          // Mengklik elemen anchor untuk memulai unduhan
+          a.click();
+          // Menghapus elemen anchor setelah unduhan
+          document.body.removeChild(a);
+        });
+    </script>
   </body>
 </html>

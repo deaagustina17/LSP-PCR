@@ -916,8 +916,8 @@
                                         <input
                                           type="checkbox"
                                           class="form-check-input"
-                                          id="checkbox2"
-                                          name="checkbox2"
+                                          id="checkbox3"
+                                          name="checkbox3"
                                         />
                                       </label>
                                     </div>
@@ -933,8 +933,8 @@
                                         <input
                                           type="checkbox"
                                           class="form-check-input"
-                                          id="checkbox1"
-                                          name="checkbox1"
+                                          id="checkbox4"
+                                          name="checkbox4"
                                         />
                                       </label>
                                     </div>
@@ -945,8 +945,8 @@
                                         <input
                                           type="checkbox"
                                           class="form-check-input"
-                                          id="checkbox2"
-                                          name="checkbox2"
+                                          id="checkbox5"
+                                          name="checkbox5"
                                         />
                                       </label>
                                     </div>
@@ -957,8 +957,8 @@
                                         <input
                                           type="checkbox"
                                           class="form-check-input"
-                                          id="checkbox2"
-                                          name="checkbox2"
+                                          id="checkbox6"
+                                          name="checkbox6"
                                         />
                                       </label>
                                     </div>
@@ -973,6 +973,39 @@
                     <div class="form-group row">
                       <label class="col-sm-2 col-form-label"
                         >Tanda Tangan Asesi</label
+                      >
+                      <div class="button-icon">
+                        <input
+                          type="file"
+                          class="form-control-file"
+                          id="exampleFormControlFile1"
+                        />
+                      </div>
+
+                      <label class="col-sm-2 col-form-label">Tanggal</label>
+                      <div class="col-md-4">
+                        <div class="example">
+                          <div class="input-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="datepicker-autoclose"
+                              placeholder="mm/dd/yyyy"
+                            />
+                            <span class="input-group-append"
+                              ><span class="input-group-text"
+                                ><i class="mdi mdi-calendar-check"></i></span
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+
+
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label"
+                        >Tanda Tangan Admin</label
                       >
                       <div class="button-icon">
                         <input
@@ -1068,7 +1101,6 @@
     <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 
     <script src="./js/plugins-init/form-pickers-init.js"></script>
-
     <script>
       document.querySelector(".sweet-message").onclick = function () {
         swal("Hey, Here's a message !!");
@@ -1205,6 +1237,54 @@
           }
         );
       };
+    </script>
+    <script>
+      document
+        .getElementById("checkbox1")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox2").checked = false;
+          document.getElementById("checkbox3").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox2")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox1").checked = false;
+          document.getElementById("checkbox3").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox3")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox1").checked = false;
+          document.getElementById("checkbox2").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox4")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox5").checked = false;
+          document.getElementById("checkbox6").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox5")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox4").checked = false;
+          document.getElementById("checkbox6").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox6")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox4").checked = false;
+          document.getElementById("checkbox5").checked = false;
+        });
     </script>
   </body>
 </html>
