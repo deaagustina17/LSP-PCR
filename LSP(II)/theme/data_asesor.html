@@ -92,9 +92,9 @@
         <div class="header-content clearfix">
           <div class="nav-control">
             <div class="hamburger">
-                <span class="toggle-icon"><i class="icon-menu"></i></span>
+              <span class="toggle-icon"><i class="icon-menu"></i></span>
             </div>
-        </div>
+          </div>
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
@@ -200,6 +200,20 @@
                         </div>
                       </div>
                       <div class="form-group row">
+                        <label class="col-lg-4 col-form-label" for="val-nama"
+                          >Inisial <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-6">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="val-nama"
+                            name="val-nama"
+                            placeholder="Masukkan Inisial.."
+                          />
+                        </div>
+                      </div>
+                      <div class="form-group row">
                         <label class="col-lg-4 col-form-label" for="val-ttl"
                           >Tempat/Tgl.Lahir<span class="text-danger">*</span>
                         </label>
@@ -278,7 +292,8 @@
                         <label class="col-lg-4 col-form-label" for="val-foto"
                           >Tanda Tangan<span class="text-danger">*</span>
                         </label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<div class="card">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="card">
                           <div class="button-icon">
                             <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
                             <input
@@ -420,9 +435,9 @@
                           <thead>
                             <tr>
                               <th>No</th>
-                              <th>Jenis Pelatihan</th>
+                              <th>Skema</th>
                               <th>Pelaksana</th>
-                              <th>Tahun</th>
+                              <th>Tanggal Masa Habis Berlaku</th>
                               <th>Bukti</th>
                             </tr>
                           </thead>
@@ -431,12 +446,34 @@
                               <td>1</td>
                               <td>
                                 <div class="col-lg-12">
-                                  <input
-                                    type="text"
+                                  <select
                                     class="form-control"
-                                    id="val-jenispelatihan1"
-                                    name="val-jenispelatihan1"
-                                  />
+                                    id="val-skema"
+                                    name="val-skema"
+                                  >
+                                    <option value="1">
+                                      Database Programming Supervisor
+                                    </option>
+                                    <option value="2">
+                                      Network Administrator Muda
+                                    </option>
+                                    <option value="3">Programmer</option>
+                                    <option value="4">
+                                      Teknisi Madya Jaringan Komputer
+                                    </option>
+                                    <option value="5">
+                                      Pengoperasian Peralatan Kelistrikan Dan
+                                      Elektronika Berbasis Programmable Logic
+                                      Controller (PLC)
+                                    </option>
+                                    <option value="6">Plate Welder</option>
+                                    <option value="7">
+                                      Pengoperasian Instrumentasi Proses Kontrol
+                                    </option>
+                                    <option value="8">
+                                      Teknisi Akuntansi Pratama
+                                    </option>
+                                  </select>
                                 </div>
                               </td>
                               <td>
@@ -451,12 +488,20 @@
                               </td>
                               <td>
                                 <div class="col-lg-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="val-tahun1"
-                                    name="val-tahun1"
-                                  />
+                                  <div class="input-group">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="datepicker-autoclose"
+                                      placeholder="mm/dd/yyyy"
+                                    />
+                                    <span class="input-group-append"
+                                      ><span class="input-group-text"
+                                        ><i
+                                          class="mdi mdi-calendar-check"
+                                        ></i></span
+                                    ></span>
+                                  </div>
                                 </div>
                               </td>
                               <td>
@@ -474,12 +519,34 @@
                               <td>2</td>
                               <td>
                                 <div class="col-lg-12">
-                                  <input
-                                    type="text"
+                                  <select
                                     class="form-control"
-                                    id="val-jenispelatihan2"
-                                    name="val-jenispelatihan2"
-                                  />
+                                    id="val-skema"
+                                    name="val-skema"
+                                  >
+                                    <option value="1">
+                                      Database Programming Supervisor
+                                    </option>
+                                    <option value="2">
+                                      Network Administrator Muda
+                                    </option>
+                                    <option value="3">Programmer</option>
+                                    <option value="4">
+                                      Teknisi Madya Jaringan Komputer
+                                    </option>
+                                    <option value="5">
+                                      Pengoperasian Peralatan Kelistrikan Dan
+                                      Elektronika Berbasis Programmable Logic
+                                      Controller (PLC)
+                                    </option>
+                                    <option value="6">Plate Welder</option>
+                                    <option value="7">
+                                      Pengoperasian Instrumentasi Proses Kontrol
+                                    </option>
+                                    <option value="8">
+                                      Teknisi Akuntansi Pratama
+                                    </option>
+                                  </select>
                                 </div>
                               </td>
                               <td>
@@ -494,12 +561,20 @@
                               </td>
                               <td>
                                 <div class="col-lg-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="val-tahun2"
-                                    name="val-tahun2"
-                                  />
+                                  <div class="input-group">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="datepicker-autoclose"
+                                      placeholder="mm/dd/yyyy"
+                                    />
+                                    <span class="input-group-append"
+                                      ><span class="input-group-text"
+                                        ><i
+                                          class="mdi mdi-calendar-check"
+                                        ></i></span
+                                    ></span>
+                                  </div>
                                 </div>
                               </td>
                               <td>
@@ -518,12 +593,34 @@
                               <td>3</td>
                               <td>
                                 <div class="col-lg-12">
-                                  <input
-                                    type="text"
+                                  <select
                                     class="form-control"
-                                    id="val-jenispelatihan3"
-                                    name="val-jenispelatihan3"
-                                  />
+                                    id="val-skema"
+                                    name="val-skema"
+                                  >
+                                    <option value="1">
+                                      Database Programming Supervisor
+                                    </option>
+                                    <option value="2">
+                                      Network Administrator Muda
+                                    </option>
+                                    <option value="3">Programmer</option>
+                                    <option value="4">
+                                      Teknisi Madya Jaringan Komputer
+                                    </option>
+                                    <option value="5">
+                                      Pengoperasian Peralatan Kelistrikan Dan
+                                      Elektronika Berbasis Programmable Logic
+                                      Controller (PLC)
+                                    </option>
+                                    <option value="6">Plate Welder</option>
+                                    <option value="7">
+                                      Pengoperasian Instrumentasi Proses Kontrol
+                                    </option>
+                                    <option value="8">
+                                      Teknisi Akuntansi Pratama
+                                    </option>
+                                  </select>
                                 </div>
                               </td>
                               <td>
@@ -538,12 +635,20 @@
                               </td>
                               <td>
                                 <div class="col-lg-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="val-tahun3"
-                                    name="val-tahun3"
-                                  />
+                                  <div class="input-group">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="datepicker-autoclose"
+                                      placeholder="mm/dd/yyyy"
+                                    />
+                                    <span class="input-group-append"
+                                      ><span class="input-group-text"
+                                        ><i
+                                          class="mdi mdi-calendar-check"
+                                        ></i></span
+                                    ></span>
+                                  </div>
                                 </div>
                               </td>
                               <td>
