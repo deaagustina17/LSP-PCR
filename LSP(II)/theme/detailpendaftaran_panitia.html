@@ -108,9 +108,9 @@
         <div class="header-content clearfix">
           <div class="nav-control">
             <div class="hamburger">
-                <span class="toggle-icon"><i class="icon-menu"></i></span>
+              <span class="toggle-icon"><i class="icon-menu"></i></span>
             </div>
-        </div>
+          </div>
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
@@ -526,7 +526,8 @@
                             <label class="col-lg-4 col-form-label" for="val-ktp"
                               >Upload KTP<span class="text-danger">*</span>
                             </label>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<div class="card">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="card">
                               <div class="button-icon">
                                 <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
                                 <input
@@ -547,7 +548,8 @@
                                 >*</span
                               >
                             </label>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<div class="card">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="card">
                               <div class="button-icon">
                                 <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
                                 <input
@@ -1028,7 +1030,9 @@
                     </div>
                     <div class="form-group row">
                       <label class="col-sm-2 col-form-label"
-                        >Tanda Tangan Asesi</label
+                        >Tanda Tangan Asesi<span class="text-danger"
+                          >*</span
+                        ></label
                       >
                       <div class="button-icon">
                         <input
@@ -1056,19 +1060,19 @@
                         </div>
                       </div>
                     </div>
-                    
-
 
                     <div class="form-group row">
                       <label class="col-sm-2 col-form-label"
                         >Tanda Tangan Admin</label
                       >
-                      <div class="button-icon">
-                        <input
-                          type="file"
-                          class="form-control-file"
-                          id="exampleFormControlFile1"
-                        />
+                      <div class="form-check mb-3">
+                        <label class="form-check-label">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            value=""
+                          />Silahkan melakukan penceklisan</label
+                        >
                       </div>
 
                       <label class="col-sm-2 col-form-label">Tanggal</label>
@@ -1185,11 +1189,7 @@
             closeOnConfirm: !1,
           },
           function () {
-            swal(
-              "Berhasil !!",
-              "Data berhasil di approve",
-              "success"
-            );
+            swal("Berhasil !!", "Data berhasil di approve", "success");
           }
         );
       };

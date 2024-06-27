@@ -30,35 +30,12 @@
     <!-- Custom Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
     <link href="./plugins/sweetalert/css/sweetalert.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+
     <link
       href="./plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
       rel="stylesheet"
     />
-    <!-- Page plugins css -->
-    <link
-      href="./plugins/clockpicker/dist/jquery-clockpicker.min.css"
-      rel="stylesheet"
-    />
-    <!-- Color picker plugins css -->
-    <link
-      href="./plugins/jquery-asColorPicker-master/css/asColorPicker.css"
-      rel="stylesheet"
-    />
-    <!-- Date picker plugins css -->
-    <link
-      href="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.css"
-      rel="stylesheet"
-    />
-    <!-- Daterange picker plugins css -->
-    <link
-      href="./plugins/timepicker/bootstrap-timepicker.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="./plugins/bootstrap-daterangepicker/daterangepicker.css"
-      rel="stylesheet"
-    />
+    <link href="css/style.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -108,9 +85,9 @@
         <div class="header-content clearfix">
           <div class="nav-control">
             <div class="hamburger">
-                <span class="toggle-icon"><i class="icon-menu"></i></span>
+              <span class="toggle-icon"><i class="icon-menu"></i></span>
             </div>
-        </div>
+          </div>
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
@@ -152,31 +129,36 @@
         <div class="nk-nav-scroll">
           <ul class="metismenu" id="menu">
             <!-- <li class="nav-label">Dashboard</li> -->
+            <li>
+              <a href="data_asesor.html" aria-expanded="false">
+                <span class="nav-text">Data Asesor</span>
+              </a>
+            </li>
             <li class="active">
-              <a href="index.html" aria-expanded="false">
-                <span class="nav-text">Pendaftaran Skema</span>
+              <a href="index_asesor.html" aria-expanded="false">
+                <span class="nav-text">Surat Tugas</span>
               </a>
             </li>
             <li>
-              <a href="jadwalasesmen_mhs.html" aria-expanded="false">
-                <span class="nav-text">Jadwal Asesmen</span>
-              </a>
-            </li>
-            <li>
-              <a href="keputusan_mhs.html" aria-expanded="false">
+              <a href="keputusan_asesor.html" aria-expanded="false">
                 <span class="nav-text">Keputusan Sertifikasi</span>
               </a>
             </li>
+            <!-- <li>
+                    <a href="laporan_asesor.html" aria-expanded="false">
+                        <span class="nav-text">Laporan Pleno</span>
+                    </a>
+                </li> -->
             <li>
-              <a href="banding_mhs.html" aria-expanded="false">
-                <span class="nav-text">Banding Atas Keputusan Sertifikasi</span>
-              </a>
-            </li>
-            <li>
-              <a href="umpanbalik_mhs.html" aria-expanded="false">
+              <a href="umpanbalik_asesor.html" aria-expanded="false">
                 <span class="nav-text">Umpan Balik</span>
               </a>
             </li>
+            <!-- <li>
+                    <a href="dokumensertifikasi_asesor.html" aria-expanded="false">
+                        <span class="nav-text">Dokumen Sertifikasi Asesor</span>
+                    </a>
+                </li> -->
           </ul>
         </div>
       </div>
@@ -200,7 +182,7 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="pendaftaran2_mhs.html"
+                      <a class="nav-link" href="detailapl2_asesor.html"
                         ><i class="bx bx-bell me-1"></i>APL 02</a
                       >
                     </li>
@@ -210,8 +192,16 @@
                                 >
                               </li> -->
                   </ul>
+                  <a
+                    href="index_asesor.html"
+                    class="list-group-item border-0 p-r-0"
+                    ><i class="fa fa-chevron-left font-18 align-middle mr-2"></i
+                    >Kembali</a
+                  >
+
                   <div class="card">
                     <div class="card-body">
+                      <h4>Detail Data Pendaftaran</h4>
                       <div class="form-validation">
                         <form class="form-valide" action="#" method="post">
                           <h5>
@@ -470,7 +460,8 @@
                             <label class="col-lg-4 col-form-label" for="val-ktp"
                               >Upload KTP<span class="text-danger">*</span>
                             </label>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<div class="card">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="card">
                               <div class="button-icon">
                                 <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
                                 <input
@@ -491,7 +482,8 @@
                                 >*</span
                               >
                             </label>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<div class="card">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="card">
                               <div class="button-icon">
                                 <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
                                 <input
@@ -972,7 +964,7 @@
                     </div>
                     <div class="form-group row">
                       <label class="col-sm-2 col-form-label"
-                        >Tanda Tangan Asesi<span class="text-danger">*</span></label
+                        >Tanda Tangan Asesi</label
                       >
                       <div class="button-icon">
                         <input
@@ -1000,8 +992,6 @@
                         </div>
                       </div>
                     </div>
-                    
-
 
                     <div class="form-group row">
                       <label class="col-sm-2 col-form-label"
@@ -1042,15 +1032,15 @@
                                             </div>
                                         </div>     -->
 
-                  <div class="card-body">
+                  <!-- <div class="card-body">
                     <div class="card-content">
                       <div class="sweetalert m-t-30">
                         <button class="btn btn-dark mb-2 btn sweet-confirm">
-                          Daftar
+                          Approved
                         </button>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -1131,11 +1121,7 @@
             closeOnConfirm: !1,
           },
           function () {
-            swal(
-              "Berhasil !!",
-              "Untuk lanjut ke APL 02, silahkan menunggu admin approve",
-              "success"
-            );
+            swal("Berhasil !!", "Data berhasil di approve", "success");
           }
         );
       };
