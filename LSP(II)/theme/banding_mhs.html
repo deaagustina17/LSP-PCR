@@ -441,26 +441,12 @@
                     </button>
 
                     <!-- Modal -->
-                    <div
-                      class="modal fade"
-                      id="exampleModal"
-                      tabindex="-1"
-                      role="dialog"
-                      aria-labelledby="exampleModalLabel"
-                      aria-hidden="true"
-                    >
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">
-                              Banding Atas Keputusan Sertifikasi
-                            </h5>
-                            <button
-                              type="button"
-                              class="close"
-                              data-dismiss="modal"
-                              aria-label="Tutup"
-                            >
+                            <h5 class="modal-title" id="exampleModalLabel">Banding Atas Keputusan Sertifikasi</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Tutup">
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
@@ -468,16 +454,8 @@
                             Pastikan Data di isi dengan benar
                           </div>
                           <div class="modal-footer">
-                            <button
-                              type="button"
-                              class="btn btn-secondary"
-                              data-dismiss="modal"
-                            >
-                              Tutup
-                            </button>
-                            <button type="button" class="btn btn-primary">
-                              Simpan
-                            </button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="button" class="btn btn-primary" id="saveButton">Simpan</button>
                           </div>
                         </div>
                       </div>
@@ -600,5 +578,10 @@
              }
          }
        </script> -->
+       <script>
+        document.getElementById('saveButton').addEventListener('click', function() {
+          $('#exampleModal').modal('hide');
+        });
+        </script>
   </body>
 </html>

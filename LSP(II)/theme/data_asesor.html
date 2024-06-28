@@ -4,6 +4,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="quixlab" />
+
     <title>LSP PCR</title>
     <!-- Favicon icon -->
     <link
@@ -12,9 +16,21 @@
       sizes="16x16"
       href="images/logo_lsp1.png"
     />
+    <!-- Pignose Calender -->
+    <link
+      href="./plugins/pg-calendar/css/pignose.calendar.min.css"
+      rel="stylesheet"
+    />
+    <!-- Chartist -->
+    <link rel="stylesheet" href="./plugins/chartist/css/chartist.min.css" />
+    <link
+      rel="stylesheet"
+      href="./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css"
+    />
     <!-- Custom Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
-    <!-- Custom Stylesheet -->
+    <link href="./plugins/sweetalert/css/sweetalert.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <link
       href="./plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
       rel="stylesheet"
@@ -151,19 +167,20 @@
                 <span class="nav-text">Keputusan Sertifikasi</span>
               </a>
             </li>
-            <li>
+            <!-- <li>
               <a href="umpanbalik_asesor.html" aria-expanded="false">
                 <span class="nav-text">Umpan Balik</span>
               </a>
-            </li>
-            <!-- <li>
-              <a href="dokumensertifikasi_asesor.html" aria-expanded="false">
-                <span class="nav-text">Dokumen Sertifikasi Asesor</span>
-              </a>
             </li> -->
+            <!-- <li>
+                <a href="dokumensertifikasi_asesor.html" aria-expanded="false">
+                  <span class="nav-text">Dokumen Sertifikasi Asesor</span>
+                </a>
+              </li> -->
           </ul>
         </div>
       </div>
+
       <!--**********************************
             Sidebar end
         ***********************************-->
@@ -307,13 +324,13 @@
                       </div>
 
                       <!-- <div class="form-group row">
-                                <label class="col-lg-4 col-form-label"><a href="#">Terms &amp; Conditions</a>  <span class="text-danger">*</span>
-                                </label>
-                                <div class="col-lg-8">
-                                    <label class="css-control css-control-primary css-checkbox" for="val-terms">
-                                        <input type="checkbox" class="css-control-input" id="val-terms" name="val-terms" value="1"> <span class="css-control-indicator"></span> I agree to the terms</label>
-                                </div>
-                            </div> -->
+                                  <label class="col-lg-4 col-form-label"><a href="#">Terms &amp; Conditions</a>  <span class="text-danger">*</span>
+                                  </label>
+                                  <div class="col-lg-8">
+                                      <label class="css-control css-control-primary css-checkbox" for="val-terms">
+                                          <input type="checkbox" class="css-control-input" id="val-terms" name="val-terms" value="1"> <span class="css-control-indicator"></span> I agree to the terms</label>
+                                  </div>
+                              </div> -->
                       <h5>b. Riwayat pengajaran 3 tahun terakhir</h5>
                       <div class="table-responsive">
                         <table class="table table-striped">
@@ -668,28 +685,37 @@
                     </form>
                   </div>
                 </div>
+                <div class="card-body">
+                  <div class="card-content">
+                    <div class="sweetalert m-t-30">
+                      <button class="btn btn-dark mb-2 btn sweet-success">
+                        Simpan
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- #/ container -->
       </div>
-      <!--**********************************
+    </div>
+    <!--**********************************
             Content body end
         ***********************************-->
 
-      <!--**********************************
+    <!--**********************************
             Footer start
         ***********************************-->
-      <!-- <div class="footer">
+    <!-- <div class="footer">
             <div class="copyright">
                 <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
             </div>
         </div> -->
-      <!--**********************************
+    <!--**********************************
             Footer end
         ***********************************-->
-    </div>
+    <!-- </div> -->
     <!--**********************************
         Main wrapper end
     ***********************************-->
@@ -702,7 +728,8 @@
     <script src="js/settings.js"></script>
     <script src="js/gleek.js"></script>
     <script src="js/styleSwitcher.js"></script>
-
+    <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
     <script src="./plugins/moment/moment.js"></script>
     <script src="./plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
     <!-- Clock Plugin JavaScript -->
@@ -718,5 +745,142 @@
     <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 
     <script src="./js/plugins-init/form-pickers-init.js"></script>
+    <script>
+      document.querySelector(".sweet-message").onclick = function () {
+        swal("Hey, Here's a message !!");
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-text").onclick = function () {
+        swal("Hey, Here's a message !!", "It's pretty, isn't it?");
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-success").onclick = function () {
+        swal("Berhasil disimpan !!", "", "success");
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-confirm").onclick = function () {
+        swal(
+          {
+            title: "Apakah data telah sesuai?",
+            // text: "You will not be able to recover this imaginary file !!",
+            type: "warning",
+            showCancelButton: !0,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Selesai",
+            closeOnConfirm: !1,
+          },
+          function () {
+            swal(
+              "Berhasil !!",
+              "Untuk lanjut ke APL 02, silahkan menunggu admin approve",
+              "success"
+            );
+          }
+        );
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-success-cancel").onclick = function () {
+        swal(
+          {
+            title: "Are you sure to delete ?",
+            text: "You will not be able to recover this imaginary file !!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it !!",
+            cancelButtonText: "No, cancel it !!",
+            closeOnConfirm: false,
+            closeOnCancel: false,
+          },
+          function (e) {
+            e
+              ? swal(
+                  "Deleted !!",
+                  "Hey, your imaginary file has been deleted !!",
+                  "success"
+                )
+              : swal(
+                  "Cancelled !!",
+                  "Hey, your imaginary file is safe !!",
+                  "error"
+                );
+          }
+        );
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-image-message").onclick = function () {
+        swal({
+          title: "Sweet !!",
+          text: "Hey, Here's a custom image !!",
+          imageUrl: "../assets/images/hand.jpg",
+        });
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-html").onclick = function () {
+        swal({
+          title: "Sweet !!",
+          text: "<span style='color:#ff0000'>Hey, you are using HTML !!<span>",
+          html: true,
+        });
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-auto").onclick = function () {
+        swal({
+          title: "Sweet auto close alert !!",
+          text: "Hey, i will close in 2 seconds !!",
+          timer: 2e3,
+          showConfirmButton: false,
+        });
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-prompt").onclick = function () {
+        swal(
+          {
+            title: "Enter an input !!",
+            text: "Write something interesting !!",
+            type: "input",
+            showCancelButton: true,
+            closeOnConfirm: false,
+            animation: "slide-from-top",
+            inputPlaceholder: "Write something",
+          },
+          function (e) {
+            return (
+              !1 !== e &&
+              ("" === e
+                ? (swal.showInputError("You need to write something!"), !1)
+                : void swal("Hey !!", "You wrote: " + e, "success"))
+            );
+          }
+        );
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-ajax").onclick = function () {
+        swal(
+          {
+            title: "Sweet ajax request !!",
+            text: "Submit to run ajax request !!",
+            type: "info",
+            showCancelButton: true,
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true,
+          },
+          function () {
+            setTimeout(function () {
+              swal("Hey, your ajax request finished !!");
+            }, 2e3);
+          }
+        );
+      };
+    </script>
   </body>
 </html>

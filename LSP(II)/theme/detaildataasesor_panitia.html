@@ -13,6 +13,8 @@
       href="images/logo_lsp1.png"
     />
     <!-- Custom Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="./plugins/sweetalert/css/sweetalert.css" rel="stylesheet" />
     <link
       href="./plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
       rel="stylesheet"
@@ -95,9 +97,9 @@
         <div class="header-content clearfix">
           <div class="nav-control">
             <div class="hamburger">
-                <span class="toggle-icon"><i class="icon-menu"></i></span>
+              <span class="toggle-icon"><i class="icon-menu"></i></span>
             </div>
-        </div>
+          </div>
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
@@ -260,6 +262,20 @@
                         </div>
                       </div>
                       <div class="form-group row">
+                        <label class="col-lg-4 col-form-label" for="val-nama"
+                          >Inisial <span class="text-danger">*</span>
+                        </label>
+                        <div class="col-lg-6">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="val-nama"
+                            name="val-nama"
+                            placeholder="Masukkan Inisial.."
+                          />
+                        </div>
+                      </div>
+                      <div class="form-group row">
                         <label class="col-lg-4 col-form-label" for="val-ttl"
                           >Tempat/Tgl.Lahir<span class="text-danger">*</span>
                         </label>
@@ -338,6 +354,7 @@
                         <label class="col-lg-4 col-form-label" for="val-foto"
                           >Tanda Tangan<span class="text-danger">*</span>
                         </label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
                         <div class="card">
                           <div class="button-icon">
                             <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
@@ -480,9 +497,9 @@
                           <thead>
                             <tr>
                               <th>No</th>
-                              <th>Jenis Pelatihan</th>
+                              <th>Skema</th>
                               <th>Pelaksana</th>
-                              <th>Tahun</th>
+                              <th>Tanggal Masa Habis Berlaku</th>
                               <th>Bukti</th>
                             </tr>
                           </thead>
@@ -491,12 +508,34 @@
                               <td>1</td>
                               <td>
                                 <div class="col-lg-12">
-                                  <input
-                                    type="text"
+                                  <select
                                     class="form-control"
-                                    id="val-jenispelatihan1"
-                                    name="val-jenispelatihan1"
-                                  />
+                                    id="val-skema"
+                                    name="val-skema"
+                                  >
+                                    <option value="1">
+                                      Database Programming Supervisor
+                                    </option>
+                                    <option value="2">
+                                      Network Administrator Muda
+                                    </option>
+                                    <option value="3">Programmer</option>
+                                    <option value="4">
+                                      Teknisi Madya Jaringan Komputer
+                                    </option>
+                                    <option value="5">
+                                      Pengoperasian Peralatan Kelistrikan Dan
+                                      Elektronika Berbasis Programmable Logic
+                                      Controller (PLC)
+                                    </option>
+                                    <option value="6">Plate Welder</option>
+                                    <option value="7">
+                                      Pengoperasian Instrumentasi Proses Kontrol
+                                    </option>
+                                    <option value="8">
+                                      Teknisi Akuntansi Pratama
+                                    </option>
+                                  </select>
                                 </div>
                               </td>
                               <td>
@@ -511,12 +550,20 @@
                               </td>
                               <td>
                                 <div class="col-lg-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="val-tahun1"
-                                    name="val-tahun1"
-                                  />
+                                  <div class="input-group">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="datepicker-autoclose"
+                                      placeholder="mm/dd/yyyy"
+                                    />
+                                    <span class="input-group-append"
+                                      ><span class="input-group-text"
+                                        ><i
+                                          class="mdi mdi-calendar-check"
+                                        ></i></span
+                                    ></span>
+                                  </div>
                                 </div>
                               </td>
                               <td>
@@ -534,12 +581,34 @@
                               <td>2</td>
                               <td>
                                 <div class="col-lg-12">
-                                  <input
-                                    type="text"
+                                  <select
                                     class="form-control"
-                                    id="val-jenispelatihan2"
-                                    name="val-jenispelatihan2"
-                                  />
+                                    id="val-skema"
+                                    name="val-skema"
+                                  >
+                                    <option value="1">
+                                      Database Programming Supervisor
+                                    </option>
+                                    <option value="2">
+                                      Network Administrator Muda
+                                    </option>
+                                    <option value="3">Programmer</option>
+                                    <option value="4">
+                                      Teknisi Madya Jaringan Komputer
+                                    </option>
+                                    <option value="5">
+                                      Pengoperasian Peralatan Kelistrikan Dan
+                                      Elektronika Berbasis Programmable Logic
+                                      Controller (PLC)
+                                    </option>
+                                    <option value="6">Plate Welder</option>
+                                    <option value="7">
+                                      Pengoperasian Instrumentasi Proses Kontrol
+                                    </option>
+                                    <option value="8">
+                                      Teknisi Akuntansi Pratama
+                                    </option>
+                                  </select>
                                 </div>
                               </td>
                               <td>
@@ -554,12 +623,20 @@
                               </td>
                               <td>
                                 <div class="col-lg-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="val-tahun2"
-                                    name="val-tahun2"
-                                  />
+                                  <div class="input-group">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="datepicker-autoclose"
+                                      placeholder="mm/dd/yyyy"
+                                    />
+                                    <span class="input-group-append"
+                                      ><span class="input-group-text"
+                                        ><i
+                                          class="mdi mdi-calendar-check"
+                                        ></i></span
+                                    ></span>
+                                  </div>
                                 </div>
                               </td>
                               <td>
@@ -578,12 +655,34 @@
                               <td>3</td>
                               <td>
                                 <div class="col-lg-12">
-                                  <input
-                                    type="text"
+                                  <select
                                     class="form-control"
-                                    id="val-jenispelatihan3"
-                                    name="val-jenispelatihan3"
-                                  />
+                                    id="val-skema"
+                                    name="val-skema"
+                                  >
+                                    <option value="1">
+                                      Database Programming Supervisor
+                                    </option>
+                                    <option value="2">
+                                      Network Administrator Muda
+                                    </option>
+                                    <option value="3">Programmer</option>
+                                    <option value="4">
+                                      Teknisi Madya Jaringan Komputer
+                                    </option>
+                                    <option value="5">
+                                      Pengoperasian Peralatan Kelistrikan Dan
+                                      Elektronika Berbasis Programmable Logic
+                                      Controller (PLC)
+                                    </option>
+                                    <option value="6">Plate Welder</option>
+                                    <option value="7">
+                                      Pengoperasian Instrumentasi Proses Kontrol
+                                    </option>
+                                    <option value="8">
+                                      Teknisi Akuntansi Pratama
+                                    </option>
+                                  </select>
                                 </div>
                               </td>
                               <td>
@@ -598,12 +697,20 @@
                               </td>
                               <td>
                                 <div class="col-lg-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="val-tahun3"
-                                    name="val-tahun3"
-                                  />
+                                  <div class="input-group">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="datepicker-autoclose"
+                                      placeholder="mm/dd/yyyy"
+                                    />
+                                    <span class="input-group-append"
+                                      ><span class="input-group-text"
+                                        ><i
+                                          class="mdi mdi-calendar-check"
+                                        ></i></span
+                                    ></span>
+                                  </div>
                                 </div>
                               </td>
                               <td>
@@ -623,28 +730,37 @@
                     </form>
                   </div>
                 </div>
+                <div class="card-body">
+                  <div class="card-content">
+                    <div class="sweetalert m-t-30">
+                      <button class="btn btn-dark mb-2 btn sweet-success">
+                        Simpan
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- #/ container -->
       </div>
-      <!--**********************************
+    </div>
+    <!--**********************************
             Content body end
         ***********************************-->
 
-      <!--**********************************
+    <!--**********************************
             Footer start
         ***********************************-->
-      <!-- <div class="footer">
+    <!-- <div class="footer">
             <div class="copyright">
                 <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
             </div>
         </div> -->
-      <!--**********************************
+    <!--**********************************
             Footer end
         ***********************************-->
-    </div>
+    <!-- </div> -->
     <!--**********************************
         Main wrapper end
     ***********************************-->
@@ -657,11 +773,8 @@
     <script src="js/settings.js"></script>
     <script src="js/gleek.js"></script>
     <script src="js/styleSwitcher.js"></script>
-
-    <script src="./plugins/tables/js/jquery.dataTables.min.js"></script>
-    <script src="./plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
-    <script src="./plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
-
+    <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
     <script src="./plugins/moment/moment.js"></script>
     <script src="./plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
     <!-- Clock Plugin JavaScript -->
@@ -677,5 +790,142 @@
     <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 
     <script src="./js/plugins-init/form-pickers-init.js"></script>
+    <script>
+      document.querySelector(".sweet-message").onclick = function () {
+        swal("Hey, Here's a message !!");
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-text").onclick = function () {
+        swal("Hey, Here's a message !!", "It's pretty, isn't it?");
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-success").onclick = function () {
+        swal("Berhasil disimpan !!", "", "success");
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-confirm").onclick = function () {
+        swal(
+          {
+            title: "Apakah data telah sesuai?",
+            // text: "You will not be able to recover this imaginary file !!",
+            type: "warning",
+            showCancelButton: !0,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Selesai",
+            closeOnConfirm: !1,
+          },
+          function () {
+            swal(
+              "Berhasil !!",
+              "Untuk lanjut ke APL 02, silahkan menunggu admin approve",
+              "success"
+            );
+          }
+        );
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-success-cancel").onclick = function () {
+        swal(
+          {
+            title: "Are you sure to delete ?",
+            text: "You will not be able to recover this imaginary file !!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it !!",
+            cancelButtonText: "No, cancel it !!",
+            closeOnConfirm: false,
+            closeOnCancel: false,
+          },
+          function (e) {
+            e
+              ? swal(
+                  "Deleted !!",
+                  "Hey, your imaginary file has been deleted !!",
+                  "success"
+                )
+              : swal(
+                  "Cancelled !!",
+                  "Hey, your imaginary file is safe !!",
+                  "error"
+                );
+          }
+        );
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-image-message").onclick = function () {
+        swal({
+          title: "Sweet !!",
+          text: "Hey, Here's a custom image !!",
+          imageUrl: "../assets/images/hand.jpg",
+        });
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-html").onclick = function () {
+        swal({
+          title: "Sweet !!",
+          text: "<span style='color:#ff0000'>Hey, you are using HTML !!<span>",
+          html: true,
+        });
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-auto").onclick = function () {
+        swal({
+          title: "Sweet auto close alert !!",
+          text: "Hey, i will close in 2 seconds !!",
+          timer: 2e3,
+          showConfirmButton: false,
+        });
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-prompt").onclick = function () {
+        swal(
+          {
+            title: "Enter an input !!",
+            text: "Write something interesting !!",
+            type: "input",
+            showCancelButton: true,
+            closeOnConfirm: false,
+            animation: "slide-from-top",
+            inputPlaceholder: "Write something",
+          },
+          function (e) {
+            return (
+              !1 !== e &&
+              ("" === e
+                ? (swal.showInputError("You need to write something!"), !1)
+                : void swal("Hey !!", "You wrote: " + e, "success"))
+            );
+          }
+        );
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-ajax").onclick = function () {
+        swal(
+          {
+            title: "Sweet ajax request !!",
+            text: "Submit to run ajax request !!",
+            type: "info",
+            showCancelButton: true,
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true,
+          },
+          function () {
+            setTimeout(function () {
+              swal("Hey, your ajax request finished !!");
+            }, 2e3);
+          }
+        );
+      };
+    </script>
   </body>
 </html>
