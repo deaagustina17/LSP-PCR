@@ -14,10 +14,71 @@
     />
     <!-- Custom Stylesheet -->
     <link
+      href="./plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
+      rel="stylesheet"
+    />
+    <!-- Page plugins css -->
+    <link
+      href="./plugins/clockpicker/dist/jquery-clockpicker.min.css"
+      rel="stylesheet"
+    />
+    <!-- Color picker plugins css -->
+    <link
+      href="./plugins/jquery-asColorPicker-master/css/asColorPicker.css"
+      rel="stylesheet"
+    />
+    <!-- Date picker plugins css -->
+    <link
+      href="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
+    <!-- Daterange picker plugins css -->
+    <link
+      href="./plugins/timepicker/bootstrap-timepicker.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./plugins/bootstrap-daterangepicker/daterangepicker.css"
+      rel="stylesheet"
+    />
+    <link
       href="./plugins/tables/css/datatable/dataTables.bootstrap4.min.css"
       rel="stylesheet"
     />
     <link href="css/style.css" rel="stylesheet" />
+    <style>
+      .x_panel {
+        border: 1px solid #dfe2e6;
+        padding: 20px;
+        margin-bottom: 20px;
+        background: #fff;
+        border-radius: 10px;
+      }
+      .x_title {
+        border-bottom: 2px solid #e5e5e5;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+      }
+      .x_title h2 {
+        margin: 5px 0;
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+      .x_title small {
+        font-size: 0.875em;
+        color: #909090;
+      }
+      .x_content {
+        margin-top: 20px;
+      }
+      .label-align {
+        text-align: left;
+      }
+      .btn {
+        font-size: 14px;
+      }
+    </style>
+
   </head>
 
   <body>
@@ -207,22 +268,202 @@
 
         <div class="container-fluid">
           <div class="row">
-            <div class="col-lg-12">
-              <div class="card">
-                  <div class="card-body">
-                      <h4 class="card-title">Upload Tanda Tangan</h4>
-                      <div class="basic-form">
-                          <form>
-                              <div class="form-group">
-                                  <input type="file" class="form-control-file">
-                              </div>
-                          </form>
-                      </div>
-                  </div>
+            <div class="col-md-12 col-sm-12">
+              <div class="x_title">
+                <h2>Manajemen Data Diri</h2>
+                <div class="clearfix"></div>
+                <small
+                  >Anda dapat melakukan pengelolaan data diri dan perubahan
+                  password melalui halaman ini.</small
+                >
               </div>
-          </div>
+            </div>
+
+
+            <div class="col-md-6 col-sm-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Data Diri <small>Formulir Data Diri</small></h2>
+                </div>
+                <div class="x_content">
+                  <br />
+                  <input type="hidden" id="id" value="1" name="id" />
+                  <div class="form-group row">
+                    <label
+                      class="col-form-label col-md-4 col-sm-4 label-align"
+                      for="nama_lengkap"
+                      >Nama Lengkap <span class="required">*</span></label
+                    >
+                    <div class="col-md-8 col-sm-8">
+                      <input
+                        type="text"
+                        id="nama_lengkap"
+                        name="nama_lengkap"
+                        value="test admin"
+                        required="required"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label
+                      class="col-form-label col-md-4 col-sm-4 label-align"
+                      for="email"
+                      >Email <span class="required">*</span></label
+                    >
+                    <div class="col-md-8 col-sm-8">
+                      <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        value="test@admin.com"
+                        required="required"
+                        readonly
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label
+                      class="col-form-label col-md-4 col-sm-4 label-align"
+                      for="tanda_tangan"
+                      >Tanda Tangan <span class="required">*</span></label
+                    >
+                    <div class="col-md-8 col-sm-8">
+                      <button
+                        class="btn btn-success btn-sm"
+                        type="button"
+                        data-toggle="modal"
+                        data-target="#modal_ttd"
+                      >
+                        <span class="fa fa-upload"></span> Perbarui Tanda Tangan
+                      </button>
+                      <a href="#" class="btn btn-info btn-sm" target="_blank"
+                        ><span class="fa fa-search"></span> Lihat</a
+                      >
+                    </div>
+                  </div>
+                  <br />
+                  <div class="modal-footer">
+                    <button class="btn btn-warning btn-sm" type="reset">
+                      <span class="fa fa-undo"></span> Reset
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-sm"
+                      onclick="update()"
+                    >
+                      <span class="fa fa-save"></span> Simpan Perubahan
+                    </button>
+                  </div>
+
+                  <!-- Modal -->
+                  <div id="modal_ttd" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h6 class="modal-title">
+                            Silahkan upload tanda tangan
+                          </h6>
+                          <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                          >
+                            &times;
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <input
+                            type="hidden"
+                            id="id_user"
+                            name="id_user"
+                            value="1"
+                          />
+                          <div class="form-group row">
+                            <label
+                              class="col-form-label col-md-4 col-sm-4 label-align"
+                              for="upload_tanda_tangan"
+                              >Upload Tanda Tangan
+                              <span class="required">*</span></label
+                            >
+                            <div class="col-md-8 col-sm-8">
+                              <input
+                                type="file"
+                                id="upload_tanda_tangan"
+                                name="upload_tanda_tangan"
+                                required
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button class="btn btn-warning btn-sm" type="reset">
+                            <span class="fa fa-undo"></span> Reset
+                          </button>
+                          <button type="submit" class="btn btn-primary btn-sm">
+                            <span class="fa fa-save"></span> Simpan
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Data Diri <small>Perubahan Data Password</small></h2>
+                </div>
+                <div class="x_content">
+                  <div class="form-group row">
+                    <label
+                      class="col-form-label col-md-4 col-sm-4 label-align"
+                      for="password_baru"
+                      >Password Baru :</label
+                    >
+                    <div class="col-md-8 col-sm-8">
+                      <input
+                        type="password"
+                        id="password_baru"
+                        name="password_baru"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label
+                      class="col-form-label col-md-4 col-sm-4 label-align"
+                      for="password_ulang"
+                      >Masukkan ulang :</label
+                    >
+                    <div class="col-md-8 col-sm-8">
+                      <input
+                        type="password"
+                        id="password_ulang"
+                        name="password_ulang"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-actions">
+                    <button
+                      type="button"
+                      onclick="update_password()"
+                      class="btn btn-success btn-sm"
+                    >
+                      <span class="fa fa-save"></span> Simpan dan Kirim
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
         <!-- #/ container -->
       </div>
       <!--**********************************
@@ -257,5 +498,31 @@
     <script src="./plugins/tables/js/jquery.dataTables.min.js"></script>
     <script src="./plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
     <script src="./plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
+
+    <script src="./plugins/moment/moment.js"></script>
+    <script src="./plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <!-- Clock Plugin JavaScript -->
+    <script src="./plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
+    <!-- Color Picker Plugin JavaScript -->
+    <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
+    <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
+    <script src="./plugins/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+    <!-- Date Picker Plugin JavaScript -->
+    <script src="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- Date range Plugin JavaScript -->
+    <script src="./plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <script src="./js/plugins-init/form-pickers-init.js"></script>
+    <script>
+      function update() {
+        // Your update function here
+      }
+
+      function update_password() {
+        // Your update password function here
+      }
+    </script>
+
   </body>
 </html>

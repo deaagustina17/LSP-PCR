@@ -30,35 +30,12 @@
     <!-- Custom Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
     <link href="./plugins/sweetalert/css/sweetalert.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+
     <link
       href="./plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
       rel="stylesheet"
     />
-    <!-- Page plugins css -->
-    <link
-      href="./plugins/clockpicker/dist/jquery-clockpicker.min.css"
-      rel="stylesheet"
-    />
-    <!-- Color picker plugins css -->
-    <link
-      href="./plugins/jquery-asColorPicker-master/css/asColorPicker.css"
-      rel="stylesheet"
-    />
-    <!-- Date picker plugins css -->
-    <link
-      href="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.css"
-      rel="stylesheet"
-    />
-    <!-- Daterange picker plugins css -->
-    <link
-      href="./plugins/timepicker/bootstrap-timepicker.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="./plugins/bootstrap-daterangepicker/daterangepicker.css"
-      rel="stylesheet"
-    />
+    <link href="css/style.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -162,7 +139,7 @@
                 <span class="nav-text">Asesmen</span>
               </a>
             </li>
-            <li>
+            <li class="active">
               <a href="keputusan_asesor.html" aria-expanded="false">
                 <span class="nav-text">Keputusan Sertifikasi</span>
               </a>
@@ -178,19 +155,23 @@
               </a>
             </li>
             <!-- <li>
+                    <a href="laporan_asesor.html" aria-expanded="false">
+                        <span class="nav-text">Laporan Pleno</span>
+                    </a>
+                </li> -->
+            <!-- <li>
               <a href="umpanbalik_asesor.html" aria-expanded="false">
                 <span class="nav-text">Umpan Balik</span>
               </a>
             </li> -->
             <!-- <li>
-                <a href="dokumensertifikasi_asesor.html" aria-expanded="false">
-                  <span class="nav-text">Dokumen Sertifikasi Asesor</span>
-                </a>
-              </li> -->
+                    <a href="dokumensertifikasi_asesor.html" aria-expanded="false">
+                        <span class="nav-text">Dokumen Sertifikasi Asesor</span>
+                    </a>
+                </li> -->
           </ul>
         </div>
       </div>
-
       <!--**********************************
             Sidebar end
         ***********************************-->
@@ -199,56 +180,57 @@
             Content body start
         ***********************************-->
       <div class="content-body">
-        <!-- row -->
         <div class="container-fluid">
-          <div class="row justify-content-center">
-            <div class="col-lg-12">
-              <div class="card">
-                <div class="card-body">
-                  <div class="form-validation">
-                    <form class="form-valide" action="#" method="post">
-                      <div class="form-group row">
-                        <label class="col-lg-4 col-form-label" for="val-nama"
-                          >Skema Sertifikasi <span class="text-danger">*</span>
-                        </label>
-                        <div class="col-lg-6">
-                          <select
-                            class="form-control"
-                            id="val-jk"
-                            name="val-jk"
-                          >
-                          <option value="1">
-                            Database Programming Supervisor
-                          </option>
-                          <option value="2">
-                            Network Administrator Muda
-                          </option>
-                          <option value="3">Programmer</option>
-                          <option value="4">
-                            Teknisi Madya Jaringan Komputer
-                          </option>
-                          <option value="5">
-                            Pengoperasian Peralatan Kelistrikan Dan
-                            Elektronika Berbasis Programmable Logic
-                            Controller (PLC)
-                          </option>
-                          <option value="6">Plate Welder</option>
-                          <option value="7">
-                            Pengoperasian Instrumentasi Proses Kontrol
-                          </option>
-                          <option value="8">
-                            Teknisi Akuntansi Pratama
-                          </option>
-                          </select>
-                        </div>
+          <div class="card">
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="nav nav-pills flex-column flex-md-row mb-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="javascript:void(0);"
+                        ><i class="bx bx-user me-1"></i>FR.AK 02</a
+                      >
+                    </li>
+                    
+                    <!-- <li class="nav-item">
+                                <a class="nav-link" href="pages-account-settings-connections.html"
+                                  ><i class="bx bx-link-alt me-1"></i> Connections</a
+                                >
+                              </li> -->
+                  </ul>
+                  <a
+                    href="keputusan_asesor.html"
+                    class="list-group-item border-0 p-r-0"
+                    ><i class="fa fa-chevron-left font-18 align-middle mr-2"></i
+                    >Kembali</a
+                  >
+
+                  <div class="card">
+                    <div class="card-body">
+                      <h4>Rekaman Asesmen Kompetensi</h4>
+                      <div class="form-validation">
+                        
                       </div>
-                      <div class="form-group row">
-                        <label class="col-lg-4 col-form-label" for="val-ttl"
-                          >Tanggal Habis Berlaku<span class="text-danger"
-                            >*</span
-                          >
-                        </label>
-                        <div class="col-lg-3">
+                    </div>
+                  </div>
+
+                
+                  <div class="card-body">
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label"
+                        >Tanda Tangan Asesi</label
+                      >
+                      <div class="button-icon">
+                        <input
+                          type="file"
+                          class="form-control-file"
+                          id="exampleFormControlFile1"
+                        />
+                      </div>
+  
+                      <label class="col-sm-2 col-form-label">Tanggal</label>
+                      <div class="col-md-4">
+                        <div class="example">
                           <div class="input-group">
                             <input
                               type="text"
@@ -263,39 +245,62 @@
                           </div>
                         </div>
                       </div>
-
-                      <div class="form-group row">
-                        <label class="col-lg-4 col-form-label" for="val-foto"
-                          >Upload<span class="text-danger">*</span>
-                        </label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <div class="card">
-                          <div class="button-icon">
-                            <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label"
+                        >Tanda Tangan Asesor</label
+                      >
+                      <div class="form-check mb-3">
+                        <label class="form-check-label">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            value=""
+                          />Silahkan melakukan penceklisan</label
+                        >
+                      </div>
+  
+                      <label class="col-sm-2 col-form-label">Tanggal</label>
+                      <div class="col-md-4">
+                        <div class="example">
+                          <div class="input-group">
                             <input
-                              type="file"
-                              class="form-control-file"
-                              id="exampleFormControlFile1"
-                              accept="image/*"
+                              type="text"
+                              class="form-control"
+                              id="datepicker-autoclose"
+                              placeholder="mm/dd/yyyy"
                             />
+                            <span class="input-group-append"
+                              ><span class="input-group-text"
+                                ><i class="mdi mdi-calendar-check"></i></span
+                            ></span>
                           </div>
                         </div>
                       </div>
-
-
-                     
-                      
-                    </form>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-content">
-                    <div class="sweetalert m-t-30">
-                      <button class="btn btn-dark mb-2 btn sweet-success">
-                        Simpan
-                      </button>
+                    </div>
+                    <div class="card-content">
+                      <div class="sweetalert m-t-30">
+                        <button class="btn btn-dark mb-2 btn sweet-success">
+                          Simpan
+                        </button>
+                      </div>
                     </div>
                   </div>
+                  <!-- <div class="form-group row">
+                                            <div class="col-lg-8 ml-auto">
+                                                <a href="pendaftaran2_mhs.html" class="btn btn-primary">Daftar</a>
+                                            </div>
+                                        </div>     -->
+
+                  <!-- <div class="card-body">
+                    <div class="card-content">
+                      <div class="sweetalert m-t-30">
+                        <button class="btn btn-dark mb-2 btn sweet-confirm">
+                          Approved
+                        </button>
+                      </div>
+                    </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -360,7 +365,7 @@
     </script>
     <script>
       document.querySelector(".sweet-success").onclick = function () {
-        swal("Berhasil disimpan !!", "", "success");
+        swal("Hey, Good job !!", "You clicked the button !!", "success");
       };
     </script>
     <script>
@@ -376,11 +381,7 @@
             closeOnConfirm: !1,
           },
           function () {
-            swal(
-              "Berhasil !!",
-              "Untuk lanjut ke APL 02, silahkan menunggu admin approve",
-              "success"
-            );
+            swal("Berhasil !!", "Data berhasil di approve", "success");
           }
         );
       };
@@ -484,6 +485,54 @@
           }
         );
       };
+    </script>
+    <script>
+      document
+        .getElementById("checkbox1")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox2").checked = false;
+          document.getElementById("checkbox3").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox2")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox1").checked = false;
+          document.getElementById("checkbox3").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox3")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox1").checked = false;
+          document.getElementById("checkbox2").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox4")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox5").checked = false;
+          document.getElementById("checkbox6").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox5")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox4").checked = false;
+          document.getElementById("checkbox6").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox6")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox4").checked = false;
+          document.getElementById("checkbox5").checked = false;
+        });
     </script>
   </body>
 </html>
