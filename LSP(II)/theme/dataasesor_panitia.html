@@ -46,6 +46,49 @@
       rel="stylesheet"
     />
     <link href="css/style.css" rel="stylesheet" />
+    <style>
+      .small-text {
+        font-size: 12px;
+        color: black;
+      }
+
+      .badge.bg-green {
+        background-color: #1abb9c;
+        color: #fff;
+        border: 1px solid #1abb9c;
+      }
+      .bg-green {
+        color: #fff;
+      }
+      .badge.bg-red {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+      }
+
+      .color-muted {
+        color: #6c757d;
+      }
+
+      .color-danger {
+        color: #dc3545;
+      }
+
+      .table th h5 {
+        margin: 0;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .modal-header {
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #e9ecef;
+      }
+
+      .modal-body {
+        padding: 20px;
+      }
+    </style>
   </head>
 
   <body>
@@ -95,9 +138,9 @@
         <div class="header-content clearfix">
           <div class="nav-control">
             <div class="hamburger">
-                <span class="toggle-icon"><i class="icon-menu"></i></span>
+              <span class="toggle-icon"><i class="icon-menu"></i></span>
             </div>
-        </div>
+          </div>
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
@@ -249,92 +292,63 @@
                   > -->
                   <div class="table-responsive">
                     <table
-                      class="table table-striped table-bordered zero-configuration"
+                      class="table table-striped table-bordered zero-configuration dataTable no-footer"
                     >
                       <thead>
                         <tr>
-                          <th>Nama Lengkap</th>
-                          <th>Inisial</th>
-                          <th>Jenis Kelamin</th>
-                          <th>Aksi</th>
+                          <th>
+                            <h6><b>Nama Lengkap</b></h6>
+                          </th>
+                          <th>
+                            <h6><b>Inisial</b></h6>
+                          </th>
+                          <th>
+                            <h6><b>Jenis Kelamin</b></h6>
+                          </th>
+                          <th>
+                            <h6><b>Aksi</b></h6>
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        <tr class="small-text">
                           <td>Anggy Trisnadoli, S.S.T., M.T.</td>
                           <td>ATD</td>
                           <td>Laki-Laki</td>
                           <td>
-                            <span>
-                              <a
-                                href="editdataasesor_panitia.html"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                title="Edit"
-                                ><i class="fa fa-pencil color-muted m-r-5"></i
-                              ></a>
-                              <a
-                                href="#"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                title="Hapus"
-                                ><i class="fa fa-trash-o color-danger"></i
-                              ></a>
-                              <a
-                                href="detaildataasesor_panitia.html"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                title="Detail"
-                                ><i class="fa fa-info-circle color-danger"></i
-                              ></a>
-                              <a
-                                href="#"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                title="Unduh"
-                                ><i class="fa fa-download color-danger"></i
-                              ></a>
-                            </span>
+                            <button
+                            class="badge bg-green"
+                            title="Edit Data"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            id="editButton"
+                          >
+                            <i class="fa fa-pencil m-r-5" style="color: white"></i>
+                          </button>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="small-text">
                           <td>Dini Nurmalasari, S.T., M.T</td>
                           <td>DNS</td>
                           <td>Perempuan</td>
                           <td>
-                            <span>
-                              <a
-                                href="editdataasesor_panitia.html"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                title="Edit"
-                                ><i class="fa fa-pencil color-muted m-r-5"></i
-                              ></a>
-                              <a
-                                href="#"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                title="Hapus"
-                                ><i class="fa fa-trash-o color-danger"></i
-                              ></a>
-                              <a
-                                href="detaildataasesor_panitia.html"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                title="Detail"
-                                ><i class="fa fa-info-circle color-danger"></i
-                              ></a>
-                              <a
-                                href="#"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                title="Unduh"
-                                ><i class="fa fa-download color-danger"></i
-                              ></a>
-                            </span>
+                            <button
+                              class="badge bg-green"
+                              title="Edit Data"
+                              data-toggle="modal"
+                              data-target="#add-edit"
+                              data-toggle="modal"
+                              data-placement="top"
+                            >
+                              <i
+                                class="fa fa-pencil m-r-5"
+                                style="color: white"
+                              ></i>
+                            </button>
                           </td>
                         </tr>
                       </tbody>
+
                       <!-- Modal Add Category -->
                       <div class="modal fade none-border" id="add-category">
                         <div class="modal-dialog">
@@ -639,5 +653,15 @@
     <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 
     <script src="./js/plugins-init/form-pickers-init.js"></script>
+    <script>
+      $(document).ready(function () {
+          $('[data-toggle="tooltip"]').tooltip();
+
+          // Optional: Add action to open modal
+          $('#editButton').on('click', function () {
+              $('#editModal').modal('show');
+          });
+      });
+  </script>
   </body>
 </html>
