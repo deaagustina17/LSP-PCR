@@ -1,0 +1,3226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="quixlab" />
+
+    <title>LSP PCR</title>
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/logo_lsp1.png"
+    />
+    <!-- Pignose Calender -->
+    <link
+      href="./plugins/pg-calendar/css/pignose.calendar.min.css"
+      rel="stylesheet"
+    />
+    <!-- Chartist -->
+    <link rel="stylesheet" href="./plugins/chartist/css/chartist.min.css" />
+    <link
+      rel="stylesheet"
+      href="./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css"
+    />
+    <!-- Custom Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="./plugins/sweetalert/css/sweetalert.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      href="./plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
+      rel="stylesheet"
+    />
+    <!-- Page plugins css -->
+    <link
+      href="./plugins/clockpicker/dist/jquery-clockpicker.min.css"
+      rel="stylesheet"
+    />
+    <!-- Color picker plugins css -->
+    <link
+      href="./plugins/jquery-asColorPicker-master/css/asColorPicker.css"
+      rel="stylesheet"
+    />
+    <!-- Date picker plugins css -->
+    <link
+      href="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
+    <!-- Daterange picker plugins css -->
+    <link
+      href="./plugins/timepicker/bootstrap-timepicker.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./plugins/bootstrap-daterangepicker/daterangepicker.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+      <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+          <circle
+            class="path"
+            cx="50"
+            cy="50"
+            r="20"
+            fill="none"
+            stroke-width="3"
+            stroke-miterlimit="10"
+          />
+        </svg>
+      </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+      <!--**********************************
+            Nav header start
+        ***********************************-->
+      <div class="nav-header text-center">
+        <!-- <a href="index.html"> -->
+        <span class="brand-title">
+          <img src="images/logo_lsp1.png" width="100" height="auto" />
+        </span>
+      </div>
+      <!--**********************************
+            Nav header end
+        ***********************************-->
+
+      <!--**********************************
+            Header start
+        ***********************************-->
+      <div class="header">
+        <div class="header-content clearfix">
+          <div class="nav-control">
+            <div class="hamburger">
+              <span class="toggle-icon"><i class="icon-menu"></i></span>
+            </div>
+          </div>
+          <div class="header-right">
+            <ul class="clearfix">
+              <li class="icons dropdown">
+                <div
+                  class="user-img c-pointer position-relative"
+                  data-toggle="dropdown"
+                >
+                  <span class="activity active"></span>
+                  <img src="images/user/1.png" height="40" width="40" alt="" />
+                </div>
+                <div
+                  class="drop-down dropdown-profile animated fadeIn dropdown-menu"
+                >
+                  <div class="dropdown-content-body">
+                    <ul>
+                      <!-- <li><a href="/LSP/masuk.html"><i class="icon-key"></i> <span>Logout</span></a></li> -->
+                      <li>
+                        <a
+                          href="file:///D:/SEMESTER%208/PA/LSP%20PCR/LSP/masuk.html"
+                          ><i class="icon-key"></i> <span>Keluar</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+      <!--**********************************
+            Sidebar start
+        ***********************************-->
+      <div class="nk-sidebar">
+        <div class="nk-nav-scroll">
+          <ul class="metismenu" id="menu">
+            <!-- <li class="nav-label">Dashboard</li> -->
+            <li class="active">
+              <a href="index.html" aria-expanded="false">
+                <span class="nav-text">Pendaftaran Skema</span>
+              </a>
+            </li>
+            <li>
+              <a href="jadwalasesmen_mhs.html" aria-expanded="false">
+                <span class="nav-text">Jadwal Asesmen</span>
+              </a>
+            </li>
+            <li>
+              <a href="keputusan_mhs.html" aria-expanded="false">
+                <span class="nav-text">Keputusan Sertifikasi</span>
+              </a>
+            </li>
+            <li>
+              <a href="banding_mhs.html" aria-expanded="false">
+                <span class="nav-text">Banding Atas Keputusan Sertifikasi</span>
+              </a>
+            </li>
+            <li>
+              <a href="umpanbalik_mhs.html" aria-expanded="false">
+                <span class="nav-text">Umpan Balik</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+      <!--**********************************
+            Content body start
+        ***********************************-->
+      <div class="content-body">
+        <div class="container-fluid">
+          <div class="card">
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="nav nav-pills flex-column flex-md-row mb-3">
+                    <li class="nav-item">
+                      <a class="nav-link" href="pendaftaran_mhs4.html"
+                        ><i class="bx bx-user me-1"></i>APL 01</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="javascript:void(0);"
+                        ><i class="bx bx-bell me-1"></i>APL 02</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="persetujuanasesmen_mhs.html"
+                        ><i class="bx bx-bell me-1"></i>FR.AK.01</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="form-validation">
+                        <form class="form-valide" action="#" method="post">
+                          <h5>Asesmen Mandiri</h5>
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">
+                                      Memelihara Efektivitas Hubungan di tempat
+                                      kerja
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Mengenali dan mematuhi,
+                                      peraturan K3, undang-undang lingkungan,
+                                      kebijakan dan prosedur perusahaan, serta
+                                      tanda dan kode yang dipakai di lokasi
+                                      kerja<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      1.1 Peraturan K3, undang-undang
+                                      lingkungan, kebijakan dan prosedur
+                                      perusahaan, tanda dan kode yang berlaku di
+                                      lokasi pekerjaan dijelaskan sesuai
+                                      prosedur kerja.<br />
+                                      1.2 Peraturan K3, undang-undang
+                                      lingkungan, kebijakan dan prosedur
+                                      perusahaan, tanda dan kode yang berlaku di
+                                      lokasi pekerjaan dipatuhi sebagai
+                                      ketentuan yang harus dilaksanakan<br />
+                                      1.3 Peran dan tanggung-jawab personel
+                                      diidentifikasi dalam area yang terkait
+                                      dengan kesehatan, keselamatan, keamanan
+                                      dan lingkungan.<br />
+                                      1.4 Pemberi kerja dan karyawan yang
+                                      bertanggung jawab terhadap kesehatan,
+                                      keselamatan, keamanan dan lingkungan
+                                      diidentifikasi sesuai prosedur standar
+                                      K3.<br />
+                                      1.5 Petugas kebersihan diperkerjakan
+                                      sesuai prosedur kerja dan peraturan K3.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox1"
+                                            checked
+                                            name="checkbox1"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox2"
+                                            name="checkbox2"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Menggunakan peralatan pelindung
+                                      diri<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      2.1. Peralatan pelindung diri dipelihara
+                                      sesuai prosedur standar dan buku petunjuk
+                                      pemeliharaan (instruction manual).<br />
+                                      2.2. Peralatan pelindung diri digunakan
+                                      sesuai prosedur kerja dan K3.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      3. Elemen: Mematuhi buku petunjuk
+                                      (Instruction Manual)<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      3.1. Buku petunjuk penanganan peralatan
+                                      yang sesuai dengan lokasi pekerjaan
+                                      diidentifikasi sesuai prosedur standar.<br />
+                                      3.2. Buku petunjuk penanganan peralatan
+                                      ditempatkan sesuai dengan lokasi pekerjaan
+                                      & prosedur kerja.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      4. Elemen: Mengambil tindakan yang sesuai
+                                      terhadap lokasi pekerjaan yang penuh
+                                      risiko bahaya<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      4.1. Material yang berhubungan dengan
+                                      lokasi pekerjaan yang penuh risiko bahaya
+                                      terhadap kesehatan dan keselamatan
+                                      individu, lokasi dan lingkungan pekerjaan
+                                      diidentifikasi sesuai prosedur kerja dan
+                                      K3.<br />
+                                      4.2. Tindakan pencegahan, penerapan
+                                      prosedur, penyimpanan dan pemberian tanda
+                                      bahaya di lokasi pekerjaan dilaksanakan
+                                      sesuai prosedur, peraturan K3 dan
+                                      lingkungan.<br />
+                                      4.3. Pemberian tanda bahaya yang tidak
+                                      dapat teridentifikasi dilaporkan kepada
+                                      pihak yang berwenang sesuai prosedur
+                                      pelaporan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      5. Elemen: Membuat laporan peristiwa dan
+                                      penyelidikan kecelakaan kerja<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      5.1. Pelaporan peristiwa dan penyelidikan
+                                      kecelakaan kerja diidentifikasi sesuai
+                                      prosedur pelaporan.<br />
+                                      5.2. Laporan peristiwa dan penyelidikan
+                                      kecelakaan kerja dibuat sesuai prosedur
+                                      pelaporan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      6. Elemen: Melaksanakan prosedur keadaan
+                                      darurat<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      6.1. Kejadian keadaan darurat, kecelakan,
+                                      atau keadaan bahaya diidentifikasi sesuai
+                                      prosedur kerja.<br />
+                                      6.2. Peralatan keadaan darurat
+                                      diidentifikasi sesuai prosedur standar<br />
+                                      6.3. Prosedur tanggap darurat dan evakuasi
+                                      diterapkan sesuai prosedur kerja.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      7. Elemen: Melaksanakan pola hidup
+                                      sehat<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      7.1. Sumber daya internal dan eksternal
+                                      yang membantu pekerja berhadapan dengan
+                                      faktor-faktor pendorong kearah pola hidup
+                                      tidak sehat diidentifikasi sesuai prosedur
+                                      standar<br />
+                                      7.2. Faktor-faktor penyebab kondisi
+                                      pekerja tidak nyaman diatasi sesuai
+                                      prosedur.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <br />
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">
+                                      Memelihara Lingkungan Tempat Kerja
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Memberi danmenerima instruksi
+                                      dan informasi yangberkaitan dengan
+                                      pekerjaan<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      1.1 Instruksi dan informasi yangberkaitan
+                                      dengan pekerjaan diterimasesuai prosedur
+                                      komunikasi ditempat kerja<br />
+                                      1.2 Instruksi dan informasi yangberkaitan
+                                      dengan pekerjaan ditindaklanjuti sesuai
+                                      prosedur standar komunikasi.<br />
+                                      1.3 Instruksi dan informasi yang berkaitan
+                                      dengan pekerjaan dikonfirmasi kepada
+                                      penerima untuk meyakinkan tidak terjadi
+                                      kekeliruan sesuai prosedur komunikasi
+                                      ditempat kerja.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox7"
+                                            checked
+                                            name="checkbox7"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox8"
+                                            name="checkbox8"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Mengikuti prosedur dan
+                                      kebijakan perusahaan<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      2.1. Kebijakan perusahaan yang terkait
+                                      diidentifikasi sesuai prosedur standar.<br />
+                                      2.2. Personal yang bertanggung jawab untuk
+                                      menerima keluhan tentang pelanggaran atas
+                                      kebijakan perusahaan yang terkait
+                                      diidentifikasi sesuai prosedur standar.<br />
+                                      2.3. Kebijakan perusahaan yang terkait
+                                      dilaksanakan sesuai prosedur kerja.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox9"
+                                            checked
+                                            name="checkbox9"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox10"
+                                            name="checkbox10"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      3. Elemen: Menyelesaikan permasalahan di
+                                      tempat kerja<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      3.1. Proses penyelesaian permasalahan
+                                      diidentifikasi sesuai prosedur standar.<br />
+                                      3.2. Proses penyelesaian permasalahan
+                                      dimonitor sehingga meminimalisasi gangguan
+                                      terhadap pekerjaan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      4. Elemen: Melaporkan permasalahan di
+                                      tempat kerja<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      4.1. Formulir permasalahan di
+                                      dokumentasikan sesuai prosedur penyimpanan
+                                      dokumen<br />
+                                      4.2. Formulir permasalahan dilaporkan
+                                      sesuai prosedur pelaporan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <br />
+
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">Menulis Program Sofware</th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Menyiapkan aktivitas
+                                      pekerjaan<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      1.1. Dokumen rancangan hardware sistem,
+                                      dokumen rancangan diagram alur program dan
+                                      dokumen lain yang diperlukan disiapkan
+                                      sesuai prosedur persiapan.<br />
+                                      1.2. Rencana kegiatan dibuat sesuai
+                                      prosedur persiapan.<br />
+                                      1.3. Area kerja, bahan, peralatan dan
+                                      software aplikasi kontrol dan software
+                                      pendukung disiapkan sesuai spesifikasi
+                                      pekerjaan dan prosedur persiapan.<br />
+                                      1.4. Persiapan pekerjaan yang tidak dapat
+                                      dilaksanakan secara lengkap segera
+                                      dilaporkan sesuai prosedur persiapan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox11"
+                                            checked
+                                            name="checkbox11"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox12"
+                                            name="checkbox12"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Merancang program software<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      2.1. Input, output dan proses,
+                                      diidentifikasi sesuai kebutuhan sistem
+                                      baik digital maupun analog untuk pembuatan
+                                      program pengendalian proses berdasarkan
+                                      algoritma sistem/proses.<br />
+                                      2.2. Metode standar perancangan program
+                                      software dipilih berdasar spesifikasi yang
+                                      dipersyaratkan dan atau ketentuan
+                                      perusahaan.<br />
+                                      2.3. Software aplikasi kontrol dipilih
+                                      berdasar spesifikasi yang dipersyaratkan
+                                      dan atau ketentuan perusahaan.<br />
+                                      2.4. Setiap aktifitas input (class
+                                      diagram) diterjemahkan ke dalam bentuk
+                                      program sesuai prosedur perancangan.<br />
+                                      2.5. Setiap unit proses (collaboration
+                                      diagram) yang merupakan kolaborasi
+                                      beberapa input lengkap dengan parameternya
+                                      dirubah ke dalam bentuk program sesuai
+                                      standar pemrograman dan ketentuan
+                                      perusahaan.<br />
+                                      2.6. Setiap aktifitas unit proses
+                                      (activity diagram) lengkap dengan
+                                      parameternya dirubah ke dalam bentuk
+                                      program sesuai prosedur pemrograman.<br />
+                                      2.7. Sistem basis data dirancang berdasar
+                                      spesifikasi yang dipersyaratkan sesuai
+                                      standar pemrograman.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      5. Elemen: Menguji program software<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      3.1. Hasil rancangan program diuji melalui
+                                      simulasi alat pengolah data. <br />
+                                      3.2. Hasil simulasi yang belum sesuai
+                                      dengan persyaratan spesifikasi dilakukan
+                                      modifikasi program.<br />
+                                      3.3. Hasil rancangan program yang telah
+                                      sesuai dengan persyaratan spesifikasi
+                                      dilaporkan sesuai prosedur pelaporan.<br />
+                                      3.4. Data hasil pengujian dievaluasi
+                                      menggunakan prinsip dan metode yang
+                                      tepat.<br />
+                                      3.5. Hasil pengujian yang belum sesuai
+                                      dengan spesifikasi yang dipersyaratkan
+                                      dilakukan modifikasi program.<br />
+                                      3.6. Hasil rancangan dan pengujian program
+                                      dikonsultasikan sesuai prosedur pengujian.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      4. Elemen: Melaporkan hasil rancangan
+                                      program<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      4.1. Dokumen hasil rancangan program dalam
+                                      bentuk hard dan soft copy diserahkan
+                                      kepada atasan untuk diputuskan sesuai
+                                      prosedur pelaporan.<br />
+                                      4.2. Area kerja dan peralatan pendukung
+                                      perancangan program dikembalikan ke
+                                      kondisi semula sesuai prosedur standar.<br />
+                                      4.3. Dokumen rancangan hardware dan alur
+                                      program sistem dan dokumen lain yang
+                                      terkait teknis perancangan program
+                                      dikembalikan sesuai prosedur standar.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <br />
+
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">
+                                      Melaksanakan Komisioning Sistem
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Melaksanakan pemeriksaan sistem
+                                      Instalasi (Installation Check)<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      1.1. Sumber daya yang diperlukan untuk
+                                      pemeriksaan sistem instalasi
+                                      diidentifikasi sesuai dengan spesifikasi
+                                      pekerjaan yang telah ditentukan.<br />
+                                      1.2. Perlengkapan kerja, gambar sistem dan
+                                      instruksi kerja diinterpretasikan sesuai
+                                      dengan rencana kerja.<br />
+                                      1.3. Lokasi kerja disiapkan sesuai dengan
+                                      keperluan pekerjaan sesuai prosedur
+                                      pemeriksaan.<br />
+                                      1.4. Peralatan/sub sistem instalasi
+                                      otomasi diperiksa dan diteliti sesuai
+                                      dengan spesifikasi yang telah ditentukan
+                                      sesuai prosedur pemeriksaan.<br />
+                                      1.5. Semua komponen sistem yang sudah
+                                      terpasang sebelum beroperasi dilakukan
+                                      pemeriksaan sesuai standar pemasangan
+                                      untuk menentukan kelaikan operasi sistem
+                                      sesuai dengan standar kelayakan sistem
+                                      otomasi.<br />
+                                      1.6. Data hasil pemeriksaan sistem
+                                      instalasi dikaji berdasarkan standar
+                                      kelayakan pengoperasian sistem untuk
+                                      pengambilan keputusan.<br />
+                                      1.7. Penyimpangan terhadap kondisi kerja
+                                      baik peralatan utama dan pendukung
+                                      instalasi sistem otomasi disesuikan
+                                      kembali sesuai standar kelayakan
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox23"
+                                            checked
+                                            name="checkbox23"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox24"
+                                            name="checkbox24"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Melaksanakan uji kinerja
+                                      (Performance Test)<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      1.1. Sumber daya yang diperlukan untuk
+                                      pengoperasian dan pengujian kinerja sistem
+                                      otomasi diidentifikasi sesuai dengan
+                                      spesifikasi pekerjaan yang telah
+                                      ditentukan.<br />
+                                      1.2. Perlengkapan kerja, gambar sistem dan
+                                      instruksi kerja diinterpretasikan<br />
+                                      1.3. Lokasi kerja disiapkan sesuai dengan
+                                      keperluan pekerjaan sesuai prosedur
+                                      pengujian.<br />
+                                      1.4. Peralatan/sub sistem otomasi diuji
+                                      dan diteliti kinerjanya sesuai dengan
+                                      spesifikasi yang telah ditentukan sesuai
+                                      prosedur pengujian.<br />
+                                      1.5. Unjuk kerja sistem otomasi di uji
+                                      berdasarkan standar kinerja sistem dengan
+                                      menjalankan dan membebani sistem sesuai
+                                      dengan standar kerja peralatan sistem.<br />
+                                      1.6. Data parameter sistem hasil pengujian
+                                      dianalisa sebagai dasar pengambilan
+                                      keputusan untuk mendapatkan kualitas
+                                      kinerja sistem yang optimal.<br />
+                                      1.7. Penyimpangan terhadap kerja peralatan
+                                      utama dan pendukung sistem otomasi diset
+                                      (tunning up) untuk mendapatkan kualitas
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox25"
+                                            checked
+                                            name="checkbox25"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox26"
+                                            name="checkbox26"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      3. Elemen: Melaksanakan inspection test<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      1.1. Sumber daya yang diperlukan untuk
+                                      penginspeksian dan pengoperasian sistem
+                                      otomasi diidentifikasi sesuai prosedur
+                                      standar.<br />
+                                      1.2. Perlengkapan kerja, gambar sistem dan
+                                      instruksi kerja diinterpretasikan sesuai
+                                      dengan rencana kerja.<br />
+                                      1.3. Lokasi kerja disiapkan sesuai dengan
+                                      keperluan pekerjaan sesuai prosedur
+                                      pengujian.<br />
+                                      1.4. Peralatan/sub sistem otomasi
+                                      diinspeksi sesuai dengan spesifikasi yang
+                                      telah ditentukan sesuai prosedur
+                                      pengujian.<br />
+                                      1.5. Operasional komponen dan peralatan
+                                      sistem otomasi diperiksa berdasarkan
+                                      prosedur standar.<br />
+                                      1.6. Data hasil inspeksi terhadap
+                                      operasional sistem otomasi dianalisa untuk
+                                      menentukan kelangsungan operasi sistem
+                                      sesuai prosedur pengujian.<br />
+                                      1.7. Penyimpangan terhadap kondisi kerja
+                                      peralatan utama dan pendukung sistem
+                                      otomasi diperbaiki sesuai prosedur
+                                      pengujian.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox27"
+                                            checked
+                                            name="checkbox27"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox28"
+                                            name="checkbox28"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      4. Elemen: Membuat laporan hasil
+                                      komisioning<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      4.1. Semua hasil komisioning dibandingkan
+                                      dengan standar dan spesifikasi unjuk kerja
+                                      sistem otomasi sesuai prosedur
+                                      pelaporan.<br />
+                                      4.2. Semua hasil pemeriksaan dan pengujian
+                                      dibuat berita acara dan laporan sesuai
+                                      dengan format yang telah ditentukan
+                                      diserahkan pada atasan yang terkait sesuai
+                                      prosedur pelaporan.<br />
+                                      4.3. Selesai melakukan komisioning
+                                      terhadap hasil pemasangan, hasil kerja dan
+                                      keberlangsungan operasional sistem otomasi
+                                      semua peralatan dan perlengkapan kerja
+                                      ditata kembali sesuai prosedur standar.<br />
+                                      4.4. Setelah semua pekerjaan selesai,
+                                      semua penanganan sistem otomasi
+                                      selanjutnya diserahkan kepada personel
+                                      yang ditunjuk untuk pelaksanaan
+                                      pengoperasian sesuai prosedur
+                                      pengoperasian.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <br />
+
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">
+                                      Mengoperasikan Mesin Perkakas Konvensional
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Menyiapkan aktifitas
+                                      pekerjaan<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      1.1. Gambar rancangan benda disiapkan
+                                      sesuai prosedur standar<br />
+                                      1.2. Bahan baku atau benda kerja disiapkan
+                                      sesuai spesifikasi kebutuhan dan prosedur
+                                      standar<br />
+                                      1.3. Bahan baku atau benda kerja diukur
+                                      dimensinya dengan alat ukur standar untuk
+                                      memastikan memenuhi spesifikasi yang
+                                      dipersyaratkan<br />
+                                      1.4. Alat potong yang diperlukan
+                                      diidentifikasi dan disiapkan sesuai
+                                      prosedur standar.<br />
+                                      1.5. Alat potong yang diperlukan
+                                      diidentifikasi dan disiapkan sesuai
+                                      prosedur standar.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox33"
+                                            checked
+                                            name="checkbox33"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox34"
+                                            name="checkbox34"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Mengoperasikan mesin<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      2.1 Mesin yang digunakan dipastikan dalam
+                                      keadaan tersambung ke sumber daya
+                                      listrik<br />
+                                      2.2 Alat potong dipasang pada mesin sesuai
+                                      prosedur pemasangan <br />
+                                      2.3 Kacamata, sepatu, helm dan sarung
+                                      tangan pengaman dipakai sesuai prosedur
+                                      standar <br />
+                                      2.4 Benda kerja dipasang dan diset pada
+                                      mesin sesuai.<br />
+                                      2.5 Mesin diset sesuai spesfikasi bahan
+                                      baku atau benda kerja dan kebutuhan
+                                      pekerjaan serta dihidupkan sesuai prosedur
+                                      standar<br />
+                                      2.6 Langkah-langkah kerja untuk memproses
+                                      bahan baku didasarkan pada gambar
+                                      rancangan sesuai prosedur kerja<br />
+                                      2.7 Mesin dioperasikan berdasarkan
+                                      spesifikasi urutan pekerjaan sesuai
+                                      prosedur pengoperasian<br />
+                                      2.8 Pengukuran dimensi dilakukan untuk
+                                      memastikan telah sesuai spesifikasi yang
+                                      dipersyaratkan
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox35"
+                                            checked
+                                            name="checkbox35"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox36"
+                                            name="checkbox36"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      3. Elemen: Mengembalikan tempat kerja ke
+                                      kondisi semula<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      3.1 Mesin dimatikan sesuai prosedur <br />
+                                      3.2 Perkakas, perlengkapan dan instrumen
+                                      dilepas dari mesin, dibersihkan dan
+                                      dikembalikan ketempatnya semula sesuai
+                                      prosedur standar<br />
+                                      3.3 Mesin dibersihkan dari sampah
+                                      logam/non-logam sesuai prosedur standar
+                                      Benda kerja dipasang dan diset pada mesin
+                                      sesuai.<br />
+                                      3.4 Mesin diset ke kondisi semula sesuai
+                                      prosedur standar<br />
+                                      3.5 Sampah logam dan non-logam dibuang
+                                      sesuai prosedur<br />
+                                      3.6 Perkakas dan perlengkapan yang rusak
+                                      saat digunakan dan benda kerja yang telah
+                                      dibuat dilaporkan sesuai prosedur
+                                      pelaporan<br />
+                                      3.7 Kondisi tempat kerja yang tidak bisa
+                                      dikembalikan ke kondisi semula, dilaporkan
+                                      kepada personel yang bertanggung jawab
+                                      sesuai prosedur pelaporan
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox35"
+                                            checked
+                                            name="checkbox35"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox36"
+                                            name="checkbox36"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">Memelihara Sensor</th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Menyiapkan aktivitas
+                                      pekerjaan<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      1.1. Diagram rangkaian sensor yang terkait
+                                      disiapkan sesuai prosedur persiapan
+                                      kerja.<br />
+                                      1.2. Rincian aktivitas kerja yang terkait
+                                      dijelaskan berdasarkan diagram rangkaian
+                                      dan prosedur persiapan kerja.<br />
+                                      1.3. Kondisi keamanan yang terkait dengan
+                                      pekerjaan kelistrikan sesuai prosedur
+                                      standar.<br />
+                                      1.4. Peralatan kerja kelistrikan, bahan
+                                      dan peralatan K3 yang terkait dalam
+                                      pelaksanaan pekerjaan dipilih sesuai
+                                      spesifikasi kebutuhan.<br />
+                                      1.5. Sensor dan perangkat yang terkait
+                                      diidentifikasi berdasarkan diagram
+                                      rangkaian dan prosedur standar.<br />
+                                      1.6. Sensor yang terkait diperiksa kondisi
+                                      kelaikannya dengan alat ukur sesuai
+                                      prosedur standar.<br />
+                                      1.7. Kondisi yang tidak normal pada sensor
+                                      dilaporkan kepada pihak yang terkait.<br />
+                                      1.8. Persiapan pekerjaan yang tidak
+                                      lengkap dilaporkan kepada atasan yang
+                                      terkait.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox33"
+                                            checked
+                                            name="checkbox33"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox34"
+                                            name="checkbox34"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Menyambungkan sensor<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      2.1. Catu daya utama yang tersambung
+                                      dengan sistem kontrol listrik diputuskan
+                                      dari unit catu daya sesuai prosedur
+                                      pengisolasian.<br />
+                                      2.2. Sensor dipasang sesuai dengan
+                                      spesifikasi pabrik, sistem instalasi dan
+                                      dengan diagram rangkaian.<br />
+                                      2.3. Sistem pengawatan sensor disambung
+                                      sesuai diagram rangkaian.<br />
+                                      2.4. Perangkat kelistrikan yang merupakan
+                                      bagian dari rangkaian kontrol disambung
+                                      sesuai diagram rangkaian.<br />
+                                      2.5. Semua sambungan sensor diperiksa
+                                      untuk menjamin bahwa telah sesuai dengan
+                                      diagram rangkaian.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox35"
+                                            checked
+                                            name="checkbox35"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox36"
+                                            name="checkbox36"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      3. Elemen: Men-setup sensor<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      3.1. Sistem kontrol listrik disambungkan
+                                      ke catu daya utama sesuai prosedur
+                                      penyambungan <br />
+                                      3.2. Sensor, perangkat dan komponen
+                                      kelistrikan diaktifkan untuk menjalankan
+                                      rangkaian kontrol sesuai dengan diagram
+                                      rangkaian dan instruksi kerja.<br />
+                                      3.3. Sensor di-setup sensitivitasnya
+                                      sesuai dengan spesifikasi yang
+                                      dibutuhkan.<br />
+                                      3.4. Sensor yang teridentifikasi tidak
+                                      bekerja diganti dengan spesifikasi yang
+                                      sama sesuai prosedur standar.<br />
+                                      3.5. Pengawatan diperiksa kembali jika
+                                      terdapat ketidaksesuaian dengan diagram
+                                      rangkaian sesuai prosedur standar.<br />
+                                      3.6. Pekerjaan yang tidak lengkap
+                                      dilaporkan kepada petugas yang berwenang
+                                      sesuai prosedur perusahaan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      4. Elemen: Mengkondisikan kembali area
+                                      kerja<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      4.1. Catu daya yang tersambung dengan
+                                      sistem dimatikan sesuai prosedur
+                                      pengisolasian.<br />
+                                      4.2. Sensor yang rusak secara tertulis
+                                      kepada petugas yang berwenang sesuai
+                                      prosedur pelaporan.<br />
+                                      4.3. Area kerja dibersihkan sesuai
+                                      prosedur kerja.<br />
+                                      4.4. Diagram rangkaian dan lembar
+                                      instruksi kerja dikembalikan kepada
+                                      petugas yang terkait sesuai prosedur
+                                      kerja.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      5. Elemen: Melaporkan hasil pemeliharaan
+                                      dan pengesetan sensor<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      5.1. Data hasil pemeliharaan dan
+                                      pengesetan sensor dicatat pada lembar
+                                      kerja sesuai prosedur pencatatan
+                                      dokumen.<br />
+                                      5.2. Data hasil pemeliharaan dan
+                                      pengesetan sensor dibandingkan dengan
+                                      spesifikasi pabrik yang dipersyaratkan
+                                      sesuai instruksi kerja dan prosedur
+                                      perusahaan.<br />
+                                      5.3. Hasil pekerjaan pemeliharaan dan
+                                      pengesetan sensor dibukukan dalam bentuk
+                                      laporan sesuai format standar
+                                      perusahaan.<br />
+                                      5.4. Perangkat yang tidak perlu
+                                      dipindahkan ke lokasi semula sesuai
+                                      prosedur perusahaan.<br />
+                                      5.5. Dokumen/laporan diserahkan kepada
+                                      atasan atau petugas yang bertanggungjawab
+                                      sesuai prosedur pelaporan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox35"
+                                            checked
+                                            name="checkbox35"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox36"
+                                            name="checkbox36"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">
+                                      Memelihara Sistem Kelistrikan
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Menyiapkan teknis pemeliharaan
+                                      sistem kelistrikan secara menyeluruh<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      1.1. Kartu riwayat setiap unit peralatan
+                                      sistem kelistrikan disiapkan sesuai
+                                      prosedur persiapan <br />
+                                      1.2. Jadwal pemeliharaan setiap unit
+                                      sistem kelistrikan disiapkan dan
+                                      dikoordinasi dengan bagian produksi <br />
+                                      1.3. Jadwal pelaksanaan pemeliharaan
+                                      disiapkan sesuai dengan sarana dan SDM
+                                      yang tersedia.<br />
+                                      1.4. Teknik pemeliharaan sistem
+                                      kelistrikan otomasi disiapkan sesuai
+                                      prosedur.<br />
+                                      1.5. Perlengkapan kerja untuk pemeliharaan
+                                      diidentifikasi sesuai kebutuhan
+                                      pemeliharaan<br />
+                                      1.6. Perlengkapan kerja (hardware dan
+                                      software, gambar, instruksi kerja, jadwal
+                                      pemeliharaan) yang diperlukan disiapkan
+                                      sesuai dengan kebutuhan pemeliharaan dan
+                                      rencana kerja.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox33"
+                                            checked
+                                            name="checkbox33"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox34"
+                                            name="checkbox34"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Melaksanakan pemeliharaan
+                                      peralatan dan perangkat sistem
+                                      kelistrikan<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      2.1 Lokasi kerja tempat pemeliharaan
+                                      peralatan kelistrikan otomasi disiapkan
+                                      sesuai dengan kebutuhan pekerjaan dan
+                                      prosedur.<br />
+                                      2.2 Data hasil pemeriksaan setiap unit
+                                      sistem kelistrikan sebelumnya dianalisis
+                                      secara presisi sesuai standar
+                                      pemeliharaan<br />
+                                      2.3 Penyebab kerusakan atau kelainan
+                                      diidentifikasi sesuai dengan standar
+                                      peralatan yang dipersyaratkan sesuai
+                                      prosedur identifikasi<br />
+                                      2.4 Peralatan dan perangkat sistem
+                                      kelistrikan otomasi dipelihara sesuai
+                                      dengan jadwal dan rencana kerja dan
+                                      prosedur pemeliharaan<br />
+                                      2.5 Peralatan dan perangkat sistem
+                                      kelistrikan dibersihkan sesuai dengan
+                                      rencana kerja dan prosedur kebersihan 2.6
+                                      Perlengkapan kerja dikembalikan ke tempat
+                                      penyimpanan sesuai prosedur
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox35"
+                                            checked
+                                            name="checkbox35"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox36"
+                                            name="checkbox36"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      3. Eleman: Melaksanakan pengujian dan
+                                      perbaikan peralatan dan perangkat sistem
+                                      kelistrikan otomasi secara menyeluruh<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      3.1. Semua unit peralatan kelistrikan
+                                      otomasi diuji secara presisi sesuai dengan
+                                      prosedur pengujian.<br />
+                                      3.2. Pengujian dan perbaikan dilakukan
+                                      setelah semua kondisi peralatan
+                                      kelistrikan teridentifikasi sesuai
+                                      spesifikasi pekerjaan.<br />
+                                      3.3. Perbaikan peralatan sistem
+                                      kelistrikan dilakukan berdasarkan
+                                      identifikasi kerusakan dan buku petunjuk
+                                      pengoperasian dan pemeliharaan
+                                      peralatan.<br />
+                                      3.4. Hasil perbaikan peralatan sistem
+                                      kelistrikan diuji dengan standar unit
+                                      peralatan industri dan digunakan sebagai
+                                      acuan perencanaan pemeliharaan
+                                      selanjutnya.<br />
+                                      3.5. Semua hasil perbaikan dan pengujian
+                                      peralatan sistem kelistrikan otomasi
+                                      dicatat dan dibukukan sesuai dengan
+                                      prosedur pencatatan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      4. Elemen: Membuat laporan pemeliharaan<br />
+                                      • Kriteria Unjuk Kerja: <br />
+                                      4.1. Laporan dibuat sesuai prosedur.<br />
+                                      4.2. Kartu riwayat pemeliharaan disimpan
+                                      secara terstruktur sesuai prosedur
+                                      penyimpanan.<br />
+                                      4.3. Manajemen pemeliharaan dilaksanakan
+                                      sesuai prosedur pelaksanaan
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">Memelihara Sensor</th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Menyiapkan aktivitas
+                                      pekerjaan<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      1.1. Diagram rangkaian sensor yang terkait
+                                      disiapkan sesuai prosedur persiapan
+                                      kerja.<br />
+                                      1.2. Rincian aktivitas kerja yang terkait
+                                      dijelaskan berdasarkan diagram rangkaian
+                                      dan prosedur persiapan kerja.<br />
+                                      1.3. Kondisi keamanan yang terkait dengan
+                                      pekerjaan kelistrikan sesuai prosedur
+                                      standar.<br />
+                                      1.4. Peralatan kerja kelistrikan, bahan
+                                      dan peralatan K3 yang terkait dalam
+                                      pelaksanaan pekerjaan dipilih sesuai
+                                      spesifikasi kebutuhan.<br />
+                                      1.5. Sensor dan perangkat yang terkait
+                                      diidentifikasi berdasarkan diagram
+                                      rangkaian dan prosedur standar.<br />
+                                      1.6. Sensor yang terkait diperiksa kondisi
+                                      kelaikannya dengan alat ukur sesuai
+                                      prosedur standar.<br />
+                                      1.7. Kondisi yang tidak normal pada sensor
+                                      dilaporkan kepada pihak yang terkait.<br />
+                                      1.8. Persiapan pekerjaan yang tidak
+                                      lengkap dilaporkan kepada atasan yang
+                                      terkait.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox33"
+                                            checked
+                                            name="checkbox33"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox34"
+                                            name="checkbox34"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Menyambungkan sensor<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      2.1. Catu daya utama yang tersambung
+                                      dengan sistem kontrol listrik diputuskan
+                                      dari unit catu daya sesuai prosedur
+                                      pengisolasian.<br />
+                                      2.2. Sensor dipasang sesuai dengan
+                                      spesifikasi pabrik, sistem instalasi dan
+                                      dengan diagram rangkaian.<br />
+                                      2.3. Sistem pengawatan sensor disambung
+                                      sesuai diagram rangkaian.<br />
+                                      2.4. Perangkat kelistrikan yang merupakan
+                                      bagian dari rangkaian kontrol disambung
+                                      sesuai diagram rangkaian.<br />
+                                      2.5. Semua sambungan sensor diperiksa
+                                      untuk menjamin bahwa telah sesuai dengan
+                                      diagram rangkaian.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox35"
+                                            checked
+                                            name="checkbox35"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox36"
+                                            name="checkbox36"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      3. Elemen: Men-setup sensor<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      3.1. Sistem kontrol listrik disambungkan
+                                      ke catu daya utama sesuai prosedur
+                                      penyambungan <br />
+                                      3.2. Sensor, perangkat dan komponen
+                                      kelistrikan diaktifkan untuk menjalankan
+                                      rangkaian kontrol sesuai dengan diagram
+                                      rangkaian dan instruksi kerja.<br />
+                                      3.3. Sensor di-setup sensitivitasnya
+                                      sesuai dengan spesifikasi yang
+                                      dibutuhkan.<br />
+                                      3.4. Sensor yang teridentifikasi tidak
+                                      bekerja diganti dengan spesifikasi yang
+                                      sama sesuai prosedur standar.<br />
+                                      3.5. Pengawatan diperiksa kembali jika
+                                      terdapat ketidaksesuaian dengan diagram
+                                      rangkaian sesuai prosedur standar.<br />
+                                      3.6. Pekerjaan yang tidak lengkap
+                                      dilaporkan kepada petugas yang berwenang
+                                      sesuai prosedur perusahaan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      4. Elemen: Mengkondisikan kembali area
+                                      kerja<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      4.1. Catu daya yang tersambung dengan
+                                      sistem dimatikan sesuai prosedur
+                                      pengisolasian.<br />
+                                      4.2. Sensor yang rusak secara tertulis
+                                      kepada petugas yang berwenang sesuai
+                                      prosedur pelaporan.<br />
+                                      4.3. Area kerja dibersihkan sesuai
+                                      prosedur kerja.<br />
+                                      4.4. Diagram rangkaian dan lembar
+                                      instruksi kerja dikembalikan kepada
+                                      petugas yang terkait sesuai prosedur
+                                      kerja.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      5. Elemen: Melaporkan hasil pemeliharaan
+                                      dan pengesetan sensor<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      5.1. Data hasil pemeliharaan dan
+                                      pengesetan sensor dicatat pada lembar
+                                      kerja sesuai prosedur pencatatan
+                                      dokumen.<br />
+                                      5.2. Data hasil pemeliharaan dan
+                                      pengesetan sensor dibandingkan dengan
+                                      spesifikasi pabrik yang dipersyaratkan
+                                      sesuai instruksi kerja dan prosedur
+                                      perusahaan.<br />
+                                      5.3. Hasil pekerjaan pemeliharaan dan
+                                      pengesetan sensor dibukukan dalam bentuk
+                                      laporan sesuai format standar
+                                      perusahaan.<br />
+                                      5.4. Perangkat yang tidak perlu
+                                      dipindahkan ke lokasi semula sesuai
+                                      prosedur perusahaan.<br />
+                                      5.5. Dokumen/laporan diserahkan kepada
+                                      atasan atau petugas yang bertanggungjawab
+                                      sesuai prosedur pelaporan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox35"
+                                            checked
+                                            name="checkbox35"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox36"
+                                            name="checkbox36"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">
+                                      Memelihara Sistem Elektronik
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Merencanakan kegiatan
+                                      pemeliharaan rutin (preventif maintenance)
+                                      sistem elektronik. • Kriteria Unjuk
+                                      Kerja:<br />
+                                      1.1. Kegiatan pemeliharaan rutin dibuat
+                                      berdasarkan karakteristik peralatan dan
+                                      sistem dengan menggunakan metode yang
+                                      mengacu pada buku petunjuk pemeliharaan
+                                      yang dikeluarkan oleh pabrik pembuatnya
+                                      (operation and service manual) dan
+                                      mengikuti prosedur.<br />
+                                      1.2. Jadwal pemeliharaan rutin sistem
+                                      dibuat menggunakan metode yang tepat
+                                      melalui koordinasi dengan bagian produksi
+                                      sesuai dengan prosedur.<br />
+                                      1.3. Pengaturan sumber daya manusia
+                                      internal untuk pelaksana kegiatan
+                                      pemeliharaan didasarkan pada kompetensi
+                                      yang dimiliki dan sesuai prosedur
+                                      standar.<br />
+                                      1.4. Pemeliharaan rutin sistem dibuat
+                                      berdasarkan buku petunjuk pengoperasian
+                                      dan pemeliharaan (operation and service
+                                      manual pabrik), peraturan K3 Industri dan
+                                      Lingkungan, dengan metode dan teknik
+                                      pembuatan yang tepat serta mengikuti
+                                      prosedur standar.<br />
+                                      1.5. Kegiatan pemeliharaan rutin di luar
+                                      kemampuan sumber daya internal
+                                      direncanakan sesuai prosedur standar.<br />
+                                      1.6. Penunjukan pelaksana eksternal
+                                      dilakukan berdasarkan spesifikasi
+                                      pemeliharaan yang dibutuhkan dan sesuai
+                                      prosedur standar.<br />
+                                      1.7. Hasil perencanaan kegiatan
+                                      pemeliharaan rutin diverifikasi kepada
+                                      personal yang tepat untuk dijustifikasi
+                                      sesuai prosedur verifikasi.<br />
+                                      1.8. Hasil perencanaan kegiatan
+                                      pemeliharaan rutin yang telah
+                                      dijustifikasi disosialisasikan kepada
+                                      pihak dan bagian yang terkait sesuai
+                                      prosedur standar. 1.9. Dokumen rencana
+                                      kegiatan pemeliharaan rutin disimpan
+                                      sesuai prosedur penyimpanan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox33"
+                                            checked
+                                            name="checkbox33"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox34"
+                                            name="checkbox34"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Melaksanakan pemeliharaan rutin
+                                      system elektronik Menggunakan peralatan
+                                      pelindung diri<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      2.1. Sumber daya manusia yang diperlukan
+                                      disiapkan sesuai kebutuhan spesifikasi
+                                      pekerjaan dan dilaksanakan sesuai prosedur
+                                      standar.<br />
+                                      2.2. Petunjuk dan aturan kerja
+                                      pemeliharaan dan perbaikan sistem
+                                      dilaksanakan sesuai dengan prosedur yang
+                                      berlaku. Dokumen peralatan (operation and
+                                      service manual pabrik pembuatnya)
+                                      disiapkan berdasarkan prosedur
+                                      pelaksanaan.<br />
+                                      2.3. Dokumen/buku riwayat pemeliharaan dan
+                                      perbaikan peralatan disiapkan berdasarkan
+                                      prosedur standar.<br />
+                                      2.4. Peralatan dan perlengkapan K3 (dengan
+                                      petunjuk pengoperasiannya) yang diperlukan
+                                      diperiksa kondisi dan kelengkapannya dan
+                                      disiapkan sesuai prosedur pemeriksaan.<br />
+                                      2.5. Peralatan K3 (pakaian keamanan kerja,
+                                      sepatu non konduktif dan peralatan
+                                      keamanan lainnya yang diperlukan) dipakai
+                                      sesuai petunjuk pemakaian pabrik
+                                      pembuatnya.<br />
+                                      2.6. Peralatan ukur (oscilloscope dan
+                                      perlengkapannya, digital probe,
+                                      analog/digital multimeter, digital
+                                      thermometer) disiapkan sesuai prosedur
+                                      standar.<br />
+                                      2.7. Perkakas kerja bengkel elektronik
+                                      (tools set) dan contact cleaner disiapkan
+                                      sesuai spesifikasi pekerjaan dan sesuai
+                                      prosedur persiapan.<br />
+                                      2.8. Kegiatan pekerjaan yang akan
+                                      dilaksanakan dikonfirmasi ke bagian
+                                      produksi dan bagian lainnya yang terkait
+                                      sesuai prosedur pelaksanaan.<br />
+                                      2.9. Peralatan keamanan kerja (pakaian,
+                                      sepatu non-konduktif dan lainnya yang
+                                      diperlukan) dipakai sesuai petunjuk
+                                      pemakaian pabrik pembuatnya.<br />
+                                      2.10. Lokasi pekerjaan disiapkan sesuai
+                                      prosedur persiapan.<br />
+                                      2.11. Sistem dinonaktifkan (shutdown)
+                                      sesuai prosedur standar.<br />
+                                      2.12. Kemasan (Cassing) peralatan dibuka
+                                      sesuai buku petunjuk (service manual)
+                                      pabrik pembuatnya dan sesuai prosedur
+                                      standar.<br />
+                                      2.13. Semua konektor kabel dibersihkan
+                                      dari debu menggunakan udara kering
+                                      bertekanan sesuai prosedur kebersihan.<br />
+                                      2.14. Semua konektor (male/female), kartu
+                                      interface, pcb utama (motherboard) dan
+                                      kemasan (cabinet) dibersihkan dari sisa
+                                      debu dengan menggunakan electronic contact
+                                      cleaner sesuai buku petunjuk (service
+                                      manual) pabrik pembuatnya dan atau sesuai
+                                      prosedur kebersihan.<br />
+                                      2.15. Semua konektor (male/female), kartu
+                                      interface, PCB utama (motherboard) dan
+                                      kemasan (cabinet) dipasang kembali sesuai
+                                      buku petunjuk (service manual) pabrik
+                                      pembuatnya dan atau sesuai prosedur
+                                      pemasangan.<br />
+                                      2.16. Kinerja operasi dan atau spesifikasi
+                                      kelistrikan diuji dengan menggunakan
+                                      metode pengukuran dan alat ukur dan atau
+                                      software diagnostik yang tepat sesuai buku
+                                      petunjuk (operation and service manual)
+                                      pabrik pembuatnya dan atau sesuai prosedur
+                                      pengujian.<br />
+                                      2.17. Set-up ulang peralatan dilaksanakan
+                                      menggunakan metode dan peralatan yang
+                                      tepat sesuai buku petunjuk (operation and
+                                      service manual) pabrik pembuatnya dan atau
+                                      sesuai prosedur standar.<br />
+                                      2.18. Kegiatan pemeliharan dicatat pada
+                                      buku riwayat pemeliharaan dan perbaikan
+                                      peralatan sesuai prosedur pencatatan.<br />
+                                      2.19. Peralatan dan perangkat sistem
+                                      elektronik otomasi dipelihara sesuai
+                                      jadwal pemeliharaan dan dilaksanakan
+                                      sesuai prosedur pemeliharaan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox35"
+                                            checked
+                                            name="checkbox35"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox36"
+                                            name="checkbox36"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      3. Elemen: Memperbaiki gangguan/kerusakan
+                                      sistem elektronik <br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      3.1. Kartu laporan gangguan dibaca dengan
+                                      teliti dan dipahami maksudnya. 3.2.
+                                      Ketidakjelasan gangguan pada kartu laporan
+                                      dikonfirmasi kepada personel yang tepat
+                                      sesuai prosedur standar.<br />
+                                      3.3. Jadwal pekerjaan direncanakan dan
+                                      dibuat melalui koordinasi dengan bagian
+                                      produksi dan bagian lainnya yang terkait
+                                      sesuai prosedur.<br />
+                                      3.4. Sumber daya manusia yang diperlukan
+                                      disiapkan sesuai spesifikasi pekerjaan dan
+                                      kompetensi yang dimiliki dan dilaksanakan
+                                      sesuai prosedur standar.<br />
+                                      3.5. Prosedur dan dokumen lainnya yang
+                                      diperlukan disiapkan sesuai spesifikasi
+                                      pekerjaan dan dilaksanakan sesuai prosedur
+                                      standar.<br />
+                                      3.6. Perkakas kerja bengkel elektronik
+                                      (electronic tools set) dan alat ukur
+                                      (analog/digital multimeter, digital test
+                                      probe, digital thermometer jenis laser)
+                                      dan atau software diagnostik disiapkan
+                                      sesuai prosedur standar.<br />
+                                      3.7. Peralatan K3 digunakan sesuai
+                                      spesifikasi pekerjaan.<br />
+                                      3.8. Lokasi kerusakan ditelusuri dan
+                                      dijustifikasi dengan menggunakan alat ukur
+                                      dan metode analisis data pengukuran dan
+                                      atau menggunakan software diagnostik yang
+                                      tepat berdasarkan buku petunjuk (operation
+                                      and service manual) pabrik pembuatnya.<br />
+                                      3.9. Lokasi terjadinya gangguan/kerusakan
+                                      dan gejala yang ditimbulkan dicatat pada
+                                      buku riwayat pemeliharaan peralatan sesuai
+                                      prosedur pencatatan.<br />
+                                      3.10. Interface card atau komponen yang
+                                      rusak dilepas dengan menggunakan metode
+                                      dan peralatan yang tepat sesuai buku
+                                      petunjuk (service manual) pabrik
+                                      pembuatnya dan atau sesuai prosedur
+                                      standar.<br />
+                                      3.11. Interface card atau komponen yang
+                                      rusak tercatat pada buku riwayat
+                                      pemeliharaan peralatan dan dilaporkan
+                                      secara tertulis sesuai prosedur
+                                      pelaporan.<br />
+                                      3.12. Pengadaan suku cadang pengganti
+                                      dilaksanakan sesuai spesifikasi yang
+                                      dipersyaratkan pabrik pembuat peralatan
+                                      dan sesuai prosedur standar.<br />
+                                      3.13. Interface card atau komponen
+                                      pengganti dipasang sesuai buku petunjuk
+                                      (service manual) pabrik pembuat peralatan
+                                      dan atau sesuai prosedur standar.<br />
+                                      3.14. Set-up ulang peralatan dilaksanakan
+                                      menggunakan metode dan peralatan yang
+                                      tepat sesuai buku petunjuk (operation and
+                                      service manual) pabrik pembuatnya dan atau
+                                      sesuai prosedur standar.<br />
+                                      3.15. Kinerja operasi dan atau spesifikasi
+                                      kelistrikan dites dengan menggunakan
+                                      metode pengukuran dan alat ukur dan atau
+                                      software diagnostik yang tepat sesuai buku
+                                      petunjuk (operation and service manual)
+                                      pabrik pembuatnya dan atau sesuai prosedur
+                                      pengetesan.<br />
+                                      3.16. Kegiatan perbaikan dicatat pada buku
+                                      riwayat pemeliharaan dan perbaikan sistem
+                                      sesuai prosedur pencatatan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      4. Elemen: Membuat laporan pemeliharaan<br />
+                                      • Kriteria Unjuk Kerja: <br />
+                                      4.1. Laporan dibuat sesuai prosedur.<br />
+                                      4.2. Kartu riwayat pemeliharaan disimpan
+                                      secara terstruktur sesuai prosedur
+                                      penyimpanan.<br />
+                                      4.3. Manajemen pemeliharaan dilaksanakan
+                                      sesuai prosedur pelaksanaan
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"
+                      >Tanda Tangan Asesi</label
+                    >
+                    <div class="button-icon">
+                      <input
+                        type="file"
+                        class="form-control-file"
+                        id="exampleFormControlFile1"
+                      />
+                    </div>
+
+                    <label class="col-sm-2 col-form-label">Tanggal</label>
+                    <div class="col-md-4">
+                      <div class="example">
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="datepicker-autoclose"
+                            placeholder="mm/dd/yyyy"
+                          />
+                          <span class="input-group-append"
+                            ><span class="input-group-text"
+                              ><i class="mdi mdi-calendar-check"></i></span
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"
+                      >Tanda Tangan Asesor</label
+                    >
+                    <div class="form-check mb-3">
+                      <label class="form-check-label">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          value=""
+                        />Silahkan melakukan penceklisan</label
+                      >
+                    </div>
+
+                    <label class="col-sm-2 col-form-label">Tanggal</label>
+                    <div class="col-md-4">
+                      <div class="example">
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="datepicker-autoclose"
+                            placeholder="mm/dd/yyyy"
+                          />
+                          <span class="input-group-append"
+                            ><span class="input-group-text"
+                              ><i class="mdi mdi-calendar-check"></i></span
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <div class="sweetalert m-t-30">
+                      <button class="btn btn-dark mb-2 btn sweet-message">
+                        Kirim
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--**********************************
+            Content body end
+        ***********************************-->
+
+    <!--**********************************
+            Footer start
+        ***********************************-->
+    <!-- <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
+            </div>
+        </div> -->
+    <!--**********************************
+            Footer end
+        ***********************************-->
+    <!-- </div> -->
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="plugins/common/common.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/gleek.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
+    <script src="./plugins/moment/moment.js"></script>
+    <script src="./plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <!-- Clock Plugin JavaScript -->
+    <script src="./plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
+    <!-- Color Picker Plugin JavaScript -->
+    <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
+    <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
+    <script src="./plugins/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+    <!-- Date Picker Plugin JavaScript -->
+    <script src="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- Date range Plugin JavaScript -->
+    <script src="./plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <script src="./js/plugins-init/form-pickers-init.js"></script>
+
+    <script>
+      document.querySelector(".sweet-message").onclick = function () {
+        swal("APL02 berhasil dikirim, silahkan menunggu jadwal asesmen");
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-text").onclick = function () {
+        swal("Hey, Here's a message !!", "It's pretty, isn't it?");
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-success").onclick = function () {
+        swal("Hey, Good job !!", "You clicked the button !!", "success");
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-confirm").onclick = function () {
+        swal(
+          {
+            title: "Apakah data telah sesuai?",
+            // text: "You will not be able to recover this imaginary file !!",
+            type: "warning",
+            showCancelButton: !0,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Selesai",
+            closeOnConfirm: !1,
+          },
+          function () {
+            swal(
+              "Berhasil !!",
+              "Untuk lanjut ke APL 02, silahkan menunggu admin approve",
+              "success"
+            );
+          }
+        );
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-success-cancel").onclick = function () {
+        swal(
+          {
+            title: "Are you sure to delete ?",
+            text: "You will not be able to recover this imaginary file !!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it !!",
+            cancelButtonText: "No, cancel it !!",
+            closeOnConfirm: false,
+            closeOnCancel: false,
+          },
+          function (e) {
+            e
+              ? swal(
+                  "Deleted !!",
+                  "Hey, your imaginary file has been deleted !!",
+                  "success"
+                )
+              : swal(
+                  "Cancelled !!",
+                  "Hey, your imaginary file is safe !!",
+                  "error"
+                );
+          }
+        );
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-image-message").onclick = function () {
+        swal({
+          title: "Sweet !!",
+          text: "Hey, Here's a custom image !!",
+          imageUrl: "../assets/images/hand.jpg",
+        });
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-html").onclick = function () {
+        swal({
+          title: "Sweet !!",
+          text: "<span style='color:#ff0000'>Hey, you are using HTML !!<span>",
+          html: true,
+        });
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-auto").onclick = function () {
+        swal({
+          title: "Sweet auto close alert !!",
+          text: "Hey, i will close in 2 seconds !!",
+          timer: 2e3,
+          showConfirmButton: false,
+        });
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-prompt").onclick = function () {
+        swal(
+          {
+            title: "Enter an input !!",
+            text: "Write something interesting !!",
+            type: "input",
+            showCancelButton: true,
+            closeOnConfirm: false,
+            animation: "slide-from-top",
+            inputPlaceholder: "Write something",
+          },
+          function (e) {
+            return (
+              !1 !== e &&
+              ("" === e
+                ? (swal.showInputError("You need to write something!"), !1)
+                : void swal("Hey !!", "You wrote: " + e, "success"))
+            );
+          }
+        );
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-ajax").onclick = function () {
+        swal(
+          {
+            title: "Sweet ajax request !!",
+            text: "Submit to run ajax request !!",
+            type: "info",
+            showCancelButton: true,
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true,
+          },
+          function () {
+            setTimeout(function () {
+              swal("Hey, your ajax request finished !!");
+            }, 2e3);
+          }
+        );
+      };
+    </script>
+    <!-- <script>
+      document
+        .getElementById("checkbox1")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox2").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox2")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox1").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox3")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox4").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox4")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox3").checked = false;
+        });
+    </script> -->
+    <script>
+      // Function to add event listener to a checkbox
+      function addEventListenerToCheckbox(checkboxId1, checkboxId2) {
+        document
+          .getElementById(checkboxId1)
+          .addEventListener("click", function () {
+            document.getElementById(checkboxId2).checked = false;
+          });
+        document
+          .getElementById(checkboxId2)
+          .addEventListener("click", function () {
+            document.getElementById(checkboxId1).checked = false;
+          });
+      }
+
+      // Loop to add event listeners to each checkbox up to 70
+      for (let i = 1; i <= 70; i += 2) {
+        let nextId = i + 1;
+        if (nextId <= 70) {
+          addEventListenerToCheckbox("checkbox" + i, "checkbox" + nextId);
+        }
+      }
+    </script>
+  </body>
+</html>

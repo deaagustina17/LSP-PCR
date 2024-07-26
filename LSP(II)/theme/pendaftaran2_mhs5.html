@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="quixlab" />
+
+    <title>LSP PCR</title>
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/logo_lsp1.png"
+    />
+    <!-- Pignose Calender -->
+    <link
+      href="./plugins/pg-calendar/css/pignose.calendar.min.css"
+      rel="stylesheet"
+    />
+    <!-- Chartist -->
+    <link rel="stylesheet" href="./plugins/chartist/css/chartist.min.css" />
+    <link
+      rel="stylesheet"
+      href="./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css"
+    />
+    <!-- Custom Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="./plugins/sweetalert/css/sweetalert.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      href="./plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
+      rel="stylesheet"
+    />
+    <!-- Page plugins css -->
+    <link
+      href="./plugins/clockpicker/dist/jquery-clockpicker.min.css"
+      rel="stylesheet"
+    />
+    <!-- Color picker plugins css -->
+    <link
+      href="./plugins/jquery-asColorPicker-master/css/asColorPicker.css"
+      rel="stylesheet"
+    />
+    <!-- Date picker plugins css -->
+    <link
+      href="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
+    <!-- Daterange picker plugins css -->
+    <link
+      href="./plugins/timepicker/bootstrap-timepicker.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./plugins/bootstrap-daterangepicker/daterangepicker.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+      <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+          <circle
+            class="path"
+            cx="50"
+            cy="50"
+            r="20"
+            fill="none"
+            stroke-width="3"
+            stroke-miterlimit="10"
+          />
+        </svg>
+      </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+      <!--**********************************
+            Nav header start
+        ***********************************-->
+      <div class="nav-header text-center">
+        <!-- <a href="index.html"> -->
+        <span class="brand-title">
+          <img src="images/logo_lsp1.png" width="100" height="auto" />
+        </span>
+      </div>
+      <!--**********************************
+            Nav header end
+        ***********************************-->
+
+      <!--**********************************
+            Header start
+        ***********************************-->
+      <div class="header">
+        <div class="header-content clearfix">
+          <div class="nav-control">
+            <div class="hamburger">
+              <span class="toggle-icon"><i class="icon-menu"></i></span>
+            </div>
+          </div>
+          <div class="header-right">
+            <ul class="clearfix">
+              <li class="icons dropdown">
+                <div
+                  class="user-img c-pointer position-relative"
+                  data-toggle="dropdown"
+                >
+                  <span class="activity active"></span>
+                  <img src="images/user/1.png" height="40" width="40" alt="" />
+                </div>
+                <div
+                  class="drop-down dropdown-profile animated fadeIn dropdown-menu"
+                >
+                  <div class="dropdown-content-body">
+                    <ul>
+                      <!-- <li><a href="/LSP/masuk.html"><i class="icon-key"></i> <span>Logout</span></a></li> -->
+                      <li>
+                        <a
+                          href="file:///D:/SEMESTER%208/PA/LSP%20PCR/LSP/masuk.html"
+                          ><i class="icon-key"></i> <span>Keluar</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+      <!--**********************************
+            Sidebar start
+        ***********************************-->
+      <div class="nk-sidebar">
+        <div class="nk-nav-scroll">
+          <ul class="metismenu" id="menu">
+            <!-- <li class="nav-label">Dashboard</li> -->
+            <li class="active">
+              <a href="index.html" aria-expanded="false">
+                <span class="nav-text">Pendaftaran Skema</span>
+              </a>
+            </li>
+            <li>
+              <a href="jadwalasesmen_mhs.html" aria-expanded="false">
+                <span class="nav-text">Jadwal Asesmen</span>
+              </a>
+            </li>
+            <li>
+              <a href="keputusan_mhs.html" aria-expanded="false">
+                <span class="nav-text">Keputusan Sertifikasi</span>
+              </a>
+            </li>
+            <li>
+              <a href="banding_mhs.html" aria-expanded="false">
+                <span class="nav-text">Banding Atas Keputusan Sertifikasi</span>
+              </a>
+            </li>
+            <li>
+              <a href="umpanbalik_mhs.html" aria-expanded="false">
+                <span class="nav-text">Umpan Balik</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+      <!--**********************************
+            Content body start
+        ***********************************-->
+      <div class="content-body">
+        <div class="container-fluid">
+          <div class="card">
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="nav nav-pills flex-column flex-md-row mb-3">
+                    <li class="nav-item">
+                      <a class="nav-link" href="pendaftaran_mhs5.html"
+                        ><i class="bx bx-user me-1"></i>APL 01</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="javascript:void(0);"
+                        ><i class="bx bx-bell me-1"></i>APL 02</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="persetujuanasesmen_mhs.html"
+                        ><i class="bx bx-bell me-1"></i>FR.AK.01</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="form-validation">
+                        <form class="form-valide" action="#" method="post">
+                          <h5>Asesmen Mandiri</h5>
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">
+                                      Melaksanakan Persiapan Tempat Kerja
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Melakukan persiapan
+                                      pekerjaan.<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      1.1 Gambar kerja (production drawing)
+                                      diidentifikasi. <br />
+                                      1.2 Tools dan alat bantu yang dibutuhkan
+                                      dalam setiap desain diidentifikasi. <br />
+                                      1.3 Tempat penyimpanan tools, alat bantu,
+                                      dan General Assembly (GA) drawing
+                                      diidentifikasi. <br />
+                                      1.4 Schedule produksi diidentifikasi.
+                                      <br />
+                                      1.5 Prosedur penandaan barang
+                                      diidentifikasi.<br />
+                                      1.6 Kegiatan pada unit kompetensi ini
+                                      merujuk pada prosedur K3.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox1"
+                                            checked
+                                            name="checkbox1"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox2"
+                                            name="checkbox2"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Memastikan barang yang tidak
+                                      digunakan dipindahkan.<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      2.1 Barang yang tidak terpakai dipindahkan
+                                      sesuai dengan prosedur.<br />
+                                      2.2 Material terpakai atau dapat digunakan
+                                      kembali, dikumpulkan, disortir, dan
+                                      dipelihara sesuai prosedur.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      3. Elemen: Menyusun barang dan mesin di
+                                      tempat kerja<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      3.1 Mesin-mesin ditata sesuai dengan
+                                      kebutuhan pekerjaan. <br />
+                                      3.2 Barang-barang yang masih terpakai
+                                      disusun sesuai prosedur/perintah kerja.
+                                      <br />
+                                      3.3 Barang-barang di tempat kerja
+                                      dipastikan memiliki label identitas dengan
+                                      jelas sebagai penanda barang.<br />
+                                      3.4 Peralatan safety dan jalur evakuasi
+                                      dipastikan bebas dari hambatan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <br />
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">
+                                      Memperbaiki Hasil Pengelasan
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Melakukan Persiapan
+                                      Perbaikan.<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      1.1 Kegiatan pengelasan dilakukan sesuai
+                                      prosedur K3. <br />
+                                      1.2 Jenis cacat las/welding defect
+                                      diidentifikasi. <br />
+                                      1.3 Prosedur perbaikan hasil pengelasan
+                                      diidentifikasi. <br />
+                                      1.4 Standar kriteria penilaian (acceptance
+                                      criteria) diidentifikasi. <br />
+                                      1.5 Kesiapan mesin las dipastikan sesuai
+                                      prosedur repair.<br />
+                                      1.6 Kesiapan alat bantu dipastikan sesuai
+                                      jenis cacat/welding defect.<br />
+                                      1.7 Kesiapan bahan tambah (consumable)
+                                      untuk repair dipastikan sesuai
+                                      prosedur.<br />
+                                      1.8 Kesiapan Benda kerja yang akan
+                                      diperbaiki.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox7"
+                                            checked
+                                            name="checkbox7"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox8"
+                                            name="checkbox8"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Melaksanakan Prosedur
+                                      Perbaikan.<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      2.1 Benda kerja ditempatkan sesuai dengan
+                                      prosedur.<br />
+                                      2.2 Penggunaan alat bantu proses perbaikan
+                                      (repair) diidentifikasi.<br />
+                                      2.3 Bahan tambah (consumable)
+                                      diidentifikasi.<br />
+                                      2.4 Hasil perbaikan kualitasnya dipastikan
+                                      sesuai standar.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox9"
+                                            checked
+                                            name="checkbox9"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox10"
+                                            name="checkbox10"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <br />
+
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">
+                                      Membuat sambungan las kampuh (groove)
+                                      sesuai Welding Procedure Specification
+                                      (WPS) untuk pengelasan pelat ke pelat dan
+                                      sesuai dengan proses las yang digunakan.
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Melakukan Persiapan Pengelasan
+                                      Las Kampuh (Groove) Pelat ke Pelat.<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      1.1 Kegiatan pengelasan dilakukan sesuai
+                                      prosedur K3. <br />
+                                      1.2 Gambar teknis diidentifikasi. <br />
+                                      1.3 WPS diidentifikasi. <br />
+                                      1.4 Kesiapan mesin las dipastikan sesuai
+                                      WPS. <br />
+                                      1.5 Kesiapan peralatan bantu dipastikan
+                                      sesuai prosedur.<br />
+                                      1.6 Kesiapan material induk pelat
+                                      dipastikan sesuai WPS.<br />
+                                      1.7 Kesiapan bahan tambah (Consumable)
+                                      dipastikan sesuai WPS.<br />
+                                      1.8 Root Gap dan Root Face pelat
+                                      dipastikan sesuai WPS.<br />
+                                      1.9 Permukaan bidang lasan dipastikan
+                                      bebas kotoran dan karat.<br />
+                                      1.10 Setting parameter las pada mesin las
+                                      dilakukan sesuai WPS.<br />
+                                      1.11 Tack welding (las cantum) dilakukan
+                                      sesuai prosedur.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox11"
+                                            checked
+                                            name="checkbox11"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox12"
+                                            name="checkbox12"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Melakukan Proses Pengelasan Las
+                                      Kampuh (Groove) Pelat ke Pelat.<br />
+                                      • Kriteria Unjuk Kerja:<br />
+                                      2.1 Tack welding (las cantum) dihilangkan
+                                      sesuai prosedur.<br />
+                                      2.2 Arah pergerakan las dipastikan sesuai
+                                      prosedur.<br />
+                                      2.3 Kestabilan Arc (busur las) dijaga
+                                      sesuai prosedur pada posisi kualifikasi
+                                      las kampuh (groove) pelat ke pelat.<br />
+                                      2.4 Kestabilan sudut pengelasan dijaga
+                                      sesuai prosedur pada posisi kualifikasi
+                                      las kampuh (groove) pelat ke pelat.<br />
+                                      2.5 Slag (kotoran) dibersihkan sesuai
+                                      prosedur.<br />
+                                      2.6 Sambungan lasan pada start stop
+                                      dipastikan bebas dari cacat las.<br />
+                                      2.7 Interpass temperature dijaga sesuai
+                                      prosedur.<br />
+                                      2.8 Ukuran penetrasi (root) dan
+                                      reinforcement (cap) lasan dipastikan
+                                      sesuai acceptance criteria pada
+                                      prosedur.<br />
+                                      Hasil lasan dipastikan sesuai acceptance
+                                      criteria pada prosedur.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <br />
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"
+                      >Tanda Tangan Asesi</label
+                    >
+                    <div class="button-icon">
+                      <input
+                        type="file"
+                        class="form-control-file"
+                        id="exampleFormControlFile1"
+                      />
+                    </div>
+
+                    <label class="col-sm-2 col-form-label">Tanggal</label>
+                    <div class="col-md-4">
+                      <div class="example">
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="datepicker-autoclose"
+                            placeholder="mm/dd/yyyy"
+                          />
+                          <span class="input-group-append"
+                            ><span class="input-group-text"
+                              ><i class="mdi mdi-calendar-check"></i></span
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"
+                      >Tanda Tangan Asesor</label
+                    >
+                    <div class="form-check mb-3">
+                      <label class="form-check-label">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          value=""
+                        />Silahkan melakukan penceklisan</label
+                      >
+                    </div>
+
+                    <label class="col-sm-2 col-form-label">Tanggal</label>
+                    <div class="col-md-4">
+                      <div class="example">
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="datepicker-autoclose"
+                            placeholder="mm/dd/yyyy"
+                          />
+                          <span class="input-group-append"
+                            ><span class="input-group-text"
+                              ><i class="mdi mdi-calendar-check"></i></span
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <div class="sweetalert m-t-30">
+                      <button class="btn btn-dark mb-2 btn sweet-message">
+                        Kirim
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--**********************************
+            Content body end
+        ***********************************-->
+
+    <!--**********************************
+            Footer start
+        ***********************************-->
+    <!-- <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
+            </div>
+        </div> -->
+    <!--**********************************
+            Footer end
+        ***********************************-->
+    <!-- </div> -->
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="plugins/common/common.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/gleek.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
+    <script src="./plugins/moment/moment.js"></script>
+    <script src="./plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <!-- Clock Plugin JavaScript -->
+    <script src="./plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
+    <!-- Color Picker Plugin JavaScript -->
+    <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
+    <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
+    <script src="./plugins/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+    <!-- Date Picker Plugin JavaScript -->
+    <script src="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- Date range Plugin JavaScript -->
+    <script src="./plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <script src="./js/plugins-init/form-pickers-init.js"></script>
+
+    <script>
+      document.querySelector(".sweet-message").onclick = function () {
+        swal("APL02 berhasil dikirim, silahkan menunggu jadwal asesmen");
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-text").onclick = function () {
+        swal("Hey, Here's a message !!", "It's pretty, isn't it?");
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-success").onclick = function () {
+        swal("Hey, Good job !!", "You clicked the button !!", "success");
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-confirm").onclick = function () {
+        swal(
+          {
+            title: "Apakah data telah sesuai?",
+            // text: "You will not be able to recover this imaginary file !!",
+            type: "warning",
+            showCancelButton: !0,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Selesai",
+            closeOnConfirm: !1,
+          },
+          function () {
+            swal(
+              "Berhasil !!",
+              "Untuk lanjut ke APL 02, silahkan menunggu admin approve",
+              "success"
+            );
+          }
+        );
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-success-cancel").onclick = function () {
+        swal(
+          {
+            title: "Are you sure to delete ?",
+            text: "You will not be able to recover this imaginary file !!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it !!",
+            cancelButtonText: "No, cancel it !!",
+            closeOnConfirm: false,
+            closeOnCancel: false,
+          },
+          function (e) {
+            e
+              ? swal(
+                  "Deleted !!",
+                  "Hey, your imaginary file has been deleted !!",
+                  "success"
+                )
+              : swal(
+                  "Cancelled !!",
+                  "Hey, your imaginary file is safe !!",
+                  "error"
+                );
+          }
+        );
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-image-message").onclick = function () {
+        swal({
+          title: "Sweet !!",
+          text: "Hey, Here's a custom image !!",
+          imageUrl: "../assets/images/hand.jpg",
+        });
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-html").onclick = function () {
+        swal({
+          title: "Sweet !!",
+          text: "<span style='color:#ff0000'>Hey, you are using HTML !!<span>",
+          html: true,
+        });
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-auto").onclick = function () {
+        swal({
+          title: "Sweet auto close alert !!",
+          text: "Hey, i will close in 2 seconds !!",
+          timer: 2e3,
+          showConfirmButton: false,
+        });
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-prompt").onclick = function () {
+        swal(
+          {
+            title: "Enter an input !!",
+            text: "Write something interesting !!",
+            type: "input",
+            showCancelButton: true,
+            closeOnConfirm: false,
+            animation: "slide-from-top",
+            inputPlaceholder: "Write something",
+          },
+          function (e) {
+            return (
+              !1 !== e &&
+              ("" === e
+                ? (swal.showInputError("You need to write something!"), !1)
+                : void swal("Hey !!", "You wrote: " + e, "success"))
+            );
+          }
+        );
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-ajax").onclick = function () {
+        swal(
+          {
+            title: "Sweet ajax request !!",
+            text: "Submit to run ajax request !!",
+            type: "info",
+            showCancelButton: true,
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true,
+          },
+          function () {
+            setTimeout(function () {
+              swal("Hey, your ajax request finished !!");
+            }, 2e3);
+          }
+        );
+      };
+    </script>
+    <!-- <script>
+      document
+        .getElementById("checkbox1")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox2").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox2")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox1").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox3")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox4").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox4")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox3").checked = false;
+        });
+    </script> -->
+    <script>
+      // Function to add event listener to a checkbox
+      function addEventListenerToCheckbox(checkboxId1, checkboxId2) {
+        document
+          .getElementById(checkboxId1)
+          .addEventListener("click", function () {
+            document.getElementById(checkboxId2).checked = false;
+          });
+        document
+          .getElementById(checkboxId2)
+          .addEventListener("click", function () {
+            document.getElementById(checkboxId1).checked = false;
+          });
+      }
+
+      // Loop to add event listeners to each checkbox up to 70
+      for (let i = 1; i <= 70; i += 2) {
+        let nextId = i + 1;
+        if (nextId <= 70) {
+          addEventListenerToCheckbox("checkbox" + i, "checkbox" + nextId);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,2813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="quixlab" />
+
+    <title>LSP PCR</title>
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/logo_lsp1.png"
+    />
+    <!-- Pignose Calender -->
+    <link
+      href="./plugins/pg-calendar/css/pignose.calendar.min.css"
+      rel="stylesheet"
+    />
+    <!-- Chartist -->
+    <link rel="stylesheet" href="./plugins/chartist/css/chartist.min.css" />
+    <link
+      rel="stylesheet"
+      href="./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css"
+    />
+    <!-- Custom Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="./plugins/sweetalert/css/sweetalert.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      href="./plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
+      rel="stylesheet"
+    />
+    <!-- Page plugins css -->
+    <link
+      href="./plugins/clockpicker/dist/jquery-clockpicker.min.css"
+      rel="stylesheet"
+    />
+    <!-- Color picker plugins css -->
+    <link
+      href="./plugins/jquery-asColorPicker-master/css/asColorPicker.css"
+      rel="stylesheet"
+    />
+    <!-- Date picker plugins css -->
+    <link
+      href="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
+    <!-- Daterange picker plugins css -->
+    <link
+      href="./plugins/timepicker/bootstrap-timepicker.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./plugins/bootstrap-daterangepicker/daterangepicker.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+      <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+          <circle
+            class="path"
+            cx="50"
+            cy="50"
+            r="20"
+            fill="none"
+            stroke-width="3"
+            stroke-miterlimit="10"
+          />
+        </svg>
+      </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+      <!--**********************************
+            Nav header start
+        ***********************************-->
+      <div class="nav-header text-center">
+        <!-- <a href="index.html"> -->
+        <span class="brand-title">
+          <img src="images/logo_lsp1.png" width="100" height="auto" />
+        </span>
+      </div>
+      <!--**********************************
+            Nav header end
+        ***********************************-->
+
+      <!--**********************************
+            Header start
+        ***********************************-->
+      <div class="header">
+        <div class="header-content clearfix">
+          <div class="nav-control">
+            <div class="hamburger">
+              <span class="toggle-icon"><i class="icon-menu"></i></span>
+            </div>
+          </div>
+          <div class="header-right">
+            <ul class="clearfix">
+              <li class="icons dropdown">
+                <div
+                  class="user-img c-pointer position-relative"
+                  data-toggle="dropdown"
+                >
+                  <span class="activity active"></span>
+                  <img src="images/user/1.png" height="40" width="40" alt="" />
+                </div>
+                <div
+                  class="drop-down dropdown-profile animated fadeIn dropdown-menu"
+                >
+                  <div class="dropdown-content-body">
+                    <ul>
+                      <!-- <li><a href="/LSP/masuk.html"><i class="icon-key"></i> <span>Logout</span></a></li> -->
+                      <li>
+                        <a
+                          href="file:///D:/SEMESTER%208/PA/LSP%20PCR/LSP/masuk.html"
+                          ><i class="icon-key"></i> <span>Keluar</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+      <!--**********************************
+            Sidebar start
+        ***********************************-->
+      <div class="nk-sidebar">
+        <div class="nk-nav-scroll">
+          <ul class="metismenu" id="menu">
+            <!-- <li class="nav-label">Dashboard</li> -->
+            <li class="active">
+              <a href="index.html" aria-expanded="false">
+                <span class="nav-text">Pendaftaran Skema</span>
+              </a>
+            </li>
+            <li>
+              <a href="jadwalasesmen_mhs.html" aria-expanded="false">
+                <span class="nav-text">Jadwal Asesmen</span>
+              </a>
+            </li>
+            <li>
+              <a href="keputusan_mhs.html" aria-expanded="false">
+                <span class="nav-text">Keputusan Sertifikasi</span>
+              </a>
+            </li>
+            <li>
+              <a href="banding_mhs.html" aria-expanded="false">
+                <span class="nav-text">Banding Atas Keputusan Sertifikasi</span>
+              </a>
+            </li>
+            <li>
+              <a href="umpanbalik_mhs.html" aria-expanded="false">
+                <span class="nav-text">Umpan Balik</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+      <!--**********************************
+            Content body start
+        ***********************************-->
+      <div class="content-body">
+        <div class="container-fluid">
+          <div class="card">
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="row">
+                <div class="col-md-12">
+                  <ul class="nav nav-pills flex-column flex-md-row mb-3">
+                    <li class="nav-item">
+                      <a class="nav-link" href="pendaftaran_mhs7.html"
+                        ><i class="bx bx-user me-1"></i>APL 01</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="javascript:void(0);"
+                        ><i class="bx bx-bell me-1"></i>APL 02</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="persetujuanasesmen_mhs.html"
+                        ><i class="bx bx-bell me-1"></i>FR.AK.01</a
+                      >
+                    </li>
+                  </ul>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="form-validation">
+                        <form class="form-valide" action="#" method="post">
+                          <h5>Asesmen Mandiri</h5>
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">
+                                      Unit Kompetensi: Menerapkan Prinsip
+                                      Praktik Profesional dalam Bekerja
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Mengidentifikasi luas, sektor
+                                      dan tanggung jawab industry<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      1.1 Aspek-aspek eksternal yang
+                                      mempengaruhi profesi teknisi akuntansi
+                                      diidentifikasi dalam menjalankan
+                                      pekerjaan<br />
+                                      1.2 Peran dan tanggung jawab berbagai
+                                      pihak yang terlibat dalam profesi teknisi
+                                      akuntansi diidentifikasi dalam menjalankan
+                                      pekerjaan<br />
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox1"
+                                            checked
+                                            name="checkbox1"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox2"
+                                            name="checkbox2"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Menerapkan pedoman, prosedur,
+                                      dan aturan<br />
+                                      ● Kriteria Unjuk Kerja<br />
+                                      1.1 Informasi yang berhubungan dengan
+                                      hukum, peraturan dan kode etik dikumpulkan
+                                      dan dianalisa<br />
+                                      1.2 Informasi yang berhubungan dengan
+                                      hukum, peraturan dan kode etik dalam
+                                      kaitannya dengan pihak yang bersangkutan
+                                      di tempat kerja ditentukan<br />
+                                      1.3 Ketentuan tentang praktik kerja yang
+                                      relevan dipergunakan sebagai dasar untuk
+                                      menjalankan pekerjaan dan pengambilan
+                                      keputusan secara beretika
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      3. Elemen: Mengelola informasi<br />
+                                      ● Kriteria Unjuk Kerja<br />
+                                      2.1 Dokumen, laporan, data, dan kalkulasi
+                                      dianalisis dan diorganisir sesuai
+                                      kebutuhan konsumen dan/atau organisasi<br />
+                                      2.2 Informasi disajikan dalam format yang
+                                      sesuai dengan kebutuhan pengguna informasi
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      4. Elemen: Merencanakan penyelesaian
+                                      pekerjaan dengan mempertimbangkan
+                                      keterbatasan waktu<br />
+                                      ● Kriteria Unjuk Kerja<br />
+                                      3.1 Tugas yang harus diselesaikan dan
+                                      kondisi yang relevan ditentukan<br />
+                                      3.2 Pekerjaan direncanakan secara mandiri
+                                      maupun secara tim untuk periode tertentu
+                                      dengan mempertimbangkan sumber daya, waktu
+                                      dan skala prioritas<br />
+                                      3.3 Perubahan teknologi dan organisaasi
+                                      kerja dapat diadaptasi
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      5. Elemen: Merancang dan mengelola
+                                      kompetensi personal<br />
+                                      ● Kriteria Unjuk Kerja<br />
+                                      4.1 Kebutuhan pengembangan kompetensi dan
+                                      sasaran pengembangn diidentifikasi dan
+                                      dikaji ulang secara periodic<br />
+                                      4.2 Kebutuhan kompetensi, otorisasi, dan
+                                      lisensi diidentifikasi<br />
+                                      4.3 Kesempatan pengembangan profesional
+                                      yang menggambarkan kebutuhan dan sasaran
+                                      diselesaikan dalam jangka waktu tertentu
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <br />
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">
+                                      Menerapkan Praktik-Praktik Kesehatan dan
+                                      Keselamatan di Tempat Kerja
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Mengikuti prosedur kerja untuk
+                                      mengidentifikasi bahaya dan pengendalian
+                                      resiko<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      1.1 Bahaya di tempat kerja dikenali dan
+                                      dilaporkan kepada yang berwenang sesuai
+                                      dengan prosedur tempat kerja.<br />
+                                      1.2 Prosedur tempat kerja dan instruksi
+                                      kerja untuk mengendalikan resiko diikuti
+                                      secara akurat.<br />
+                                      1.3 Prosedur tempat kerja yang berkaitan
+                                      dengan kecelakaan, api, dan darurat
+                                      diikuti dimana diperlukan dalam lingkup
+                                      penyebab dan kompetensi karyawan.<br />
+                                      1.4 Seluruh area kerja dijaga tetap bersih
+                                      dan bebas dari gangguan.<br />
+                                      1.5 Seluruh pintu darurat dikenali dan
+                                      bebas setiap waktu.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox7"
+                                            checked
+                                            name="checkbox7"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox8"
+                                            name="checkbox8"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Berkontribusi untuk
+                                      berpartisipasi dalam pengaturan manajemen
+                                      kesehatan dan keselamatan kerja.<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      1.1 Isu-isu kesehatan dan keselamatan
+                                      kerja diinformasikan kepada aparat yang
+                                      berwenang sesuai dengan prosedur tempat
+                                      kerja yang relevan.<br />
+                                      1.2 Kontribusi kepada manajemen kesehatan
+                                      dan keselamatan kerja di tempat kerja
+                                      dibuat sesuai dengan kebijakan dan
+                                      prosedur organisasi dan dalam lingkup
+                                      tanggung jawab dan kompetensi karyawan.<br />
+                                      1.3 Dokumen kesehatan dan keselamatan
+                                      kerja yang relevan diidentifikasi, secara
+                                      periodik diperiksa, dan rekomendasinya
+                                      ditindaklanjuti.<br />
+                                      1.4 Klarifikasi kewajiban, prosedur dan
+                                      praktik-praktik kesehatan dan keselamatan
+                                      kerja ditinjau kembali bila diperlukan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox9"
+                                            checked
+                                            name="checkbox9"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox10"
+                                            name="checkbox10"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      3. Elemen: Menerapkan praktik- praktik
+                                      kesehatan dan keselamatan kerja<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      2.1 Prosedur kesehatan dan keselamatan
+                                      kerja diterapkan setiap waktu dalam
+                                      pekerjaan sehari-hari.<br />
+                                      2.2 Peringatan bahaya dan tanda-tanda
+                                      keselamatan dikenali dan diobservasi.<br />
+                                      2.3 Teknik-teknik penanganan keselamatan
+                                      secara manual dan tehnik keselamatan
+                                      operasi peralatan diterapkan setiap
+                                      waktu.<br />
+                                      2.4 Prosedur pertolongan pertama secara
+                                      darurat diikuti.<br />
+                                      2.5 Situasi yang secara potensial
+                                      berbahaya diidentifikasi, meliputi
+                                      kegagalan dan peralatan berbahaya, secara
+                                      langsung dilaporkan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox9"
+                                            checked
+                                            name="checkbox9"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox10"
+                                            name="checkbox10"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <br />
+
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">Memproses Entry Jurnal</th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Memeriksa dokumen sumber dan
+                                      dokumen pendukung<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      1.1 Dokumen sumber dan pendukung
+                                      diperiksa.<br />
+                                      Otorisasi oleh pihak yang berwenang dalam
+                                      dokumen sumber diperiksa.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox11"
+                                            checked
+                                            name="checkbox11"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox12"
+                                            name="checkbox12"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Mencatat dokumen sumber ke
+                                      dalam jurnal<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      2.1 Jurnal diotorisasi sesuai dengan
+                                      kebijakan dan prosedur perusahaan.<br />
+                                      2.2 Dokumen sumber dicatat ke dalam jurnal
+                                      secara akurat dan sesuai dengan standar
+                                      yang ditetapkan perusahaan.<br />
+                                      2.3 Transaksi secara tepat dialokasikan ke
+                                      dalam sistem dan akun.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      3. Elemen: Mengarsipkan dokumen Sumber dan
+                                      Pendukung<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      3.1 Dokumen Sumber dan pendukung disimpan
+                                      secara tepat waktu dan sesuai dengan
+                                      prosedur dan kebijakan perusahaan.<br />
+                                      3.2 Arsip dokumen diakses dan ditelusuri
+                                      sesuai kebijakan perusahaan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <br />
+
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">Memproses Buku Besar</th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Mempersiapkan pengelolaan buku
+                                      besar<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      1.1 Peralatan dan Perlengkapan yang
+                                      dibutuhkan untuk pengelolaan buku besar
+                                      disediakan<br />
+                                      1.2 Buku besar yang diperlukan
+                                      disediakan<br />
+                                      1.3 Rekapitulasi Jurnal disajikan
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox11"
+                                            checked
+                                            name="checkbox11"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox12"
+                                            name="checkbox12"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Membukukan jumlah angka dari
+                                      jurnal ke buku besar<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      2.1 Akun-akun dalam buku besar yang
+                                      diperlukan diidentifikasi<br />
+                                      2.2 Jumlah yang ada dalam rekapitulasi
+                                      jurnal dibukukan
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      3. Elemen: Menyusun daftar saldo akun
+                                      dalam buku besar<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      3.1 Daftar saldo akun dalam buku besar
+                                      disajikan sesuai dengan format yang telah
+                                      ditetapkan<br />
+                                      3.2 Saldo akun dalam buku besar dipastikan
+                                      kebenarannya
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <br />
+
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">
+                                      Menyusun Laporan Keuangan
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Mencatat jurnal penyesuaian<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      1.1 Dokumen sumber penyesuaian
+                                      disediakan<br />
+                                      1.2 Akun-akun yang memerlukan penyesuaian
+                                      diidentifikasi<br />
+                                      1.3 Jurnal penyesuaian yang diperlukan
+                                      dicatat
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox11"
+                                            checked
+                                            name="checkbox11"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox12"
+                                            name="checkbox12"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Menyajikan laporan<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      2.1 Neraca lajur disiapkan sesuai
+                                      ketentuan SOP<br />
+                                      2.2 Laporan laba rugi disajikan sesuai
+                                      ketentuan SOP/SAK/SAK ETAP<br />
+                                      2.3 Laporan neraca/laporan posisi keuangan
+                                      disajikan sesuai ketentuan SOP/SAK./SAK
+                                      ETAP<br />
+                                      2.4 Laporan Perubahan ekuitas disajikan
+                                      sesuai ketentuan SOP/SAK/SAK ETAP<br />
+                                      2.5 Laporan arus kas disajikan sesuai
+                                      ketentuan SOP/SAK/SAK ETAP
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      3. Elemen: Mencatat jurnal penutup<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      3.1 Akun yang didebit dan dikredit
+                                      diidentifikasi<br />
+                                      3.2 Jurnal penutup dicatat
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      4. Elemen: Memposting jurnal penyesuaian
+                                      dan jurnal penutup ke buku besar<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      4.1 Jurnal penyesuaian dan jurnal penutup
+                                      diposting<br />
+                                      4.2 Saldo dalam buku besar setelah tutup
+                                      buku disajikan sesuai ketentuan SOP
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <br />
+
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">
+                                      Mengoperasikan Paket Program Pengolah
+                                      Data/Spreadsheet
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      5. Elemen: Mempersiapkan komputer dan
+                                      paket program pengolah angka<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      10.4 Komputer yang dibutuhkan untuk
+                                      mengoperasikan paket program pengolah
+                                      angka disediakan<br />
+                                      10.5 Paket program pengolah angka siap
+                                      dioperasikan<br />
+                                      10.6 Sumber data yang akan diolah dengan
+                                      program pengolah angka disiapkan
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox11"
+                                            checked
+                                            name="checkbox11"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox12"
+                                            name="checkbox12"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      6. Elemen: Mengentry data<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      6.1. Karakter sel diidentifikasi<br />
+                                      6.2. Karakter data diidentifikasi<br />
+                                      6.3. Data dientry sesuai dengan karakter
+                                      sel<br />
+                                      6.4. Hasil entry disesuaikan dengan sumber
+                                      data
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      7. Elemen: Mengolah data dengan
+                                      menggunakan fungsi-fungsi program pengolah
+                                      angka<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      7.1. Data diolah dengan rumus
+                                      matematika<br />
+                                      7.2. Data diolah dengan rumus statistik<br />
+                                      7.3. Data diolah dengan menggunakan rumus
+                                      semi absolut, absolut dan fungsi logika<br />
+                                      7.4. Data diolah dengan menggunakan fungsi
+                                      finansial<br />
+                                      7.5. Data diolah dengan menggunakan fungsi
+                                      date-time<br />
+                                      7.6. Data diolah dengan menggunakan fungsi
+                                      grafik
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      8. Elemen: Membuat laporan<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      8.1. Laporan dibuat dalam bentuk table<br />
+                                      8.2. Laporan dibuat dalam bentuk grafik
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <br />
+
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">
+                                      Mengoperasikan Aplikasi Komputer Akuntansi
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      9. Elemen: Menyiapkan data awal
+                                      perusahaan<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      10.7 Peralatan dan perlengkapan yang
+                                      dibutuhkan disiapkan<br />
+                                      10.8 Data perusahaan dibuat
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox11"
+                                            checked
+                                            name="checkbox11"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox12"
+                                            name="checkbox12"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      10. Elemen: Menyusun Data Setup Awal dan
+                                      Saldo Awal<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      2.1 Daftar Akun disusun dan saldo awal
+                                      akun dientry<br />
+                                      2.2 Kode Pajak disiapkan<br />
+                                      2.3 Kartu Piutang dan pelanggan dibuat dan
+                                      saldo awal piutang dientry<br />
+                                      2.4 Kartu utang dan pemasok dibuat dan
+                                      saldo awal utang dientry<br />
+                                      2.5 Kartu Persediaan dibuat dan saldo awal
+                                      persediaan dientry
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      11. Elemen: Melakukan entry transaksi<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      3.1 Transaksi yang akan dientry
+                                      dianalisis<br />
+                                      3.2 Transaksi dientry dengan menggunakan
+                                      menu yang tepat<br />
+                                      3.3 Penyesuaian dientry dengan tepat<br />
+                                      3.4 Proses tutup buku dilakukan secara
+                                      tepat
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      12. Elemen: Mencetak laporan keuangan dan
+                                      laporan lainnya<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      4.1 Laporan laba rugi dibuat sesuai dengan
+                                      ketentuan SOP<br />
+                                      4.2 Laporan neraca dibuat sesuai dengan
+                                      ketentuan SOP<br />
+                                      4.3 Laporan ekuitas dibuat sesuai dengan
+                                      ketentuan SOP<br />
+                                      4.4 Laporan arus kas dibuat sesuai dengan
+                                      ketentuan SOP<br />
+                                      4.5 Laporan piutang dibuat sesuai dengan
+                                      ketentuan SOP<br />
+                                      4.6 Laporan Utang dibuat sesuai dengan
+                                      ketentuan SOP<br />
+                                      4.7 Laporan persediaan dibuat sesuai
+                                      dengan ketentuan SOP
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      13. Elemen: Membuat Backup File<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      5.1 Backup file data dibuat sesuai dengan
+                                      ketentuan SOP<br />
+                                      5.2 Backup file data disimpan dalam media
+                                      penyimpanan data
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <br />
+
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">Mengelola Kartu Piutang</th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Mempersiapkan pengelolaan kartu
+                                      piutang<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      1.1 Peralatan dan Perlengkapan yang
+                                      dibutuhkan untuk pengelolaan piutang
+                                      disediakan<br />
+                                      1.2 Data transaksi piutang disediakan
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox11"
+                                            checked
+                                            name="checkbox11"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox12"
+                                            name="checkbox12"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Mengidentifikasi data
+                                      piutang<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      2.1 Saldo awal piutang diidentifikasi<br />
+                                      2.2 Data mutasi piutang usaha
+                                      diidentifikasi<br />
+                                      2.3 Data mutasi piutang lainnya
+                                      diidentifikasi
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      3. Elemen: Membukukan mutasi piutang ke
+                                      kartu piutang<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      3.1 1 Data mutasi piutang diverifikasi<br />
+                                      3.2 Data mutasi piutang dibukukan<br />
+                                      3.3 Saldo akhir piutang diidentifikasi
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      4. Elemen: Melakukan konfirmasi saldo
+                                      piutang<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      4.1 Nama dan alamat debitur, serta jumlah
+                                      piutang diidentifikasi<br />
+                                      4.2 Surat pernyataan piutang dibuat<br />
+                                      4.3 Surat pernyataan piutang dipastikan
+                                      terkirim<br />
+                                      4.4 Jawaban surat pernyataan dianalisis
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      5. Elemen: Menyusun laporan piutang<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      5.1 Umur piutang diidentifikasi<br />
+                                      5.2 Laporan piutang disajikan sesuai
+                                      dengan ketentuan SOP
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <br />
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table
+                                class="table table-bordered table-striped verticle-middle"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th rowspan="2">Unit Kompetensi:</th>
+                                    <th colspan="4">Mengelola Kartu Utang</th>
+                                  </tr>
+                                  <tr>
+                                    <th colspan="4"></th>
+                                  </tr>
+
+                                  <tr>
+                                    <th>Dapatkah Saya ................?</th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th>Bukti Relavan</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Mempersiapkan pengelolaan kartu
+                                      utang<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      1.1 Peralatan dan perlengkapan yang
+                                      dibutuhkan untuk pengelolaan utang
+                                      disediakan<br />
+                                      1.2 Data transaksi utang disediakan
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox11"
+                                            checked
+                                            name="checkbox11"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox12"
+                                            name="checkbox12"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Mengidentifikasi data utang<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      2.1 Saldo awal utang diidentifikasi<br />
+                                      2.2 Data mutasi utang usaha
+                                      diidentifikasi<br />
+                                      2.3 Data mutasi utang lainnya
+                                      diidentifikasi
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      3. Elemen: Membukukan mutasi utang ke
+                                      kartu utang<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      3.1 Data mutasi utang diverifikasi<br />
+                                      3.2 Data mutasi utang dibukukan<br />
+                                      3.3 Saldo akhir utang diidentifikasi
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      4. Elemen: Menyusun laporan utang<br />
+                                      ● Kriteria Unjuk Kerja:<br />
+                                      4.1 Umur utang diidentifikasi<br />
+                                      4.2 Laporan utang disajikan sesuai dengan
+                                      ketentuan SOP
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox13"
+                                            checked
+                                            name="checkbox13"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox14"
+                                            name="checkbox14"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="col-lg-12">
+                                        <input
+                                          type="text"
+                                          class="form-control"
+                                          id="val-buktirelavan"
+                                          name="val-buktirelavan"
+                                        />
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <br />
+                          div class="col-lg-12">
+                          <div class="table-responsive">
+                            <table
+                              class="table table-bordered table-striped verticle-middle"
+                            >
+                              <thead>
+                                <tr>
+                                  <th rowspan="2">Unit Kompetensi:</th>
+                                  <th colspan="4">
+                                    Mengelola Kartu Persediaan
+                                  </th>
+                                </tr>
+                                <tr>
+                                  <th colspan="4"></th>
+                                </tr>
+
+                                <tr>
+                                  <th>Dapatkah Saya ................?</th>
+                                  <th>K</th>
+                                  <th>BK</th>
+                                  <th>Bukti Relavan</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    1. Elemen: Mempersiapkan pengelolaan kartu
+                                    persediaan<br />
+                                    ● Kriteria Unjuk Kerja:<br />
+                                    1.1 Peralatan dan perlengkapan yang
+                                    dibutuhkan untuk pengelolaan kartu
+                                    persediaan disediakan<br />
+                                    1.2 Data transaksi persediaan disediakan
+                                  </td>
+                                  <td>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input
+                                          type="checkbox"
+                                          class="form-check-input"
+                                          id="checkbox11"
+                                          checked
+                                          name="checkbox11"
+                                        />
+                                      </label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input
+                                          type="checkbox"
+                                          class="form-check-input"
+                                          id="checkbox12"
+                                          name="checkbox12"
+                                        />
+                                      </label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="col-lg-12">
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="val-buktirelavan"
+                                        name="val-buktirelavan"
+                                      />
+                                    </div>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td>
+                                    2. Elemen: Mengidentifikasi data mutasi
+                                    persediaan<br />
+                                    ● Kriteria Unjuk Kerja:<br />
+                                    2.1 1 Saldo awal persediaan
+                                    diidentifikasi<br />
+                                    2.2 Data penerimaan persediaan
+                                    diidentifikasi<br />
+                                    2.3 Data retur penjualan diidentifikasi<br />
+                                    2.4 Data retur pembelian diidentifikasi<br />
+                                    2.5 Data pengeluaran persediaan
+                                    diidentifikasi
+                                  </td>
+                                  <td>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input
+                                          type="checkbox"
+                                          class="form-check-input"
+                                          id="checkbox13"
+                                          checked
+                                          name="checkbox13"
+                                        />
+                                      </label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input
+                                          type="checkbox"
+                                          class="form-check-input"
+                                          id="checkbox14"
+                                          name="checkbox14"
+                                        />
+                                      </label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="col-lg-12">
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="val-buktirelavan"
+                                        name="val-buktirelavan"
+                                      />
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    3. Elemen: Membukukan mutasi persediaan ke
+                                    kartu persediaan<br />
+                                    ● Kriteria Unjuk Kerja:<br />
+                                    3.1 Data mutasi persediaan diverifikasi<br />
+                                    3.2 Data mutasi persediaan dibukukan
+                                  </td>
+                                  <td>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input
+                                          type="checkbox"
+                                          class="form-check-input"
+                                          id="checkbox13"
+                                          checked
+                                          name="checkbox13"
+                                        />
+                                      </label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input
+                                          type="checkbox"
+                                          class="form-check-input"
+                                          id="checkbox14"
+                                          name="checkbox14"
+                                        />
+                                      </label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="col-lg-12">
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="val-buktirelavan"
+                                        name="val-buktirelavan"
+                                      />
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    4. Elemen: Membuat laporan persediaan<br />
+                                    ● Kriteria Unjuk Kerja:<br />
+                                    4.1 Laporan persediaan disajikan sesuai
+                                    dengan ketentuan SOP<br />
+                                    4.2 Saldo akhir persediaan diidentifikasi
+                                  </td>
+                                  <td>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input
+                                          type="checkbox"
+                                          class="form-check-input"
+                                          id="checkbox13"
+                                          checked
+                                          name="checkbox13"
+                                        />
+                                      </label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input
+                                          type="checkbox"
+                                          class="form-check-input"
+                                          id="checkbox14"
+                                          name="checkbox14"
+                                        />
+                                      </label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="col-lg-12">
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="val-buktirelavan"
+                                        name="val-buktirelavan"
+                                      />
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    5. Elemen: Membukukan selisih persediaan<br />
+                                    ● Kriteria Unjuk Kerja:<br />
+                                    5.1 Berita acara hasil penghitungan fisik
+                                    persediaan disediakan<br />
+                                    5.2 Selisih persediaan ditentukan
+                                    kewajarannnya sesuai dengan ketentuan
+                                    perusahaan<br />
+                                    5.3 Selisih persediaan (kurang/lebih)
+                                    dibukukan
+                                  </td>
+                                  <td>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input
+                                          type="checkbox"
+                                          class="form-check-input"
+                                          id="checkbox13"
+                                          checked
+                                          name="checkbox13"
+                                        />
+                                      </label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="form-check mb-3">
+                                      <label class="form-check-label">
+                                        <input
+                                          type="checkbox"
+                                          class="form-check-input"
+                                          id="checkbox14"
+                                          name="checkbox14"
+                                        />
+                                      </label>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div class="col-lg-12">
+                                      <input
+                                        type="text"
+                                        class="form-control"
+                                        id="val-buktirelavan"
+                                        name="val-buktirelavan"
+                                      />
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <br />
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"
+                      >Tanda Tangan Asesi</label
+                    >
+                    <div class="button-icon">
+                      <input
+                        type="file"
+                        class="form-control-file"
+                        id="exampleFormControlFile1"
+                      />
+                    </div>
+
+                    <label class="col-sm-2 col-form-label">Tanggal</label>
+                    <div class="col-md-4">
+                      <div class="example">
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="datepicker-autoclose"
+                            placeholder="mm/dd/yyyy"
+                          />
+                          <span class="input-group-append"
+                            ><span class="input-group-text"
+                              ><i class="mdi mdi-calendar-check"></i></span
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"
+                      >Tanda Tangan Asesor</label
+                    >
+                    <div class="form-check mb-3">
+                      <label class="form-check-label">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          value=""
+                        />Silahkan melakukan penceklisan</label
+                      >
+                    </div>
+
+                    <label class="col-sm-2 col-form-label">Tanggal</label>
+                    <div class="col-md-4">
+                      <div class="example">
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="datepicker-autoclose"
+                            placeholder="mm/dd/yyyy"
+                          />
+                          <span class="input-group-append"
+                            ><span class="input-group-text"
+                              ><i class="mdi mdi-calendar-check"></i></span
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <div class="sweetalert m-t-30">
+                      <button class="btn btn-dark mb-2 btn sweet-message">
+                        Kirim
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--**********************************
+            Content body end
+        ***********************************-->
+
+    <!--**********************************
+            Footer start
+        ***********************************-->
+    <!-- <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
+            </div>
+        </div> -->
+    <!--**********************************
+            Footer end
+        ***********************************-->
+    <!-- </div> -->
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="plugins/common/common.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/gleek.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
+    <script src="./plugins/moment/moment.js"></script>
+    <script src="./plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <!-- Clock Plugin JavaScript -->
+    <script src="./plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
+    <!-- Color Picker Plugin JavaScript -->
+    <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
+    <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
+    <script src="./plugins/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+    <!-- Date Picker Plugin JavaScript -->
+    <script src="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- Date range Plugin JavaScript -->
+    <script src="./plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <script src="./js/plugins-init/form-pickers-init.js"></script>
+
+    <script>
+      document.querySelector(".sweet-message").onclick = function () {
+        swal("APL02 berhasil dikirim, silahkan menunggu jadwal asesmen");
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-text").onclick = function () {
+        swal("Hey, Here's a message !!", "It's pretty, isn't it?");
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-success").onclick = function () {
+        swal("Hey, Good job !!", "You clicked the button !!", "success");
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-confirm").onclick = function () {
+        swal(
+          {
+            title: "Apakah data telah sesuai?",
+            // text: "You will not be able to recover this imaginary file !!",
+            type: "warning",
+            showCancelButton: !0,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Selesai",
+            closeOnConfirm: !1,
+          },
+          function () {
+            swal(
+              "Berhasil !!",
+              "Untuk lanjut ke APL 02, silahkan menunggu admin approve",
+              "success"
+            );
+          }
+        );
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-success-cancel").onclick = function () {
+        swal(
+          {
+            title: "Are you sure to delete ?",
+            text: "You will not be able to recover this imaginary file !!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it !!",
+            cancelButtonText: "No, cancel it !!",
+            closeOnConfirm: false,
+            closeOnCancel: false,
+          },
+          function (e) {
+            e
+              ? swal(
+                  "Deleted !!",
+                  "Hey, your imaginary file has been deleted !!",
+                  "success"
+                )
+              : swal(
+                  "Cancelled !!",
+                  "Hey, your imaginary file is safe !!",
+                  "error"
+                );
+          }
+        );
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-image-message").onclick = function () {
+        swal({
+          title: "Sweet !!",
+          text: "Hey, Here's a custom image !!",
+          imageUrl: "../assets/images/hand.jpg",
+        });
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-html").onclick = function () {
+        swal({
+          title: "Sweet !!",
+          text: "<span style='color:#ff0000'>Hey, you are using HTML !!<span>",
+          html: true,
+        });
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-auto").onclick = function () {
+        swal({
+          title: "Sweet auto close alert !!",
+          text: "Hey, i will close in 2 seconds !!",
+          timer: 2e3,
+          showConfirmButton: false,
+        });
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-prompt").onclick = function () {
+        swal(
+          {
+            title: "Enter an input !!",
+            text: "Write something interesting !!",
+            type: "input",
+            showCancelButton: true,
+            closeOnConfirm: false,
+            animation: "slide-from-top",
+            inputPlaceholder: "Write something",
+          },
+          function (e) {
+            return (
+              !1 !== e &&
+              ("" === e
+                ? (swal.showInputError("You need to write something!"), !1)
+                : void swal("Hey !!", "You wrote: " + e, "success"))
+            );
+          }
+        );
+      };
+    </script>
+    <script>
+      document.querySelector(".sweet-ajax").onclick = function () {
+        swal(
+          {
+            title: "Sweet ajax request !!",
+            text: "Submit to run ajax request !!",
+            type: "info",
+            showCancelButton: true,
+            closeOnConfirm: false,
+            showLoaderOnConfirm: true,
+          },
+          function () {
+            setTimeout(function () {
+              swal("Hey, your ajax request finished !!");
+            }, 2e3);
+          }
+        );
+      };
+    </script>
+    <!-- <script>
+      document
+        .getElementById("checkbox1")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox2").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox2")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox1").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox3")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox4").checked = false;
+        });
+    </script>
+    <script>
+      document
+        .getElementById("checkbox4")
+        .addEventListener("click", function () {
+          document.getElementById("checkbox3").checked = false;
+        });
+    </script> -->
+    <script>
+      // Function to add event listener to a checkbox
+      function addEventListenerToCheckbox(checkboxId1, checkboxId2) {
+        document
+          .getElementById(checkboxId1)
+          .addEventListener("click", function () {
+            document.getElementById(checkboxId2).checked = false;
+          });
+        document
+          .getElementById(checkboxId2)
+          .addEventListener("click", function () {
+            document.getElementById(checkboxId1).checked = false;
+          });
+      }
+
+      // Loop to add event listeners to each checkbox up to 70
+      for (let i = 1; i <= 70; i += 2) {
+        let nextId = i + 1;
+        if (nextId <= 70) {
+          addEventListenerToCheckbox("checkbox" + i, "checkbox" + nextId);
+        }
+      }
+    </script>
+  </body>
+</html>
