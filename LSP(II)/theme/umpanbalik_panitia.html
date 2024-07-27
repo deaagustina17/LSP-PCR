@@ -76,6 +76,7 @@
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
+                Hi, Panitia LSP (Panitia)
                 <div
                   class="user-img c-pointer position-relative"
                   data-toggle="dropdown"
@@ -240,33 +241,44 @@
                           <td>
                             <span>
                               <a
+                              class="badge bg-green"
                                 href="editumpanbalik_panitia.html"
                                 data-toggle="tooltip"
                                 data-placement="top"
                                 title="Edit"
                                 ><i class="fa fa-pencil color-muted m-r-5"></i
                               ></a>
+                              <button
+                                    class="badge bg-red"
+                                    data-placement="top"
+                                    onclick="confirmDelete(this)"
+                                  >
+                                    <i
+                                      class="fa fa-trash-o"
+                                      style="color: white"
+                                    ></i>
+                                  </button>
                               <a
-                                href="#"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                title="Hapus"
-                                ><i class="fa fa-trash-o color-danger"></i
-                              ></a>
-                              <a
+                              class="badge bg-info"
                                 href="detailumpanbalik_panitia.html"
                                 data-toggle="tooltip"
                                 data-placement="top"
                                 title="Detail"
                                 ><i class="fa fa-info-circle color-danger"></i
                               ></a>
-                              <a
-                                href="#"
-                                data-toggle="tooltip"
-                                data-placement="top"
-                                title="Unduh"
-                                ><i class="fa fa-download color-danger"></i
-                              ></a>
+                              <!-- <a
+                                    href="./file.xlsx"
+                                    class="badge bg-unduh"
+                                    data-placement="top"
+                                    id="downloadLink"
+                                    download="downloaded_file.txt"
+                                    onclick="confirmDownload(event, this)"
+                                  >
+                                    <i
+                                      class="fa fa-download"
+                                      style="color: white"
+                                    ></i>
+                                  </a> -->
                             </span>
                           </td>
                         </tr>

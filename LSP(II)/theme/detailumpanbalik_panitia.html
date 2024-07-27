@@ -232,7 +232,556 @@
               <div class="card">
                 <div class="card-body">
                   <div class="form-validation">
-                    
+                    <form class="form-valide" action="#" method="post">
+                      <a
+                        href="umpanbalik_panitia.html"
+                        class="list-group-item border-0 p-r-0"
+                        ><i
+                          class="fa fa-chevron-left font-18 align-middle mr-2"
+                        ></i
+                        >Kembali</a
+                      >
+                      <h4 class="card-title">Detail Umpan Balik</h4>
+                      <div class="basic-form">
+                        <form>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label"
+                              >Nama Asesor</label
+                            >
+                            <div class="col-sm-10">
+                              <input
+                                type="asesi"
+                                class="form-control"
+                                placeholder=""
+                              />
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label"
+                              >Tanggal</label
+                            >
+                            <div class="col-md-8">
+                              <div class="example">
+                                <div class="input-group">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="datepicker-autoclose"
+                                    placeholder="mm/dd/yyyy"
+                                  />
+                                  <span class="input-group-append"
+                                    ><span class="input-group-text"
+                                      ><i
+                                        class="mdi mdi-calendar-check"
+                                      ></i></span
+                                  ></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- <div class="card-title">
+                        <h4>Table Striped</h4>
+                      </div> -->
+                      <h6>
+                        Umpan balik dari Asesi (diisi oleh Asesi setelah
+                        pengambilan keputusan) :
+                      </h6>
+                      <div class="table-responsive">
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>KOMPONEN</th>
+                              <th colspan="2">Hasil</th>
+                              <th>Catatan/Komentar Asesi</th>
+                            </tr>
+                            <tr>
+                              <th></th>
+                              <th>Ya</th>
+                              <th>Tidak</th>
+                              <th></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                Saya mendapatkan penjelasan yang cukup
+                                memadai mengenai proses asesmen/uji
+                                kompetensi
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox1"
+                                      checked
+                                      name="checkbox1"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox2"
+                                      name="checkbox2"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-lg-12">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="val-buktirelavan"
+                                    name="val-buktirelavan"
+                                  />
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                Saya diberikan kesempatan untuk mempelajari
+                                standar kompetensi yang akan diujikan dan
+                                menilai diri sendiri terhadap pencapaiannya
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox3"
+                                      checked
+                                      name="checkbox3"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox4"
+                                      name="checkbox4"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-lg-12">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="val-buktirelavan"
+                                    name="val-buktirelavan"
+                                  />
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                Asesor memberikan kesempatan untuk
+                                mendiskusikan/menegosiasikan metoda,
+                                instrumen dan sumber asesmen serta jadwal
+                                asesmen
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox5"
+                                      checked
+                                      name="checkbox5"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox6"
+                                      name="checkbox6"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-lg-12">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="val-buktirelavan"
+                                    name="val-buktirelavan"
+                                  />
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                Asesor berusaha menggali seluruh bukti
+                                pendukung yang sesuai dengan latar belakang
+                                pelatihan dan pengalaman yang saya miliki
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox7"
+                                      checked
+                                      name="checkbox7"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox8"
+                                      name="checkbox8"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-lg-12">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="val-buktirelavan"
+                                    name="val-buktirelavan"
+                                  />
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                Saya sepenuhnya diberikan kesempatan untuk
+                                mendemonstrasikan kompetensi yang saya
+                                miliki selama asesmen
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox9"
+                                      checked
+                                      name="checkbox9"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox10"
+                                      name="checkbox10"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-lg-12">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="val-buktirelavan"
+                                    name="val-buktirelavan"
+                                  />
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                Saya mendapatkan penjelasan yang memadai
+                                mengenai keputusan asesmen
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox11"
+                                      checked
+                                      name="checkbox11"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox12"
+                                      name="checkbox12"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-lg-12">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="val-buktirelavan"
+                                    name="val-buktirelavan"
+                                  />
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                Asesor memberikan umpan balik yang mendukung
+                                setelah asesmen serta tindak lanjutnya
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox13"
+                                      checked
+                                      name="checkbox13"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox14"
+                                      name="checkbox14"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-lg-12">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="val-buktirelavan"
+                                    name="val-buktirelavan"
+                                  />
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                Asesor bersama saya mempelajari semua
+                                dokumen asesmen serta menandatanganinya
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox15"
+                                      checked
+                                      name="checkbox15"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox16"
+                                      name="checkbox16"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-lg-12">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="val-buktirelavan"
+                                    name="val-buktirelavan"
+                                  />
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                Asesor bersama saya mempelajari semua
+                                dokumen asesmen serta menandatanganinya
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox17"
+                                      checked
+                                      name="checkbox17"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox18"
+                                      name="checkbox18"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-lg-12">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="val-buktirelavan"
+                                    name="val-buktirelavan"
+                                  />
+                                </div>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td>
+                                Asesor menggunakan keterampilan komunikasi
+                                yang efektif selama asesmen
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox19"
+                                      checked
+                                      name="checkbox19"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="form-check mb-3">
+                                  <label class="form-check-label">
+                                    <input
+                                      type="checkbox"
+                                      class="form-check-input"
+                                      id="checkbox20"
+                                      name="checkbox20"
+                                    />
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-lg-12">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="val-buktirelavan"
+                                    name="val-buktirelavan"
+                                  />
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <h6>Catatan/komentar lainnya (apabila ada) :</h6>
+                        <textarea
+                          class="form-control h-150px"
+                          rows="6"
+                          id="comment"
+                        ></textarea>
+                      </div>
+
+                      <br />
+                      <div class="form-group row">
+                        <label class="col-sm-2 col-form-label"
+                          >Tanda Tangan Asesi</label
+                        >
+                        <div class="button-icon">
+                          <input
+                            type="file"
+                            class="form-control-file"
+                            id="exampleFormControlFile1"
+                          />
+                        </div>
+
+                        <!-- <label class="col-sm-2 col-form-label">Tanggal</label>
+                      <div class="col-md-4">
+                        <div class="example">
+                          <div class="input-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="datepicker-autoclose"
+                              placeholder="mm/dd/yyyy"
+                            />
+                            <span class="input-group-append"
+                              ><span class="input-group-text"
+                                ><i class="mdi mdi-calendar-check"></i></span
+                            ></span>
+                          </div>
+                        </div>
+                      </div> -->
+
+                        <!-- <label class="col-sm-2 col-form-label">Tanggal/label>
+                        <div class="col-sm-4">
+                          <input
+                            type="asesi"
+                            class="form-control"
+                            placeholder=""
+                          />
+                        </div> -->
+                      </div>
+                    </form>
+                  </div>
+                </form>
+              </div>
             </div>
             <div class="card-body">
               <div class="card-content">

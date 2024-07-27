@@ -114,7 +114,7 @@
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
-                Hi, Dea (Asesi)
+                Hi, Asesor (Asesor)
                 <div
                   class="user-img c-pointer position-relative"
                   data-toggle="dropdown"
@@ -233,11 +233,14 @@
                         <div class="col-lg-6">
                           <input
                             type="text"
-                            class="form-control"
+                            class="form-control input_nama_lengkap_asesor"
                             id="val-nama"
                             name="val-nama"
                             placeholder="Masukkan nama lengkap.."
                           />
+                          <div
+                            class="text-danger error_input_nama_lengkap_asesor"
+                          ></div>
                         </div>
                       </div>
                       <div class="form-group row">
@@ -247,11 +250,14 @@
                         <div class="col-lg-6">
                           <input
                             type="text"
-                            class="form-control"
+                            class="form-control input_inisial_asesor"
                             id="val-nama"
                             name="val-nama"
                             placeholder="Masukkan Inisial.."
                           />
+                          <div
+                            class="text-danger error_input_inisial_asesor"
+                          ></div>
                         </div>
                       </div>
                       <div class="form-group row">
@@ -261,17 +267,18 @@
                         <div class="col-lg-3">
                           <input
                             type="text"
-                            class="form-control"
+                            class="form-control input_tempat"
                             id="val-ttl"
                             name="val-ttl"
                             placeholder="Masukkan Tempat/Tgl.Lahir.."
                           />
+                          <div class="text-danger error_input_tempat"></div>
                         </div>
                         <div class="col-lg-3">
                           <div class="input-group">
                             <input
                               type="text"
-                              class="form-control"
+                              class="form-control input_tgl_lahir"
                               id="datepicker-autoclose"
                               placeholder="mm/dd/yyyy"
                             />
@@ -280,6 +287,7 @@
                                 ><i class="mdi mdi-calendar-check"></i></span
                             ></span>
                           </div>
+                          <div class="text-danger error_input_tgl_lahir"></div>
                         </div>
                       </div>
                       <div class="form-group row">
@@ -288,13 +296,15 @@
                         </label>
                         <div class="col-lg-6">
                           <select
-                            class="form-control"
+                            class="form-control input_jk"
                             id="val-jk"
                             name="val-jk"
                           >
+                            <option value="">Pilih</option>
                             <option value="lk">Laki - Laki</option>
                             <option value="pr">Perempuan</option>
                           </select>
+                          <div class="text-danger error_input_jk"></div>
                         </div>
                       </div>
                       <div class="form-group row">
@@ -306,13 +316,15 @@
                         <div class="col-lg-6">
                           <input
                             type="text"
-                            class="form-control"
+                            class="form-control input_kebangsaan"
                             id="val-kebangsaan"
                             name="val-kebangsaan"
                             placeholder="Masukkan Kebangsaan.."
                           />
+                          <div class="text-danger error_input_kebangsaan"></div>
                         </div>
                       </div>
+
                       <div class="form-group row">
                         <label class="col-lg-4 col-form-label" for="val-alamat"
                           >Alamat rumah
@@ -321,11 +333,14 @@
                         <div class="col-lg-6">
                           <input
                             type="text"
-                            class="form-control"
+                            class="form-control input_alamat_rumah"
                             id="val-alamat"
                             name="val-alamat"
                             placeholder="Masukkan Alamat rumah (Domisili Saat ini).."
                           />
+                          <div
+                            class="text-danger error_input_alamat_rumah"
+                          ></div>
                         </div>
                       </div>
                       <div class="form-group row">
@@ -336,11 +351,14 @@
                         <div class="col-lg-6">
                           <input
                             type="text"
-                            class="form-control"
+                            class="form-control input_nomor_regis"
                             id="val-alamat"
                             name="val-alamat"
                             placeholder="Masukkan Nomor registrasi"
                           />
+                          <div
+                            class="text-danger error_input_nomor_regis"
+                          ></div>
                         </div>
                       </div>
 
@@ -348,142 +366,40 @@
                         <label class="col-lg-4 col-form-label" for="val-foto"
                           >Tanda Tangan<span class="text-danger">*</span>
                         </label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <div class="card">
-                          <div class="button-icon">
-                            <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
-                            <input
-                              type="file"
-                              class="form-control-file"
-                              id="exampleFormControlFile1"
-                              accept="image/*"
-                            />
-                          </div>
+                        <div class="col-lg-6">
+                          <input
+                            type="file"
+                            class="form-control input_tanda_tangan"
+                            id="val-alamat"
+                            name="val-alamat"
+                          />
+                          <div
+                            class="text-danger error_input_tanda_tangan"
+                          ></div>
                         </div>
                       </div>
 
-                      <!-- <div class="form-group row">
-                                  <label class="col-lg-4 col-form-label"><a href="#">Terms &amp; Conditions</a>  <span class="text-danger">*</span>
-                                  </label>
-                                  <div class="col-lg-8">
-                                      <label class="css-control css-control-primary css-checkbox" for="val-terms">
-                                          <input type="checkbox" class="css-control-input" id="val-terms" name="val-terms" value="1"> <span class="css-control-indicator"></span> I agree to the terms</label>
-                                  </div>
-                              </div> -->
-                                <h5>b. Riwayat Pengajaran 3 Tahun Terakhir</h5>
-                                <div class="table-responsive">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>No</th>
-                                                <th>Nama Mata Kuliah</th>
-                                                <th>Kelas</th>
-                                                <th>Bukti</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="teachingHistoryTableBody">
-                                            <tr>
-                                                <td>1</td>
-                                                <td>
-                                                    <div class="col-lg-12">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="val-matakuliah1"
-                                                            name="val-matakuliah1"
-                                                        />
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="col-lg-12">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="val-kelas1"
-                                                            name="val-kelas1"
-                                                        />
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="button-icon">
-                                                        <input
-                                                            type="file"
-                                                            class="form-control-file"
-                                                            id="exampleFormControlFile1"
-                                                            accept="image/*"
-                                                        />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>
-                                                    <div class="col-lg-12">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="val-matakuliah2"
-                                                            name="val-matakuliah2"
-                                                        />
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="col-lg-12">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="val-kelas2"
-                                                            name="val-kelas2"
-                                                        />
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="button-icon">
-                                                        <input
-                                                            type="file"
-                                                            class="form-control-file"
-                                                            id="exampleFormControlFile2"
-                                                            accept="image/*"
-                                                        />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>
-                                                    <div class="col-lg-12">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="val-matakuliah3"
-                                                            name="val-matakuliah3"
-                                                        />
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="col-lg-12">
-                                                        <input
-                                                            type="text"
-                                                            class="form-control"
-                                                            id="val-kelas3"
-                                                            name="val-kelas3"
-                                                        />
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="button-icon">
-                                                        <input
-                                                            type="file"
-                                                            class="form-control-file"
-                                                            id="exampleFormControlFile3"
-                                                            accept="image/*"
-                                                        />
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <button id="addRowButton" class="btn btn-success mb-3">Tambah Riwayat Pengajaran</button>
+                      <h5>b. Riwayat Pengajaran 3 Tahun Terakhir</h5>
+                      <div class="table-responsive">
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>Nama Mata Kuliah</th>
+                              <th>Kelas</th>
+                              <th>Bukti</th>
+                              <th>Aksi</th>
+                            </tr>
+                          </thead>
+                          <tbody class="row_riwayat_pengajaran">
+                            <tr>
+                              <td>
+                                <div class="col-lg-12">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="val-matakuliah1"
+                                    name="val-matakuliah1"
+                                  />
                                 </div>
                               </td>
                               <td>
@@ -500,82 +416,26 @@
                                 <div class="button-icon">
                                   <input
                                     type="file"
-                                    class="form-control-file"
+                                    class="form-control"
                                     id="exampleFormControlFile1"
                                     accept="image/*"
                                   />
                                 </div>
                               </td>
-                            </tr>
-                            <tr>
-                              <td>2</td>
                               <td>
-                                <div class="col-lg-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="val-matakuliah2"
-                                    name="val-matakuliah2"
-                                  />
-                                </div>
-                              </td>
-                              <td>
-                                <div class="col-lg-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="val-kelas2"
-                                    name="val-kelas2"
-                                  />
-                                </div>
-                              </td>
-                              <td>
-                                <div class="button-icon">
-                                  <input
-                                    type="file"
-                                    class="form-control-file"
-                                    id="exampleFormControlFile1"
-                                    accept="image/*"
-                                  />
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>3</td>
-                              <td>
-                                <div class="col-lg-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="val-matakuliah3"
-                                    name="val-matakuliah3"
-                                  />
-                                </div>
-                              </td>
-                              <td>
-                                <div class="col-lg-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="val-kelas3"
-                                    name="val-kelas3"
-                                  />
-                                </div>
-                              </td>
-                              <td>
-                                <div class="button-icon">
-                                  <input
-                                    type="file"
-                                    class="form-control-file"
-                                    id="exampleFormControlFile1"
-                                    accept="image/*"
-                                  />
-                                </div>
+                                <button
+                                  class="btn btn-danger button_hapus_riwayat_pengajaran"
+                                >
+                                  Hapus
+                                </button>
                               </td>
                             </tr>
                           </tbody>
                         </table>
-                        <button class="btn btn-sm btn-success">
+                        <button
+                          class="btn btn-success mb-3 button_tambah_riwayat_pengajaran"
+                          type="button"
+                        >
                           Tambah Riwayat Pengajaran
                         </button>
                       </div>
@@ -585,16 +445,15 @@
                         <table class="table table-striped">
                           <thead>
                             <tr>
-                              <th>No</th>
                               <th>Jenis Pelatihan</th>
                               <th>Pelaksana</th>
                               <th>Tahun</th>
                               <th>Bukti</th>
+                              <th>Aksi</th>
                             </tr>
                           </thead>
-                          <tbody>
+                          <tbody class="row_pengalaman_pelatihan1">
                             <tr>
-                              <td>1</td>
                               <td>
                                 <div class="col-lg-12">
                                   <input
@@ -629,113 +488,36 @@
                                 <div class="button-icon">
                                   <input
                                     type="file"
-                                    class="form-control-file"
+                                    class="form-control"
                                     id="exampleFormControlFile1"
                                     accept="image/*"
                                   />
                                 </div>
                               </td>
-                            </tr>
-                            <tr>
-                              <td>2</td>
                               <td>
-                                <div class="col-lg-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="val-jenispelaksanaan2"
-                                    name="val-pelaksanaan2"
-                                  />
-                                </div>
-                              </td>
-                              <td>
-                                <div class="col-lg-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="val-jenispelaksanaan2"
-                                    name="val-jenispelaksanaan2"
-                                  />
-                                </div>
-                              </td>
-                              <td>
-                                <div class="col-lg-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="val-tahun"
-                                    name="val-tahun"
-                                  />
-                                </div>
-                              </td>
-                              <td>
-                                <div class="button-icon">
-                                  <input
-                                    type="file"
-                                    class="form-control-file"
-                                    id="exampleFormControlFile1"
-                                    accept="image/*"
-                                  />
-                                </div>
-                              </td>
-                            </tr>
-
-                            <tr>
-                              <td>3</td>
-                              <td>
-                                <div class="col-lg-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="val-jenispelaksanaan3"
-                                    name="val-jenispelaksanaan3"
-                                  />
-                                </div>
-                              </td>
-                              <td>
-                                <div class="col-lg-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="val-pelaksanaan3"
-                                    name="val-pelaksanaan3"
-                                  />
-                                </div>
-                              </td>
-                              <td>
-                                <div class="col-lg-12">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    id="val-tahun"
-                                    name="val-tahun"
-                                  />
-                                </div>
-                              </td>
-                              <td>
-                                <div class="button-icon">
-                                  <input
-                                    type="file"
-                                    class="form-control-file"
-                                    id="exampleFormControlFile1"
-                                    accept="image/*"
-                                  />
-                                </div>
+                                <button
+                                  class="btn btn-danger button_hapus_pengalaman_pelatihan1"
+                                >
+                                  Hapus
+                                </button>
                               </td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-content">
-                    <div class="sweetalert m-t-30">
-                      <button class="btn btn-dark mb-2 btn sweet-success">
-                        Simpan
+                      <button
+                        class="btn btn-success mb-3 button_tambah_pengalaman_pelatihan1"
+                        type="button"
+                      >
+                        Tambah Pengalaman Pelatihan
                       </button>
-                    </div>
+                    </form>
+                    <br />
+                    <button
+                      class="btn btn-dark mb-2 btn simpan_data_pengalaman"
+                    >
+                      Simpan
+                    </button>
                   </div>
                 </div>
               </div>
@@ -789,191 +571,6 @@
     <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 
     <script src="./js/plugins-init/form-pickers-init.js"></script>
-    <script>
-      document.querySelector(".sweet-message").onclick = function () {
-        swal("Hey, Here's a message !!");
-      };
-    </script>
-    <script>
-      document.querySelector(".sweet-text").onclick = function () {
-        swal("Hey, Here's a message !!", "It's pretty, isn't it?");
-      };
-    </script>
-    <script>
-      document.querySelector(".sweet-success").onclick = function () {
-        swal("Berhasil disimpan !!", "", "success");
-      };
-    </script>
-    <script>
-      document.querySelector(".sweet-confirm").onclick = function () {
-        swal(
-          {
-            title: "Apakah data telah sesuai?",
-            // text: "You will not be able to recover this imaginary file !!",
-            type: "warning",
-            showCancelButton: !0,
-            confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Selesai",
-            closeOnConfirm: !1,
-          },
-          function () {
-            swal(
-              "Berhasil !!",
-              "Untuk lanjut ke APL 02, silahkan menunggu admin approve",
-              "success"
-            );
-          }
-        );
-      };
-    </script>
-    <script>
-      document.querySelector(".sweet-success-cancel").onclick = function () {
-        swal(
-          {
-            title: "Are you sure to delete ?",
-            text: "You will not be able to recover this imaginary file !!",
-            type: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Yes, delete it !!",
-            cancelButtonText: "No, cancel it !!",
-            closeOnConfirm: false,
-            closeOnCancel: false,
-          },
-          function (e) {
-            e
-              ? swal(
-                  "Deleted !!",
-                  "Hey, your imaginary file has been deleted !!",
-                  "success"
-                )
-              : swal(
-                  "Cancelled !!",
-                  "Hey, your imaginary file is safe !!",
-                  "error"
-                );
-          }
-        );
-      };
-    </script>
-    <script>
-      document.querySelector(".sweet-image-message").onclick = function () {
-        swal({
-          title: "Sweet !!",
-          text: "Hey, Here's a custom image !!",
-          imageUrl: "../assets/images/hand.jpg",
-        });
-      };
-    </script>
-    <script>
-      document.querySelector(".sweet-html").onclick = function () {
-        swal({
-          title: "Sweet !!",
-          text: "<span style='color:#ff0000'>Hey, you are using HTML !!<span>",
-          html: true,
-        });
-      };
-    </script>
-    <script>
-      document.querySelector(".sweet-auto").onclick = function () {
-        swal({
-          title: "Sweet auto close alert !!",
-          text: "Hey, i will close in 2 seconds !!",
-          timer: 2e3,
-          showConfirmButton: false,
-        });
-      };
-    </script>
-    <script>
-      document.querySelector(".sweet-prompt").onclick = function () {
-        swal(
-          {
-            title: "Enter an input !!",
-            text: "Write something interesting !!",
-            type: "input",
-            showCancelButton: true,
-            closeOnConfirm: false,
-            animation: "slide-from-top",
-            inputPlaceholder: "Write something",
-          },
-          function (e) {
-            return (
-              !1 !== e &&
-              ("" === e
-                ? (swal.showInputError("You need to write something!"), !1)
-                : void swal("Hey !!", "You wrote: " + e, "success"))
-            );
-          }
-        );
-      };
-    </script>
-    <script>
-      document.querySelector(".sweet-ajax").onclick = function () {
-        swal(
-          {
-            title: "Sweet ajax request !!",
-            text: "Submit to run ajax request !!",
-            type: "info",
-            showCancelButton: true,
-            closeOnConfirm: false,
-            showLoaderOnConfirm: true,
-          },
-          function () {
-            setTimeout(function () {
-              swal("Hey, your ajax request finished !!");
-            }, 2e3);
-          }
-        );
-      };
-    </script>
-    <script>
-      $(document).ready(function() {
-    let rowCount = 3; // Mulai dari jumlah baris yang sudah ada
-
-    $('#addRowButton').click(function() {
-        rowCount++; // Increment jumlah baris
-
-        // Buat elemen baris baru
-        const newRow = $(`
-            <tr>
-                <td>${rowCount}</td>
-                <td>
-                    <div class="col-lg-12">
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="val-matakuliah${rowCount}"
-                            name="val-matakuliah${rowCount}"
-                        />
-                    </div>
-                </td>
-                <td>
-                    <div class="col-lg-12">
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="val-kelas${rowCount}"
-                            name="val-kelas${rowCount}"
-                        />
-                    </div>
-                </td>
-                <td>
-                    <div class="button-icon">
-                        <input
-                            type="file"
-                            class="form-control-file"
-                            id="exampleFormControlFile${rowCount}"
-                            accept="image/*"
-                        />
-                    </div>
-                </td>
-            </tr>
-        `);
-
-        // Tambahkan baris baru ke dalam tabel
-        $('#teachingHistoryTableBody').append(newRow);
-    });
-});
-    </script>
+    <script src="js/custom_new.js"></script>
   </body>
 </html>

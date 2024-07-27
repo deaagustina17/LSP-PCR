@@ -59,6 +59,7 @@
       href="./plugins/bootstrap-daterangepicker/daterangepicker.css"
       rel="stylesheet"
     />
+    <link href="css/custom_new.css" rel="stylesheet"/>
   </head>
 
   <body>
@@ -114,6 +115,7 @@
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
+                Hi, Asesor (Asesor)
                 <div
                   class="user-img c-pointer position-relative"
                   data-toggle="dropdown"
@@ -173,7 +175,10 @@
               </a>
             </li>
             <li>
-              <a href="dokumensertifikasiasesor_asesor.html" aria-expanded="false">
+              <a
+                href="dokumensertifikasiasesor_asesor.html"
+                aria-expanded="false"
+              >
                 <span class="nav-text">Dokumen Sertifikasi Asesor</span>
               </a>
             </li>
@@ -223,33 +228,32 @@
                         </label>
                         <div class="col-lg-6">
                           <select
-                            class="form-control"
+                            class="form-control input_skema"
                             id="val-jk"
                             name="val-jk"
                           >
-                          <option value="1">
-                            Database Programming Supervisor
-                          </option>
-                          <option value="2">
-                            Network Administrator Muda
-                          </option>
-                          <option value="3">Programmer</option>
-                          <option value="4">
-                            Teknisi Madya Jaringan Komputer
-                          </option>
-                          <option value="5">
-                            Pengoperasian Peralatan Kelistrikan Dan
-                            Elektronika Berbasis Programmable Logic
-                            Controller (PLC)
-                          </option>
-                          <option value="6">Plate Welder</option>
-                          <option value="7">
-                            Pengoperasian Instrumentasi Proses Kontrol
-                          </option>
-                          <option value="8">
-                            Teknisi Akuntansi Pratama
-                          </option>
+                            <option value="1">
+                              Database Programming Supervisor
+                            </option>
+                            <option value="2">
+                              Network Administrator Muda
+                            </option>
+                            <option value="3">Programmer</option>
+                            <option value="4">
+                              Teknisi Madya Jaringan Komputer
+                            </option>
+                            <option value="5">
+                              Pengoperasian Peralatan Kelistrikan Dan
+                              Elektronika Berbasis Programmable Logic Controller
+                              (PLC)
+                            </option>
+                            <option value="6">Plate Welder</option>
+                            <option value="7">
+                              Pengoperasian Instrumentasi Proses Kontrol
+                            </option>
+                            <option value="8">Teknisi Akuntansi Pratama</option>
                           </select>
+                          <div class="text-danger error_input_skema"></div>
                         </div>
                       </div>
                       <div class="form-group row">
@@ -260,11 +264,12 @@
                         <div class="col-lg-6">
                           <input
                             type="text"
-                            class="form-control"
+                            class="form-control input_nomor_regis"
                             id="val-alamat"
                             name="val-alamat"
                             placeholder="Masukkan Nomor registrasi"
                           />
+                          <div class="text-danger error_input_nomor_regis"></div>
                         </div>
                       </div>
                       <div class="form-group row">
@@ -277,7 +282,7 @@
                           <div class="input-group">
                             <input
                               type="text"
-                              class="form-control"
+                              class="form-control input_tgl_habis"
                               id="datepicker-autoclose"
                               placeholder="mm/dd/yyyy"
                             />
@@ -286,6 +291,7 @@
                                 ><i class="mdi mdi-calendar-check"></i></span
                             ></span>
                           </div>
+                          <div class="text-danger error_input_tgl_habis"></div>
                         </div>
                       </div>
 
@@ -293,33 +299,25 @@
                         <label class="col-lg-4 col-form-label" for="val-foto"
                           >Upload<span class="text-danger">*</span>
                         </label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <div class="card">
-                          <div class="button-icon">
-                            <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
-                            <input
-                              type="file"
-                              class="form-control-file"
-                              id="exampleFormControlFile1"
-                              accept="image/*"
-                            />
-                          </div>
+                        <div class="col-lg-6">
+                          <input
+                            type="file"
+                            class="form-control input_tandatangan"
+                            id="val-alamat"
+                            name="val-alamat"
+                          />
+                          <div
+                            class="text-danger error_input_tandatangan"
+                          ></div>
                         </div>
                       </div>
 
-
-                     
-                      
-                    </form>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="card-content">
-                    <div class="sweetalert m-t-30">
-                      <button class="btn btn-dark mb-2 btn sweet-success">
+                      <button
+                        class="btn btn-dark mb-2 btn simpan_dokumensertifikasiasesor_asesor"
+                      >
                         Simpan
                       </button>
-                    </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -373,6 +371,7 @@
     <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 
     <script src="./js/plugins-init/form-pickers-init.js"></script>
+    <script src="js/custom_new.js"></script>
     <script>
       document.querySelector(".sweet-message").onclick = function () {
         swal("Hey, Here's a message !!");

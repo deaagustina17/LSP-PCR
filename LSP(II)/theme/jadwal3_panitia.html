@@ -27,6 +27,8 @@
       href="./plugins/jquery-asColorPicker-master/css/asColorPicker.css"
       rel="stylesheet"
     />
+    <!-- sweet alert -->
+    <link href="./plugins/sweetalert/css/sweetalert.css" rel="stylesheet" />
     <!-- Date picker plugins css -->
     <link
       href="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.css"
@@ -46,6 +48,29 @@
       rel="stylesheet"
     />
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/custom_new.css" rel="stylesheet" />
+    <style>
+      /* CSS untuk mempercantik tombol */
+      #downloadBtn {
+        background-color: transparent; /* Background transparan */
+        border: 2px solid #ffffff; /* Border hijau */
+        color: #000000; /* Warna teks hijau */
+        /* padding: 15px 32px; */
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        /* margin: 4px 2px; */
+        cursor: pointer;
+        border-radius: 2px; /* Sudut membulat */
+        transition: background-color 0.3s, color 0.3s; /* Animasi perubahan warna latar belakang dan teks */
+      }
+
+      #downloadBtn:hover {
+        background-color: #ffffff; /* Warna latar belakang saat hover */
+        color: #759bff; /* Warna teks saat hover */
+      }
+    </style>
   </head>
 
   <body>
@@ -95,9 +120,9 @@
         <div class="header-content clearfix">
           <div class="nav-control">
             <div class="hamburger">
-                <span class="toggle-icon"><i class="icon-menu"></i></span>
+              <span class="toggle-icon"><i class="icon-menu"></i></span>
             </div>
-        </div>
+          </div>
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
@@ -169,7 +194,7 @@
                 <span class="nav-text">Data Pendaftaran</span>
               </a>
             </li>
-            <li class="active">
+            <li>
               <a href="jadwal_panitia.html" aria-expanded="false">
                 <span class="nav-text">Data Jadwal Asesmen</span>
               </a>
@@ -224,71 +249,75 @@
         ***********************************-->
       <div class="content-body">
         <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <ul class="nav nav-pills flex-column flex-md-row mb-3">
+                <li class="nav-item">
+                  <a class="nav-link " href="jadwal_panitia.html"
+                    ><i class="bx bx-user me-1"></i>Database Programming
+                    Supervisor</a
+                  >
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link " href="jadwal2_panitia.html"
+                    ><i class="bx bx-bell me-1"></i>Network Administrator
+                    Muda
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="javascript:void(0);"
+                    ><i class="bx bx-bell me-1"></i>Programmer
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="jadwal4_panitia.html"
+                    ><i class="bx bx-bell me-1"></i>Teknisi Madya Jaringan
+                    Komputer
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="jadwal5_panitia.html"
+                    ><i class="bx bx-bell me-1"></i>Pengoperasian Peralatan
+                    Kelistrikan Dan Elektronika Berbasis Programmable Logic
+                    Controller (PLC)
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="jadwal6_panitia.html"
+                    ><i class="bx bx-bell me-1"></i>Plate Welder
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="jadwal7_panitia.html"
+                    ><i class="bx bx-bell me-1"></i>Pengoperasian
+                    Instrumentasi Proses Kontrol
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="jadwal8_panitia.html"
+                    ><i class="bx bx-bell me-1"
+                      >Teknisi Akuntansi Pratama
+                    </i></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="jadwal9_panitia.html"
+                    ><i class="bx bx-bell me-1"></i>Welding Inspector
+                    Standar
+                  </a>
+                </li>
+                <!-- <li class="nav-item">
+                          <a class="nav-link" href="pages-account-settings-connections.html"
+                            ><i class="bx bx-link-alt me-1"></i> Connections</a
+                          >
+                        </li> -->
+              </ul>
+            </div>
+          </div>
           <div class="card">
             <div class="container-xxl flex-grow-1 container-p-y">
               <div class="row">
                 <div class="col-md-12">
-                  <ul class="nav nav-pills flex-column flex-md-row mb-3">
-                    <li class="nav-item">
-                      <a class="nav-link" href="jadwal_panitia.html"
-                        ><i class="bx bx-user me-1"></i>Database Programming
-                        Supervisor</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="jadwal2_panitia.html"
-                        ><i class="bx bx-bell me-1"></i>Network Administrator
-                        Muda
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" href="javascript:void(0);"
-                        ><i class="bx bx-bell me-1"></i>Programmer
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="jadwal4_panitia.html"
-                        ><i class="bx bx-bell me-1"></i>Teknisi Madya Jaringan
-                        Komputer
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="jadwal5_panitia.html"
-                        ><i class="bx bx-bell me-1"></i>Pengoperasian Peralatan
-                        Kelistrikan Dan Elektronika Berbasis Programmable Logic
-                        Controller (PLC)
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="jadwal6_panitia.html"
-                        ><i class="bx bx-bell me-1"></i>Plate Welder
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="jadwal7_panitia.html"
-                        ><i class="bx bx-bell me-1"></i>Pengoperasian
-                        Instrumentasi Proses Kontrol
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="jadwal8_panitia.html"
-                        ><i class="bx bx-bell me-1"
-                          >Teknisi Akuntansi Pratama
-                        </i></a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="jadwal9_panitia.html"
-                        ><i class="bx bx-bell me-1"></i>Welding Inspector
-                        Standar
-                      </a>
-                    </li>
-                    <!-- <li class="nav-item">
-                              <a class="nav-link" href="pages-account-settings-connections.html"
-                                ><i class="bx bx-link-alt me-1"></i> Connections</a
-                              >
-                            </li> -->
-                  </ul>
                   <div class="card">
                     <div class="card-body">
                       <h4 class="card-title">Data Jadwal Asesmen</h4>
@@ -299,8 +328,8 @@
                         class="btn btn-dark mb-2"
                         ><i class="ti-plus f-s-12 m-r-5"></i> Tambah</a
                       >
-                      <div class="form-group row">
-                        <label class="col-sm-3 col-form-label"
+                      <!-- <div class="col-md-12">
+                        <label class="control-label"
                           >Upload Jadwal Asesmen</label
                         >
                         <div class="button-icon">
@@ -308,13 +337,29 @@
                             type="file"
                             class="form-control-file"
                             id="exampleFormControlFile1"
+                            accept=".xlsx"
                           />
                         </div>
-                      </div>
+                      </div> -->
+                      <a id="downloadBtn" href="./file.xlsx" class="float-right">Download Format Excel</a>
 
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label"
+                          >Upload Jadwal Asesmen</label
+                        >
+                        <div class="button-icon border p-2">
+                          <input
+                            type="file"
+                            class="form-control-file"
+                            id="exampleFormControlFile1"
+                          />
+
+                        </div>
+                        <button class="btn btn-md btn-primary m-2" onclick="simpan_data()">Upload Batch</button>
+                      </div>
                       <div class="table-responsive">
                         <table
-                          class="table table-striped table-bordered zero-configuration"
+                          class="table table-striped table-bordered zero-configuration small-text"
                         >
                           <thead>
                             <tr>
@@ -322,12 +367,16 @@
                               <th>Bidang</th>
                               <th>Nama Asesi</th>
                               <th>Asesor</th>
+                              <th>Hari</th>
                               <th>Tanggal</th>
                               <th>Waktu</th>
                               <th>Ruangan</th>
                               <th>Aksi</th>
                             </tr>
                           </thead>
+                          <tbody>
+                           
+                          </tbody>
                           <!-- Modal Add Category -->
                           <div class="modal fade none-border" id="add-category">
                             <div class="modal-dialog">
@@ -496,15 +545,15 @@
                                 <div class="modal-footer">
                                   <button
                                     type="button"
-                                    class="btn btn-default waves-effect"
+                                    class="btn btn-danger waves-effect"
                                     data-dismiss="modal"
                                   >
                                     Tutup
                                   </button>
                                   <button
                                     type="button"
-                                    class="btn btn-danger waves-effect waves-light save-category"
-                                    data-dismiss="modal"
+                                    class="btn btn-info waves-effect waves-light save-category"
+                                    onclick="simpan_data()"
                                   >
                                     Simpan
                                   </button>
@@ -682,15 +731,15 @@
                                 <div class="modal-footer">
                                   <button
                                     type="button"
-                                    class="btn btn-default waves-effect"
+                                    class="btn btn-danger waves-effect"
                                     data-dismiss="modal"
                                   >
                                     Tutup
                                   </button>
                                   <button
                                     type="button"
-                                    class="btn btn-danger waves-effect waves-light save-category"
-                                    data-dismiss="modal"
+                                    class="btn btn-info waves-effect waves-light save-category"
+                                    onclick="simpan_data()"
                                   >
                                     Simpan
                                   </button>
@@ -738,6 +787,8 @@
     <script src="js/settings.js"></script>
     <script src="js/gleek.js"></script>
     <script src="js/styleSwitcher.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
 
     <script src="./plugins/tables/js/jquery.dataTables.min.js"></script>
     <script src="./plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
@@ -758,5 +809,6 @@
     <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 
     <script src="./js/plugins-init/form-pickers-init.js"></script>
+    <script src="./js/custom_new.js"></script>
   </body>
 </html>

@@ -89,6 +89,7 @@
       } */
     </style>
     <link href="css/custom_new.css" rel="stylesheet" />
+    <link href="./plugins/sweetalert/css/sweetalert.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -144,7 +145,7 @@
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
-                Hi, Dea (Mahasiswa)
+                Hi, Panitia LSP (Panitia)
                 <div
                   class="user-img c-pointer position-relative"
                   data-toggle="dropdown"
@@ -283,425 +284,68 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Data Asesor</h4>
-                  <!-- <div class="col-auto">
-                                    <button class="btn btn-dark mb-2">Tambah</button>
-                                </div> -->
-                  <!-- <a
-                    href="tambahdataasesor_panitia.html"
-                    class="btn btn-dark mb-2"
-                    ><i class="ti-plus f-s-12 m-r-5"></i> Tambah</a
-                  > -->
-                  <div class="table-responsive">
-                    <table
-                      class="table table-striped table-bordered zero-configuration dataTable no-footer"
-                    >
-                      <thead>
-                        <tr>
-                          <th>
-                            <h6><b>Nama Lengkap</b></h6>
-                          </th>
-                          <th>
-                            <h6><b>Inisial</b></h6>
-                          </th>
-                          <th>
-                            <h6><b>Jenis Kelamin</b></h6>
-                          </th>
-                          <th>
-                            <h6><b>Aksi</b></h6>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr class="small-text">
-                          <td>Anggy Trisnadoli, S.S.T., M.T.</td>
-                          <td>ATD</td>
-                          <td>Laki-Laki</td>
-                          <td>
-                            <button
-                              class="badge bg-green"
-                              title="Edit Data"
-                              data-toggle="tooltip"
-                              data-placement="top"
-                              id="editButton"
-                            >
-                              <i
-                                class="fa fa-pencil m-r-5"
-                                style="color: white"
-                              ></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr class="small-text">
-                          <td>Dini Nurmalasari, S.T., M.T</td>
-                          <td>DNS</td>
-                          <td>Perempuan</td>
-                          <td>
-                            <button
-                              class="badge bg-green"
-                              title="Edit Data"
-                              data-toggle="modal"
-                              data-target="#add-edit-dini"
-                              data-toggle="modal"
-                              data-placement="top"
-                            >
-                              <i
-                                class="fa fa-pencil m-r-5"
-                                style="color: white"
-                              ></i>
-                            </button>
-                          </td>
-                        </tr>
-                      </tbody>
-
-                      <!-- Modal Add Category -->
-                      <div class="modal fade none-border" id="add-edit-dini">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h4 class="modal-title">
-                                <strong>Edit Data Asesor</strong>
-                              </h4>
-                      <!-- Modal Edit -->
-                      <div
-                        class="modal fade"
-                        id="editModal"
-                        tabindex="-1"
-                        role="dialog"
-                        aria-labelledby="editModalLabel"
-                        aria-hidden="true"
-                      >
-                        <div
-                          class="modal-dialog"
-                          role="document"
-                          style="max-width: 1000px"
-                        >
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title">
-                                Formulir Skema Sertifikasi
-                              </h5>
-                              <button
-                                type="button"
-                                class="close"
-                                data-dismiss="modal"
-                                aria-label="Close"
-                              >
-                                <span aria-hidden="true">×</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                              <form>
-                                <!-- Nama Asesor -->
-                                <div class="form-group row align-items-center">
-                                  <label
-                                    for="namaAsesor"
-                                    class="col-sm-3 col-form-label"
-                                    >Nama Asesor*</label
-                                  >
-                                  <div class="col-sm-9 input-group">
-                                    <div class="input-group-prepend">
-                                      <span class="input-group-text"
-                                        ><i class="fa fa-file"></i
-                                      ></span>
-                                    </div>
-                                    <input
-                                      type="text"
-                                      class="form-control"
-                                      id="namaAsesor"
-                                      placeholder="Nama Asesor"
-                                      value="Anggy Trisnadoli, S.S.T., M.T."
-                                    />
-                                  </div>
-                                </div>
-
-                                <!-- Inisial -->
-                                <div class="form-group row align-items-center">
-                                  <label
-                                    for="inisial"
-                                    class="col-sm-3 col-form-label"
-                                    >Inisial*</label
-                                  >
-                                  <div class="col-sm-9 input-group">
-                                    <div class="input-group-prepend">
-                                      <span class="input-group-text"
-                                        ><i class="fa fa-file"></i
-                                      ></span>
-                                    </div>
-                                    <input
-                                      type="text"
-                                      class="form-control"
-                                      id="inisial"
-                                      placeholder="Inisial"
-                                      value="ATD"
-                                    />
-                                  </div>
-                                </div>
-
-                                <!-- Tanggal Lahir -->
-                                <div class="form-group row align-items-center">
-                                  <label
-                                    for="tanggalLahir"
-                                    class="col-sm-3 col-form-label"
-                                    >Tanggal Lahir*</label
-                                  >
-                                  <div class="col-sm-9 input-group">
-                                    <div class="input-group-prepend">
-                                      <span class="input-group-text"
-                                        ><i class="fa fa-file"></i
-                                      ></span>
-                                    </div>
-                                    <input
-                                      type="text"
-                                      class="form-control"
-                                      id="tanggalLahir"
-                                      placeholder="Tanggal Lahir"
-                                      value=""
-                                    />
-                                    <div class="input-group-append">
-                                      <span class="input-group-text"
-                                        ><i class="fa fa-calendar"></i
-                                      ></span>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <!-- Jenis Kelamin -->
-                                <div class="form-group row align-items-center">
-                                  <label
-                                    for="jenisKelamin"
-                                    class="col-sm-3 col-form-label"
-                                    >Jenis Kelamin*</label
-                                  >
-                                  <div class="col-sm-9 input-group">
-                                    <div class="input-group-prepend">
-                                      <span class="input-group-text"
-                                        ><i class="fa fa-file"></i
-                                      ></span>
-                                    </div>
-                                    <input
-                                      type="text"
-                                      class="form-control"
-                                      id="jenisKelamin"
-                                      placeholder="Jenis Kelamin"
-                                      value="Laki-Laki"
-                                    />
-                                  </div>
-                                </div>
-
-                                <!-- Kebangsaan -->
-                                <div class="form-group row align-items-center">
-                                  <label
-                                    for="kebangsaan"
-                                    class="col-sm-3 col-form-label"
-                                    >Kebangsaan*</label
-                                  >
-                                  <div class="col-sm-9 input-group">
-                                    <div class="input-group-prepend">
-                                      <span class="input-group-text"
-                                        ><i class="fa fa-file"></i
-                                      ></span>
-                                    </div>
-                                    <input
-                                      type="text"
-                                      class="form-control"
-                                      id="kebangsaan"
-                                      placeholder="Kebangsaan"
-                                      value="Indonesia"
-                                    />
-                                  </div>
-                                </div>
-
-                                <!-- Alamat Rumah -->
-                                <div class="form-group row align-items-center">
-                                  <label
-                                    for="alamatRumah"
-                                    class="col-sm-3 col-form-label"
-                                    >Alamat Rumah*</label
-                                  >
-                                  <div class="col-sm-9 input-group">
-                                    <div class="input-group-prepend">
-                                      <span class="input-group-text"
-                                        ><i class="fa fa-file"></i
-                                      ></span>
-                                    </div>
-                                    <input
-                                      type="text"
-                                      class="form-control"
-                                      id="alamatRumah"
-                                      placeholder="Alamat Rumah"
-                                      value="xxxx"
-                                    />
-                                  </div>
-                                </div>
-
-                                <!-- Tanda tangan -->
-                                <div class="form-group row align-items-center">
-                                  <label
-                                    for="alamatRumah"
-                                    class="col-sm-3 col-form-label"
-                                    >Tanda Tangan*</label
-                                  >
-                                  <div class="col-sm-9 input-group">
-                                    <div class="input-group-prepend">
-                                      <input
-                                        type="file"
-                                        name="tanda_tangan"
-                                        id="tanda_tangan"
-                                        class="custom-file-input"
-                                      />
-                                      <label
-                                        class="custom-file-label"
-                                        for="tanda_tangan"
-                                        >1720615545</label
-                                      >
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- Riwayat Pengajaran -->
-                                <h4>Riwayat Pengajaran</h4>
-                                <table class="table table-bordered">
-                                  <thead class="thead-light">
-                                    <tr>
-                                      <th>Mata Kuliah</th>
-                                      <th>Kelas</th>
-                                      <th>Bukti</th>
-                                      <th>Action</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                      <td>
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                        />
-                                      </td>
-                                      <td>
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                        />
-                                      </td>
-                                      <td>
-                                        <div class="custom-file">
-                                          <input
-                                            type="file"
-                                            class="custom-file-input"
-                                            id="buktiPengajaran1"
-                                          />
-                                          <label
-                                            class="custom-file-label"
-                                            for="buktiPengajaran1"
-                                            >Pilih file</label
-                                          >
-                                        </div>
-                                      </td>
-                                      <td>
-                                        <button class="btn btn-danger">
-                                          Hapus
-                                        </button>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                                <button class="btn btn-success mb-3">
-                                  Tambah Riwayat Pengajaran
-                                </button>
-
-                                <!-- Pengalaman Pelatihan -->
-                                <h4>Pengalaman Pelatihan</h4>
-                                <table class="table table-bordered">
-                                  <thead class="thead-light">
-                                    <tr>
-                                      <th>Skema</th>
-                                      <th>Pelaksana</th>
-                                      <th>Tanggal Masa Habis Berlaku</th>
-                                      <th>Bukti</th>
-                                      <th>Action</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                      <td>
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                        />
-                                      </td>
-                                      <td>
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                        />
-                                      </td>
-                                      <td>
-                                        <input
-                                          type="date"
-                                          class="form-control"
-                                        />
-                                      </td>
-                                      <td>
-                                        <div class="custom-file">
-                                          <input
-                                            type="file"
-                                            class="custom-file-input"
-                                            id="buktiPelatihan1"
-                                          />
-                                          <label
-                                            class="custom-file-label"
-                                            for="buktiPelatihan1"
-                                            >Pilih file</label
-                                          >
-                                        </div>
-                                      </td>
-                                      <td>
-                                        <button class="btn btn-danger">
-                                          Hapus
-                                        </button>
-                                      </td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                                <button class="btn btn-success mb-3">
-                                  Tambah Pengalaman Pelatihan
-                                </button>
-
-                                <!-- Footer Buttons -->
-                                <div class="d-flex justify-content-end mt-3">
-                                  <button class="btn btn-danger mr-2">
-                                    Batal
-                                  </button>
-                                  <button class="btn btn-primary">
-                                    Simpan
-                                  </button>
-                                </div>
-                              </form>
-                            </div>
-<<<<<<< HEAD
-                            <div class="modal-footer">
-                              <button
-                                type="button"
-                                class="btn btn-danger waves-effect"
-                                data-dismiss="modal"
-                              >
-                                Tutup
-                              </button>
-                              <button
-                                type="button"
-                                class="btn btn-info waves-effect waves-light save-category"
-                                data-dismiss="modal"
-                              >
-                                Simpan
-                              </button>
-                            </div>
-=======
->>>>>>> 018e69ec306776a1ac1ddfa7f62a4c6ca1a60971
-                          </div>
-                        </div>
-                      </div>
-
-                    </table>
-                  </div>
+                  <table
+                    class="table table-striped table-bordered zero-configuration dataTable no-footer"
+                  >
+                    <thead>
+                      <tr>
+                        <th>
+                          <h6><b>Nama Lengkap</b></h6>
+                        </th>
+                        <th>
+                          <h6><b>Inisial</b></h6>
+                        </th>
+                        <th>
+                          <h6><b>Jenis Kelamin</b></h6>
+                        </th>
+                        <th>
+                          <h6><b>Aksi</b></h6>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="small-text">
+                        <td>Anggy Trisnadoli, S.S.T., M.T.</td>
+                        <td>ATD</td>
+                        <td>Laki-Laki</td>
+                        <td>
+                          <button
+                            class="badge bg-green"
+                            title="Edit Data"
+                            data-target="#edit-formulir"
+                            data-toggle="modal"
+                            data-placement="top"
+                            id="editButton"
+                          >
+                            <i
+                              class="fa fa-pencil m-r-5"
+                              style="color: white"
+                            ></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr class="small-text">
+                        <td>Dini Nurmalasari, S.T., M.T</td>
+                        <td>DNS</td>
+                        <td>Perempuan</td>
+                        <td>
+                          <button
+                            class="badge bg-green"
+                            title="Edit Data"
+                            data-toggle="modal"
+                            data-target="#edit-formulir"
+                            data-toggle="modal"
+                            data-placement="top"
+                          >
+                            <i
+                              class="fa fa-pencil m-r-5"
+                              style="color: white"
+                            ></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -709,87 +353,613 @@
         </div>
       </div>
     </div>
-                      <!-- END MODAL -->
-                      <!-- <tfoot>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
-                                            </tr>
-                                        </tfoot> -->
+    <!-- Modal Add Category -->
+    <div class="modal fade none-border" id="edit-formulir">
+      <div class="modal-dialog modal-formulir">
+        <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Formulir Skema Sertifikasi</h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <!-- Nama Asesor -->
+              <div class="form-group row align-items-center">
+                <label for="namaAsesor" class="col-sm-3 col-form-label"
+                  >Nama Asesor*</label
+                >
+                <div class="col-sm-9 input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fa fa-file"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="namaAsesor"
+                    placeholder="Nama Asesor"
+                    value="Anggy Trisnadoli, S.S.T., M.T."
+                  />
+                </div>
+              </div>
 
-                      <!--**********************************
-            Content body end
-        ***********************************-->
+              <!-- Inisial -->
+              <div class="form-group row align-items-center">
+                <label for="inisial" class="col-sm-3 col-form-label"
+                  >Inisial*</label
+                >
+                <div class="col-sm-9 input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fa fa-file"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inisial"
+                    placeholder="Inisial"
+                    value="ATD"
+                  />
+                </div>
+              </div>
 
-                      <!--**********************************
-            Footer start
-        ***********************************-->
-                      <!-- <div class="footer">
-            <div class="copyright">
-                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
+              <!-- Tanggal Lahir -->
+              <div class="form-group row align-items-center">
+                <label for="tanggalLahir" class="col-sm-3 col-form-label"
+                  >Tanggal Lahir*</label
+                >
+                <div class="col-sm-9 input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fa fa-file"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="tanggalLahir"
+                    placeholder="Tanggal Lahir"
+                    value=""
+                  />
+                  <div class="input-group-append">
+                    <span class="input-group-text"
+                      ><i class="fa fa-calendar"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Jenis Kelamin -->
+              <div class="form-group row align-items-center">
+                <label for="jenisKelamin" class="col-sm-3 col-form-label"
+                  >Jenis Kelamin*</label
+                >
+                <div class="col-sm-9 input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fa fa-file"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="jenisKelamin"
+                    placeholder="Jenis Kelamin"
+                    value="Laki-Laki"
+                  />
+                </div>
+              </div>
+
+              <!-- Kebangsaan -->
+              <div class="form-group row align-items-center">
+                <label for="kebangsaan" class="col-sm-3 col-form-label"
+                  >Kebangsaan*</label
+                >
+                <div class="col-sm-9 input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fa fa-file"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="kebangsaan"
+                    placeholder="Kebangsaan"
+                    value="Indonesia"
+                  />
+                </div>
+              </div>
+
+              <!-- Alamat Rumah -->
+              <div class="form-group row align-items-center">
+                <label for="alamatRumah" class="col-sm-3 col-form-label"
+                  >Alamat Rumah*</label
+                >
+                <div class="col-sm-9 input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fa fa-file"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="alamatRumah"
+                    placeholder="Alamat Rumah"
+                    value="xxxx"
+                  />
+                </div>
+              </div>
+
+              <!-- Tanda tangan -->
+              <div class="form-group row align-items-center">
+                <label for="alamatRumah" class="col-sm-3 col-form-label"
+                  >Tanda Tangan*</label
+                >
+                <div class="col-sm-9 input-group">
+                  <div class="input-group-prepend">
+                    <input
+                      type="file"
+                      name="tanda_tangan"
+                      id="tanda_tangan"
+                      class="custom-file-input"
+                    />
+                    <label class="custom-file-label" for="tanda_tangan"
+                      >1720615545</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Riwayat Pengajaran -->
+              <h4>Riwayat Pengajaran</h4>
+              <table class="table table-bordered">
+                <thead class="thead-light">
+                  <tr>
+                    <th>Mata Kuliah</th>
+                    <th>Kelas</th>
+                    <th>Bukti</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="riwayat-pengajaran-body">
+                  <tr>
+                    <td>
+                      <input type="text" class="form-control mata_kuliah" />
+                    </td>
+                    <td>
+                      <input type="text" class="form-control kelas_pengajaran" />
+                    </td>
+                    <td width="28%">
+                      <input type="file" class="form-control kelas_pengajaran" />
+                    </td>
+                    <td>
+                      <button
+                        class="btn btn-danger hapus_data_pengajaran"
+                        type="button"
+                      >
+                        Hapus
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <button id="tambah-riwayat-pengajaran" type="button" class="btn btn-success mb-3">
+                Tambah Riwayat Pengajaran
+              </button>
+
+              <!-- Pengalaman Pelatihan -->
+              <h4>Pengalaman Pelatihan</h4>
+              <table class="table table-bordered">
+                <thead class="thead-light">
+                  <tr>
+                    <th>Skema</th>
+                    <th>Pelaksana</th>
+                    <th>Tanggal Masa Habis Berlaku</th>
+                    <th>Bukti</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody class="row_tambah_pengalaman_pelatihan">
+                  <tr>
+                    <td>
+                      <input type="text" class="form-control" />
+                    </td>
+                    <td>
+                      <input type="text" class="form-control" />
+                    </td>
+                    <td>
+                      <input type="date" class="form-control" />
+                    </td>
+                    <td>
+                      <div class="custom-file">
+                        <input
+                          type="file"
+                          class="custom-file-input"
+                          id="buktiPelatihan1"
+                        />
+                        <label class="custom-file-label" for="buktiPelatihan1"
+                          >Pilih file</label
+                        >
+                      </div>
+                    </td>
+                    <td>
+                      <button class="btn btn-danger button_hapus_pengalaman_pelatihan" type="button">Hapus</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <button class="btn btn-success mb-3 button_tambah_pengalaman_pelatihan" type="button">
+                Tambah Pengalaman Pelatihan
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger waves-effect"
+              data-dismiss="modal"
+            >
+              Tutup
+            </button>
+            <button
+              type="button"
+              class="btn btn-info waves-effect waves-light save-category"
+              onclick="simpan_data()"
+            >
+              Simpan
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- add modal -->
+    <div class="modal fade none-border" id="add-edit-dini">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">
+              <strong>Edit Data Asesor</strong>
+            </h4>
+            <div
+              class="modal fade"
+              id="editModal"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="editModalLabel"
+              aria-hidden="true"
+            >
+              <div
+                class="modal-dialog"
+                role="document"
+                style="max-width: 1000px"
+              >
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Formulir Skema Sertifikasi</h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <!-- Nama Asesor -->
+                      <div class="form-group row align-items-center">
+                        <label for="namaAsesor" class="col-sm-3 col-form-label"
+                          >Nama Asesor*</label
+                        >
+                        <div class="col-sm-9 input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"
+                              ><i class="fa fa-file"></i
+                            ></span>
+                          </div>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="namaAsesor"
+                            placeholder="Nama Asesor"
+                            value="Anggy Trisnadoli, S.S.T., M.T."
+                          />
+                        </div>
+                      </div>
+
+                      <!-- Inisial -->
+                      <div class="form-group row align-items-center">
+                        <label for="inisial" class="col-sm-3 col-form-label"
+                          >Inisial*</label
+                        >
+                        <div class="col-sm-9 input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"
+                              ><i class="fa fa-file"></i
+                            ></span>
+                          </div>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="inisial"
+                            placeholder="Inisial"
+                            value="ATD"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- Tanggal Lahir -->
+                      <div class="form-group row align-items-center">
+                        <label
+                          for="tanggalLahir"
+                          class="col-sm-3 col-form-label"
+                          >Tanggal Lahir*</label
+                        >
+                        <div class="col-sm-9 input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"
+                              ><i class="fa fa-file"></i
+                            ></span>
+                          </div>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="tanggalLahir"
+                            placeholder="Tanggal Lahir"
+                            value=""
+                          />
+                          <div class="input-group-append">
+                            <span class="input-group-text"
+                              ><i class="fa fa-calendar"></i
+                            ></span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Jenis Kelamin -->
+                      <div class="form-group row align-items-center">
+                        <label
+                          for="jenisKelamin"
+                          class="col-sm-3 col-form-label"
+                          >Jenis Kelamin*</label
+                        >
+                        <div class="col-sm-9 input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"
+                              ><i class="fa fa-file"></i
+                            ></span>
+                          </div>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="jenisKelamin"
+                            placeholder="Jenis Kelamin"
+                            value="Laki-Laki"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- Kebangsaan -->
+                      <div class="form-group row align-items-center">
+                        <label for="kebangsaan" class="col-sm-3 col-form-label"
+                          >Kebangsaan*</label
+                        >
+                        <div class="col-sm-9 input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"
+                              ><i class="fa fa-file"></i
+                            ></span>
+                          </div>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="kebangsaan"
+                            placeholder="Kebangsaan"
+                            value="Indonesia"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- Alamat Rumah -->
+                      <div class="form-group row align-items-center">
+                        <label for="alamatRumah" class="col-sm-3 col-form-label"
+                          >Alamat Rumah*</label
+                        >
+                        <div class="col-sm-9 input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"
+                              ><i class="fa fa-file"></i
+                            ></span>
+                          </div>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="alamatRumah"
+                            placeholder="Alamat Rumah"
+                            value="xxxx"
+                          />
+                        </div>
+                      </div>
+
+                      <!-- Tanda tangan -->
+                      <div class="form-group row align-items-center">
+                        <label for="alamatRumah" class="col-sm-3 col-form-label"
+                          >Tanda Tangan*</label
+                        >
+                        <div class="col-sm-9 input-group">
+                          <div class="input-group-prepend">
+                            <input
+                              type="file"
+                              name="tanda_tangan"
+                              id="tanda_tangan"
+                              class="custom-file-input"
+                            />
+                            <label class="custom-file-label" for="tanda_tangan"
+                              >1720615545</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Riwayat Pengajaran -->
+                      <h4>Riwayat Pengajaran</h4>
+                      <table class="table table-bordered">
+                        <thead class="thead-light">
+                          <tr>
+                            <th>Mata Kuliah</th>
+                            <th>Kelas</th>
+                            <th>Bukti</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <input type="text" class="form-control" />
+                            </td>
+                            <td>
+                              <input type="text" class="form-control" />
+                            </td>
+                            <td>
+                              <div class="custom-file">
+                                <input
+                                  type="file"
+                                  class="custom-file-input"
+                                  id="buktiPengajaran2"
+                                />
+                                <label
+                                  class="custom-file-label"
+                                  for="buktiPengajaran2"
+                                  >Pilih file</label
+                                >
+                              </div>
+                            </td>
+                            <td>
+                              <button class="btn btn-danger">Hapus</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <button class="btn btn-success mb-3">
+                        Tambah Riwayat Pengajaran
+                      </button>
+
+                      <!-- Pengalaman Pelatihan -->
+                      <h4>Pengalaman Pelatihan</h4>
+                      <table class="table table-bordered">
+                        <thead class="thead-light">
+                          <tr>
+                            <th>Skema</th>
+                            <th>Pelaksana</th>
+                            <th>Tanggal Masa Habis Berlaku</th>
+                            <th>Bukti</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <input type="text" class="form-control" />
+                            </td>
+                            <td>
+                              <input type="text" class="form-control" />
+                            </td>
+                            <td>
+                              <input type="date" class="form-control" />
+                            </td>
+                            <td>
+                              <div class="custom-file">
+                                <input
+                                  type="file"
+                                  class="custom-file-input"
+                                  id="buktiPelatihan1"
+                                />
+                                <label
+                                  class="custom-file-label"
+                                  for="buktiPelatihan1"
+                                  >Pilih file</label
+                                >
+                              </div>
+                            </td>
+                            <td>
+                              <button class="btn btn-danger">Hapus</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <button class="btn btn-success mb-3">
+                        Tambah Pengalaman Pelatihan
+                      </button>
+
+                      <!-- Footer Buttons -->
+                      <!-- <div class="d-flex justify-content-end mt-3">
+                        <button class="btn btn-danger mr-2">Batal</button>
+                        <button class="btn btn-primary">Simpan</button>
+                      </div> -->
+                    </form>
+                  </div>
+                  
+                </div>
+              </div>
             </div>
-        </div> -->
-                      <!--**********************************
-            Footer end
-        ***********************************-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal -->
+    <!-- Aktor : Asesor Pre Kondisi : Asesor ingin mengelola dokumen sertifikasi
+    asesor Post Kondisi : Asesor dapat mengelola dokumen sertifikasi asesor
+    Skenario : Aksi Aktor Reaksi Sistem Skenario Normal 1. Klik menu “Dokumen
+    Sertifikasi Asesor” 2. Menampilkan halaman dokumen sertifikasi asesor 3.
+    Mengisi dokumen sertifikasi asesor 4. Menyimpan dokumen sertifikasi asesor -->
+    <script src="plugins/common/common.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/gleek.js"></script>
+    <script src="js/styleSwitcher.js"></script>
 
-                      <!--**********************************
-        Main wrapper end
-    ***********************************-->
+    <script src="./plugins/tables/js/jquery.dataTables.min.js"></script>
+    <script src="./plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
+    <script src="./plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
 
-                      <!--**********************************
-        Scripts
-    ***********************************-->
-                      <script src="plugins/common/common.min.js"></script>
-                      <script src="js/custom.min.js"></script>
-                      <script src="js/settings.js"></script>
-                      <script src="js/gleek.js"></script>
-                      <script src="js/styleSwitcher.js"></script>
+    <script src="./plugins/moment/moment.js"></script>
+    <script src="./plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <!-- Clock Plugin JavaScript -->
+    <script src="./plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
+    <!-- Color Picker Plugin JavaScript -->
+    <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
+    <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
+    <script src="./plugins/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+    <!-- Date Picker Plugin JavaScript -->
+    <script src="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- Date range Plugin JavaScript -->
+    <script src="./plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 
-                      <script src="./plugins/tables/js/jquery.dataTables.min.js"></script>
-                      <script src="./plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
-                      <script src="./plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
-
-                      <script src="./plugins/moment/moment.js"></script>
-                      <script src="./plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
-                      <!-- Clock Plugin JavaScript -->
-                      <script src="./plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
-                      <!-- Color Picker Plugin JavaScript -->
-                      <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
-                      <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
-                      <script src="./plugins/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
-                      <!-- Date Picker Plugin JavaScript -->
-                      <script src="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-                      <!-- Date range Plugin JavaScript -->
-                      <script src="./plugins/timepicker/bootstrap-timepicker.min.js"></script>
-                      <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
-
-<<<<<<< HEAD
     <script src="./js/plugins-init/form-pickers-init.js"></script>
-    <script>
-      $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
+    <!-- Chartjs -->
+    <script src="./plugins/chart.js/Chart.bundle.min.js"></script>
+    <!-- Circle progress -->
+    <script src="./plugins/circle-progress/circle-progress.min.js"></script>
+    <!-- Datamap -->
+    <script src="./plugins/d3v3/index.js"></script>
+    <script src="./plugins/topojson/topojson.min.js"></script>
+    <script src="./plugins/datamaps/datamaps.world.min.js"></script>
+    <!-- Morrisjs -->
+    <script src="./plugins/raphael/raphael.min.js"></script>
+    <script src="./plugins/morris/morris.min.js"></script>
+    <!-- Pignose Calender -->
+    <script src="./plugins/moment/moment.min.js"></script>
+    <script src="./plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+    <!-- ChartistJS -->
+    <script src="./plugins/chartist/js/chartist.min.js"></script>
+    <script src="./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
 
-        // Optional: Add action to open modal
-        $("#editButton").on("click", function () {
-          $("#editModal").modal("show");
-        });
-      });
-    </script>
-=======
-                      <script src="./js/plugins-init/form-pickers-init.js"></script>
-                      <script>
-                        $(document).ready(function () {
-                          $("#editButton").click(function () {
-                            $("#editModal").modal("show");
-                          });
-                        });
-                      </script>
-
->>>>>>> 018e69ec306776a1ac1ddfa7f62a4c6ca1a60971
+    <script src="./js/dashboard/dashboard-1.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
+    <script src="./js/custom_new.js"></script>
   </body>
 </html>

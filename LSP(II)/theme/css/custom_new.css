@@ -43,3 +43,27 @@
   color: #fff;
   border: 1px solid #054b93;
 }
+/* size modal */
+.modal-formulir{
+  max-width: 65% !important;
+}
+
+/* #unduh_color{
+  background-color: #054b93;
+  color: #fff;
+  border: 1px solid #054b93;
+}
+
+.badge_dea_agustina#unduh_color{
+  background-color: #054b93;
+  color: #fff;
+  border: 1px solid #054b93;
+}
+.badge_dea_agustina {
+  background-color: red;
+  color: white;
+  padding: 1px 5px;
+  text-align: center;
+  border-radius: 2px;
+  font-size: 8px;
+} */
