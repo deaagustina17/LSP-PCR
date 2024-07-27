@@ -19,49 +19,51 @@
     />
     <link href="css/style.css" rel="stylesheet" />
     <style>
-     
       .small-text {
         font-size: 12px;
         color: black;
       }
 
       .badge.bg-green {
-            background-color: #1ABB9C ;
-            color: #fff;
-            border: 1px solid #1ABB9C;
-        }
-        .bg-green {
-  color: #fff;
-}
-        .badge.bg-red {
-            background-color: #dc3545;
-            color: white;
-            border: none;
-        }
+        background-color: #1abb9c;
+        color: #fff;
+        border: 1px solid #1abb9c;
+      }
+      .bg-green {
+        color: #fff;
+      }
+      .badge.bg-red {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+      }
 
-        .color-muted {
-            color: #6c757d;
-        }
+      .color-muted {
+        color: #6c757d;
+      }
 
-        .color-danger {
-            color: #dc3545;
-        }
+      .color-danger {
+        color: #dc3545;
+      }
 
-        .table th h5 {
-            margin: 0;
-            font-weight: bold;
-            font-size: 16px;
-        }
+      .table th h5 {
+        margin: 0;
+        font-weight: bold;
+        font-size: 16px;
+      }
 
-        .modal-header {
-            background-color: #f8f9fa;
-            border-bottom: 1px solid #e9ecef;
-        }
+      .modal-header {
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #e9ecef;
+      }
 
-        .modal-body {
-            padding: 20px;
-        }
+      .modal-body {
+        padding: 20px;
+      }
     </style>
+    <link href="css/custom_new.css" rel="stylesheet" />
+    <!-- sweet alert -->
+    <link href="./plugins/sweetalert/css/sweetalert.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -111,9 +113,9 @@
         <div class="header-content clearfix">
           <div class="nav-control">
             <div class="hamburger">
-                <span class="toggle-icon"><i class="icon-menu"></i></span>
+              <span class="toggle-icon"><i class="icon-menu"></i></span>
             </div>
-        </div>
+          </div>
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
@@ -267,14 +269,22 @@
                   > -->
                   <div class="table-responsive">
                     <table
-                      class="table table-striped table-bordered zero-configuration"
+                      class="table table-striped table-bordered zero-configuration small-text"
                     >
                       <thead>
                         <tr>
-                          <th><h6><b>Nama depan</b></h6></th>
-                          <th><h6><b>Nama belakang</b></h6></th>
-                          <th><h6><b>Email</b></h6></th>
-                          <th><h6><b>Aksi</b></h6></th>
+                          <th>
+                            <h6><b>Nama depan</b></h6>
+                          </th>
+                          <th>
+                            <h6><b>Nama belakang</b></h6>
+                          </th>
+                          <th>
+                            <h6><b>Email</b></h6>
+                          </th>
+                          <th>
+                            <h6><b>Aksi</b></h6>
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
@@ -287,11 +297,16 @@
                               class="badge bg-green"
                               title="Edit Data"
                               href="editdataasesor_panitia.html"
-                                data-toggle="tooltip"
-                                data-placement="top"
+                              data-toggle="modal"
+                              data-target="#edit_trisia"
+                              data-toggle="modal"
+                              data-placement="top"
                             >
-                            <i class="fa fa-pencil m-r-5" style="color: white;"></i>
-                          </button>
+                              <i
+                                class="fa fa-pencil m-r-5"
+                                style="color: white"
+                              ></i>
+                            </button>
                           </td>
                         </tr>
                         <tr class="small-text">
@@ -303,21 +318,26 @@
                               class="badge bg-green"
                               title="Edit Data"
                               href="editdataasesor_panitia.html"
-                                data-toggle="tooltip"
-                                data-placement="top"
+                              data-toggle="modal"
+                              data-target="#edit_trisia"
+                              data-toggle="modal"
+                              data-placement="top"
                             >
-                            <i class="fa fa-pencil m-r-5" style="color: white;"></i>
-                          </button>
+                              <i
+                                class="fa fa-pencil m-r-5"
+                                style="color: white"
+                              ></i>
+                            </button>
                           </td>
                         </tr>
                       </tbody>
                       <!-- Modal Add Category -->
-                      <div class="modal fade none-border" id="add-category">
+                      <div class="modal fade none-border" id="edit_trisia">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
                               <h4 class="modal-title">
-                                <strong>Tambah Data Mahasiswa</strong>
+                                <strong>Edit Data Mahasiswa</strong>
                               </h4>
                             </div>
                             <div class="modal-body">
@@ -349,14 +369,14 @@
                             <div class="modal-footer">
                               <button
                                 type="button"
-                                class="btn btn-default waves-effect"
+                                class="btn btn-danger waves-effect"
                                 data-dismiss="modal"
                               >
                                 Tutup
                               </button>
                               <button
                                 type="button"
-                                class="btn btn-danger waves-effect waves-light save-category"
+                                class="btn btn-info waves-effect waves-light save-category"
                                 data-dismiss="modal"
                               >
                                 Simpan
@@ -379,7 +399,9 @@
                               <form>
                                 <div class="row">
                                   <div class="col-md-12">
-                                    <label class="control-label">Nama Depan</label>
+                                    <label class="control-label"
+                                      >Nama Depan</label
+                                    >
                                     <input
                                       class="form-control form-white"
                                       placeholder="Masukkan nama depan"
@@ -388,7 +410,9 @@
                                     />
                                   </div>
                                   <div class="col-md-12">
-                                    <label class="control-label">Nama Belakang</label>
+                                    <label class="control-label"
+                                      >Nama Belakang</label
+                                    >
                                     <input
                                       class="form-control form-white"
                                       placeholder="Masukkan nama belakang"

@@ -78,7 +78,6 @@
         font-size: 14px;
       }
     </style>
-
   </head>
 
   <body>
@@ -128,9 +127,9 @@
         <div class="header-content clearfix">
           <div class="nav-control">
             <div class="hamburger">
-                <span class="toggle-icon"><i class="icon-menu"></i></span>
+              <span class="toggle-icon"><i class="icon-menu"></i></span>
             </div>
-        </div>
+          </div>
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
@@ -279,13 +278,36 @@
               </div>
             </div>
 
-
             <div class="col-md-6 col-sm-12">
               <div class="x_panel">
                 <div class="x_title">
-                  <h2>Data Diri <small>Formulir Data Diri</small></h2>
+                  <h2>
+                    Data Diri
+                    <small
+                      >Formulir Data Diri
+
+                      <i class="fa fa-times float-right" style="cursor: pointer"
+                        >&nbsp;&nbsp;</i
+                      >
+                      <i
+                        class="fa fa-wrench float-right"
+                        style="cursor: pointer"
+                        >&nbsp;&nbsp;</i
+                      >
+                      <i
+                        id="toggleIcon"
+                        style="cursor: pointer"
+                        class="fa fa fa-chevron-down hide_data_diri float-right"
+                        >&nbsp;&nbsp;</i
+                      >
+                      <!-- <i
+                        style="cursor: pointer"
+                        class="fa fa fa-chevron-down hide_data_diri float-right"
+                      ></i> -->
+                    </small>
+                  </h2>
                 </div>
-                <div class="x_content">
+                <div class="x_content formulir_data_diri">
                   <br />
                   <input type="hidden" id="id" value="1" name="id" />
                   <div class="form-group row">
@@ -416,9 +438,28 @@
             <div class="col-md-6 col-sm-12">
               <div class="x_panel">
                 <div class="x_title">
-                  <h2>Data Diri <small>Perubahan Data Password</small></h2>
+                  <h2>
+                    Data Diri
+                    <small
+                      >Perubahan Data Password
+                      <i class="fa fa-times float-right" style="cursor: pointer"
+                        >&nbsp;&nbsp;</i
+                      >
+                      <i
+                        class="fa fa-wrench float-right"
+                        style="cursor: pointer"
+                        >&nbsp;&nbsp;</i
+                      >
+                      <i
+                        id="toggleIcon_perubahan"
+                        style="cursor: pointer"
+                        class="fa fa fa-chevron-down hide_data_diri_perubahan float-right"
+                        >&nbsp;&nbsp;</i
+                      ></small
+                    >
+                  </h2>
                 </div>
-                <div class="x_content">
+                <div class="x_content formulir_data_diri_perubahan">
                   <div class="form-group row">
                     <label
                       class="col-form-label col-md-4 col-sm-4 label-align"
@@ -515,6 +556,41 @@
 
     <script src="./js/plugins-init/form-pickers-init.js"></script>
     <script>
+      $("#toggleIcon").on("click", function () {
+        // Toggle the visibility of the content
+        $(".formulir_data_diri").fadeToggle(150);
+
+        // Check if the icon currently shows "arrow-down"
+        if ($(this).hasClass("fa fa-chevron-down")) {
+          // Change to "arrow-up"
+          $(this)
+            .removeClass("fa fa-chevron-down")
+            .addClass("fa fa-chevron-up");
+        } else {
+          // Change to "arrow-down"
+          $(this)
+            .removeClass("fa fa-chevron-up")
+            .addClass("fa fa-chevron-down");
+        }
+      });
+      $("#toggleIcon_perubahan").on("click", function () {
+        // Toggle the visibility of the content
+        $(".formulir_data_diri_perubahan").fadeToggle(150);
+
+        // Check if the icon currently shows "arrow-down"
+        if ($(this).hasClass("fa fa-chevron-down")) {
+          // Change to "arrow-up"
+          $(this)
+            .removeClass("fa fa-chevron-down")
+            .addClass("fa fa-chevron-up");
+        } else {
+          // Change to "arrow-down"
+          $(this)
+            .removeClass("fa fa-chevron-up")
+            .addClass("fa fa-chevron-down");
+        }
+      });
+
       function update() {
         // Your update function here
       }
@@ -523,6 +599,5 @@
         // Your update password function here
       }
     </script>
-
   </body>
 </html>

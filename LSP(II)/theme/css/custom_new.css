@@ -1,0 +1,45 @@
+.small-text {
+  font-size: 12px;
+  color: black;
+}
+.dataTables_wrapper .dataTables_filter input {
+  border: 1px solid #ccc !important;
+  padding: 1px !important; /* Sesuaikan padding agar sesuai dengan input */
+  font-size: 12pt !important;
+  height: 12px !important; /* Sesuaikan tinggi dengan input */
+  margin: 2px !important;
+  /* font-size: 14px !important; */
+}
+
+.dataTables_wrapper .dataTables_length select {
+  border: 1px solid #ccc !important;
+  padding: 1px !important; /* Sesuaikan padding agar sesuai dengan input */
+  font-size: 12pt !important;
+  height: 12px !important;
+  box-sizing: border-box !important;
+}
+.badge.bg-green {
+  background-color: #1abb9c;
+  color: #fff;
+  border: 1px solid #1abb9c;
+}
+.badge.bg-red {
+  background-color: #ff0000;
+  color: #fff;
+  border: 1px solid #ff0000;
+}
+.badge.bg-red {
+  background-color: #ff0000;
+  color: #fff;
+  border: 1px solid #ff0000;
+}
+.badge.bg-info {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}
+.badge.bg-unduh {
+  background-color: #054b93;
+  color: #fff;
+  border: 1px solid #054b93;
+}

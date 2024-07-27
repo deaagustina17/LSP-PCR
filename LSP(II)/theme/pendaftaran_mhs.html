@@ -58,6 +58,13 @@
       href="./plugins/bootstrap-daterangepicker/daterangepicker.css"
       rel="stylesheet"
     />
+    <style>
+      .error-message {
+        color: red;
+        font-size: 0.875em;
+        margin-top: 5px;
+      }
+    </style>
   </head>
 
   <body>
@@ -107,9 +114,9 @@
         <div class="header-content clearfix">
           <div class="nav-control">
             <div class="hamburger">
-                <span class="toggle-icon"><i class="icon-menu"></i></span>
+              <span class="toggle-icon"><i class="icon-menu"></i></span>
             </div>
-        </div>
+          </div>
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
@@ -229,6 +236,12 @@
                             pendidikan formal serta data pekerjaan anda pada
                             saat ini.
                           </h6>
+                          <button
+                            class="btn btn-sm btn-primary sweet-confirm"
+                            type="button"
+                          >
+                            tes
+                          </button>
                           <h5>a. Data Pribadi</h5>
                           <div class="form-group row">
                             <label
@@ -240,10 +253,14 @@
                               <input
                                 type="text"
                                 class="form-control"
-                                id="val-nama"
+                                id="nama_lengkap"
                                 name="val-nama"
                                 placeholder="Masukkan nama lengkap.."
                               />
+                              <div
+                                id="error_nama_lengkap"
+                                class="error-message"
+                              ></div>
                             </div>
                           </div>
                           <div class="form-group row">
@@ -254,10 +271,14 @@
                               <input
                                 type="text"
                                 class="form-control"
-                                id="val-ktp"
+                                id="no_ktp"
                                 name="val-ktp"
                                 placeholder="Masukkan No KTP/NIK.."
                               />
+                              <div
+                                id="error_no_ktp"
+                                class="error-message"
+                              ></div>
                             </div>
                           </div>
                           <div class="form-group row">
@@ -270,16 +291,20 @@
                               <input
                                 type="text"
                                 class="form-control"
-                                id="val-ttl"
+                                id="tempat_tgl_lahir"
                                 name="val-ttl"
                                 placeholder="Masukkan Tempat/Tgl.Lahir.."
                               />
+                              <div
+                                id="error_tempat_tgl_lahir"
+                                class="error-message"
+                              ></div>
                             </div>
                             <div class="col-lg-3">
                               <div class="input-group">
                                 <input
                                   type="text"
-                                  class="form-control"
+                                  class="form-control tanggal_lahir"
                                   id="datepicker-autoclose"
                                   placeholder="mm/dd/yyyy"
                                 />
@@ -290,6 +315,10 @@
                                     ></i></span
                                 ></span>
                               </div>
+                              <div
+                                id="error_tanggal_lahir"
+                                class="error-message"
+                              ></div>
                             </div>
                           </div>
                           <div class="form-group row">
@@ -317,10 +346,14 @@
                               <input
                                 type="text"
                                 class="form-control"
-                                id="val-kebangsaan"
+                                id="val-kebangsaan-negara"
                                 name="val-kebangsaan"
                                 placeholder="Masukkan Kebangsaan.."
                               />
+                              <div
+                                id="error_val_kebangsaan"
+                                class="error-message"
+                              ></div>
                             </div>
                           </div>
                           <div class="form-group row">
@@ -338,6 +371,10 @@
                                 name="val-alamat"
                                 placeholder="Masukkan Alamat rumah (Domisili Saat ini).."
                               />
+                              <div
+                                id="error_val-alamat"
+                                class="error-message"
+                              ></div>
                             </div>
                           </div>
                           <div class="form-group row">
@@ -355,6 +392,10 @@
                                 name="val-alamat1"
                                 placeholder="Masukkan Alamat rumah (Sesuai KTP).."
                               />
+                              <div
+                                id="error_val-alamat1"
+                                class="error-message"
+                              ></div>
                             </div>
                           </div>
 
@@ -386,6 +427,10 @@
                                 <option value="010">010</option>
                                 <option value="011">011</option>
                               </select>
+                              <div
+                                id="error_val-desa"
+                                class="error-message"
+                              ></div>
                             </div>
                           </div>
 
@@ -416,6 +461,10 @@
                                 <option value="010">010</option>
                                 <option value="011">011</option>
                               </select>
+                              <div
+                                id="error_val-kecamatan"
+                                class="error-message"
+                              ></div>
                             </div>
                           </div>
 
@@ -444,6 +493,10 @@
                                 <option value="010">010</option>
                                 <option value="011">011</option>
                               </select>
+                              <div
+                                id="error_val-pos"
+                                class="error-message"
+                              ></div>
                             </div>
                           </div>
 
@@ -459,22 +512,19 @@
                                 name="val-tlp"
                                 placeholder="08217221313"
                               />
+                              <div
+                                id="error_val-tlp"
+                                class="error-message"
+                              ></div>
                             </div>
                           </div>
-
-                          <!-- <div class="form-group row">
-                                                    <label class="col-lg-4 col-form-label" for="val-email">Email<span class="text-danger">*</span>
-                                                    </label>
-                                                    <div class="col-lg-6">
-                                                        <input type="text" class="form-control" id="val-email" name="val-email" placeholder="dea20si@mahasiswa.pcr.ac.id">
-                                                    </div>
-                                                </div> -->
 
                           <div class="form-group row">
                             <label class="col-lg-4 col-form-label" for="val-ktp"
                               >Upload KTP<span class="text-danger">*</span>
                             </label>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<div class="card">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="card">
                               <div class="button-icon">
                                 <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
                                 <input
@@ -482,6 +532,10 @@
                                   class="form-control-file"
                                   id="exampleFormControlFile1"
                                 />
+                                <div
+                                  id="error_exampleFormControlFile1"
+                                  class="error-message"
+                                ></div>
                               </div>
                             </div>
                           </div>
@@ -495,14 +549,18 @@
                                 >*</span
                               >
                             </label>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<div class="card">
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="card">
                               <div class="button-icon">
-                                <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
                                 <input
                                   type="file"
                                   class="form-control-file"
-                                  id="exampleFormControlFile1"
+                                  id="exampleFormControlFile_merah"
                                 />
+                                <div
+                                  id="error_exampleFormControlFile_merah"
+                                  class="error-message"
+                                ></div>
                               </div>
                             </div>
                           </div>
@@ -976,14 +1034,20 @@
                     </div>
                     <div class="form-group row">
                       <label class="col-sm-2 col-form-label"
-                        >Tanda Tangan Asesi<span class="text-danger">*</span></label
+                        >Tanda Tangan Asesi<span class="text-danger"
+                          >*</span
+                        ></label
                       >
                       <div class="button-icon">
                         <input
                           type="file"
                           class="form-control-file"
-                          id="exampleFormControlFile1"
+                          id="exampleFormControlFile_asesi"
                         />
+                        <div
+                          id="error_exampleFormControlFile_asesi"
+                          class="error-message"
+                        ></div>
                       </div>
 
                       <label class="col-sm-2 col-form-label">Tanggal</label>
@@ -1004,8 +1068,6 @@
                         </div>
                       </div>
                     </div>
-                    
-
 
                     <div class="form-group row">
                       <label class="col-sm-2 col-form-label"
@@ -1049,9 +1111,12 @@
                   <div class="card-body">
                     <div class="card-content">
                       <div class="sweetalert m-t-30">
-                        <button class="btn btn-dark mb-2 btn sweet-confirm">
+                        <button class="btn btn-dark mb-2 btn" type="button">
                           Daftar
                         </button>
+                        <!-- <button class="btn btn-dark mb-2 btn sweet-confirm">
+                          Daftar
+                        </button> -->
                       </div>
                     </div>
                   </div>
@@ -1124,6 +1189,276 @@
     </script>
     <script>
       document.querySelector(".sweet-confirm").onclick = function () {
+        // var isValid = true;
+        // var exampleFormControlFile_asesi = document.getElementById(
+        //   "exampleFormControlFile_asesi"
+        // );
+        // var nama_lengkap = document.getElementById("nama_lengkap");
+        // var no_ktp = document.getElementById("no_ktp");
+        // var tempat_tgl_lahir = document.getElementById("tempat_tgl_lahir");
+        // var tgl_lahir = $(".tanggal_lahir").val();
+
+        // var error_exampleFormControlFile_asesi = document.getElementById(
+        //   "error_exampleFormControlFile_asesi"
+        // );
+        // var error_nama_lengkap = document.getElementById("error_nama_lengkap");
+        // var error_no_ktp = document.getElementById("error_no_ktp");
+        // var error_tempat_tgl_lahir = document.getElementById(
+        //   "error_tempat_tgl_lahir"
+        // );
+        // var error_tanggal_lahir = document.getElementById(
+        //   "error_tanggal_lahir"
+        // );
+
+        // var val_kebangsaan = $("#val-kebangsaan-negara").val();
+        // var val_jk = $("#val-jk").val();
+        // var val_alamat = $("#val-alamat").val();
+        // var val_alamat1 = $("#val-alamat1").val();
+        // var val_desa = $("#val-desa").val();
+        // var val_kecamatan = $("#val-kecamatan").val();
+        // var val_pos = $("#val-pos").val();
+        // var val_tlp = $("#val-tlp").val();
+        // var exampleFormControlFile1 = $("#exampleFormControlFile1").val();
+        // var exampleFormControlFile_merah = $(
+        //   "#exampleFormControlFile_merah"
+        // ).val();
+
+        // var error_val_jk = $("#error_val_jk");
+        // var error_val_alamat = $("#error_val-alamat");
+        // var error_val_alamat1 = $("#error_val-alamat1");
+        // var error_val_desa = $("#error_val-desa");
+        // var error_val_kecamatan = $("#error_val-kecamatan");
+        // var error_val_pos = $("#error_val-pos");
+        // var error_val_tlp = $("#error_val-tlp");
+        // var error_exampleFormControlFile1 = $("#error_exampleFormControlFile1");
+        // var error_exampleFormControlFile_merah = $(
+        //   "#error_exampleFormControlFile_merah"
+        // );
+        // var error_val_kebangsaan = $("#error_val_kebangsaan");
+
+        // if (tgl_lahir === "") {
+        //   error_tanggal_lahir.textContent = "Please insert date of birth";
+        //   isValid = false;
+        // }
+
+        // // val kebangsaan
+        // if (val_kebangsaan === "") {
+        //   error_val_kebangsaan.text("please enter your kebangsaan");
+        //   isValid = false;
+        // }
+        // // Validate nama_lengkap
+        // if (exampleFormControlFile_asesi.value === "") {
+        //   error_exampleFormControlFile_asesi.textContent =
+        //     "Please insert signs asessi";
+        //   isValid = false;
+        // } else {
+        //   error_nama_lengkap.textContent = "";
+        // }
+        // // Validate nama_lengkap
+        // if (nama_lengkap.value === "") {
+        //   error_nama_lengkap.textContent = "Please enter a username";
+        //   isValid = false;
+        // } else {
+        //   error_nama_lengkap.textContent = "";
+        // }
+
+        // // Validate no_ktp
+        // if (no_ktp.value === "") {
+        //   error_no_ktp.textContent = "Please enter your KTP number";
+        //   isValid = false;
+        // } else {
+        //   error_no_ktp.textContent = "";
+        // }
+
+        // // Validate tempat_tgl_lahir
+        // if (tempat_tgl_lahir.value === "") {
+        //   error_tempat_tgl_lahir.textContent =
+        //     "Please enter your place and date of birth";
+        //   isValid = false;
+        // } else {
+        //   error_tempat_tgl_lahir.textContent = "";
+        // }
+
+        // // Prevent form submission if validation fails
+        // if (!isValid) {
+        //   return "";
+        //   event.preventDefault();
+        // }
+        // Get input values
+        var isValid = true;
+        var tanggal_lahir = $(".tanggal_lahir").val();
+        var val_jk = $("#val-jk").val();
+        var val_kebangsaan = $("#val-kebangsaan-negara").val();
+        var val_alamat = $("#val-alamat").val();
+        var val_alamat1 = $("#val-alamat1").val();
+        var val_desa = $("#val-desa").val();
+        var val_kecamatan = $("#val-kecamatan").val();
+        var val_pos = $("#val-pos").val();
+        var val_tlp = $("#val-tlp").val();
+        var exampleFormControlFile1 = $("#exampleFormControlFile1").val();
+        var exampleFormControlFile_merah = $(
+          "#exampleFormControlFile_merah"
+        ).val();
+        var nama_lengkap = $("#nama_lengkap").val();
+        var no_ktp = $("#no_ktp").val();
+        var tempat_tgl_lahir = $("#tempat_tgl_lahir").val();
+        var exampleFormControlFile_asesi = $(
+          "#exampleFormControlFile_asesi"
+        ).val();
+
+        // Get error elements
+        var error_tanggal_lahir = $("#error_tanggal_lahir");
+        var error_val_jk = $("#error_val_jk");
+        var error_val_kebangsaan = $("#error_val_kebangsaan");
+        var error_val_alamat = $("#error_val-alamat");
+        var error_val_alamat1 = $("#error_val-alamat1");
+        var error_val_desa = $("#error_val-desa");
+        var error_val_kecamatan = $("#error_val-kecamatan");
+        var error_val_pos = $("#error_val-pos");
+        var error_val_tlp = $("#error_val-tlp");
+        var error_exampleFormControlFile1 = $("#error_exampleFormControlFile1");
+        var error_exampleFormControlFile_merah = $(
+          "#error_exampleFormControlFile_merah"
+        );
+        var error_nama_lengkap = $("#error_nama_lengkap");
+        var error_no_ktp = $("#error_no_ktp");
+        var error_tempat_tgl_lahir = $("#error_tempat_tgl_lahir");
+        var error_exampleFormControlFile_asesi = $(
+          "#error_exampleFormControlFile_asesi"
+        );
+
+        if (exampleFormControlFile_asesi === "") {
+          error_exampleFormControlFile_asesi.text("Please insert your signs");
+          isValid = false;
+        } else {
+          error_tanggal_lahir.text("");
+        }
+
+        // Validate fields
+        if (tanggal_lahir === "") {
+          error_tanggal_lahir.text("Please enter your birth date");
+          isValid = false;
+        } else {
+          error_tanggal_lahir.text("");
+        }
+
+        if (val_jk === "") {
+          error_val_jk.text("Please select your gender");
+          isValid = false;
+        } else {
+          error_val_jk.text("");
+        }
+
+        if (val_kebangsaan === "") {
+          error_val_kebangsaan.text("Please enter your nationality");
+          isValid = false;
+        } else {
+          error_val_kebangsaan.text("");
+        }
+
+        if (val_alamat === "") {
+          error_val_alamat.text("Please enter your current address");
+          isValid = false;
+        } else {
+          error_val_alamat.text("");
+        }
+
+        if (val_alamat1 === "") {
+          error_val_alamat1.text("Please enter your address according to KTP");
+          isValid = false;
+        } else {
+          error_val_alamat1.text("");
+        }
+
+        if (val_desa === "") {
+          error_val_desa.text("Please select your village");
+          isValid = false;
+        } else {
+          error_val_desa.text("");
+        }
+
+        if (val_kecamatan === "") {
+          error_val_kecamatan.text("Please select your sub-district");
+          isValid = false;
+        } else {
+          error_val_kecamatan.text("");
+        }
+
+        if (val_pos === "") {
+          error_val_pos.text("Please select your postal code");
+          isValid = false;
+        } else {
+          error_val_pos.text("");
+        }
+
+        if (val_tlp === "") {
+          error_val_tlp.text("Please enter your phone number");
+          isValid = false;
+        } else {
+          error_val_tlp.text("");
+        }
+
+        if (exampleFormControlFile1 === "") {
+          error_exampleFormControlFile1.text("Please upload your KTP");
+          isValid = false;
+        } else {
+          error_exampleFormControlFile1.text("");
+        }
+
+        if (exampleFormControlFile_merah === "") {
+          error_exampleFormControlFile_merah.text(
+            "Please upload your photo with a red background"
+          );
+          isValid = false;
+        } else {
+          error_exampleFormControlFile_merah.text("");
+        }
+
+        if (nama_lengkap === "") {
+          error_nama_lengkap.text("Please enter your full name");
+          isValid = false;
+        } else {
+          error_nama_lengkap.text("");
+        }
+
+        if (no_ktp === "") {
+          error_no_ktp.text("Please enter your KTP number");
+          isValid = false;
+        } else {
+          error_no_ktp.text("");
+        }
+
+        if (tempat_tgl_lahir === "") {
+          error_tempat_tgl_lahir.text(
+            "Please enter your place and date of birth"
+          );
+          isValid = false;
+        } else {
+          error_tempat_tgl_lahir.text("");
+        }
+
+        // Prevent form submission if validation fails
+        if (!isValid) {
+          return "";
+          event.preventDefault();
+        }
+        // var nama_lengkap = document.getElementById("nama_lengkap");
+        // var no_ktp = document.getElementById("no_ktp");
+        // var tempat_tgl_lahir = document.getElementById("tempat_tgl_lahir");
+        // var error_nama_lengkap = document.getElementById("error_nama_lengkap");
+        // var error_no_ktp = document.getElementById("error_no_ktp");
+        // var error_tempat_tgl_lahir = document.getElementById(
+        //   "error_tempat_tgl_lahir"
+        // );
+
+        // if (nama_lengkap.value === "") {
+        //   error_nama_lengkap.textContent = "Please enter a username";
+        //   event.preventDefault(); // Prevent form submission
+        //   return "";
+        // } else {
+        //   error_nama_lengkap.textContent = ""; // Clear the error message
+        // }
+
         swal(
           {
             title: "Apakah data telah sesuai?",
