@@ -59,6 +59,7 @@
       href="./plugins/bootstrap-daterangepicker/daterangepicker.css"
       rel="stylesheet"
     />
+    <link href="css/custom_new.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -369,6 +370,8 @@
                         <div class="col-lg-6">
                           <input
                             type="file"
+                            accept="pdf"
+                            onchange="wajib_pdf(this)"
                             class="form-control input_tanda_tangan"
                             id="val-alamat"
                             name="val-alamat"

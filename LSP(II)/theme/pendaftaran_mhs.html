@@ -58,6 +58,7 @@
       href="./plugins/bootstrap-daterangepicker/daterangepicker.css"
       rel="stylesheet"
     />
+    <link href="css/custom_new.css" rel="stylesheet" />
     <style>
       .error-message {
         color: red;
@@ -326,9 +327,14 @@
                                 id="val-jk"
                                 name="val-jk"
                               >
+                                <option value="">Pilih</option>
                                 <option value="lk">Laki - Laki</option>
                                 <option value="pr">Perempuan</option>
                               </select>
+                              <div
+                                id="error_val_jk"
+                                class="error-message"
+                              ></div>
                             </div>
                           </div>
                           <div class="form-group row">
@@ -526,6 +532,8 @@
                                   type="file"
                                   class="form-control-file"
                                   id="exampleFormControlFile1"
+                                  accept="pdf"
+                                  onchange="wajib_pdf(this)"
                                 />
                                 <div
                                   id="error_exampleFormControlFile1"
@@ -551,6 +559,8 @@
                                   type="file"
                                   class="form-control-file"
                                   id="exampleFormControlFile_merah"
+                                  accept="pdf"
+                                  onchange="wajib_pdf(this)"
                                 />
                                 <div
                                   id="error_exampleFormControlFile_merah"
@@ -1038,6 +1048,8 @@
                           type="file"
                           class="form-control-file"
                           id="exampleFormControlFile_asesi"
+                          accept="pdf"
+                          onchange="wajib_pdf(this)"
                         />
                         <div
                           id="error_exampleFormControlFile_asesi"
@@ -1170,6 +1182,7 @@
     <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 
     <script src="./js/plugins-init/form-pickers-init.js"></script>
+    <script src="js/custom_new.js"></script>
     <script>
       document.querySelector(".sweet-message").onclick = function () {
         swal("Hey, Here's a message !!");
@@ -1326,7 +1339,7 @@
         );
 
         if (exampleFormControlFile_asesi === "") {
-          error_exampleFormControlFile_asesi.text("Please insert your signs");
+          error_exampleFormControlFile_asesi.text("Upload tanda tangan");
           isValid = false;
         } else {
           error_tanggal_lahir.text("");
@@ -1334,102 +1347,98 @@
 
         // Validate fields
         if (tanggal_lahir === "") {
-          error_tanggal_lahir.text("Please enter your birth date");
+          error_tanggal_lahir.text("Masukkan tanggal");
           isValid = false;
         } else {
           error_tanggal_lahir.text("");
         }
 
         if (val_jk === "") {
-          error_val_jk.text("Please select your gender");
+          error_val_jk.text("Pilih gender");
           isValid = false;
         } else {
           error_val_jk.text("");
         }
 
         if (val_kebangsaan === "") {
-          error_val_kebangsaan.text("Please enter your nationality");
+          error_val_kebangsaan.text("Masukkan kebangsaan");
           isValid = false;
         } else {
           error_val_kebangsaan.text("");
         }
 
         if (val_alamat === "") {
-          error_val_alamat.text("Please enter your current address");
+          error_val_alamat.text("Masukkan alamat");
           isValid = false;
         } else {
           error_val_alamat.text("");
         }
 
         if (val_alamat1 === "") {
-          error_val_alamat1.text("Please enter your address according to KTP");
+          error_val_alamat1.text("Masukkan alamat sesuai KTP");
           isValid = false;
         } else {
           error_val_alamat1.text("");
         }
 
         if (val_desa === "") {
-          error_val_desa.text("Please select your village");
+          error_val_desa.text("Masukkan kelurahan/desa sesuai KTP");
           isValid = false;
         } else {
           error_val_desa.text("");
         }
 
         if (val_kecamatan === "") {
-          error_val_kecamatan.text("Please select your sub-district");
+          error_val_kecamatan.text("Masukkan kecamatan sesuai KTP");
           isValid = false;
         } else {
           error_val_kecamatan.text("");
         }
 
         if (val_pos === "") {
-          error_val_pos.text("Please select your postal code");
+          error_val_pos.text("Masukkan kode pos sesuai KTP");
           isValid = false;
         } else {
           error_val_pos.text("");
         }
 
         if (val_tlp === "") {
-          error_val_tlp.text("Please enter your phone number");
+          error_val_tlp.text("Masukkan nomor telepon");
           isValid = false;
         } else {
           error_val_tlp.text("");
         }
 
         if (exampleFormControlFile1 === "") {
-          error_exampleFormControlFile1.text("Please upload your KTP");
+          error_exampleFormControlFile1.text("Upload KTP");
           isValid = false;
         } else {
           error_exampleFormControlFile1.text("");
         }
 
         if (exampleFormControlFile_merah === "") {
-          error_exampleFormControlFile_merah.text(
-            "Please upload your photo with a red background"
-          );
+          error_exampleFormControlFile_merah.text("Upload pas foto");
           isValid = false;
         } else {
           error_exampleFormControlFile_merah.text("");
         }
 
         if (nama_lengkap === "") {
-          error_nama_lengkap.text("Please enter your full name");
+          error_nama_lengkap.text("Masukkan nama lengkap");
           isValid = false;
         } else {
           error_nama_lengkap.text("");
         }
 
         if (no_ktp === "") {
-          error_no_ktp.text("Please enter your KTP number");
+          error_no_ktp.text("Masukkan no KTP");
           isValid = false;
         } else {
           error_no_ktp.text("");
         }
 
         if (tempat_tgl_lahir === "") {
-          error_tempat_tgl_lahir.text(
-            "Please enter your place and date of birth"
-          );
+          error_tempat_tgl_lahir.text("Masukkan tempat");
           isValid = false;
         } else {
           error_tempat_tgl_lahir.text("");
@@ -1624,6 +1633,20 @@
           document.getElementById("checkbox4").checked = false;
           document.getElementById("checkbox5").checked = false;
         });
+    </script>
+    <script>
+      function validateFile() {
+        const input = document.getElementById("exampleFormControlFile1");
+        const file = input.files[0];
+        const errorMessage = document.getElementById("error-message");
+
+        if (file && file.type !== "application/pdf") {
+          errorMessage.textContent = "Please upload a PDF file.";
+          input.value = ""; // Clear the input
+        } else {
+          errorMessage.textContent = ""; // Clear any previous error messages
+        }
+      }
     </script>
   </body>
 </html>

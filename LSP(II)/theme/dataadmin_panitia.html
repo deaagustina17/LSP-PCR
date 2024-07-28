@@ -37,6 +37,7 @@
       href="./plugins/timepicker/bootstrap-timepicker.min.css"
       rel="stylesheet"
     />
+    <link href="./plugins/sweetalert/css/sweetalert.css" rel="stylesheet" />
     <link
       href="./plugins/bootstrap-daterangepicker/daterangepicker.css"
       rel="stylesheet"
@@ -114,13 +115,8 @@
       <div class="nav-header text-center">
         <!-- <a href="index.html"> -->
         <span class="brand-title">
-          <img src="images/logo_lsp1.png" width="100" />
+          <img src="images/logo_lsp1.png" width="100" height="auto" />
         </span>
-        <div class="nav-control">
-          <div class="hamburger" style="margin-left: 1em">
-            <span class="toggle-icon"><i class="icon-menu"></i></span>
-          </div>
-        </div>
       </div>
       <!--**********************************
               Nav header end
@@ -131,6 +127,11 @@
           ***********************************-->
       <div class="header">
         <div class="header-content clearfix">
+          <div class="nav-control">
+            <div class="hamburger">
+              <span class="toggle-icon"><i class="icon-menu"></i></span>
+            </div>
+          </div>
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
@@ -351,8 +352,8 @@
                     <label
                       class="col-form-label col-md-4 col-sm-4 label-align"
                       for="tanda_tangan"
-                      >Tanda Tangan <span class="required">*</span></label
-                    >
+                      >Tanda Tangan
+                    </label>
                     <div class="col-md-8 col-sm-8">
                       <button
                         class="btn btn-success btn-sm"
@@ -362,20 +363,27 @@
                       >
                         <span class="fa fa-upload"></span> Perbarui Tanda Tangan
                       </button>
-                      <a href="#" class="btn btn-info btn-sm" target="_blank"
+                      <a
+                        href="tandatangan_admin.pdf"
+                        class="btn btn-info btn-sm"
+                        target="_blank"
                         ><span class="fa fa-search"></span> Lihat</a
                       >
                     </div>
                   </div>
                   <br />
                   <div class="modal-footer">
-                    <button class="btn btn-warning btn-sm" type="reset">
+                    <button
+                      class="btn btn-warning btn-sm"
+                      type="reset"
+                      onclick="reset()"
+                    >
                       <span class="fa fa-undo"></span> Reset
                     </button>
                     <button
                       type="button"
                       class="btn btn-primary btn-sm"
-                      onclick="update()"
+                      onclick="simpan_data()"
                     >
                       <span class="fa fa-save"></span> Simpan Perubahan
                     </button>
@@ -410,23 +418,32 @@
                               class="col-form-label col-md-4 col-sm-4 label-align"
                               for="upload_tanda_tangan"
                               >Upload Tanda Tangan
-                              <span class="required">*</span></label
-                            >
+                            </label>
                             <div class="col-md-8 col-sm-8">
                               <input
                                 type="file"
                                 id="upload_tanda_tangan"
                                 name="upload_tanda_tangan"
                                 required
+                                accept="pdf"
+                                onchange="wajib_pdf(this)"
                               />
                             </div>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-warning btn-sm" type="reset">
+                          <button
+                            class="btn btn-warning btn-sm"
+                            type="reset"
+                            onclick="upload_tanda_tangan()"
+                          >
                             <span class="fa fa-undo"></span> Reset
                           </button>
-                          <button type="submit" class="btn btn-primary btn-sm">
+                          <button
+                            type="submit"
+                            class="btn btn-primary btn-sm"
+                            onclick="simpan_data()"
+                          >
                             <span class="fa fa-save"></span> Simpan
                           </button>
                         </div>
@@ -495,7 +512,7 @@
                   <div class="form-actions">
                     <button
                       type="button"
-                      onclick="update_password()"
+                      onclick="simpan_data()"
                       class="btn btn-success btn-sm"
                     >
                       <span class="fa fa-save"></span> Simpan dan Kirim
@@ -557,7 +574,19 @@
     <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 
     <script src="./js/plugins-init/form-pickers-init.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
+    <script src="js/custom_new.js"></script>
     <script>
+      // function wajib_pdf(input) {
+      //   var input_ktp = $(input).val();
+      //   var fileExtension = input_ktp.split(".").pop().toLowerCase();
+      //   if (fileExtension !== "pdf") {
+      //     alert("Pastikan file yang diupload PDF");
+      //     $(input).val("");
+      //   }
+      // }
+
       $("#toggleIcon").on("click", function () {
         // Toggle the visibility of the content
         $(".formulir_data_diri").fadeToggle(150);
@@ -599,6 +628,14 @@
 
       function update_password() {
         // Your update password function here
+      }
+
+      function reset() {
+        $("#email").val("");
+        $("#nama_lengkap").val("");
+      }
+      function upload_tanda_tangan() {
+        $("#upload_tanda_tangan").val("");
       }
     </script>
   </body>

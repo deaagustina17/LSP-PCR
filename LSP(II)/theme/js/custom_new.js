@@ -202,7 +202,7 @@ $(".simpan_data_pengalaman").on("click", function () {
   var error_input_nama_lengkap_asesor = $(".error_input_nama_lengkap_asesor");
 
   if (input_nama_lengkap_asesor === "") {
-    error_input_nama_lengkap_asesor.text("masukkan nama lengkap");
+    error_input_nama_lengkap_asesor.text("Masukkan nama lengkap");
     is_valid = false;
   } else {
     error_input_nama_lengkap_asesor.text("");
@@ -212,7 +212,7 @@ $(".simpan_data_pengalaman").on("click", function () {
   var error_input_inisial_asesor = $(".error_input_inisial_asesor");
 
   if (input_inisial_asesor === "") {
-    error_input_inisial_asesor.text("masukkan inisial");
+    error_input_inisial_asesor.text("Masukkan inisial");
     is_valid = false;
   } else {
     error_input_inisial_asesor.text("");
@@ -222,7 +222,7 @@ $(".simpan_data_pengalaman").on("click", function () {
   var error_input_tempat = $(".error_input_tempat");
 
   if (input_tempat === "") {
-    error_input_tempat.text("masukkan tempat");
+    error_input_tempat.text("Masukkan tempat");
     is_valid = false;
   } else {
     error_input_tempat.text("");
@@ -232,7 +232,7 @@ $(".simpan_data_pengalaman").on("click", function () {
   var error_input_tgl_lahir = $(".error_input_tgl_lahir");
 
   if (input_tgl_lahir === "") {
-    error_input_tgl_lahir.text("masukkan tanggal");
+    error_input_tgl_lahir.text("Masukkan tanggal");
     is_valid = false;
   } else {
     error_input_tgl_lahir.text("");
@@ -242,7 +242,7 @@ $(".simpan_data_pengalaman").on("click", function () {
   var error_input_jk = $(".error_input_jk");
 
   if (input_jk === "") {
-    error_input_jk.text("pilih jenis kelamin");
+    error_input_jk.text("Pilih jenis kelamin");
     is_valid = false;
   } else {
     error_input_jk.text("");
@@ -252,7 +252,7 @@ $(".simpan_data_pengalaman").on("click", function () {
   var error_input_kebangsaan = $(".error_input_kebangsaan");
 
   if (input_kebangsaan === "") {
-    error_input_kebangsaan.text("masukkan kebangsaan");
+    error_input_kebangsaan.text("Masukkan kebangsaan");
     is_valid = false;
   } else {
     error_input_kebangsaan.text("");
@@ -262,7 +262,7 @@ $(".simpan_data_pengalaman").on("click", function () {
   var error_input_alamat_rumah = $(".error_input_alamat_rumah");
 
   if (input_alamat_rumah === "") {
-    error_input_alamat_rumah.text("masukkan alamat rumah");
+    error_input_alamat_rumah.text("Masukkan alamat rumah");
     is_valid = false;
   } else {
     error_input_alamat_rumah.text("");
@@ -272,7 +272,7 @@ $(".simpan_data_pengalaman").on("click", function () {
   var error_input_nomor_regis = $(".error_input_nomor_regis");
 
   if (input_nomor_regis === "") {
-    error_input_nomor_regis.text("masukkan nomor regis");
+    error_input_nomor_regis.text("Masukkan nomor regis");
     is_valid = false;
   } else {
     error_input_nomor_regis.text("");
@@ -282,7 +282,7 @@ $(".simpan_data_pengalaman").on("click", function () {
   var error_input_tanda_tangan = $(".error_input_tanda_tangan");
 
   if (input_tanda_tangan === "") {
-    error_input_tanda_tangan.text("upload tanda tangan");
+    error_input_tanda_tangan.text("Upload tanda tangan");
     is_valid = false;
   } else {
     error_input_tanda_tangan.text("");
@@ -317,25 +317,26 @@ $(".simpan_data_pengalaman").on("click", function () {
   $(".input_tanda_tangan").val("");
 });
 
+// $(".simpan_data_pengalaman").on("click", function () {
 // dokumensertifikasiasesor_asesor
-$("simpan_dokumensertifikasiasesor_asesor").on("click", function () {
+$(".simpan_dokumensertifikasiasesor_asesor").on("click", function () {
   var is_valid = true;
 
   var input_skema = $(".input_skema").val();
-  var input_skema = $(".input_skema");
+  var error_input_skema = $(".error_input_skema");
 
   if (input_skema === "") {
-    input_skema.text("pilih skema");
+    error_input_skema.text("Pilih skema");
     is_valid = false;
   } else {
-    input_skema.text("");
+    error_input_skema.text("");
   }
 
   var input_nomor_regis = $(".input_nomor_regis").val();
   var error_input_nomor_regis = $(".error_input_nomor_regis");
 
   if (input_nomor_regis === "") {
-    error_input_nomor_regis.text("masukkan nomor regis");
+    error_input_nomor_regis.text("Masukkan nomor regis");
     is_valid = false;
   } else {
     error_input_nomor_regis.text("");
@@ -345,7 +346,7 @@ $("simpan_dokumensertifikasiasesor_asesor").on("click", function () {
   var error_input_tgl_habis = $(".error_input_tgl_habis");
 
   if (input_tgl_habis === "") {
-    error_input_tgl_habis.text("masukkan tangal habis");
+    error_input_tgl_habis.text("Masukkan tangal habis");
     is_valid = false;
   } else {
     error_input_tgl_habis.text("");
@@ -355,7 +356,7 @@ $("simpan_dokumensertifikasiasesor_asesor").on("click", function () {
   var error_input_tandatangan = $(".error_input_tandatangan");
 
   if (input_tandatangan === "") {
-    error_input_tandatangan.text("upload tanda tangan");
+    error_input_tandatangan.text("Upload tanda tangan");
     is_valid = false;
   } else {
     error_input_tandatangan.text("");
@@ -384,4 +385,12 @@ $(".input_nomor_regis").val('');
 $(".input_tgl_habis").val('');
 $(".input_tandatangan").val('');
 });
-$;
+
+function wajib_pdf(input) {
+  var input_ktp = $(input).val();
+  var fileExtension = input_ktp.split(".").pop().toLowerCase();
+  if (fileExtension !== "pdf") {
+    alert("Pastikan file yang diupload PDF");
+    $(input).val("");
+  }
+}
