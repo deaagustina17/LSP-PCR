@@ -44,10 +44,30 @@
   border: 1px solid #054b93;
 }
 /* size modal */
-.modal-formulir{
+.modal-formulir {
   max-width: 65% !important;
 }
 
+/* custom layout nav control */
+@media (min-width: 200px) and (max-width: 767px) {
+  .brand-title {
+    display: none;
+    /* position: absolute; */
+  }
+  .toggle-icon {
+    display: block;
+  }
+}
+
+/* Menyembunyikan ikon toggle untuk layar lebih besar dari 600px */
+@media (min-width: 768px) and (max-width: 1920px) {
+  .toggle-icon {
+    display: none;
+  }
+  .brand-title {
+    margin-right: 7em;
+  }
+}
 /* #unduh_color{
   background-color: #054b93;
   color: #fff;
