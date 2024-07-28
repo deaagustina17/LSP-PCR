@@ -242,7 +242,25 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Data Pendaftaran</h4>
+                  <div class="form-group row m-0">
+                    <div class="col-sm-10 col-form-label p-0">
+                      <h4 class="card-title">Data Pendaftaran</h4>
+                    </div>
+                    <div class="col-sm-2 text-right">
+                      <a
+                        href="./file.xlsx"
+                        class="btn btn-primary"
+                        data-placement="top"
+                        id="downloadLink"
+                        data-toggle="tooltip"
+                        title="Klik untuk mengunduh file Excel"
+                        onclick="confirmDownload(event, this)"
+                      >
+                        <i class="fa fa-download" style="color: white"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- <h4 class="card-title">Data Pendaftaran</h4> -->
                   <!-- <a
                     href="tambahpendaftaran_panitia.html"
                     class="btn btn-dark mb-2"
@@ -314,14 +332,14 @@
                                 title="Detail"
                                 ><i class="fa fa-info-circle color-danger"></i
                               ></a>
-                              <a
+                              <!-- <a
                                 class="badge bg-unduh"
                                 href="file.xlsx"
                                 data-toggle="tooltip"
                                 data-placement="top"
                                 title="Unduh"
                                 ><i class="fa fa-download color-danger"></i
-                              ></a>
+                              ></a> -->
                             </span>
                           </td>
                         </tr>
@@ -363,14 +381,14 @@
                                 title="Detail"
                                 ><i class="fa fa-info-circle color-danger"></i
                               ></a>
-                              <a
+                              <!-- <a
                                 class="badge bg-unduh"
                                 href="file.xlsx"
                                 data-toggle="tooltip"
                                 data-placement="top"
                                 title="Unduh"
                                 ><i class="fa fa-download color-danger"></i
-                              ></a>
+                              ></a> -->
                             </span>
                           </td>
                         </tr>

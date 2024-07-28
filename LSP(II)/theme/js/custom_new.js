@@ -75,19 +75,13 @@ $(".button_tambah_pengalaman_pelatihan").on("click", function () {
                       <input type="text" class="form-control" />
                     </td>
                     <td>
-                      <input type="date" class="form-control" />
+                      <input type="text" class="form-control" />
                     </td>
-                    <td>
-                      <div class="custom-file">
-                        <input
-                          type="file"
-                          class="custom-file-input"
-                          id="buktiPelatihan1"
-                        />
-                        <label class="custom-file-label" for="buktiPelatihan1"
-                          >Pilih file</label
-                        >
-                      </div>
+                    <td width="28%">
+                      <input
+                        type="file"
+                        class="form-control bukti_pelatihan"
+                      />
                     </td>
                     <td>
                       <button class="btn btn-danger button_hapus_pengalaman_pelatihan" type="button">Hapus</button>
