@@ -263,6 +263,7 @@
                           <th>Tanggal</th>
                           <th>Nama Asesi</th>
                           <th>Bidang</th>
+                          <th>Rekomendasi</th>
                           <th>Hasil</th>
                           <th>Aksi</th>
                         </tr>
@@ -270,7 +271,7 @@
                       <tbody>
                         <tr>
                           <td>1</td>
-                          <td>25 April 2024</td>
+                          <td>25 Maret 2024</td>
                           <td>Dea Agustina</td>
                           <td>Database Programming Supervisor</td>
                           <td>
@@ -279,59 +280,71 @@
                               <span class="slider"></span>
                             </label>
                           </td>
+                          <td id="hasil1">Tidak Kompeten</td>
                           <td>
                             <span>
-                              <a
+                              <button
                                 class="badge bg-green"
-                                href="#"
                                 data-toggle="modal"
                                 data-target="#add-edit"
                                 data-placement="top"
                                 title="Edit"
-                                ><i class="fa fa-pencil color-muted m-r-5"></i
-                              ></a>
-                              <a
+                              >
+                                <i
+                                  class="fa fa-pencil m-r-5"
+                                  style="color: white"
+                                ></i>
+                              </button>
+                              <button
                                 class="badge bg-red"
-                                href="#"
-                                data-toggle="tooltip"
                                 data-placement="top"
                                 onclick="confirmDelete(this)"
-                                ><i class="fa fa-trash-o color-danger"></i
-                              ></a>
+                              >
+                                <i
+                                  class="fa fa-trash-o"
+                                  style="color: white"
+                                ></i>
+                              </button>
                             </span>
                           </td>
                         </tr>
 
                         <tr>
-                          <td>1</td>
-                          <td>25 April 2024</td>
+                          <td>2</td>
+                          <td>25 Maret 2024</td>
                           <td>Yokie Trisannerson</td>
                           <td>Database Programming Supervisor</td>
                           <td>
-                            <label class="switch" onclick="onOff1()">
-                              <input type="checkbox" id="checkbox1" />
+                            <label class="switch" onclick="onOff2()">
+                              <input type="checkbox" id="checkbox2" />
                               <span class="slider"></span>
                             </label>
                           </td>
+                          <td id="hasil2">Tidak Kompeten</td>
                           <td>
                             <span>
-                              <a
+                              <button
                                 class="badge bg-green"
-                                href="#"
                                 data-toggle="modal"
                                 data-target="#add-edit"
                                 data-placement="top"
                                 title="Edit"
-                                ><i class="fa fa-pencil color-muted m-r-5"></i
-                              ></a>
-                              <a
+                              >
+                                <i
+                                  class="fa fa-pencil m-r-5"
+                                  style="color: white"
+                                ></i>
+                              </button>
+                              <button
                                 class="badge bg-red"
-                                href="#"
-                                data-toggle="tooltip"
                                 data-placement="top"
                                 onclick="confirmDelete(this)"
-                                ><i class="fa fa-trash-o color-danger"></i
-                              ></a>
+                              >
+                                <i
+                                  class="fa fa-trash-o"
+                                  style="color: white"
+                                ></i>
+                              </button>
                             </span>
                           </td>
                         </tr>
@@ -343,145 +356,19 @@
                           <div class="modal-content">
                             <div class="modal-header">
                               <h4 class="modal-title">
-                                <strong
-                                  >Tambah Data Keputusan Sertifikasi</strong
-                                >
+                                <strong>Tambah Data Laporan Pleno</strong>
                               </h4>
                             </div>
                             <div class="modal-body">
                               <form>
                                 <div class="row">
-                                  <div class="col-md-12">
-                                    <label class="control-label">Batch</label>
-                                    <input
-                                      class="form-control form-white"
-                                      placeholder="Masukkan batch"
-                                      type="text"
-                                      name="category-batch"
-                                    />
-                                  </div>
-                                  <div class="col-md-12">
-                                    <label class="control-label">Tanggal</label>
-                                    <div class="row">
-                                      <div class="col-md-8">
-                                        <div class="example">
-                                          <div class="input-group">
-                                            <input
-                                              type="text"
-                                              class="form-control"
-                                              id="tambah_date_picker"
-                                              placeholder="mm/dd/yyyy"
-                                            />
-                                            <span class="input-group-append"
-                                              ><span class="input-group-text"
-                                                ><i
-                                                  class="mdi mdi-calendar-check"
-                                                ></i></span
-                                            ></span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
                                   <div class="col-md-12">
                                     <label class="control-label"
-                                      >Nama Asesi</label
+                                      >Batch</label
                                     >
                                     <input
                                       class="form-control form-white"
-                                      placeholder="Masukkan Nama Asesi"
-                                      type="text"
-                                      name="category-nama"
-                                    />
-                                  </div>
-                                  <div class="col-md-12">
-                                    <label class="control-label">Bidang</label>
-                                    <select
-                                      class="form-control form-white"
-                                      data-placeholder="Jenis SK"
-                                      name="category-jenis_sk"
-                                    >
-                                      <option value="bidang1">
-                                        Database Programming Supervisor
-                                      </option>
-                                      <option value="bidang2">
-                                        Network Administrator Muda
-                                      </option>
-                                      <option value="bidang3">
-                                        Programmer
-                                      </option>
-                                      <option value="bidang4">
-                                        Teknisi Madya Jaringan Komputer
-                                      </option>
-                                      <option value="bidang5">
-                                        Pengoperasian Peralatan Kelistrikan Dan
-                                        Elektronika Berbasis Programmable Logic
-                                        Controller (PLC)
-                                      </option>
-                                      <option value="bidang6">
-                                        Plate Welder
-                                      </option>
-                                      <option value="bidang7">
-                                        Pengoperasian Instrumentasi Proses
-                                        Kontrol
-                                      </option>
-                                      <option value="bidang8">
-                                        Teknisi Akuntansi Pratama
-                                      </option>
-                                      <option value="bidang9">
-                                        Welding Inspector Standar
-                                      </option>
-                                    </select>
-                                  </div>
-                                  <div class="col-md-12">
-                                    <label class="control-label">Hasil</label
-                                    ><br />
-                                    <label class="switch" onclick="onOff3()">
-                                      <input type="checkbox" id="checkbox3" />
-                                      <span class="slider"></span>
-                                    </label>
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
-                            <div class="modal-footer">
-                              <button
-                                type="button"
-                                class="btn btn-danger waves-effect"
-                                data-dismiss="modal"
-                              >
-                                Tutup
-                              </button>
-                              <button
-                                type="button"
-                                class="btn btn-info waves-effect waves-light save-category"
-                                onclick="simpan_data()"
-                              >
-                                Simpan
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- END MODAL -->
-
-                      <!-- Modal Add Edit -->
-                      <div class="modal fade none-border" id="add-edit">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h4 class="modal-title">
-                                <strong>Edit Data Keputusan Sertifikasi</strong>
-                              </h4>
-                            </div>
-                            <div class="modal-body">
-                              <form>
-                                <div class="row">
-                                  <div class="col-md-12">
-                                    <label class="control-label">Batch</label>
-                                    <input
-                                      class="form-control form-white"
-                                      placeholder="Masukkan batch"
+                                      placeholder="Masukkan Batch"
                                       type="text"
                                       name="category-batch"
                                     />
@@ -560,12 +447,168 @@
                                     </select>
                                   </div>
                                   <div class="col-md-12">
-                                    <label class="control-label">Hasil</label
+                                    <label class="control-label"
+                                      >Rekomendasi</label
                                     ><br />
                                     <label class="switch" onclick="onOff3()">
                                       <input type="checkbox" id="checkbox3" />
                                       <span class="slider"></span>
                                     </label>
+                                  </div>
+                                  <div class="col-md-12">
+                                    <label class="control-label">Hasil</label>
+                                    <select
+                                      class="form-control form-white"
+                                      data-placeholder="Hasil"
+                                      name="category-hasil"
+                                    >
+                                      <option value="hasilk">Kompeten</option>
+                                      <option value="hasiltk">
+                                        Tidak Kompeten
+                                      </option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-danger waves-effect"
+                                data-dismiss="modal"
+                              >
+                                Tutup
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-info waves-effect waves-light save-category"
+                                onclick="simpan_data()"
+                              >
+                                Simpan
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- END MODAL -->
+
+                      <!-- Modal Add Category -->
+                      <div class="modal fade none-border" id="add-edit">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h4 class="modal-title">
+                                <strong>Edit Data Keputusan Sertifikasi</strong>
+                              </h4>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >Batch</label
+                                    >
+                                    <input
+                                      class="form-control form-white"
+                                      placeholder="Masukkan Batch"
+                                      type="text"
+                                      name="category-batch"
+                                    />
+                                  </div>
+                                  <div class="col-md-12">
+                                    <label class="control-label">Tanggal</label>
+                                    <div class="row">
+                                      <div class="col-md-8">
+                                        <div class="example">
+                                          <div class="input-group">
+                                            <input
+                                              type="text"
+                                              class="form-control"
+                                              id="datepicker-autoclose"
+                                              placeholder="mm/dd/yyyy"
+                                            />
+                                            <span class="input-group-append"
+                                              ><span class="input-group-text"
+                                                ><i
+                                                  class="mdi mdi-calendar-check"
+                                                ></i></span
+                                            ></span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >Nama Asesi</label
+                                    >
+                                    <input
+                                      class="form-control form-white"
+                                      placeholder="Masukkan Nama Asesi"
+                                      type="text"
+                                      name="category-nama"
+                                    />
+                                  </div>
+                                  <div class="col-md-12">
+                                    <label class="control-label">Bidang</label>
+                                    <select
+                                      class="form-control form-white"
+                                      data-placeholder="Jenis SK"
+                                      name="category-jenis_sk"
+                                    >
+                                      <option value="bidang1">
+                                        Database Programming Supervisor
+                                      </option>
+                                      <option value="bidang2">
+                                        Network Administrator Muda
+                                      </option>
+                                      <option value="bidang3">
+                                        Programmer
+                                      </option>
+                                      <option value="bidang4">
+                                        Teknisi Madya Jaringan Komputer
+                                      </option>
+                                      <option value="bidang5">
+                                        Pengoperasian Peralatan Kelistrikan Dan
+                                        Elektronika Berbasis Programmable Logic
+                                        Controller (PLC)
+                                      </option>
+                                      <option value="bidang6">
+                                        Plate Welder
+                                      </option>
+                                      <option value="bidang7">
+                                        Pengoperasian Instrumentasi Proses
+                                        Kontrol
+                                      </option>
+                                      <option value="bidang8">
+                                        Teknisi Akuntansi Pratama
+                                      </option>
+                                      <option value="bidang9">
+                                        Welding Inspector Standar
+                                      </option>
+                                    </select>
+                                  </div>
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >Rekomendasi</label
+                                    ><br />
+                                    <label class="switch" onclick="onOff3()">
+                                      <input type="checkbox" id="checkbox3" />
+                                      <span class="slider"></span>
+                                    </label>
+                                  </div>
+                                  <div class="col-md-12">
+                                    <label class="control-label">Hasil</label>
+                                    <select
+                                      class="form-control form-white"
+                                      data-placeholder="Hasil"
+                                      name="category-hasil"
+                                    >
+                                      <option value="hasilk">Kompeten</option>
+                                      <option value="hasiltk">
+                                        Tidak Kompeten
+                                      </option>
+                                    </select>
                                   </div>
                                 </div>
                               </form>

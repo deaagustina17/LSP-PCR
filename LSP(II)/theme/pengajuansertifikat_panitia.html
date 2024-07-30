@@ -250,6 +250,30 @@
                     class="btn btn-dark mb-2"
                     ><i class="ti-plus f-s-12 m-r-5"></i> Tambah</a
                   >
+                  <a id="downloadBtn" href="./Format_Pengajuan_Sertifikat.xlsx" class="float-right"
+                        >Download Format Excel</a
+                      >
+
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label"
+                          >Upload Pengajuan Sertifikat</label
+                        >
+                        <div class="button-icon border p-2">
+                          <input
+                            type="file"
+                            class="form-control-file"
+                            id="exampleFormControlFile1"
+                            accept="pdf"
+                                  onchange="wajib_pdf(this)"
+                          />
+                        </div>
+                        <button
+                          class="btn btn-md btn-primary m-2"
+                          onclick="simpan_data()"
+                        >
+                          Upload Batch
+                        </button>
+                      </div>
                   <div class="table-responsive">
                     <table
                       class="table table-striped table-bordered zero-configuration small-text"
