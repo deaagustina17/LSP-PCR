@@ -306,15 +306,15 @@ $(".simpan_data_pengalaman").on("click", function () {
       swal("Berhasil !!", "Data Berhasil Di Simpan", "success");
     }
   );
-  $(".input_nama_lengkap_asesor").val("");
-  $(".input_inisial_asesor").val("");
-  $(".input_tempat").val("");
-  $(".input_tgl_lahir").val("");
-  $(".input_jk").val("");
-  $(".input_kebangsaan").val("");
-  $(".input_alamat_rumah").val("");
-  $(".input_nomor_regis").val("");
-  $(".input_tanda_tangan").val("");
+  // $(".input_nama_lengkap_asesor").val("");
+  // $(".input_inisial_asesor").val("");
+  // $(".input_tempat").val("");
+  // $(".input_tgl_lahir").val("");
+  // $(".input_jk").val("");
+  // $(".input_kebangsaan").val("");
+  // $(".input_alamat_rumah").val("");
+  // $(".input_nomor_regis").val("");
+  // $(".input_tanda_tangan").val("");
 });
 
 // $(".simpan_data_pengalaman").on("click", function () {
@@ -394,3 +394,14 @@ function wajib_pdf(input) {
     $(input).val("");
   }
 }
+
+// custom datepicker
+      
+var today = new Date();
+
+// Initialize datepicker with today's date
+$('.datepicker-autoclose').datepicker({
+    autoclose: true,
+    format: 'dd-mm-yyyy'
+}).datepicker('setDate', today);
+

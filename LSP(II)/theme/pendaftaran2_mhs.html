@@ -2207,14 +2207,20 @@
                 <div class="card-body">
                   <div class="form-group row">
                     <label class="col-sm-2 col-form-label"
-                      >Tanda Tangan Asesi</label
-                    >
+                      >Tanda Tangan Asesi <span class="text-danger">*</span>
+                    </label>
                     <div class="button-icon">
                       <input
                         type="file"
                         class="form-control-file"
-                        id="exampleFormControlFile1"
+                        id="exampleFormControlFile_asesi"
+                        accept="pdf"
+                        onchange="wajib_pdf(this)"
                       />
+                      <div
+                        id="error_exampleFormControlFile_asesi"
+                        class="text-danger"
+                      ></div>
                     </div>
 
                     <label class="col-sm-2 col-form-label">Tanggal</label>
@@ -2223,8 +2229,7 @@
                         <div class="input-group">
                           <input
                             type="text"
-                            class="form-control"
-                            id="datepicker-autoclose"
+                            class="form-control datepicker-autoclose"
                             placeholder="mm/dd/yyyy"
                           />
                           <span class="input-group-append"
@@ -2255,8 +2260,7 @@
                         <div class="input-group">
                           <input
                             type="text"
-                            class="form-control"
-                            id="datepicker-autoclose"
+                            class="form-control datepicker-autoclose"
                             placeholder="mm/dd/yyyy"
                           />
                           <span class="input-group-append"
@@ -2269,7 +2273,9 @@
                   </div>
                   <div class="card-content">
                     <div class="sweetalert m-t-30">
-                      <button class="btn btn-dark mb-2 btn sweet-message">
+                      <button
+                        class="btn btn-dark mb-2 btn sweet-message kirimpendaftaran2"
+                      >
                         Kirim
                       </button>
                     </div>
@@ -2324,13 +2330,13 @@
     <!-- Date range Plugin JavaScript -->
     <script src="./plugins/timepicker/bootstrap-timepicker.min.js"></script>
     <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
-
+    <script src="js/custom_new.js"></script>
     <script src="./js/plugins-init/form-pickers-init.js"></script>
 
     <script>
-      document.querySelector(".sweet-message").onclick = function () {
-        swal("APL02 berhasil dikirim, silahkan menunggu jadwal asesmen");
-      };
+      // document.querySelector(".sweet-message").onclick = function () {
+      //   swal("APL02 berhasil dikirim, silahkan menunggu jadwal asesmen");
+      // };
     </script>
     <script>
       document.querySelector(".sweet-text").onclick = function () {
@@ -2514,6 +2520,20 @@
           addEventListenerToCheckbox("checkbox" + i, "checkbox" + nextId);
         }
       }
+
+      $(".kirimpendaftaran2").on("click", function () {
+        var exampleFormControlFile_asesi = $(
+          "#exampleFormControlFile_asesi"
+        ).val();
+        if (exampleFormControlFile_asesi === "") {
+          $("#error_exampleFormControlFile_asesi").text("Upload tanda tangan");
+          return "";
+        } else {
+          $("#error_exampleFormControlFile_asesi").text("");
+          swal("APL02 berhasil dikirim, silahkan menunggu jadwal asesmen");
+          $("#exampleFormControlFile_asesi").val("");
+        }
+      });
     </script>
   </body>
 </html>

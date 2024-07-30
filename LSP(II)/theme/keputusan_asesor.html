@@ -353,5 +353,25 @@
   <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
   <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
   <script src="./js/custom_new.js"></script>
+  <script>
+    function onOff1() {
+        var checkbox = document.getElementById("checkbox1");
+
+        if (checkbox.checked) {
+          document.getElementById("hasil1").innerHTML = "Kompeten";
+        } else {
+          document.getElementById("hasil1").innerHTML = "Tidak Kompeten";
+        }
+      }
+      function onOff2() {
+        var checkbox = document.getElementById("checkbox2");
+
+        if (checkbox.checked) {
+          document.getElementById("hasil2").innerHTML = "Kompeten";
+        } else {
+          document.getElementById("hasil2").innerHTML = "Tidak Kompeten";
+        }
+      }
+  </script>
   </body>
 </html>

@@ -12,7 +12,20 @@
       sizes="16x16"
       href="images/logo_lsp1.png"
     />
+    <!-- Pignose Calender -->
+    <link
+      href="./plugins/pg-calendar/css/pignose.calendar.min.css"
+      rel="stylesheet"
+    />
+    <!-- Chartist -->
+    <link rel="stylesheet" href="./plugins/chartist/css/chartist.min.css" />
+    <link
+      rel="stylesheet"
+      href="./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css"
+    />
     <!-- Custom Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="./plugins/sweetalert/css/sweetalert.css" rel="stylesheet" />
     <link
       href="./plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
       rel="stylesheet"
@@ -32,20 +45,6 @@
       href="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.css"
       rel="stylesheet"
     />
-    <!-- Daterange picker plugins css -->
-    <link
-      href="./plugins/timepicker/bootstrap-timepicker.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="./plugins/bootstrap-daterangepicker/daterangepicker.css"
-      rel="stylesheet"
-    />
-    <link
-      href="./plugins/tables/css/datatable/dataTables.bootstrap4.min.css"
-      rel="stylesheet"
-    />
-    <link href="css/style.css" rel="stylesheet" />
     <link href="css/custom_new.css" rel="stylesheet" />
   </head>
 
@@ -278,8 +277,7 @@
                                 <div class="input-group">
                                   <input
                                     type="text"
-                                    class="form-control"
-                                    id="datepicker-autoclose"
+                                    class="form-control datepicker-autoclose"
                                     placeholder="mm/dd/yyyy"
                                   />
                                   <span class="input-group-append"
@@ -470,8 +468,7 @@
                                 <div class="input-group">
                                   <input
                                     type="text"
-                                    class="form-control"
-                                    id="datepicker-autoclose"
+                                    class="form-control datepicker-autoclose"
                                     placeholder="mm/dd/yyyy"
                                   />
                                   <span class="input-group-append"
@@ -609,5 +606,6 @@
     <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 
     <script src="./js/plugins-init/form-pickers-init.js"></script>
+    <script src="./js/custom_new.js"></script>
   </body>
 </html>

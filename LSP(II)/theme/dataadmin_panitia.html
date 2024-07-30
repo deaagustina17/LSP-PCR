@@ -292,11 +292,11 @@
                       <i class="fa fa-times float-right" style="cursor: pointer"
                         >&nbsp;&nbsp;</i
                       >
-                      <i
+                      <!-- <i
                         class="fa fa-wrench float-right"
                         style="cursor: pointer"
                         >&nbsp;&nbsp;</i
-                      >
+                      > -->
                       <i
                         id="toggleIcon"
                         style="cursor: pointer"
@@ -464,11 +464,11 @@
                       <i class="fa fa-times float-right" style="cursor: pointer"
                         >&nbsp;&nbsp;</i
                       >
-                      <i
+                      <!-- <i
                         class="fa fa-wrench float-right"
                         style="cursor: pointer"
                         >&nbsp;&nbsp;</i
-                      >
+                      > -->
                       <i
                         id="toggleIcon_perubahan"
                         style="cursor: pointer"
@@ -492,6 +492,7 @@
                         name="password_baru"
                         class="form-control"
                       />
+                      <div class="text-danger error_pass_baru"></div>
                     </div>
                   </div>
                   <div class="form-group row">
@@ -507,12 +508,13 @@
                         name="password_ulang"
                         class="form-control"
                       />
+                      <div class="text-danger error_salah_password"></div>
                     </div>
                   </div>
                   <div class="form-actions">
                     <button
                       type="button"
-                      onclick="simpan_data()"
+                      onclick="simpan_password()"
                       class="btn btn-success btn-sm"
                     >
                       <span class="fa fa-save"></span> Simpan dan Kirim
@@ -586,6 +588,49 @@
       //     $(input).val("");
       //   }
       // }
+      function simpan_password() {
+        var pas_baru = $("#password_baru").val();
+        var pas_ulang = $("#password_ulang").val();
+        var error_password = $(".error_salah_password");
+        var error_pass_baru = $(".error_pass_baru");
+
+        if (pas_baru === "") {
+          error_pass_baru.text("Masukkan password baru");
+          return "";
+        } else {
+          error_pass_baru.text("");
+        }
+        if (pas_ulang === "") {
+          error_password.text("Masukkan password ulang");
+          return "";
+        } else {
+          error_password.text("");
+        }
+
+        if (pas_baru !== pas_ulang) {
+          error_password.text("Password tidak sama");
+          return "";
+        } else {
+          error_password.text("");
+        }
+        swal(
+          {
+            title: "Pastikan Data Data Telah benar?",
+            // text: "You will not be able to recover this imaginary file !!",
+            type: "warning",
+            showCancelButton: !0,
+            confirmButtonColor: "#7066e0",
+            confirmButtonText: "Ya, Lanjutkan Simpan",
+            closeOnConfirm: !1,
+          },
+          function () {
+            swal("Berhasil !!", "Data Berhasil Di Simpan", "success");
+            $("#password_baru").val("");
+            $("#password_ulang").val("");
+          }
+        );
+       
+      }
 
       $("#toggleIcon").on("click", function () {
         // Toggle the visibility of the content
