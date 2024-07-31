@@ -49,6 +49,14 @@
     <link href="css/custom_new.css" rel="stylesheet" />
     <!-- sweet alert -->
     <link href="./plugins/sweetalert/css/sweetalert.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -244,6 +252,7 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Data Dokumen Sertifikasi Asesor</h4>
+                  <audio id="audio_hide" src="./sounds/notif.mp3"></audio>
                   <!-- <a
                     href="index_panitia.html"
                     data-toggle="modal"
@@ -270,7 +279,53 @@
                           <td>ATD</td>
                           <td>MET.000.0070322015</td>
                           <td>Database Programming Supervisor</td>
-                          <td>20 Maret 2027</td>
+                          <td id="tanggal_berlaku_supervisor">20 Maret 2027</td>
+                          <td></td>
+                          <td>
+                            <span>
+                              <button
+                                class="badge bg-green"
+                                data-toggle="modal"
+                                data-target="#add-edit"
+                                data-placement="top"
+                                title="Edit"
+                              >
+                                <i
+                                  class="fa fa-pencil m-r-5"
+                                  style="color: white"
+                                ></i>
+                              </button>
+                              <button
+                                class="badge bg-red"
+                                data-placement="top"
+                                onclick="confirmDelete(this)"
+                              >
+                                <i
+                                  class="fa fa-trash-o"
+                                  style="color: white"
+                                ></i>
+                              </button>
+                              <a
+                                href="./file.xlsx"
+                                class="badge bg-unduh"
+                                data-placement="top"
+                                id="downloadLink"
+                                download="downloaded_file.txt"
+                                onclick="confirmDownload(event, this)"
+                              >
+                                <i
+                                  class="fa fa-download"
+                                  style="color: white"
+                                ></i>
+                              </a>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>ATD</td>
+                          <td>MET.000.0070322015</td>
+                          <td>Database Programming Supervisor</td>
+                          <td id="tanggal_berlaku_supervisor">31 Juli 2024</td>
                           <td></td>
                           <td>
                             <span>
@@ -599,29 +654,7 @@
         </div>
         <!-- #/ container -->
       </div>
-      <!--**********************************
-            Content body end
-        ***********************************-->
-
-      <!--**********************************
-            Footer start
-        ***********************************-->
-      <!-- <div class="footer">
-            <div class="copyright">
-                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
-            </div>
-        </div> -->
-      <!--**********************************
-            Footer end
-        ***********************************-->
     </div>
-    <!--**********************************
-        Main wrapper end
-    ***********************************-->
-
-    <!--**********************************
-        Scripts
-    ***********************************-->
     <script src="plugins/common/common.min.js"></script>
     <script src="js/custom.min.js"></script>
     <script src="js/settings.js"></script>
@@ -649,6 +682,97 @@
     <script src="./js/plugins-init/form-pickers-init.js"></script>
     <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
     <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+
     <script src="./js/custom_new.js"></script>
+    <script>
+      function checkDates() {
+        // Get today's date
+        var today = new Date();
+
+        // Convert today's date to a comparable format (YYYY-MM-DD)
+        var todayFormatted = today.toISOString().split("T")[0];
+
+        // Flag to check if any date is past
+        var hasExpiredDates = false;
+
+        // Loop through each row in the table body
+        $("table tbody tr").each(function () {
+          // Get the date from the current row
+          var dateText = $(this)
+            .find("#tanggal_berlaku_supervisor")
+            .text()
+            .trim();
+
+          // Convert the date from the text to a Date object
+          // Assuming the date format in text is "DD MMMM YYYY" (e.g., "20 Maret 2027")
+          var dateParts = dateText.split(" ");
+          var day = parseInt(dateParts[0]);
+          var monthName = dateParts[1];
+          var year = parseInt(dateParts[2]);
+
+          // Convert month name to month number
+          var months = {
+            Januari: 0,
+            Februari: 1,
+            Maret: 2,
+            April: 3,
+            Mei: 4,
+            Juni: 5,
+            Juli: 6,
+            Agustus: 7,
+            September: 8,
+            Oktober: 9,
+            November: 10,
+            Desember: 11,
+          };
+          var month = months[monthName];
+
+          // Create Date object
+          var dateObj = new Date(year, month, day);
+          var dateFormatted = dateObj.toISOString().split("T")[0];
+
+          // Compare the dates
+          if (dateFormatted < todayFormatted) {
+            hasExpiredDates = true;
+            // Optionally, highlight the expired row or add some indication
+            $(this).addClass("expired-date");
+          }
+        });
+
+        // Show an alert if there are expired dates
+        if (hasExpiredDates) {
+          iziToast.error({
+            title: "Pemberitahuan",
+            message:
+              "Ada Data Assesi hari ini yang sudah habis masa berlakunya",
+          });
+          tes();
+        }
+      }
+
+      function tes() {
+        const audio = document.getElementById("audio_hide");
+
+        // Play the audio
+        audio
+          .play()
+          .then(() => {
+            console.log("Audio playback started.");
+          })
+          .catch((error) => {
+            console.error("Error occurred:", error);
+          });
+      }
+
+      // Set up an interval to check the dates every 3 seconds
+      var intervalId = setInterval(function () {
+        checkDates();
+
+        // You can clear the interval if you want to stop checking after certain conditions
+        // For example, if you update the table, you might clear the interval:
+        // clearInterval(intervalId);
+      }, 3000); // 3000 milliseconds = 3 seconds
+    </script>
   </body>
 </html>

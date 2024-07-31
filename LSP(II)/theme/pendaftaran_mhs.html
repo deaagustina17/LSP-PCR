@@ -199,14 +199,12 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link apl_02" href="pendaftaran2_mhs.html"
+                      <a class="nav-link apl_02" href="#"
                         ><i class="bx bx-bell me-1"></i>APL 02</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a
-                        class="nav-link frak_01"
-                        href="persetujuanasesmen_mhs.html"
+                      <a class="nav-link frak_01" href="#"
                         ><i class="bx bx-bell me-1"></i>FR.AK.01</a
                       >
                     </li>
@@ -1190,102 +1188,6 @@
     </script>
     <script>
       document.querySelector(".sweet-confirm").onclick = function () {
-        // var isValid = true;
-        // var exampleFormControlFile_asesi = document.getElementById(
-        //   "exampleFormControlFile_asesi"
-        // );
-        // var nama_lengkap = document.getElementById("nama_lengkap");
-        // var no_ktp = document.getElementById("no_ktp");
-        // var tempat_tgl_lahir = document.getElementById("tempat_tgl_lahir");
-        // var tgl_lahir = $(".tanggal_lahir").val();
-
-        // var error_exampleFormControlFile_asesi = document.getElementById(
-        //   "error_exampleFormControlFile_asesi"
-        // );
-        // var error_nama_lengkap = document.getElementById("error_nama_lengkap");
-        // var error_no_ktp = document.getElementById("error_no_ktp");
-        // var error_tempat_tgl_lahir = document.getElementById(
-        //   "error_tempat_tgl_lahir"
-        // );
-        // var error_tanggal_lahir = document.getElementById(
-        //   "error_tanggal_lahir"
-        // );
-
-        // var val_kebangsaan = $("#val-kebangsaan-negara").val();
-        // var val_jk = $("#val-jk").val();
-        // var val_alamat = $("#val-alamat").val();
-        // var val_alamat1 = $("#val-alamat1").val();
-        // var val_desa = $("#val-desa").val();
-        // var val_kecamatan = $("#val-kecamatan").val();
-        // var val_pos = $("#val-pos").val();
-        // var val_tlp = $("#val-tlp").val();
-        // var exampleFormControlFile1 = $("#exampleFormControlFile1").val();
-        // var exampleFormControlFile_merah = $(
-        //   "#exampleFormControlFile_merah"
-        // ).val();
-
-        // var error_val_jk = $("#error_val_jk");
-        // var error_val_alamat = $("#error_val-alamat");
-        // var error_val_alamat1 = $("#error_val-alamat1");
-        // var error_val_desa = $("#error_val-desa");
-        // var error_val_kecamatan = $("#error_val-kecamatan");
-        // var error_val_pos = $("#error_val-pos");
-        // var error_val_tlp = $("#error_val-tlp");
-        // var error_exampleFormControlFile1 = $("#error_exampleFormControlFile1");
-        // var error_exampleFormControlFile_merah = $(
-        //   "#error_exampleFormControlFile_merah"
-        // );
-        // var error_val_kebangsaan = $("#error_val_kebangsaan");
-
-        // if (tgl_lahir === "") {
-        //   error_tanggal_lahir.textContent = "Please insert date of birth";
-        //   isValid = false;
-        // }
-
-        // // val kebangsaan
-        // if (val_kebangsaan === "") {
-        //   error_val_kebangsaan.text("please enter your kebangsaan");
-        //   isValid = false;
-        // }
-        // // Validate nama_lengkap
-        // if (exampleFormControlFile_asesi.value === "") {
-        //   error_exampleFormControlFile_asesi.textContent =
-        //     "Please insert signs asessi";
-        //   isValid = false;
-        // } else {
-        //   error_nama_lengkap.textContent = "";
-        // }
-        // // Validate nama_lengkap
-        // if (nama_lengkap.value === "") {
-        //   error_nama_lengkap.textContent = "Please enter a username";
-        //   isValid = false;
-        // } else {
-        //   error_nama_lengkap.textContent = "";
-        // }
-
-        // // Validate no_ktp
-        // if (no_ktp.value === "") {
-        //   error_no_ktp.textContent = "Please enter your KTP number";
-        //   isValid = false;
-        // } else {
-        //   error_no_ktp.textContent = "";
-        // }
-
-        // // Validate tempat_tgl_lahir
-        // if (tempat_tgl_lahir.value === "") {
-        //   error_tempat_tgl_lahir.textContent =
-        //     "Please enter your place and date of birth";
-        //   isValid = false;
-        // } else {
-        //   error_tempat_tgl_lahir.textContent = "";
-        // }
-
-        // // Prevent form submission if validation fails
-        // if (!isValid) {
-        //   return "";
-        //   event.preventDefault();
-        // }
-        // Get input values
         var isValid = true;
         var tanggal_lahir = $(".tanggal_lahir").val();
         var val_jk = $("#val-jk").val();
@@ -1435,10 +1337,10 @@
         }
 
         // Prevent form submission if validation fails
-        if (!isValid) {
-          return "";
-          event.preventDefault();
-        }
+        // if (!isValid) {
+        //   return "";
+        //   event.preventDefault();
+        // }
         // var nama_lengkap = document.getElementById("nama_lengkap");
         // var no_ktp = document.getElementById("no_ktp");
         // var tempat_tgl_lahir = document.getElementById("tempat_tgl_lahir");
@@ -1472,6 +1374,7 @@
               "Untuk lanjut ke APL 02, silahkan menunggu admin approve",
               "success"
             );
+            $(".apl_02").attr("href", "pendaftaran2_mhs.html");
           }
         );
       };

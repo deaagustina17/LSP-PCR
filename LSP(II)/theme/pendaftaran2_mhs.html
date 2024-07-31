@@ -207,7 +207,7 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="persetujuanasesmen_mhs.html"
+                      <a class="nav-link frak_01" href="#"
                         ><i class="bx bx-bell me-1"></i>FR.AK.01</a
                       >
                     </li>
@@ -2531,7 +2531,8 @@
         } else {
           $("#error_exampleFormControlFile_asesi").text("");
           swal("APL02 berhasil dikirim, silahkan menunggu jadwal asesmen");
-          $("#exampleFormControlFile_asesi").val("");
+          // $("#exampleFormControlFile_asesi").val("");
+          $(".frak_01").attr("href", "persetujuanasesmen_mhs.html");
         }
       });
     </script>

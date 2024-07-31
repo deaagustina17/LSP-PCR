@@ -11,6 +11,7 @@ function confirmDelete(button) {
     },
     function () {
       swal("Berhasil !!", "Data Berhasil di Hapus", "success");
+      $(button).closest("tr").remove();
     }
   );
 }
@@ -361,7 +362,7 @@ $(".simpan_dokumensertifikasiasesor_asesor").on("click", function () {
   } else {
     error_input_tandatangan.text("");
   }
-  
+
   if (is_valid == false) {
     return "";
   }
@@ -380,10 +381,10 @@ $(".simpan_dokumensertifikasiasesor_asesor").on("click", function () {
       swal("Berhasil !!", "Data Berhasil Di Simpan", "success");
     }
   );
-  $(".input_skema").val('');
-$(".input_nomor_regis").val('');
-$(".input_tgl_habis").val('');
-$(".input_tandatangan").val('');
+  $(".input_skema").val("");
+  $(".input_nomor_regis").val("");
+  $(".input_tgl_habis").val("");
+  $(".input_tandatangan").val("");
 });
 
 function wajib_pdf(input) {
@@ -396,12 +397,13 @@ function wajib_pdf(input) {
 }
 
 // custom datepicker
-      
+
 var today = new Date();
 
 // Initialize datepicker with today's date
-$('.datepicker-autoclose').datepicker({
+$(".datepicker-autoclose")
+  .datepicker({
     autoclose: true,
-    format: 'dd-mm-yyyy'
-}).datepicker('setDate', today);
-
+    format: "dd-mm-yyyy",
+  })
+  .datepicker("setDate", today);
