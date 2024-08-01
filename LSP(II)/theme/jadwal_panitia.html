@@ -300,11 +300,11 @@
                     </i></a
                   >
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="jadwal9_panitia.html"
                     ><i class="bx bx-bell me-1"></i>Welding Inspector Standar
                   </a>
-                </li>
+                </li> -->
                 <!-- <li class="nav-item">
                           <a class="nav-link" href="pages-account-settings-connections.html"
                             ><i class="bx bx-link-alt me-1"></i> Connections</a
@@ -320,26 +320,31 @@
                   <div class="card">
                     <div class="card-body">
                       <h4 class="card-title">Data Jadwal Asesmen</h4>
-                      <a
-                        href="#"
-                        data-toggle="modal"
-                        data-target="#add-category"
-                        class="btn btn-dark mb-2"
-                        ><i class="ti-plus f-s-12 m-r-5"></i> Tambah</a
-                      >
-                      <div class="col-sm-2 text-right">
-                        <a
-                          href="./Laporan Pleno.xlsx"
-                          class="btn btn-primary"
-                          data-placement="top"
-                          id="downloadLink"
-                          data-toggle="tooltip"
-                          title="Klik untuk mengunduh file Excel"
-                          onclick="confirmDownload(event, this)"
-                        >
-                          <i class="fa fa-download" style="color: white"></i>
-                        </a>
+                      <div class="row">
+                        <div class="col-4">
+                          <a
+                            href="#"
+                            data-toggle="modal"
+                            data-target="#add-category"
+                            class="btn btn-dark mb-2"
+                            ><i class="ti-plus f-s-12 m-r-5"></i> Tambah</a
+                          >
+                        </div>
+                        <div class="col-8">
+                          <a
+                            href="./Surat Tugas.pdf"
+                            class="btn btn-primary float-right"
+                            data-placement="top"
+                            id="downloadLink"
+                            data-toggle="tooltip"
+                            title="Klik untuk mengunduh file PDF"
+                            onclick="confirmDownload(event, this)"
+                          >
+                            <i class="fa fa-download" style="color: white"></i>
+                          </a>
+                        </div>
                       </div>
+
                       <!-- <div class="col-md-12">
                         <label class="control-label"
                           >Upload Jadwal Asesmen</label
@@ -353,20 +358,19 @@
                           />
                         </div>
                       </div> -->
-                      
 
                       <div class="form-group row">
                         <div class="col-lg-3 mt-3">
                           <h5 class="form-label">Upload Jadwal Asesmen</h5>
-
                         </div>
-                        <div class="col-lg-5">
+                        <div class="col-lg-3">
                           <div class="button-icon p-2">
                             <input
                               type="file"
                               class="form-control input_file_batch_jadwal_panitia"
                               id="exampleFormControlFile1"
                               accept="pdf"
+                              style="height: 50% !important"
                               onchange="wajib_pdf(this)"
                             />
                             <div
@@ -374,20 +378,41 @@
                             ></div>
                           </div>
                         </div>
+
                         <div class="col-lg-2">
                           <button
-                            class="btn btn-md btn-primary m-2 upload_batch_jadwal_panitia"
+                            class="btn btn-md btn-primary mt-2 p-2 upload_batch_jadwal_panitia w-100"
                           >
                             Upload Batch
                           </button>
                         </div>
-                        <div class="col-lg-2  mt-2">
+                        <div class="col-2">
+                          <select
+                            class="form-control mt-2"
+                            data-placeholder="Jenis SK"
+                            name="category-asesor"
+                            style="height: 50% !important"
+                          >
+                            <option value="">Pilih Asesor</option>
+                            <option value="asesor1">AGN</option>
+                            <option value="asesor2">ATD</option>
+                            <option value="asesor3">ARW</option>
+                            <option value="asesor4">AYU</option>
+                            <option value="asesor5">DNS</option>
+                            <option value="asesor6">EDL</option>
+                            <option value="asesor7">HAZ</option>
+                            <option value="asesor8">HMD</option>
+                            <option value="asesor9">HDN</option>
+                            <option value="asesor10">HRY</option>
+                          </select>
+                        </div>
+                        <div class="col-lg-2 mt-2">
                           <a
-                        id="downloadBtn"
-                        href="./Format_Jadwal.xlsx"
-                        class="float-right"
-                        >Download Format Excel</a
-                      >
+                            id="downloadBtn"
+                            href="./Format_Jadwal.xlsx"
+                            class="float-right"
+                            >Download Format Excel</a
+                          >
                         </div>
                       </div>
                       <div class="table-responsive">
@@ -575,9 +600,9 @@
                                           <option value="bidang8">
                                             Teknisi Akuntansi Pratama
                                           </option>
-                                          <option value="bidang9">
+                                          <!-- <option value="bidang9">
                                             Welding Inspector Standar
-                                          </option>
+                                          </option> -->
                                         </select>
                                         <div
                                           class="text-danger error_input_bidang_assesor"
@@ -593,9 +618,7 @@
                                           class="form-control select-assesor"
                                           name="category-asesi"
                                         >
-                                          <option value="">
-                                            Select Assessor
-                                          </option>
+                                          <option value="">Pilih Asesi</option>
                                           <!-- Add options here -->
                                         </select>
                                         <div
@@ -611,9 +634,7 @@
                                           data-placeholder="Jenis SK"
                                           name="category-asesor"
                                         >
-                                          <option value="">
-                                            Select Asesor
-                                          </option>
+                                          <option value="">Pilih Asesor</option>
                                           <option value="asesor1">AGN</option>
                                           <option value="asesor2">ATD</option>
                                           <option value="asesor3">ARW</option>
@@ -795,9 +816,9 @@
                                           <option value="bidang8">
                                             Teknisi Akuntansi Pratama
                                           </option>
-                                          <option value="bidang9">
+                                          <!-- <option value="bidang9">
                                             Welding Inspector Standar
-                                          </option>
+                                          </option> -->
                                         </select>
                                         <div
                                           class="text-danger error_input_bidang_assesor_1"
@@ -813,9 +834,7 @@
                                           class="form-control select-assesor"
                                           name="category-asesi_1"
                                         >
-                                          <option value="">
-                                            Select Assessor
-                                          </option>
+                                          <option value="">Select Asesi</option>
                                           <!-- Add options here -->
                                         </select>
                                         <div
@@ -1067,41 +1086,52 @@
         $selectAssesor.empty();
 
         // Add default option
-        $selectAssesor.append('<option value="">Select Assessor</option>');
+        $selectAssesor.append('<option value="">Pilih Asesi</option>');
 
         // Add options based on selected bidang
         if (bidang === "bidang1") {
-          $selectAssesor.append('<option value="assessor1">Dea</option>');
-          $selectAssesor.append('<option value="assessor2">Agustina</option>');
+          $selectAssesor.append(
+            '<option value="assessor1">Dea Agustina</option>'
+          );
+          $selectAssesor.append(
+            '<option value="assessor2">Miftahul Ajmy</option>'
+          );
         } else if (bidang === "bidang2") {
-          $selectAssesor.append('<option value="assessor3">Nia</option>');
-          $selectAssesor.append('<option value="assessor4">Lely</option>');
-        } else if (bidang === "bidang2") {
-          $selectAssesor.append('<option value="assessor3">Mita</option>');
-          $selectAssesor.append('<option value="assessor4">Miftahul</option>');
+          $selectAssesor.append(
+            '<option value="assessor3">Nia Novalia</option>'
+          );
+          $selectAssesor.append(
+            '<option value="assessor4">Lely Freti</option>'
+          );
         } else if (bidang === "bidang3") {
-          $selectAssesor.append('<option value="assessor3">Haluke</option>');
-          $selectAssesor.append('<option value="assessor4">Abrata</option>');
+          $selectAssesor.append(
+            '<option value="assessor3">Haluke Alberta</option>'
+          );
+          $selectAssesor.append('<option value="assessor4">Nadiyah</option>');
         } else if (bidang === "bidang4") {
-          $selectAssesor.append('<option value="assessor3">Iwan</option>');
+          $selectAssesor.append(
+            '<option value="assessor3">Awang Badriya</option>'
+          );
+          $selectAssesor.append(
+            '<option value="assessor4">Muhammad Ababil</option>'
+          );
+        } else if (bidang === "bidang5") {
+          $selectAssesor.append('<option value="assessor3">Novendi</option>');
           $selectAssesor.append(
             '<option value="assessor4">Mardiansyah</option>'
           );
-        } else if (bidang === "bidang5") {
-          $selectAssesor.append('<option value="assessor3">felly</option>');
-          $selectAssesor.append('<option value="assessor4">Chandra</option>');
         } else if (bidang === "bidang6") {
+          $selectAssesor.append('<option value="assessor3">Alvin</option>');
+          $selectAssesor.append('<option value="assessor4">Septiady</option>');
+        } else if (bidang === "bidang7") {
           $selectAssesor.append('<option value="assessor3">Boby</option>');
           $selectAssesor.append('<option value="assessor4">Hartanto</option>');
-        } else if (bidang === "bidang7") {
+        } else if (bidang === "bidang8") {
           $selectAssesor.append('<option value="assessor3">Taufik</option>');
           $selectAssesor.append('<option value="assessor4">Amelia</option>');
-        } else if (bidang === "bidang8") {
+        } else if (bidang === "bidang9") {
           $selectAssesor.append('<option value="assessor3">Putri</option>');
           $selectAssesor.append('<option value="assessor4">Kartika</option>');
-        } else if (bidang === "bidang9") {
-          $selectAssesor.append('<option value="assessor3">Yokie</option>');
-          $selectAssesor.append('<option value="assessor4">Putra</option>');
         }
       });
 
@@ -1169,7 +1199,7 @@
         var hari = days[dateObj.getDay()];
         if (tanggal_sk === "") {
           $(".error_input_tanggal_sk")
-            .text("Masukkan tanggal SK terlebih dahulu")
+            .text("Masukkan tanggal terlebih dahulu")
             .show();
           isValid = false;
         } else {

@@ -195,7 +195,7 @@
                 <span class="nav-text">Data Pendaftaran</span>
               </a>
             </li>
-            <li>
+            <li class="active">
               <a href="jadwal_panitia.html" aria-expanded="false">
                 <span class="nav-text">Data Jadwal Asesmen</span>
               </a>
@@ -300,11 +300,11 @@
                     </i></a
                   >
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a class="nav-link" href="jadwal9_panitia.html"
                     ><i class="bx bx-bell me-1"></i>Welding Inspector Standar
                   </a>
-                </li>
+                </li> -->
                 <!-- <li class="nav-item">
                           <a class="nav-link" href="pages-account-settings-connections.html"
                             ><i class="bx bx-link-alt me-1"></i> Connections</a
@@ -320,38 +320,43 @@
                   <div class="card">
                     <div class="card-body">
                       <h4 class="card-title">Data Jadwal Asesmen</h4>
-                      <a
-                        href="#"
-                        data-toggle="modal"
-                        data-target="#add-category"
-                        class="btn btn-dark mb-2"
-                        ><i class="ti-plus f-s-12 m-r-5"></i> Tambah</a
-                      >
-                      <!-- <div class="col-md-12">
-                        <label class="control-label"
-                          >Upload Jadwal Asesmen</label
-                        >
-                        <div class="button-icon">
-                          <input
-                            type="file"
-                            class="form-control-file"
-                            id="exampleFormControlFile1"
-                            accept=".xlsx"
-                          />
+                      <div class="row">
+                        <div class="col-4">
+                          <a
+                            href="#"
+                            data-toggle="modal"
+                            data-target="#add-category"
+                            class="btn btn-dark mb-2"
+                            ><i class="ti-plus f-s-12 m-r-5"></i> Tambah</a
+                          >
                         </div>
-                      </div> -->
+                        <div class="col-8">
+                          <a
+                            href="./Laporan Pleno.xlsx"
+                            class="btn btn-primary float-right"
+                            data-placement="top"
+                            id="downloadLink"
+                            data-toggle="tooltip"
+                            title="Klik untuk mengunduh file PDF"
+                            onclick="confirmDownload(event, this)"
+                          >
+                            <i class="fa fa-download" style="color: white"></i>
+                          </a>
+                        </div>
+                      </div>
+
                       <div class="form-group row">
                         <div class="col-lg-3 mt-3">
                           <h5 class="form-label">Upload Jadwal Asesmen</h5>
-
                         </div>
-                        <div class="col-lg-5">
+                        <div class="col-lg-3">
                           <div class="button-icon p-2">
                             <input
                               type="file"
                               class="form-control input_file_batch_jadwal_panitia"
                               id="exampleFormControlFile1"
                               accept="pdf"
+                              style="height: 50% !important"
                               onchange="wajib_pdf(this)"
                             />
                             <div
@@ -359,20 +364,41 @@
                             ></div>
                           </div>
                         </div>
+
                         <div class="col-lg-2">
                           <button
-                            class="btn btn-md btn-primary m-2 upload_batch_jadwal_panitia"
+                            class="btn btn-md btn-primary mt-2 p-2 upload_batch_jadwal_panitia w-100"
                           >
                             Upload Batch
                           </button>
                         </div>
-                        <div class="col-lg-2  mt-2">
+                        <div class="col-2">
+                          <select
+                            class="form-control mt-2"
+                            data-placeholder="Jenis SK"
+                            name="category-asesor"
+                            style="height: 50% !important"
+                          >
+                            <option value="">Pilih Asesor</option>
+                            <option value="asesor1">AGN</option>
+                            <option value="asesor2">ATD</option>
+                            <option value="asesor3">ARW</option>
+                            <option value="asesor4">AYU</option>
+                            <option value="asesor5">DNS</option>
+                            <option value="asesor6">EDL</option>
+                            <option value="asesor7">HAZ</option>
+                            <option value="asesor8">HMD</option>
+                            <option value="asesor9">HDN</option>
+                            <option value="asesor10">HRY</option>
+                          </select>
+                        </div>
+                        <div class="col-lg-2 mt-2">
                           <a
-                        id="downloadBtn"
-                        href="./Format_Jadwal.xlsx"
-                        class="float-right"
-                        >Download Format Excel</a
-                      >
+                            id="downloadBtn"
+                            href="./Format_Jadwal.xlsx"
+                            class="float-right"
+                            >Download Format Excel</a
+                          >
                         </div>
                       </div>
                       <div class="table-responsive">
@@ -517,7 +543,7 @@
                                       </div>
                                       <div class="col-md-12">
                                         <label class="control-label"
-                                          >Tanggal SK</label
+                                          >Tanggal </label
                                         >
                                         <div class="row">
                                           <div class="col-md-8">
@@ -1055,7 +1081,7 @@
         var hari = days[dateObj.getDay()];
         if (tanggal_sk === "") {
           $(".error_input_tanggal_sk")
-            .text("Masukkan tanggal SK terlebih dahulu")
+            .text("Masukkan tanggal  terlebih dahulu")
             .show();
           isValid = false;
         } else {
