@@ -340,18 +340,14 @@
                           />
                         </div>
                       </div> -->
-                      <a
-                        id="downloadBtn"
-                        href="./Format_Jadwal.xlsx"
-                        class="float-right"
-                        >Download Format Excel</a
-                      >
+                      
 
                       <div class="form-group row">
                         <div class="col-lg-3 mt-3">
                           <h5 class="form-label">Upload Jadwal Asesmen</h5>
+
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-5">
                           <div class="button-icon p-2">
                             <input
                               type="file"
@@ -365,12 +361,20 @@
                             ></div>
                           </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-lg-2">
                           <button
                             class="btn btn-md btn-primary m-2 upload_batch_jadwal_panitia"
                           >
                             Upload Batch
                           </button>
+                        </div>
+                        <div class="col-lg-2  mt-2">
+                          <a
+                        id="downloadBtn"
+                        href="./Format_Jadwal.xlsx"
+                        class="float-right"
+                        >Download Format Excel</a
+                      >
                         </div>
                       </div>
                       <div class="table-responsive">
@@ -531,34 +535,37 @@
                                           <option value="">
                                             Select Bidang
                                           </option>
-                                          <option value="bidang1">
+                                          <option value="Database Programming Supervisor">
                                             Database Programming Supervisor
                                           </option>
-                                          <option value="bidang2">
+                                          <option value="Network Administrator Muda">
                                             Network Administrator Muda
                                           </option>
-                                          <option value="bidang3">
+                                          <option value="Programmer">
                                             Programmer
                                           </option>
-                                          <option value="bidang4">
+                                          <option value="Teknisi Madya Jaringan Komputer">
                                             Teknisi Madya Jaringan Komputer
                                           </option>
-                                          <option value="bidang5">
+                                          <option value="Pengoperasian Peralatan Kelistrikan
+                                          Dan Elektronika Berbasis
+                                          Programmable Logic Controller (PLC)">
                                             Pengoperasian Peralatan Kelistrikan
                                             Dan Elektronika Berbasis
                                             Programmable Logic Controller (PLC)
                                           </option>
-                                          <option value="bidang6">
+                                          <option value="Plate Welder">
                                             Plate Welder
                                           </option>
-                                          <option value="bidang7">
+                                          <option value="Pengoperasian Instrumentasi Proses
+                                          Kontrol">
                                             Pengoperasian Instrumentasi Proses
                                             Kontrol
                                           </option>
-                                          <option value="bidang8">
+                                          <option value="Teknisi Akuntansi Pratama">
                                             Teknisi Akuntansi Pratama
                                           </option>
-                                          <option value="bidang9">
+                                          <option value="Welding Inspector Standar">
                                             Welding Inspector Standar
                                           </option>
                                         </select>
@@ -577,7 +584,7 @@
                                           name="category-asesi"
                                         >
                                           <option value="">
-                                            Select Assessor
+                                            Pilih Asesi
                                           </option>
                                           <!-- Add options here -->
                                         </select>
@@ -1050,12 +1057,12 @@
         $selectAssesor.empty();
 
         // Add default option
-        $selectAssesor.append('<option value="">Select Assessor</option>');
+        $selectAssesor.append('<option value="">Select Asesi</option>');
 
-        // Add options based on selected bidang
-        if (bidang === "bidang1") {
-          $selectAssesor.append('<option value="assessor1">Dea</option>');
-          $selectAssesor.append('<option value="assessor2">Agustina</option>');
+        // Add options based on selected bidang untuk asesor
+        if (bidang === "Database Programming Supervisor") {
+          $selectAssesor.append('<option value="Dea">Dea</option>');
+          $selectAssesor.append('<option value="Miftahul">Miftahul</option>');
         } else if (bidang === "bidang2") {
           $selectAssesor.append('<option value="assessor3">Nia</option>');
           $selectAssesor.append('<option value="assessor4">Lely</option>');

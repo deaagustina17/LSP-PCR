@@ -1337,26 +1337,18 @@
         }
 
         // Prevent form submission if validation fails
-        // if (!isValid) {
-        //   return "";
-        //   event.preventDefault();
-        // }
-        // var nama_lengkap = document.getElementById("nama_lengkap");
-        // var no_ktp = document.getElementById("no_ktp");
-        // var tempat_tgl_lahir = document.getElementById("tempat_tgl_lahir");
-        // var error_nama_lengkap = document.getElementById("error_nama_lengkap");
-        // var error_no_ktp = document.getElementById("error_no_ktp");
-        // var error_tempat_tgl_lahir = document.getElementById(
-        //   "error_tempat_tgl_lahir"
-        // );
-
-        // if (nama_lengkap.value === "") {
-        //   error_nama_lengkap.textContent = "Please enter a username";
-        //   event.preventDefault(); // Prevent form submission
-        //   return "";
-        // } else {
-        //   error_nama_lengkap.textContent = ""; // Clear the error message
-        // }
+        if (!isValid) {
+          return "";
+          event.preventDefault();
+        }
+        var nama_lengkap = document.getElementById("nama_lengkap");
+        var no_ktp = document.getElementById("no_ktp");
+        var tempat_tgl_lahir = document.getElementById("tempat_tgl_lahir");
+        var error_nama_lengkap = document.getElementById("error_nama_lengkap");
+        var error_no_ktp = document.getElementById("error_no_ktp");
+        var error_tempat_tgl_lahir = document.getElementById(
+          "error_tempat_tgl_lahir"
+        );
 
         swal(
           {

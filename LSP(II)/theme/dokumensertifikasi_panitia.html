@@ -325,7 +325,9 @@
                           <td>ATD</td>
                           <td>MET.000.0070322015</td>
                           <td>Database Programming Supervisor</td>
-                          <td id="tanggal_berlaku_supervisor">31 Juli 2024</td>
+                          <td id="tanggal_berlaku_supervisor">
+                            31 Agustus 2024
+                          </td>
                           <td></td>
                           <td>
                             <span>
@@ -744,26 +746,26 @@
         if (hasExpiredDates) {
           iziToast.error({
             title: "Pemberitahuan",
-            message:
-              "Ada Data Assesi hari ini yang sudah habis masa berlakunya",
+            message: "Ada Data Asesor ini yang sudah habis masa berlakunya",
           });
-          tes();
+          // tes();
+          const audio = document.getElementById("audio_hide");
+
+          // Play the audio
+          audio
+            .play()
+            .then(() => {
+              console.log("Audio playback started.");
+            })
+            .catch((error) => {
+              console.error("Error occurred:", error);
+            });
         }
       }
 
-      function tes() {
-        const audio = document.getElementById("audio_hide");
+      // function tes() {
 
-        // Play the audio
-        audio
-          .play()
-          .then(() => {
-            console.log("Audio playback started.");
-          })
-          .catch((error) => {
-            console.error("Error occurred:", error);
-          });
-      }
+      // }
 
       // Set up an interval to check the dates every 3 seconds
       var intervalId = setInterval(function () {
