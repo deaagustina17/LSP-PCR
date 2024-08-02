@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>LSP PCR</title>
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/logo_lsp1.png"
+    />
+    <!-- Custom Stylesheet -->
+    <link
+      href="./plugins/tables/css/datatable/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+    />
+    <!-- Page plugins css -->
+    <link
+      href="./plugins/clockpicker/dist/jquery-clockpicker.min.css"
+      rel="stylesheet"
+    />
+    <!-- Color picker plugins css -->
+    <link
+      href="./plugins/jquery-asColorPicker-master/css/asColorPicker.css"
+      rel="stylesheet"
+    />
+    <!-- Date picker plugins css -->
+    <link
+      href="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
+    <!-- Daterange picker plugins css -->
+    <link
+      href="./plugins/timepicker/bootstrap-timepicker.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./plugins/bootstrap-daterangepicker/daterangepicker.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./plugins/tables/css/datatable/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/custom_new.css" rel="stylesheet" />
+    <!-- sweet alert -->
+    <link href="./plugins/sweetalert/css/sweetalert.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+      <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+          <circle
+            class="path"
+            cx="50"
+            cy="50"
+            r="20"
+            fill="none"
+            stroke-width="3"
+            stroke-miterlimit="10"
+          />
+        </svg>
+      </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+      <!--**********************************
+            Nav header start
+        ***********************************-->
+      <div class="nav-header text-center">
+        <!-- <a href="index.html"> -->
+        <span class="brand-title">
+          <img src="images/logo_lsp1.png" width="100" height="auto" />
+        </span>
+      </div>
+      <!--**********************************
+              Nav header end
+          ***********************************-->
+
+      <!--**********************************
+              Header start
+          ***********************************-->
+      <div class="header">
+        <div class="header-content clearfix">
+          <div class="nav-control">
+            <div class="hamburger">
+              <span class="toggle-icon"><i class="icon-menu"></i></span>
+            </div>
+          </div>
+          <div class="header-right">
+            <ul class="clearfix">
+              <li class="icons dropdown">
+                Hi, Panitia LSP (Panitia)
+                <div
+                  class="user-img c-pointer position-relative"
+                  data-toggle="dropdown"
+                >
+                  <span class="activity active"></span>
+                  <img src="images/user/1.png" height="40" width="40" alt="" />
+                </div>
+                <div
+                  class="drop-down dropdown-profile animated fadeIn dropdown-menu"
+                >
+                  <div class="dropdown-content-body">
+                    <ul>
+                      <!-- <li><a href="/LSP/masuk.html"><i class="icon-key"></i> <span>Logout</span></a></li> -->
+                      <li>
+                        <a
+                          href="file:///D:/SEMESTER%208/PA/LSP%20PCR/LSP/masuk.html"
+                          ><i class="icon-key"></i> <span>Keluar</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--**********************************
+            Nav header end
+        ***********************************-->
+
+      <!--**********************************
+            Header start
+
+        ***********************************-->
+      <div class="nk-sidebar">
+        <div class="nk-nav-scroll">
+          <ul class="metismenu" id="menu">
+            <!-- <li class="nav-label">Dashboard</li> -->
+            <li>
+              <a href="dataadmin_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Admin</span>
+              </a>
+            </li>
+            <li>
+              <a href="dataasesor_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Asesor</span>
+              </a>
+            </li>
+            <li>
+              <a href="index_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Mahasiswa</span>
+              </a>
+            </li>
+            <li>
+              <a href="dataskema_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Skema</span>
+              </a>
+            </li>
+            <li>
+              <a href="pendaftaranskema_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Pendaftaran Skema</span>
+              </a>
+            </li>
+            <li>
+              <a href="pendaftaran_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Pendaftaran</span>
+              </a>
+            </li>
+            <li>
+              <a href="jadwal_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Jadwal Asesmen</span>
+              </a>
+            </li>
+            <!-- <li>
+                      <a href="surattugas_panitia.html" aria-expanded="false">
+                      <span class="nav-text">Data Surat Tugas</span>
+                      </a>
+                  </li> -->
+            <li>
+              <a href="keputusan_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Keputusan Sertifikasi</span>
+              </a>
+            </li>
+            <li>
+              <a href="laporan_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Laporan Pleno</span>
+              </a>
+            </li>
+            <li>
+              <a href="banding_panitia.html" aria-expanded="false">
+                <span class="nav-text"
+                  >Data Banding Atas Keputusan Sertifikasi</span
+                >
+              </a>
+            </li>
+            <li>
+              <a href="umpanbalik_panitia.html" aria-expanded="false">
+                <span class="nav-text">Data Umpan Balik</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="pengajuansertifikat_panitia.html" aria-expanded="false">
+                <span class="nav-text">Pengajuan Sertifikat</span>
+              </a>
+            </li>
+            <li>
+              <a href="dokumensertifikasi_panitia.html" aria-expanded="false">
+                <span class="nav-text">Dokumen Sertifikasi Asesor</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+      <!--**********************************
+            Content body start
+        ***********************************-->
+      <div class="content-body">
+        <div class="row page-titles mx-0">
+          <div class="col p-md-0">
+            <!-- <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+                    </ol> -->
+          </div>
+        </div>
+        <!-- row -->
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Data Dokumen Sertifikasi Asesor</h4>
+                  <audio id="audio_hide" src="./sounds/notif.mp3"></audio>
+                  <!-- <a
+                    href="index_panitia.html"
+                    data-toggle="modal"
+                    data-target="#add-category"
+                    class="btn btn-dark mb-2"
+                    ><i class="ti-plus f-s-12 m-r-5"></i> Tambah</a
+                  > -->
+                  <div class="table-responsive">
+                    <table
+                      class="table table-striped table-bordered zero-configuration small-text"
+                    >
+                      <thead>
+                        <tr>
+                          <th>Inisial</th>
+                          <th>Nomor Registrasi</th>
+                          <th>Skema</th>
+                          <th>Tanggal Habis Berlaku</th>
+                          <th>Upload</th>
+                          <th>Aksi</th>
+                        </tr>
+                      </thead>
+                      <tbody class="row_batch_jadwal_assesmen">
+                        <tr id="id_1_atd">
+                          <td>ATD</td>
+                          <td>MET.000.0070322015</td>
+                          <td>Database Programming Supervisor</td>
+                          <td id="tanggal_berlaku_supervisor">20 Maret 2027</td>
+                          <td></td>
+                          <td>
+                            <span>
+                              <button
+                                class="badge bg-green"
+                                data-toggle="modal"
+                                data-target="#add-edit"
+                                data-placement="top"
+                                title="Edit"
+                              >
+                                <i
+                                  class="fa fa-pencil m-r-5"
+                                  style="color: white"
+                                ></i>
+                              </button>
+                              <button
+                                class="badge bg-red"
+                                data-placement="top"
+                                onclick="confirmDelete(this)"
+                              >
+                                <i
+                                  class="fa fa-trash-o"
+                                  style="color: white"
+                                ></i>
+                              </button>
+                              <a
+                                href="./file.xlsx"
+                                class="badge bg-unduh"
+                                data-placement="top"
+                                id="downloadLink"
+                                download="downloaded_file.txt"
+                                onclick="confirmDownload(event, this)"
+                              >
+                                <i
+                                  class="fa fa-download"
+                                  style="color: white"
+                                ></i>
+                              </a>
+                            </span>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>ATD</td>
+                          <td>MET.000.0070322015</td>
+                          <td>Database Programming Supervisor</td>
+                          <td id="tanggal_berlaku_supervisor">31 Juli 2024</td>
+                          <td></td>
+                          <td>
+                            <span>
+                              <button
+                                class="badge bg-green"
+                                data-toggle="modal"
+                                data-target="#add-edit"
+                                data-placement="top"
+                                title="Edit"
+                              >
+                                <i
+                                  class="fa fa-pencil m-r-5"
+                                  style="color: white"
+                                ></i>
+                              </button>
+                              <button
+                                class="badge bg-red"
+                                data-placement="top"
+                                onclick="confirmDelete(this)"
+                              >
+                                <i
+                                  class="fa fa-trash-o"
+                                  style="color: white"
+                                ></i>
+                              </button>
+                              <a
+                                href="./file.xlsx"
+                                class="badge bg-unduh"
+                                data-placement="top"
+                                id="downloadLink"
+                                download="downloaded_file.txt"
+                                onclick="confirmDownload(event, this)"
+                              >
+                                <i
+                                  class="fa fa-download"
+                                  style="color: white"
+                                ></i>
+                              </a>
+                            </span>
+                          </td>
+                        </tr>
+                      </tbody>
+                      <!-- Modal Add Category -->
+                      <div class="modal fade none-border" id="add-category">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h4 class="modal-title">
+                                <strong
+                                  >Tambah Data Dokumen Sertifikasi
+                                  Asesor</strong
+                                >
+                              </h4>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <label class="control-label">Insial</label>
+                                    <input
+                                      class="form-control form-white"
+                                      type="text"
+                                      name="category-tahun"
+                                    />
+                                  </div>
+                                  <div class="col-md-12">
+                                    <label class="control-label">Skema</label>
+                                    <select
+                                      class="form-control form-white"
+                                      data-placeholder="Jenis SK"
+                                      name="category-jenis_sk"
+                                    >
+                                      <option value="bidang1">
+                                        Database Programming Supervisor
+                                      </option>
+                                      <option value="bidang2">
+                                        Network Administrator Muda
+                                      </option>
+                                      <option value="bidang3">
+                                        Programmer
+                                      </option>
+                                      <option value="bidang4">
+                                        Teknisi Madya Jaringan Komputer
+                                      </option>
+                                      <option value="bidang5">
+                                        Pengoperasian Peralatan Kelistrikan Dan
+                                        Elektronika Berbasis Programmable Logic
+                                        Controller (PLC)
+                                      </option>
+                                      <option value="bidang6">
+                                        Plate Welder
+                                      </option>
+                                      <option value="bidang7">
+                                        Pengoperasian Instrumentasi Proses
+                                        Kontrol
+                                      </option>
+                                      <option value="bidang8">
+                                        Teknisi Akuntansi Pratama
+                                      </option>
+                                      <option value="bidang9">
+                                        Welding Inspector Standar
+                                      </option>
+                                    </select>
+                                  </div>
+
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >Tanggal Habis Berlaku</label
+                                    >
+                                    <div class="row">
+                                      <div class="col-md-8">
+                                        <div class="example">
+                                          <div class="input-group">
+                                            <input
+                                              type="text"
+                                              class="form-control datepicker-autoclose"
+                                              placeholder="mm/dd/yyyy"
+                                            />
+                                            <span class="input-group-append"
+                                              ><span class="input-group-text"
+                                                ><i
+                                                  class="mdi mdi-calendar-check"
+                                                ></i></span
+                                            ></span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >Upload SK</label
+                                    >
+                                    <div class="form-group row">
+                                      <div class="card">
+                                        <div class="button-icon">
+                                          <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
+                                          <input
+                                            type="file"
+                                            class="form-control-file"
+                                            id="exampleFormControlFile1"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-default waves-effect"
+                                data-dismiss="modal"
+                              >
+                                Tutup
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-danger waves-effect waves-light save-category"
+                                data-dismiss="modal"
+                              >
+                                Simpan
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- END MODAL -->
+
+                      <!-- Modal Add Edit -->
+                      <div
+                        class="modal fade none-border modal_tambah_data_jadwal_asesment"
+                        id="add-edit"
+                      >
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h4 class="modal-title">
+                                <strong
+                                  >Edit Data Dokumen Sertifikasi Asesor</strong
+                                >
+                              </h4>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                <div class="row">
+                                  <!-- Inisial Input -->
+                                  <div class="col-md-12">
+                                    <label class="control-label">Inisial</label>
+                                    <input
+                                      class="form-control form-white inisial_atd"
+                                      type="text"
+                                      name="inisial"
+                                    />
+                                    <div
+                                      class="text-danger error_inisial_atd"
+                                    ></div>
+                                  </div>
+
+                                  <!-- Bidang Input -->
+                                  <div class="col-md-12">
+                                    <label class="control-label">Bidang</label>
+                                    <select
+                                      class="form-control form-white"
+                                      data-placeholder="Jenis SK"
+                                      name="category-jenis_sk"
+                                    >
+                                      <option value="bidang1">
+                                        Database Programming Supervisor
+                                      </option>
+                                      <option value="bidang2">
+                                        Network Administrator Muda
+                                      </option>
+                                      <option value="bidang3">
+                                        Programmer
+                                      </option>
+                                      <option value="bidang4">
+                                        Teknisi Madya Jaringan Komputer
+                                      </option>
+                                      <option value="bidang5">
+                                        Pengoperasian Peralatan Kelistrikan Dan
+                                        Elektronika Berbasis Programmable Logic
+                                        Controller (PLC)
+                                      </option>
+                                      <option value="bidang6">
+                                        Plate Welder
+                                      </option>
+                                      <option value="bidang7">
+                                        Pengoperasian Instrumentasi Proses
+                                        Kontrol
+                                      </option>
+                                      <option value="bidang8">
+                                        Teknisi Akuntansi Pratama
+                                      </option>
+                                      <option value="bidang9">
+                                        Welding Inspector Standar
+                                      </option>
+                                    </select>
+                                    <div
+                                      class="text-danger error_category-jenis_sk"
+                                    ></div>
+                                  </div>
+
+                                  <!-- Tanggal Berlaku Input -->
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >Tanggal Berlaku</label
+                                    >
+                                    <div class="row">
+                                      <div class="col-md-8">
+                                        <div class="example">
+                                          <div class="input-group">
+                                            <input
+                                              type="text"
+                                              class="form-control datepicker-autoclose"
+                                              name="tanggal_berlaku"
+                                              placeholder="mm/dd/yyyy"
+                                            />
+                                            <span class="input-group-append">
+                                              <span class="input-group-text"
+                                                ><i
+                                                  class="mdi mdi-calendar-check"
+                                                ></i
+                                              ></span>
+                                            </span>
+                                          </div>
+                                          <div
+                                            class="text-danger error_tanggal_berlaku"
+                                          ></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- Tanggal Habis Berlaku Input -->
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >Tanggal Habis Berlaku</label
+                                    >
+                                    <div class="row">
+                                      <div class="col-md-8">
+                                        <div class="example">
+                                          <div class="input-group">
+                                            <input
+                                              type="text"
+                                              class="form-control datepicker-autoclose"
+                                              name="tanggal_habis_berlaku"
+                                              placeholder="mm/dd/yyyy"
+                                            />
+                                            <span class="input-group-append">
+                                              <span class="input-group-text"
+                                                ><i
+                                                  class="mdi mdi-calendar-check"
+                                                ></i
+                                              ></span>
+                                            </span>
+                                          </div>
+                                          <div
+                                            class="text-danger error_tanggal_habis_berlaku"
+                                          ></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- Upload SK Input -->
+                                  <div class="col-md-12">
+                                    <label class="control-label"
+                                      >Upload SK</label
+                                    >
+                                    <div class="button-icon">
+                                      <input
+                                        type="file"
+                                        class="form-control-file"
+                                        id="exampleFormControlFile1"
+                                        name="upload_sk"
+                                      />
+                                    </div>
+                                    <div
+                                      class="text-danger error_upload_sk"
+                                    ></div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-danger waves-effect"
+                                data-dismiss="modal"
+                              >
+                                Tutup
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-info waves-effect waves-light simpan_edit_atd"
+                              >
+                                Simpan
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- END MODAL -->
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- #/ container -->
+      </div>
+    </div>
+    <script src="plugins/common/common.min.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/gleek.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+
+    <script src="./plugins/tables/js/jquery.dataTables.min.js"></script>
+    <script src="./plugins/tables/js/datatable/dataTables.bootstrap4.min.js"></script>
+    <script src="./plugins/tables/js/datatable-init/datatable-basic.min.js"></script>
+
+    <script src="./plugins/moment/moment.js"></script>
+    <script src="./plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <!-- Clock Plugin JavaScript -->
+    <script src="./plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
+    <!-- Color Picker Plugin JavaScript -->
+    <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
+    <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
+    <script src="./plugins/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+    <!-- Date Picker Plugin JavaScript -->
+    <script src="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <!-- Date range Plugin JavaScript -->
+    <script src="./plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <script src="./js/plugins-init/form-pickers-init.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+
+    <script src="./js/custom_new.js"></script>
+    <script>
+      function checkDates() {
+        // Get today's date
+        var today = new Date();
+
+        // Convert today's date to a comparable format (YYYY-MM-DD)
+        var todayFormatted = today.toISOString().split("T")[0];
+
+        // Flag to check if any date is past
+        var hasExpiredDates = false;
+
+        // Loop through each row in the table body
+        $("table tbody tr").each(function () {
+          // Get the date from the current row
+          var dateText = $(this)
+            .find("#tanggal_berlaku_supervisor")
+            .text()
+            .trim();
+
+          // Convert the date from the text to a Date object
+          // Assuming the date format in text is "DD MMMM YYYY" (e.g., "20 Maret 2027")
+          var dateParts = dateText.split(" ");
+          var day = parseInt(dateParts[0]);
+          var monthName = dateParts[1];
+          var year = parseInt(dateParts[2]);
+
+          // Convert month name to month number
+          var months = {
+            Januari: 0,
+            Februari: 1,
+            Maret: 2,
+            April: 3,
+            Mei: 4,
+            Juni: 5,
+            Juli: 6,
+            Agustus: 7,
+            September: 8,
+            Oktober: 9,
+            November: 10,
+            Desember: 11,
+          };
+          var month = months[monthName];
+
+          // Create Date object
+          var dateObj = new Date(year, month, day);
+          var dateFormatted = dateObj.toISOString().split("T")[0];
+
+          // Compare the dates
+          if (dateFormatted < todayFormatted) {
+            hasExpiredDates = true;
+            // Optionally, highlight the expired row or add some indication
+            $(this).addClass("expired-date");
+          }
+        });
+
+        // Show an alert if there are expired dates
+        if (hasExpiredDates) {
+          iziToast.error({
+            title: "Pemberitahuan",
+            message:
+              "Ada Data Assesi hari ini yang sudah habis masa berlakunya",
+          });
+          tes();
+        }
+      }
+
+      function tes() {
+        const audio = document.getElementById("audio_hide");
+
+        // Play the audio
+        audio
+          .play()
+          .then(() => {
+            console.log("Audio playback started.");
+          })
+          .catch((error) => {
+            console.error("Error occurred:", error);
+          });
+      }
+
+      // Set up an interval to check the dates every 3 seconds
+      var intervalId = setInterval(function () {
+        checkDates();
+
+        // You can clear the interval if you want to stop checking after certain conditions
+        // For example, if you update the table, you might clear the interval:
+        // clearInterval(intervalId);
+      }, 3000); // 3000 milliseconds = 3 seconds
+      $(".simpan_edit_atd").on("click", function () {
+        var isValid = true;
+
+        var inisial = $("input[name='inisial']").val();
+        if (inisial === "") {
+          $(".error_inisial_atd")
+            .text("Masukkan inisial terlebih dahulu")
+            .show();
+          isValid = false;
+        } else {
+          $(".error_inisial_atd").text("").hide();
+        }
+
+        var category_jenis_sk = $("select[name='category-jenis_sk']").val();
+        if (category_jenis_sk === "") {
+          $(".error_category-jenis_sk")
+            .text("Pilih bidang terlebih dahulu")
+            .show();
+          isValid = false;
+        } else {
+          $(".error_category-jenis_sk").text("").hide();
+        }
+
+        var tanggal_berlaku = $("input[name='tanggal_berlaku']").val();
+        if (tanggal_berlaku === "") {
+          $(".error_tanggal_berlaku")
+            .text("Masukkan tanggal berlaku terlebih dahulu")
+            .show();
+          isValid = false;
+        } else {
+          $(".error_tanggal_berlaku").text("").hide();
+        }
+
+        var tanggal_habis_berlaku = $(
+          "input[name='tanggal_habis_berlaku']"
+        ).val();
+        if (tanggal_habis_berlaku === "") {
+          $(".error_tanggal_habis_berlaku")
+            .text("Masukkan tanggal habis berlaku terlebih dahulu")
+            .show();
+          isValid = false;
+        } else {
+          $(".error_tanggal_habis_berlaku").text("").hide();
+        }
+
+        var upload_sk = $("input[name='upload_sk']").val();
+        if (upload_sk === "") {
+          $(".error_upload_sk").text("Upload SK terlebih dahulu").show();
+          isValid = false;
+        } else {
+          $(".error_upload_sk").text("").hide();
+        }
+
+        if (isValid) {
+          swal(
+            {
+              title: "Pastikan Data Data Telah benar?",
+              type: "warning",
+              showCancelButton: !0,
+              confirmButtonColor: "#7066e0",
+              confirmButtonText: "Ya, Lanjutkan Simpan",
+              closeOnConfirm: !1,
+            },
+            function () {
+              swal("Berhasil !!", "Data Berhasil Di Simpan", "success");
+              $("#id_1_atd").remove();
+              var row_upload_batch = `
+        <tr id="id_1_atd">
+          <td>${inisial}</td>
+          <td>${$(
+            "select[name='category-jenis_sk'] option:selected"
+          ).text()}</td>
+          <td>${tanggal_berlaku}</td>
+          <td></td>
+          <td>${tanggal_habis_berlaku}</td>
+          <td>
+            <span>
+              <button class="badge bg-green" data-toggle="modal" data-target="#add-edit" data-placement="top" title="Edit">
+                <i class="fa fa-pencil m-r-5" style="color: white"></i>
+              </button>
+              <button class="badge bg-red" data-placement="top" onclick="confirmDelete(this)">
+                <i class="fa fa-trash-o" style="color: white"></i>
+              </button>
+              <a href="./file.xlsx" class="badge bg-unduh" data-placement="top" id="downloadLink" download="downloaded_file.txt" onclick="confirmDownload(event, this)">
+                <i class="fa fa-download" style="color: white"></i>
+              </a>
+            </span>
+          </td>
+        </tr>`;
+              $(".row_batch_jadwal_assesmen").append(row_upload_batch);
+              $(".modal_tambah_data_jadwal_asesment").modal("hide");
+            }
+          );
+        }
+      });
+    </script>
+  </body>
+</html>

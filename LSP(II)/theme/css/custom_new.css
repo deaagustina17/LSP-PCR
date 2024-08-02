@@ -68,6 +68,24 @@
     margin-right: 7em;
   }
 }
+
+/* .nav-header {
+  background-color: #699bf7 !important;
+  color: white;
+} */
+
+.header-content,
+.nav-header,
+.header {
+  background-color: #699bf7 !important;
+  color: white;
+}
+.nk-sidebar {
+  width: 70px !important;
+}
+.content-body {
+  margin-left: 5em !important;
+}
 /* #unduh_color{
   background-color: #054b93;
   color: #fff;
