@@ -106,7 +106,7 @@
       <div class="nav-header text-center">
         <!-- <a href="index.html"> -->
         <span class="brand-title">
-          <img src="images/tes.png" width="250" height="auto" />
+          <img src="images/lsp1.png" class="img_lsp" width="220" height="auto" />
         </span>
       </div>
       <!--**********************************
@@ -320,30 +320,7 @@
                   <div class="card">
                     <div class="card-body">
                       <h4 class="card-title">Data Jadwal Asesmen</h4>
-                      <div class="row">
-                        <div class="col-4">
-                          <a
-                            href="#"
-                            data-toggle="modal"
-                            data-target="#add-category"
-                            class="btn btn-dark mb-2"
-                            ><i class="ti-plus f-s-12 m-r-5"></i> Tambah</a
-                          >
-                        </div>
-                        <div class="col-8">
-                          <a
-                            href="./Format_Jadwal.xlsx"
-                            class="btn btn-primary float-right"
-                            data-placement="top"
-                            id="downloadLink"
-                            data-toggle="tooltip"
-                            title="Klik untuk mengunduh file PDF"
-                            onclick="confirmDownload(event, this)"
-                          >
-                            <i class="fa fa-download" style="color: white"></i>
-                          </a>
-                        </div>
-                      </div>
+                      
 
                       <!-- <div class="col-md-12">
                         <label class="control-label"
@@ -360,11 +337,18 @@
                       </div> -->
 
                       <div class="form-group row">
-                        <div class="col-lg-3 mt-3">
-                          <h5 class="form-label">Upload Jadwal Asesmen</h5>
+                        <div class="col-2"><br>
+                          <a
+                            href="#"
+                            data-toggle="modal"
+                            data-target="#add-category"
+                            class="btn btn-dark w-100 mt-3"
+                            ><i class="ti-plus f-s-12 m-r-5"></i> Tambah</a
+                          >
                         </div>
                         <div class="col-lg-3">
                           <div class="button-icon p-2">
+                            <h6>Upload Jadwal Asesmen</h6>
                             <input
                               type="file"
                               class="form-control input_file_batch_jadwal_panitia"
@@ -378,17 +362,43 @@
                             ></div>
                           </div>
                         </div>
+                        
 
-                        <div class="col-lg-2">
+                        <div class="col-lg-2"><br>
+                          
                           <button
-                            class="btn btn-md btn-primary mt-2 p-2 upload_batch_jadwal_panitia w-100"
+                            class="btn btn-md btn-primary mt-3 p-2 upload_batch_jadwal_panitia w-100"
                           >
                             Upload Batch
                           </button>
                         </div>
-                        <div class="col-2">
+                        
+                        <!-- <div class="col-lg-2 mt-2">
+                          <a
+                            id="downloadBtn"
+                            href="./Format_Jadwal.xlsx"
+                            class="float-right"
+                            >Download Format Excel</a
+                          >
+                        </div> -->
+                        <div class="col-1">
+                          <br>
+                          <a
+                            href="./Format_Jadwal.xlsx"
+                            class="btn btn-primary float-right mt-3"
+                            data-placement="top"
+                            id="downloadLink"
+                            data-toggle="tooltip"
+                            title="Download Format Excel"
+                            onclick="confirmDownload(event, this)"
+                          >
+                            <i class="fa fa-download" style="color: white"></i>
+                          </a>
+                        </div>
+                        <div class="col-3">
+                          <br>
                           <select
-                            class="form-control mt-2"
+                            class="form-control mt-3"
                             data-placeholder="Jenis SK"
                             name="category-asesor"
                             style="height: 50% !important"
@@ -406,14 +416,24 @@
                             <option value="asesor10">HRY</option>
                           </select>
                         </div>
-                        <div class="col-lg-2 mt-2">
+                        <div class="col-1">
+                          <br>
                           <a
-                            id="downloadBtn"
-                            href="./Format_Jadwal.xlsx"
-                            class="float-right"
-                            >Download Format Excel</a
+                            href="./Surat Tugas.pdf"
+                            class="btn btn-primary float-right mt-3"
+                            data-placement="top"
+                            id="downloadLink"
+                            data-toggle="tooltip"
+                            title="Klik untuk mengunduh file PDF"
+                            onclick="confirmDownload(event, this)"
                           >
+                            <i class="fa fa-download" style="color: white"></i>
+                          </a>
                         </div>
+                      </div>
+                      <div class="row">
+                        
+                      
                       </div>
                       <div class="table-responsive">
                         <table

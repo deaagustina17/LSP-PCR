@@ -131,7 +131,7 @@ a:focus {
 
 
 .header_section .header_bottom {
-  background-color: #ffffff;
+  background-color: #699BF7;
 }
 
 .header_section .header_bottom .container-fluid {
@@ -168,7 +168,14 @@ a:focus {
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link {
-  color: #699BF7;
+  color: #000000 !important ;
+}
+
+.hover-black:hover {
+  color: black !important;
+}
+.text-putih{
+  color: white !important;
 }
 
 .custom_nav-container .nav_search-btn {
@@ -287,7 +294,7 @@ a:focus {
 }
 
 .quote_btn-container a:hover {
-  color: #699BF7;
+  color: #ffffff;
 }
 
 /*end header section*/

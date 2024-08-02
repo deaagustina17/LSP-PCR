@@ -81,10 +81,20 @@
   color: white;
 }
 .nk-sidebar {
-  width: 70px !important;
+  width: 215px !important;
 }
 .content-body {
-  margin-left: 5em !important;
+  margin-left: 15em !important;
+}
+
+.brand-title{
+  margin-left: -2em !important;
+  width: 20px !important;
+}
+
+.img_lsp{
+  width: 220px !important;
+  margin-top: 4pt !important;
 }
 /* #unduh_color{
   background-color: #054b93;
