@@ -396,6 +396,25 @@ function wajib_pdf(input) {
   }
 }
 
+function wajib_excel(input) {
+  // Mendapatkan nilai dari input file
+  var input_ktp = $(input).val();
+
+  // Mendapatkan ekstensi file
+  var fileExtension = input_ktp.split(".").pop().toLowerCase();
+
+  // Daftar ekstensi file yang diizinkan
+  var allowedExtensions = ["xlsx", "csv", "xls"];
+
+  // Mengecek apakah ekstensi file ada dalam daftar ekstensi yang diizinkan
+  if ($.inArray(fileExtension, allowedExtensions) == -1) {
+    alert("Pastikan file yang diupload berformat .xlsx, .csv, atau .xls");
+    $(input).val("");
+  } else {
+    // Lanjutkan dengan proses selanjutnya
+  }
+}
+
 // custom datepicker
 
 var today = new Date();

@@ -125,7 +125,12 @@
       <div class="nav-header text-center">
         <!-- <a href="index.html"> -->
         <span class="brand-title">
-          <img src="images/lsp1.png" class="img_lsp" width="220" height="auto" />
+          <img
+            src="images/lsp1.png"
+            class="img_lsp"
+            width="220"
+            height="auto"
+          />
         </span>
       </div>
       <!--**********************************
@@ -303,8 +308,8 @@
                         </th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr class="small-text">
+                    <tbody class="tbody_row_data_asesor_panitia">
+                      <tr class="small-text row_1_data_asesor_panitia">
                         <td>Anggy Trisnadoli, S.S.T., M.T.</td>
                         <td>ATD</td>
                         <td>Laki-Laki</td>
@@ -316,26 +321,6 @@
                             data-toggle="modal"
                             data-placement="top"
                             id="editButton"
-                          >
-                            <i
-                              class="fa fa-pencil m-r-5"
-                              style="color: white"
-                            ></i>
-                          </button>
-                        </td>
-                      </tr>
-                      <tr class="small-text">
-                        <td>Dini Nurmalasari, S.T., M.T</td>
-                        <td>DNS</td>
-                        <td>Perempuan</td>
-                        <td>
-                          <button
-                            class="badge bg-green"
-                            title="Edit Data"
-                            data-toggle="modal"
-                            data-target="#edit-formulir"
-                            data-toggle="modal"
-                            data-placement="top"
                           >
                             <i
                               class="fa fa-pencil m-r-5"
@@ -417,7 +402,7 @@
                   </div>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control datepicker-autoclose"
                     id="tanggalLahir"
                     placeholder="Tanggal Lahir"
                     value=""
@@ -583,11 +568,7 @@
                       <input type="text" class="form-control" />
                     </td>
                     <td width="28%">
-                      <input
-                        type="file"
-                        class="form-control bukti_pelatihan"
-                      />
-                    </td>
+                      <input type="file" class="form-control bukti_pelatihan" />
                     </td>
                     <td>
                       <button
@@ -618,8 +599,7 @@
             </button>
             <button
               type="button"
-              class="btn btn-info waves-effect waves-light save-category"
-              onclick="simpan_data()"
+              class="btn btn-info waves-effect waves-light simpan_perubahan_data_anggi"
             >
               Simpan
             </button>
@@ -973,5 +953,79 @@
     <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
     <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
     <script src="./js/custom_new.js"></script>
+    <script>
+      // save perubahan data asesor anggi
+      $(".simpan_perubahan_data_anggi").on("click", function () {
+        var isValid = true;
+
+        var namaAsesor = $("#namaAsesor").val();
+        if (namaAsesor === "") {
+          alert("Masukkan nama asesor terlebih dahulu");
+          isValid = false;
+        }
+
+        var inisial = $("#inisial").val();
+        if (inisial === "") {
+          alert("Masukkan inisial terlebih dahulu");
+          isValid = false;
+        }
+
+        var tanggalLahir = $("#tanggalLahir").val();
+        if (tanggalLahir === "") {
+          alert("Masukkan tanggal lahir terlebih dahulu");
+          isValid = false;
+        }
+
+        var jenisKelamin = $("#jenisKelamin").val();
+        if (jenisKelamin === "") {
+          alert("Masukkan jenis kelamin terlebih dahulu");
+          isValid = false;
+        }
+
+        var kebangsaan = $("#kebangsaan").val();
+        if (kebangsaan === "") {
+          alert("Masukkan kebangsaan terlebih dahulu");
+          isValid = false;
+        }
+
+        var alamatRumah = $("#alamatRumah").val();
+        if (alamatRumah === "") {
+          alert("Masukkan alamat rumah terlebih dahulu");
+          isValid = false;
+        }
+
+        if (isValid) {
+          swal(
+            {
+              title: "Pastikan Data Telah Benar?",
+              type: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#7066e0",
+              confirmButtonText: "Ya, Lanjutkan Simpan",
+              closeOnConfirm: false,
+            },
+            function () {
+              $(".row_1_data_asesor_panitia").remove();
+              swal("Berhasil !!", "Data Berhasil Di Simpan", "success");
+              var row_upload_batch = `
+                <tr class="row_1_data_asesor_panitia">
+                  <td>${namaAsesor}</td>
+                  <td>${inisial}</td>
+                  <td>${jenisKelamin}</td>
+                  <td>
+                    <span>
+                      <button class="badge bg-green" data-toggle="modal" data-target="#edit-formulir" data-placement="top" title="Edit">
+                        <i class="fa fa-pencil m-r-5" style="color: white"></i>
+                      </button>
+                    </span>
+                  </td>
+                </tr>`;
+              $(".tbody_row_data_asesor_panitia").append(row_upload_batch);
+              $("#edit-formulir").modal("hide");
+            }
+          );
+        }
+      });
+    </script>
   </body>
 </html>

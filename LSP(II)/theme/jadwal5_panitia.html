@@ -255,11 +255,11 @@
         ***********************************-->
       <div class="content-body">
         <div class="container-fluid">
-          <div class="row">
+          <div class="row mb-3">
             <div class="col-lg-12" align="center">
               <i class="fa fa-chevron-left scroll-btn scroll-left"></i>
               <a
-                class="btn btn-info text-white"
+                class="btn btn-info text-light"
                 href="jadwal_panitia.html"
                 data-toggle="tooltip"
                 data-placement="top"
@@ -268,7 +268,7 @@
                 DPS
               </a>
               <a
-                class="btn btn-info text-white"
+                class="btn btn-info text-light"
                 href="jadwal2_panitia.html"
                 data-toggle="tooltip"
                 data-placement="top"
@@ -277,7 +277,7 @@
                 NAM
               </a>
               <a
-                class="btn btn-info text-white "
+                class="btn btn-info text-light"
                 href="jadwal3_panitia.html"
                 data-toggle="tooltip"
                 data-placement="top"
@@ -286,7 +286,7 @@
                 Programmer
               </a>
               <a
-                class="btn btn-info text-white "
+                class="btn btn-info text-light"
                 href="jadwal4_panitia.html"
                 data-toggle="tooltip"
                 data-placement="top"
@@ -296,7 +296,7 @@
               </a>
               <a
                 class="btn btn-info text-white active"
-                href="javascript:void(0);"
+                href="jadwal5_panitia.html"
                 data-toggle="tooltip"
                 data-placement="top"
                 title="Pengoperasian Peralatan Kelistrikan Dan Elektronika Berbasis Programmable Logic Controller (PLC)"
@@ -304,7 +304,7 @@
                 PLC
               </a>
               <a
-                class="btn btn-info text-white"
+                class="btn btn-info text-light"
                 href="jadwal6_panitia.html"
                 data-toggle="tooltip"
                 data-placement="top"
@@ -313,7 +313,7 @@
                 PW
               </a>
               <a
-                class="btn btn-info text-white"
+                class="btn btn-info text-light"
                 href="jadwal7_panitia.html"
                 data-toggle="tooltip"
                 data-placement="top"
@@ -322,7 +322,7 @@
                 PIPK
               </a>
               <a
-                class="btn btn-info text-white"
+                class="btn btn-info text-light"
                 href="jadwal8_panitia.html"
                 data-toggle="tooltip"
                 data-placement="top"
@@ -340,20 +340,6 @@
                   <div class="card">
                     <div class="card-body">
                       <h4 class="card-title">Data Jadwal Asesmen</h4>
-
-                      <!-- <div class="col-md-12">
-                        <label class="control-label"
-                          >Upload Jadwal Asesmen</label
-                        >
-                        <div class="button-icon">
-                          <input
-                            type="file"
-                            class="form-control-file"
-                            id="exampleFormControlFile1"
-                            accept=".xlsx"
-                          />
-                        </div>
-                      </div> -->
 
                       <div class="form-group row">
                         <div class="col-2">
@@ -373,9 +359,9 @@
                               type="file"
                               class="form-control input_file_batch_jadwal_panitia"
                               id="exampleFormControlFile1"
-                              accept="pdf"
+                              accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
                               style="height: 50% !important"
-                              onchange="wajib_pdf(this)"
+                              onchange="wajib_excel(this)"
                             />
                             <div
                               class="text-danger error_upload_batch_jadwal_pantia"
@@ -418,22 +404,23 @@
                         <div class="col-3">
                           <br />
                           <select
-                            class="form-control mt-3"
+                            class="form-control mt-3 pilih_asesor_onchange"
                             data-placeholder="Jenis SK"
                             name="category-asesor-select"
                             style="height: 50% !important"
+                            style="height: 50% !important"
                           >
                             <option value="">Pilih Asesor</option>
-                            <option value="asesor1">AGN</option>
-                            <option value="asesor2">ATD</option>
-                            <option value="asesor3">ARW</option>
-                            <option value="asesor4">AYU</option>
-                            <option value="asesor5">DNS</option>
-                            <option value="asesor6">EDL</option>
-                            <option value="asesor7">HAZ</option>
-                            <option value="asesor8">HMD</option>
-                            <option value="asesor9">HDN</option>
-                            <option value="asesor10">HRY</option>
+                            <option value="AGN">AGN</option>
+                            <option value="ATD">ATD</option>
+                            <option value="ARW">ARW</option>
+                            <option value="AYU">AYU</option>
+                            <option value="DNS">DNS</option>
+                            <option value="EDL">EDL</option>
+                            <option value="HAZ">HAZ</option>
+                            <option value="HMD">HMD</option>
+                            <option value="HDN">HDN</option>
+                            <option value="HRY">HRY</option>
                           </select>
                         </div>
                         <div class="col-1">
@@ -469,7 +456,106 @@
                               <th>Aksi</th>
                             </tr>
                           </thead>
-                          <tbody class="row_batch_jadwal_assesmen"></tbody>
+                          <tbody class="row_batch_jadwal_assesmen">
+                            <tr class="row_1_dea_agustina">
+                              <td>1</td>
+                              <td>Pengoperasian Peralatan Kelistrikan (PLC)</td>
+                              <td>Nia Novalia</td>
+                              <td>DNS</td>
+                              <td>Selasa</td>
+                              <td>26 Maret 2024</td>
+                              <td>14.00</td>
+                              <td>310</td>
+                              <td>
+                                <span>
+                                  <button
+                                    class="badge bg-green"
+                                    data-toggle="modal"
+                                    data-target="#add-edit"
+                                    data-placement="top"
+                                    title="Edit"
+                                  >
+                                    <i
+                                      class="fa fa-pencil m-r-5"
+                                      style="color: white"
+                                    ></i>
+                                  </button>
+                                  <button
+                                    class="badge bg-red"
+                                    data-placement="top"
+                                    onclick="confirmDelete(this)"
+                                  >
+                                    <i
+                                      class="fa fa-trash-o"
+                                      style="color: white"
+                                    ></i>
+                                  </button>
+                                  <!-- <a
+                                    href="./file.xlsx"
+                                    class="badge bg-unduh"
+                                    data-placement="top"
+                                    id="downloadLink"
+                                    download="downloaded_file.txt"
+                                    onclick="confirmDownload(event, this)"
+                                  >
+                                    <i
+                                      class="fa fa-download"
+                                      style="color: white"
+                                    ></i>
+                                  </a>-->
+                                </span>
+                              </td>
+                            </tr>
+                            <!-- <tr>
+                              <td>1</td>
+                              <td>Database Programming Supervisor</td>
+                              <td>Nia Novalia</td>
+                              <td>DNS</td>
+                              <td>Selasa</td>
+                              <td>26 Maret 2024</td>
+                              <td>14.00</td>
+                              <td>310</td>
+                              <td>
+                                <span>
+                                  <button
+                                    class="badge bg-green"
+                                    data-toggle="modal"
+                                    data-target="#add-edit"
+                                    data-placement="top"
+                                    title="Edit"
+                                  >
+                                    <i
+                                      class="fa fa-pencil m-r-5"
+                                      style="color: white"
+                                    ></i>
+                                  </button>
+                                  <button
+                                    class="badge bg-red"
+                                    data-placement="top"
+                                    onclick="confirmDelete(this)"
+                                  >
+                                    <i
+                                      class="fa fa-trash-o"
+                                      style="color: white"
+                                    ></i>
+                                  </button>
+                                  < <a
+                                    href="./file.xlsx"
+                                    class="badge bg-unduh"
+                                    data-placement="top"
+                                    id="downloadLink"
+                                    download="downloaded_file.txt"
+                                    onclick="confirmDownload(event, this)"
+                                  >
+                                    <i
+                                      class="fa fa-download"
+                                      style="color: white"
+                                    ></i>
+                                  </a>
+                                </span>
+                              </td>
+                            </tr> -->
+                          </tbody>
                           <!-- Modal Add Category -->
                           <div
                             class="modal fade none-border modal_tambah_data_jadwal_asesment"
@@ -712,6 +798,7 @@
                                           placeholder="Masukkan batch"
                                           type="text"
                                           name="category-batch_1"
+                                          value="1"
                                         />
                                         <div
                                           class="text-danger error_input_urutan_batch_1"
@@ -726,41 +813,47 @@
                                           data-placeholder="Bidang"
                                           name="category-bidang_1"
                                         >
-                                          <option value="">
-                                            Select Bidang
-                                          </option>
+                                          <option value="">Pilih Bidang</option>
                                           <option
                                             value="Database Programming Supervisor"
                                           >
                                             Database Programming Supervisor
                                           </option>
-                                          <option value="bidang2">
+                                          <option
+                                            value="Network Administrator Muda"
+                                          >
                                             Network Administrator Muda
                                           </option>
-                                          <option value="bidang3">
+                                          <option value="Programmer">
                                             Programmer
                                           </option>
-                                          <option value="bidang4">
+                                          <option
+                                            value="Teknisi Madya Jaringan Komputer"
+                                          >
                                             Teknisi Madya Jaringan Komputer
                                           </option>
-                                          <option value="bidang5">
+                                          <option
+                                            selected
+                                            value="Pengoperasian Peralatan Kelistrikan Dan Elektronika Berbasis Programmable Logic Controller (PLC)"
+                                          >
                                             Pengoperasian Peralatan Kelistrikan
                                             Dan Elektronika Berbasis
                                             Programmable Logic Controller (PLC)
                                           </option>
-                                          <option value="bidang6">
+                                          <option value="Plate Welder">
                                             Plate Welder
                                           </option>
-                                          <option value="bidang7">
+                                          <option
+                                            value="Pengoperasian Instrumentasi Proses Kontrol"
+                                          >
                                             Pengoperasian Instrumentasi Proses
                                             Kontrol
                                           </option>
-                                          <option value="bidang8">
+                                          <option
+                                            value="Teknisi Akuntansi Pratama"
+                                          >
                                             Teknisi Akuntansi Pratama
                                           </option>
-                                          <!-- <option value="bidang9">
-                                            Welding Inspector Standar
-                                          </option> -->
                                         </select>
                                         <div
                                           class="text-danger error_input_bidang_assesor_1"
@@ -773,7 +866,7 @@
                                           >Nama Asesi</label
                                         >
                                         <select
-                                          class="form-control select-assesor"
+                                          class="form-control select-assesor edit_select_asesor"
                                           name="category-asesi_1"
                                         >
                                           <option value="">Select Asesi</option>
@@ -795,16 +888,18 @@
                                           <option value="">
                                             Select Asesor
                                           </option>
-                                          <option value="asesor1">AGN</option>
-                                          <option value="asesor2">ATD</option>
-                                          <option value="asesor3">ARW</option>
-                                          <option value="asesor4">AYU</option>
-                                          <option value="asesor5">DNS</option>
-                                          <option value="asesor6">EDL</option>
-                                          <option value="asesor7">HAZ</option>
-                                          <option value="asesor8">HMD</option>
-                                          <option value="asesor9">HDN</option>
-                                          <option value="asesor10">HRY</option>
+                                          <option value="AGN">AGN</option>
+                                          <option value="ATD">ATD</option>
+                                          <option value="ARW">ARW</option>
+                                          <option value="AYU">AYU</option>
+                                          <option value="DNS" selected>
+                                            DNS
+                                          </option>
+                                          <option value="EDL">EDL</option>
+                                          <option value="HAZ">HAZ</option>
+                                          <option value="HMD">HMD</option>
+                                          <option value="HDN">HDN</option>
+                                          <option value="HRY">HRY</option>
                                         </select>
                                         <div
                                           class="text-danger error_input_asesor_1"
@@ -880,6 +975,7 @@
                                           placeholder="Masukkan Ruangan"
                                           type="text"
                                           name="category-ruangan_1"
+                                          value="310"
                                         />
                                         <div
                                           class="text-danger error_input_ruangan_1"
@@ -957,7 +1053,7 @@
         );
         if (input_file_batch_jadwal_panitia === "") {
           error_upload_batch_jadwal_pantia.text(
-            "upload file pdf terlebih dahulu"
+            "upload file Excel terlebih dahulu"
           );
           return "";
         } else {
@@ -1348,36 +1444,66 @@
             },
             function () {
               swal("Berhasil !!", "Data Berhasil Di Simpan", "success");
+              $(".row_1_dea_agustina").remove();
               // Assuming you are updating an existing row, here is the example update logic
-              // var rowToUpdate = `
-              //       <td>${categoryBatch1}</td>
-              //       <td>${$(".bidang_assesor option:selected").text()}</td>
-              //       <td>${categoryAsesi1}</td>
-              //       <td>${$(
-              //         "select[name='category-asesor_1'] option:selected"
-              //       ).text()}</td>
-              //       <td>${hari}</td>
-              //       <td>${categoryTanggalSk1}</td>
-              //       <td>${categoryWaktu1}</td>
-              //       <td>${categoryRuangan1}</td>
-              //       <td>
-              //           <span>
-              //               <button class="badge bg-green" data-toggle="modal" data-target="#add-edit" data-placement="top" title="Edit">
-              //                   <i class="fa fa-pencil m-r-5" style="color: white"></i>
-              //               </button>
-              //               <button class="badge bg-red" data-placement="top" onclick="confirmDelete(this)">
-              //                   <i class="fa fa-trash-o" style="color: white"></i>
-              //               </button>
-              //           </span>
-              //       </td>
-              //   `;
-              // $(".row_batch_jadwal_assesmen").append(rowToUpdate);
+              var rowToUpdate = `
+              <tr class="row_1_dea_agustina">
+                    <td>${categoryBatch1}</td>
+                    <td>${$(".bidang_assesor option:selected").text()}</td>
+                    <td>${categoryAsesi1}</td>
+                    <td>${$(
+                      "select[name='category-asesor_1'] option:selected"
+                    ).text()}</td>
+                    <td>${hari}</td>
+                    <td>${categoryTanggalSk1}</td>
+                    <td>${categoryWaktu1}</td>
+                    <td>${categoryRuangan1}</td>
+                    <td>
+                        <span>
+                            <button class="badge bg-green" data-toggle="modal" data-target="#add-edit" data-placement="top" title="Edit">
+                                <i class="fa fa-pencil m-r-5" style="color: white"></i>
+                            </button>
+                            <button class="badge bg-red" data-placement="top" onclick="confirmDelete(this)">
+                                <i class="fa fa-trash-o" style="color: white"></i>
+                            </button>
+                        </span>
+                    </td>
+                    </tr>
+                `;
+              $(".row_batch_jadwal_assesmen").append(rowToUpdate);
 
               $(".modal_edit_data_jadwal_asesment").modal("hide");
             }
           );
         }
       });
+
+      $(".pilih_asesor_onchange").on("change", function () {
+        var filter = $(this).val();
+        var rows = document.querySelectorAll(".row_batch_jadwal_assesmen tr");
+
+        rows.forEach(function (row) {
+          var asesor = row.cells[3].textContent.toUpperCase();
+          if (asesor.indexOf(filter) > -1) {
+            row.style.display = "";
+          } else {
+            row.style.display = "none";
+          }
+        });
+      });
+
+      var $selectAssesor = $(".edit_select_asesor");
+
+      // Clear previous options
+      $selectAssesor.empty();
+
+      // Add default option
+      $selectAssesor.append(
+        '<option value="Miftahul Ajmy">Miftahul Ajmy</option>'
+      );
+      $selectAssesor.append(
+        '<option value="Dea Agustina" selected>Nia Novalia</option>'
+      );
     </script>
   </body>
 </html>
