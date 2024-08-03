@@ -57,6 +57,9 @@
   .toggle-icon {
     display: block;
   }
+  /* .nk-sidebar {
+    width: 22px !important;
+  } */
 }
 
 /* Menyembunyikan ikon toggle untuk layar lebih besar dari 600px */
@@ -80,19 +83,19 @@
   background-color: #699bf7 !important;
   color: white;
 }
-.nk-sidebar {
+/* .nk-sidebar {
   width: 215px !important;
-}
+} */
 .content-body {
-  margin-left: 15em !important;
+  margin-left: 16em !important;
 }
 
-.brand-title{
+.brand-title {
   margin-left: -2em !important;
   width: 20px !important;
 }
 
-.img_lsp{
+.img_lsp {
   width: 220px !important;
   margin-top: 4pt !important;
 }
