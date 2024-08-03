@@ -303,7 +303,7 @@
                         </tr>
                       </thead>
                       <tbody class="row_jadwal_sertifikat">
-                        <tr>
+                        <tr class="row_agustina">
                           <td>Dea Agustina</td>
                           <td>Database Programming Supervisor</td>
                           <td>24 April 2024</td>
@@ -561,7 +561,7 @@
                                       >Nama Asesi</label
                                     >
                                     <input
-                                      class="form-control form-white"
+                                      class="form-control form-white edit_nama_asesi"
                                       placeholder="Masukkan Nama Asesi"
                                       type="text"
                                       name="category-tahun"
@@ -571,39 +571,48 @@
                                   <div class="col-md-12">
                                     <label class="control-label">Bidang</label>
                                     <select
-                                      class="form-control form-white"
-                                      data-placeholder="Jenis SK"
-                                      name="category-jenis_sk"
+                                      class="form-control form-white edit_bidang_assesor"
+                                      data-placeholder="Bidang"
+                                      name="category-bidang_1"
                                     >
-                                      <option value="bidang1">
+                                      <option value="">Pilih Bidang</option>
+                                      <option
+                                        value="Database Programming Supervisor"
+                                        selected
+                                      >
                                         Database Programming Supervisor
                                       </option>
-                                      <option value="bidang2">
+                                      <option
+                                        value="Network Administrator Muda"
+                                      >
                                         Network Administrator Muda
                                       </option>
-                                      <option value="bidang3">
+                                      <option value="Programmer">
                                         Programmer
                                       </option>
-                                      <option value="bidang4">
+                                      <option
+                                        value="Teknisi Madya Jaringan Komputer"
+                                      >
                                         Teknisi Madya Jaringan Komputer
                                       </option>
-                                      <option value="bidang5">
+                                      <option
+                                        value="Pengoperasian Peralatan Kelistrikan Dan Elektronika Berbasis Programmable Logic Controller (PLC)"
+                                      >
                                         Pengoperasian Peralatan Kelistrikan Dan
                                         Elektronika Berbasis Programmable Logic
                                         Controller (PLC)
                                       </option>
-                                      <option value="bidang6">
+                                      <option value="Plate Welder">
                                         Plate Welder
                                       </option>
-                                      <option value="bidang7">
+                                      <option
+                                        value="Pengoperasian Instrumentasi Proses Kontrol"
+                                      >
                                         Pengoperasian Instrumentasi Proses
                                         Kontrol
                                       </option>
-                                      <option value="bidang8">
+                                      <option value="Teknisi Akuntansi Pratama">
                                         Teknisi Akuntansi Pratama
-                                      </option>
-                                      <option value="bidang9">
-                                        Welding Inspector Standar
                                       </option>
                                     </select>
                                   </div>
@@ -617,7 +626,7 @@
                                           <div class="input-group">
                                             <input
                                               type="text"
-                                              class="form-control datepicker-autoclose"
+                                              class="form-control datepicker-autoclose edit_tanggal_sk"
                                               placeholder="mm/dd/yyyy"
                                             />
                                             <span class="input-group-append"
@@ -636,7 +645,7 @@
                                       >No Blanko</label
                                     >
                                     <input
-                                      class="form-control form-white"
+                                      class="form-control form-white edit_no_blanko"
                                       placeholder="Masukkan No Blanko"
                                       type="text"
                                       name="category-tahun"
@@ -649,14 +658,14 @@
                             <div class="modal-footer">
                               <button
                                 type="button"
-                                class="btn btn-default waves-effect"
+                                class="btn btn-danger waves-effect"
                                 data-dismiss="modal"
                               >
                                 Tutup
                               </button>
                               <button
                                 type="button"
-                                class="btn btn-danger waves-effect waves-light save-category"
+                                class="btn btn-info waves-effect waves-light save-category"
                                 data-dismiss="modal"
                               >
                                 Simpan
@@ -675,29 +684,7 @@
         </div>
         <!-- #/ container -->
       </div>
-      <!--**********************************
-            Content body end
-        ***********************************-->
-
-      <!--**********************************
-            Footer start
-        ***********************************-->
-      <!-- <div class="footer">
-            <div class="copyright">
-                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
-            </div>
-        </div> -->
-      <!--**********************************
-            Footer end
-        ***********************************-->
     </div>
-    <!--**********************************
-        Main wrapper end
-    ***********************************-->
-
-    <!--**********************************
-        Scripts
-    ***********************************-->
     <script src="plugins/common/common.min.js"></script>
     <script src="js/custom.min.js"></script>
     <script src="js/settings.js"></script>
@@ -776,7 +763,7 @@
             function () {
               swal("Berhasil !!", "Data Berhasil Di Simpan", "success");
               var rowUploadBatch = `
-        <tr>
+        <tr class="row_agustina">
           <td>${namaAsesi}</td>
           <td>${bidangAssesor}</td>
           <td>${tanggalSk}</td>
@@ -827,7 +814,7 @@
           },
           function () {
             swal("Berhasil !!", "Data Berhasil Di Simpan", "success");
-            var row_upload_batch = ` <tr>
+            var row_upload_batch = ` <tr class="row_agustina">
                           <td>Dea Agustina</td>
                           <td>Database Programming Supervisor</td>
                           <td>24 April 2024</td>
@@ -865,6 +852,81 @@
             $(".input_file_batch_jadwal_panitia").val("");
           }
         );
+      });
+
+      $(".save-category").on("click", function () {
+        var isValid = true;
+
+        // Clear all previous error messages
+        $(".error").hide();
+
+        var namaAsesi = $(".edit_nama_asesi").val();
+        if (namaAsesi === "") {
+          $(".edit_nama_asesi").after(
+            '<span class="error text-danger">Masukkan nama asesi terlebih dahulu</span>'
+          );
+          isValid = false;
+        }
+
+        var bidangAssesor = $(".edit_bidang_assesor").val();
+        if (bidangAssesor === "") {
+          $(".edit_bidang_assesor").after(
+            '<span class="error text-danger">Masukkan bidang terlebih dahulu</span>'
+          );
+          isValid = false;
+        }
+
+        var tanggalSk = $(".edit_tanggal_sk").val();
+        if (tanggalSk === "") {
+          $(".edit_tanggal_sk").after(
+            '<span class="error text-danger">Masukkan tanggal SK terlebih dahulu</span>'
+          );
+          isValid = false;
+        }
+
+        var noBlanko = $(".edit_no_blanko").val();
+        if (noBlanko === "") {
+          $(".edit_no_blanko").after(
+            '<span class="error text-danger">Masukkan no blanko terlebih dahulu</span>'
+          );
+          isValid = false;
+        }
+
+        if (isValid) {
+          swal(
+            {
+              title: "Pastikan Data Data Telah benar?",
+              type: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#7066e0",
+              confirmButtonText: "Ya, Lanjutkan Simpan",
+              closeOnConfirm: false,
+            },
+            function () {
+              swal("Berhasil !!", "Data Berhasil Di Simpan", "success");
+              $(".row_agustina").remove();
+              var rowUploadBatch = `
+                <tr class="row_agustina">
+                  <td>${namaAsesi}</td>
+                  <td>${bidangAssesor}</td>
+                  <td>${tanggalSk}</td>
+                  <td>${noBlanko}</td>
+                  <td>
+                    <span>
+                      <button class="badge bg-green" data-toggle="modal" data-target="#add-edit" data-placement="top" title="Edit">
+                        <i class="fa fa-pencil m-r-5" style="color: white"></i>
+                      </button>
+                      <button class="badge bg-red" data-placement="top" onclick="confirmDelete(this)">
+                        <i class="fa fa-trash-o" style="color: white"></i>
+                      </button>
+                    </span>
+                  </td>
+                </tr>`;
+              $(".row_jadwal_sertifikat").append(rowUploadBatch);
+              $("#add-edit").modal("hide");
+            }
+          );
+        }
       });
     </script>
   </body>
