@@ -408,6 +408,20 @@
                                     ></div>
                                   </div>
 
+                                  <!-- Nomor Regis Input -->
+                                  <div class="col-md-12">
+                                    <label class="control-label">Nomor Registrasi</label>
+                                    <input
+                                      class="form-control form-white nomor_atd"
+                                      type="text"
+                                      name="nomor"
+                                      value="MET.000.0070322015"
+                                    />
+                                    <div
+                                      class="text-danger error_nomor_atd"
+                                    ></div>
+                                  </div>
+
                                   <!-- Bidang Input -->
                                   <div class="col-md-12">
                                     <label class="control-label">Bidang</label>
@@ -708,6 +722,16 @@
           isValid = false;
         } else {
           $(".error_inisial_atd").text("").hide();
+        }
+
+        var nomor = $("input[name='nomor']").val();
+        if (nomor === "") {
+          $(".error_nomor_atd")
+            .text("Masukkan nomor terlebih dahulu")
+            .show();
+          isValid = false;
+        } else {
+          $(".error_nomor_atd").text("").hide();
         }
 
         var category_jenis_sk = $("select[name='category-jenis_sk']").val();
