@@ -301,7 +301,7 @@
                 data-placement="top"
                 title="Pengoperasian Peralatan Kelistrikan Dan Elektronika Berbasis Programmable Logic Controller (PLC)"
               >
-                 PLC
+                PLC
               </a>
               <a
                 class="btn btn-info text-white"
@@ -607,34 +607,47 @@
                                           data-placeholder="Bidang"
                                           name="category-bidang"
                                         >
-                                          <option value="">
-                                            Pilih Bidang
-                                          </option>
-                                          <option value="bidang1">
+                                          <option value="">Pilih Bidang</option>
+                                          <option
+                                            value="Database Programming Supervisor"
+                                          >
                                             Database Programming Supervisor
                                           </option>
-                                          <option value="bidang2">
+                                          <option
+                                            value="Network Administrator Muda"
+                                          >
                                             Network Administrator Muda
                                           </option>
-                                          <option value="bidang3">
+                                          <option value="Programmer">
                                             Programmer
                                           </option>
-                                          <option value="bidang4">
+                                          <option
+                                            value="Teknisi Madya Jaringan Komputer"
+                                          >
                                             Teknisi Madya Jaringan Komputer
                                           </option>
-                                          <option value="bidang5">
+                                          <option
+                                            value="Pengoperasian Peralatan Kelistrikan
+                                          Dan Elektronika Berbasis
+                                          Programmable Logic Controller (PLC)"
+                                          >
                                             Pengoperasian Peralatan Kelistrikan
                                             Dan Elektronika Berbasis
                                             Programmable Logic Controller (PLC)
                                           </option>
-                                          <option value="bidang6">
+                                          <option value="Plate Welder">
                                             Plate Welder
                                           </option>
-                                          <option value="bidang7">
+                                          <option
+                                            value="Pengoperasian Instrumentasi Proses
+                                          Kontrol"
+                                          >
                                             Pengoperasian Instrumentasi Proses
                                             Kontrol
                                           </option>
-                                          <option value="bidang8">
+                                          <option
+                                            value="Teknisi Akuntansi Pratama"
+                                          >
                                             Teknisi Akuntansi Pratama
                                           </option>
                                           <!-- <option value="bidang9">
@@ -667,21 +680,10 @@
                                           >Asesor</label
                                         >
                                         <select
-                                          class="form-control form-white"
-                                          data-placeholder="Jenis SK"
+                                          class="form-control form-white pilih-asesor"
                                           name="category-asesor"
                                         >
                                           <option value="">Pilih Asesor</option>
-                                          <option value="asesor1">AGN</option>
-                                          <option value="asesor2">ATD</option>
-                                          <option value="asesor3">ARW</option>
-                                          <option value="asesor4">AYU</option>
-                                          <option value="asesor5">DNS</option>
-                                          <option value="asesor6">EDL</option>
-                                          <option value="asesor7">HAZ</option>
-                                          <option value="asesor8">HMD</option>
-                                          <option value="asesor9">HDN</option>
-                                          <option value="asesor10">HRY</option>
                                         </select>
                                         <div
                                           class="text-danger error_input_asesor"
@@ -826,7 +828,9 @@
                                           <option value="">
                                             Select Bidang
                                           </option>
-                                          <option value="bidang1">
+                                          <option
+                                            value="Database Programming Supervisor"
+                                          >
                                             Database Programming Supervisor
                                           </option>
                                           <option value="bidang2">
@@ -1118,54 +1122,88 @@
       $(".bidang_assesor").on("change", function () {
         var bidang = $(this).val();
         var $selectAssesor = $(".select-assesor");
+        var pilih_asesor = $(".pilih-asesor");
 
         // Clear previous options
         $selectAssesor.empty();
+        pilih_asesor.empty();
 
         // Add default option
         $selectAssesor.append('<option value="">Pilih Asesi</option>');
+        pilih_asesor.append('<option vaklue="">Pilih Asesor</option>');
 
         // Add options based on selected bidang
-        if (bidang === "bidang1") {
+        if (bidang === "Database Programming Supervisor") {
           $selectAssesor.append(
             '<option value="Dea Agustina">Dea Agustina</option>'
           );
           $selectAssesor.append(
             '<option value="Miftahul Ajmy">Miftahul Ajmy</option>'
           );
-        } else if (bidang === "bidang2") {
+          pilih_asesor.append('<option value="ATD">ATD</option>');
+          pilih_asesor.append('<option value="DNS">DNS</option>');
+          pilih_asesor.append('<option value="MEL">MEL</option>');
+          pilih_asesor.append('<option value="JNS">JNS</option>');
+        } else if (bidang === "Network Administrator Muda") {
           $selectAssesor.append(
             '<option value="Nia Novalia">Nia Novalia</option>'
           );
           $selectAssesor.append(
             '<option value="Lely Freti">Lely Freti</option>'
           );
-        } else if (bidang === "bidang3") {
+          pilih_asesor.append('<option value="RMT">RMT</option>');
+          pilih_asesor.append('<option value="ULI">ULI</option>');
+          pilih_asesor.append('<option value="HAZ">HAZ</option>');
+        } else if (bidang === "Programmer") {
           $selectAssesor.append(
             '<option value="Haluke Alberta">Haluke Alberta</option>'
           );
           $selectAssesor.append('<option value="Nadiyah">Nadiyah</option>');
-        } else if (bidang === "bidang4") {
+          pilih_asesor.append('<option value="RPS">RPS</option>');
+          pilih_asesor.append('<option value="IDI">IDI</option>');
+          pilih_asesor.append('<option value="SRH">SRH</option>');
+          pilih_asesor.append('<option value="MMN">MMN</option>');
+          pilih_asesor.append('<option value="WIN">WIN</option>');
+        } else if (bidang === "Teknisi Madya Jaringan Komputer") {
           $selectAssesor.append(
             '<option value="Awang Badriya">Awang Badriya</option>'
           );
           $selectAssesor.append(
             '<option value="Muhammad Ababil">Muhammad Ababil</option>'
           );
-        } else if (bidang === "bidang5") {
+          pilih_asesor.append('<option value="CYN">CYN</option>');
+          pilih_asesor.append('<option value="NOP">NOP</option>');
+          pilih_asesor.append('<option value="YUL">YUL</option>');
+        } else if (
+          bidang ===
+          "Pengoperasian Peralatan Kelistrikan Dan Elektronika Berbasis Programmable Logic Controller (PLC)"
+        ) {
           $selectAssesor.append('<option value="Novendi">Novendi</option>');
           $selectAssesor.append(
             '<option value="Mardiansyah">Mardiansyah</option>'
           );
-        } else if (bidang === "bidang6") {
+          pilih_asesor.append('<option value="TNR">TNR</option>');
+          pilih_asesor.append('<option value="MUZ">MUZ</option>');
+          pilih_asesor.append('<option value="AGN">AGN</option>');
+          pilih_asesor.append('<option value="HDN">HDN</option>');
+          pilih_asesor.append('<option value="JJJ">JJJ</option>');
+          pilih_asesor.append('<option value="EDL">EDL</option>');
+        } else if (bidang === "Plate Welder") {
           $selectAssesor.append('<option value="Alvin">Alvin</option>');
           $selectAssesor.append('<option value="Septiady">Septiady</option>');
-        } else if (bidang === "bidang7") {
+          pilih_asesor.append('<option value="JUP">JUP</option>');
+          pilih_asesor.append('<option value="AGS">AGS</option>');
+          pilih_asesor.append('<option value="RNS">RNS</option>');
+        } else if (bidang === "Pengoperasian Instrumentasi Proses Kontrol") {
           $selectAssesor.append('<option value="Boby">Boby</option>');
           $selectAssesor.append('<option value="Hartanto">Hartanto</option>');
-        } else if (bidang === "bidang8") {
+          pilih_asesor.append('<option value="NHD">NHD</option>');
+          pilih_asesor.append('<option value="EDL">EDL</option>');
+        } else if (bidang === "Teknisi Akuntansi Pratama") {
           $selectAssesor.append('<option value="Taufik">Taufik</option>');
           $selectAssesor.append('<option value="Amelia">Amelia</option>');
+          pilih_asesor.append('<option value="NHD">YEF</option>');
+          pilih_asesor.append('<option value="EDL">TAF</option>');
         } else if (bidang === "bidang9") {
           $selectAssesor.append('<option value="Putri">Putri</option>');
           $selectAssesor.append('<option value="Kartika">Kartika</option>');
@@ -1277,7 +1315,7 @@
               var row_upload_batch = `
               <tr>
                 <td>${input_urutan_batch}</td>
-                <td>${$(".bidang_assesor option:selected").text()}</td>
+                <td>${bidang_assesor}</td>
                 <td>${nama_asesi}</td>
                 <td>${$(
                   "select[name='category-asesor'] option:selected"
