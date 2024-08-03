@@ -96,12 +96,17 @@
       <!--**********************************
             Nav header start
         ***********************************-->
-        <div class="nav-header text-center">
-          <!-- <a href="index.html"> -->
-          <span class="brand-title">
-            <img src="images/lsp1.png" class="img_lsp" width="220" height="auto" />
-          </span>
-        </div>
+      <div class="nav-header text-center">
+        <!-- <a href="index.html"> -->
+        <span class="brand-title">
+          <img
+            src="images/lsp1.png"
+            class="img_lsp"
+            width="220"
+            height="auto"
+          />
+        </span>
+      </div>
       <!--**********************************
             Nav header end
         ***********************************-->
@@ -288,8 +293,8 @@
                           </th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr class="small-text">
+                      <tbody class="row_mahasiswa">
+                        <tr class="small-text row_agustina">
                           <td>Dea</td>
                           <td>Agustina</td>
                           <td>dea20si@mahasiswa.pcr.ac.id</td>
@@ -299,7 +304,7 @@
                               title="Edit Data"
                               href="editdataasesor_panitia.html"
                               data-toggle="modal"
-                              data-target="#edit_trisia"
+                              data-target="#edit_agustina"
                               data-toggle="modal"
                               data-placement="top"
                             >
@@ -310,7 +315,7 @@
                             </button>
                           </td>
                         </tr>
-                        <tr class="small-text">
+                        <tr class="small-text row_yokie">
                           <td>Yokie</td>
                           <td>Trisannerson</td>
                           <td>yokie20si@mahasiswa.pcr.ac.id</td>
@@ -320,7 +325,7 @@
                               title="Edit Data"
                               href="editdataasesor_panitia.html"
                               data-toggle="modal"
-                              data-target="#edit_trisia"
+                              data-target="#edit_yokie"
                               data-toggle="modal"
                               data-placement="top"
                             >
@@ -333,7 +338,7 @@
                         </tr>
                       </tbody>
                       <!-- Modal Edit Category -->
-                      <div class="modal fade none-border" id="edit_trisia">
+                      <div class="modal fade none-border" id="edit_agustina">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
@@ -349,43 +354,44 @@
                                       >Nama depan</label
                                     >
                                     <input
-                                      class="form-control form-white"
+                                      class="form-control form-white nama_depan_agustina"
                                       placeholder="Masukkan nama depan"
                                       type="text"
                                       name="category-depan"
+                                      value="Dea"
                                     />
+                                    <div
+                                      class="text-danger error_nama_depan_agustina"
+                                    ></div>
                                   </div>
                                   <div class="col-md-12">
                                     <label class="control-label"
                                       >Nama belakang</label
                                     >
                                     <input
-                                      class="form-control form-white"
+                                      class="form-control form-white nama_belakang_agustina"
                                       placeholder="Masukkan nama belakang"
                                       type="text"
                                       name="category-belakang"
+                                      value="Agustina"
                                     />
+                                    <div
+                                      class="text-danger error_nama_belakang_agustina"
+                                    ></div>
                                   </div>
                                   <div class="col-md-12">
                                     <label class="control-label">Email</label>
                                     <input
-                                      class="form-control form-white"
+                                      class="form-control form-white email_agustina"
                                       placeholder="Masukkan email"
                                       type="text"
                                       name="category-email"
+                                      value="dea20si@mahasiswa.pcr.ac.id"
                                     />
+                                    <div
+                                      class="text-danger error_email_agustina"
+                                    ></div>
                                   </div>
-                                  <!-- <div class="col-md-6">
-                                                                <label class="control-label">Choose Category Color</label>
-                                                                <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
-                                                                    <option value="success">Success</option>
-                                                                    <option value="danger">Danger</option>
-                                                                    <option value="info">Info</option>
-                                                                    <option value="pink">Pink</option>
-                                                                    <option value="primary">Primary</option>
-                                                                    <option value="warning">Warning</option>
-                                                                </select>
-                                                            </div> -->
                                 </div>
                               </form>
                             </div>
@@ -399,8 +405,7 @@
                               </button>
                               <button
                                 type="button"
-                                class="btn btn-info waves-effect waves-light save-category"
-                                onclick="simpan_data()"
+                                class="btn btn-info waves-effect waves-light simpan_agustina"
                               >
                                 Simpan
                               </button>
@@ -410,7 +415,7 @@
                       </div>
                       <!-- END MODAL -->
                       <!-- Modal Add Category -->
-                      <div class="modal fade none-border" id="add-edit">
+                      <div class="modal fade none-border" id="edit_yokie">
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
@@ -426,43 +431,44 @@
                                       >Nama Depan</label
                                     >
                                     <input
-                                      class="form-control form-white"
+                                      class="form-control form-white nama_depan_yokie"
                                       placeholder="Masukkan nama depan"
                                       type="text"
                                       name="category-namadepan"
+                                      value="Yokie"
                                     />
+                                    <div
+                                      class="text-danger error_nama_depan_yokie"
+                                    ></div>
                                   </div>
                                   <div class="col-md-12">
                                     <label class="control-label"
                                       >Nama Belakang</label
                                     >
                                     <input
-                                      class="form-control form-white"
+                                      class="form-control form-white nama_belakang_yokie"
                                       placeholder="Masukkan nama belakang"
                                       type="text"
                                       name="category-namabelakang"
+                                      value="Trisannerson"
                                     />
+                                    <div
+                                      class="text-danger error_nama_belakang_yokie"
+                                    ></div>
                                   </div>
                                   <div class="col-md-12">
                                     <label class="control-label">Email</label>
                                     <input
-                                      class="form-control form-white"
+                                      class="form-control form-white email_yokie"
                                       placeholder="Masukkan email"
                                       type="text"
                                       name="category-email"
+                                      value="yokie20si@mahasiswa.pcr.ac.id"
                                     />
+                                    <div
+                                      class="text-danger error_email_yokie"
+                                    ></div>
                                   </div>
-                                  <!-- <div class="col-md-6">
-                                                                <label class="control-label">Choose Category Color</label>
-                                                                <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
-                                                                    <option value="success">Success</option>
-                                                                    <option value="danger">Danger</option>
-                                                                    <option value="info">Info</option>
-                                                                    <option value="pink">Pink</option>
-                                                                    <option value="primary">Primary</option>
-                                                                    <option value="warning">Warning</option>
-                                                                </select>
-                                                            </div> -->
                                 </div>
                               </form>
                             </div>
@@ -476,8 +482,7 @@
                               </button>
                               <button
                                 type="button"
-                                class="btn btn-info waves-effect waves-light save-category"
-                                onclick="simpan_data()"
+                                class="btn btn-info waves-effect waves-light simpan_yokie"
                               >
                                 Simpan
                               </button>
@@ -485,17 +490,6 @@
                           </div>
                         </div>
                       </div>
-                      <!--END MODAL-->
-                      <!-- <tfoot>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
-                                            </tr>
-                                        </tfoot> -->
                     </table>
                   </div>
                 </div>
@@ -505,29 +499,7 @@
         </div>
         <!-- #/ container -->
       </div>
-      <!--**********************************
-            Content body end
-        ***********************************-->
-
-      <!--**********************************
-            Footer start
-        ***********************************-->
-      <!-- <div class="footer">
-            <div class="copyright">
-                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
-            </div>
-        </div> -->
-      <!--**********************************
-            Footer end
-        ***********************************-->
     </div>
-    <!--**********************************
-        Main wrapper end
-    ***********************************-->
-
-    <!--**********************************
-        Scripts
-    ***********************************-->
     <script src="plugins/common/common.min.js"></script>
     <script src="js/custom.min.js"></script>
     <script src="js/settings.js"></script>
@@ -540,5 +512,143 @@
     <script src="js/custom_new.js"></script>
     <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
     <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
+    <script>
+      // simpan_yokie
+      // simpan_agustina
+      $(".simpan_agustina").on("click", function () {
+        var isValid = true;
+
+        var namaDepan = $(".nama_depan_agustina").val();
+        if (namaDepan === "") {
+          $(".error_nama_depan_agustina")
+            .text("Masukkan nama depan terlebih dahulu")
+            .show();
+          isValid = false;
+        } else {
+          $(".error_nama_depan_agustina").text("").hide();
+        }
+
+        var namaBelakang = $(".nama_belakang_agustina").val();
+        if (namaBelakang === "") {
+          $(".error_nama_belakang_agustina")
+            .text("Masukkan nama belakang terlebih dahulu")
+            .show();
+          isValid = false;
+        } else {
+          $(".error_nama_belakang_agustina").text("").hide();
+        }
+
+        var email = $(".email_agustina").val();
+        if (email === "") {
+          $(".error_email_agustina")
+            .text("Masukkan email terlebih dahulu")
+            .show();
+          isValid = false;
+        } else {
+          $(".error_email_agustina").text("").hide();
+        }
+
+        if (isValid) {
+          swal(
+            {
+              title: "Pastikan Data Telah Benar?",
+              type: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#7066e0",
+              confirmButtonText: "Ya, Lanjutkan Simpan",
+              closeOnConfirm: false,
+            },
+            function () {
+              $(".row_agustina").remove();
+              swal("Berhasil !!", "Data Berhasil Di Simpan", "success");
+              var row_upload_batch = `
+                <tr class="row_agustina">
+                  <td>${namaDepan}</td>
+                  <td>${namaBelakang}</td>
+                  <td>${email}</td>
+                  <td>
+                    <span>
+                      <button class="badge bg-green" data-toggle="modal" data-target="#edit_agustina" data-placement="top" title="Edit">
+                        <i class="fa fa-pencil m-r-5" style="color: white"></i>
+                      </button>
+                    </span>
+                  </td>
+                </tr>`;
+              $(".row_mahasiswa").append(row_upload_batch);
+
+              swal("Berhasil !!", "Data Berhasil Di Simpan", "success");
+              $("#edit_agustina").modal("hide");
+            }
+          );
+        }
+      });
+
+      // simpan_yokie
+      $(".simpan_yokie").on("click", function () {
+        var isValid = true;
+
+        var namaDepan = $(".nama_depan_yokie").val();
+        if (namaDepan === "") {
+          $(".error_nama_depan_yokie")
+            .text("Masukkan nama depan terlebih dahulu")
+            .show();
+          isValid = false;
+        } else {
+          $(".error_nama_depan_yokie").text("").hide();
+        }
+
+        var namaBelakang = $(".nama_belakang_yokie").val();
+        if (namaBelakang === "") {
+          $(".error_nama_belakang_yokie")
+            .text("Masukkan nama belakang terlebih dahulu")
+            .show();
+          isValid = false;
+        } else {
+          $(".error_nama_belakang_yokie").text("").hide();
+        }
+
+        var email = $(".email_yokie").val();
+        if (email === "") {
+          $(".error_email_yokie").text("Masukkan email terlebih dahulu").show();
+          isValid = false;
+        } else {
+          $(".error_email_yokie").text("").hide();
+        }
+
+        if (isValid) {
+          swal(
+            {
+              title: "Pastikan Data Telah Benar?",
+              type: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#7066e0",
+              confirmButtonText: "Ya, Lanjutkan Simpan",
+              closeOnConfirm: false,
+            },
+            function () {
+              $(".row_yokie").remove();
+              swal("Berhasil !!", "Data Berhasil Di Simpan", "success");
+              var row_upload_batch = `
+                <tr class="row_yokie">
+                  <td>${namaDepan}</td>
+                  <td>${namaBelakang}</td>
+                  <td>${email}</td>
+                  <td>
+                    <span>
+                      <button class="badge bg-green" data-toggle="modal" data-target="#edit_agustina" data-placement="top" title="Edit">
+                        <i class="fa fa-pencil m-r-5" style="color: white"></i>
+                      </button>
+                    </span>
+                  </td>
+                </tr>`;
+              $(".row_mahasiswa").append(row_upload_batch);
+
+              swal("Berhasil !!", "Data Berhasil Di Simpan", "success");
+              $("#edit_yokie").modal("hide");
+            }
+          );
+        }
+      });
+    </script>
   </body>
 </html>

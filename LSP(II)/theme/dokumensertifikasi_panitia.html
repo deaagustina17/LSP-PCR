@@ -279,13 +279,15 @@
                           <th>Aksi</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
+                      <tbody class="row_batch_jadwal_assesmen">
+                        <tr id="id_1_atd">
                           <td>ATD</td>
                           <td>MET.000.0070322015</td>
                           <td>Database Programming Supervisor</td>
-                          <td id="tanggal_berlaku_supervisor">20 Maret 2027</td>
-                          <td></td>
+                          <td id="tanggal_berlaku_supervisor">
+                            06 Agustus 2024
+                          </td>
+                          <td><a href="ttd.pdf">ttd.pdf</a></td>
                           <td>
                             <span>
                               <button
@@ -326,13 +328,12 @@
                             </span>
                           </td>
                         </tr>
-                        <tr>
-                          <td>DNS</td>
+
+                        <!-- <tr>
+                          <td>ATD</td>
                           <td>MET.000.0070322015</td>
                           <td>Database Programming Supervisor</td>
-                          <td id="tanggal_berlaku_supervisor">
-                            31 Agustus 2024
-                          </td>
+                          <td id="tanggal_berlaku_supervisor">31 Juli 2024</td>
                           <td></td>
                           <td>
                             <span>
@@ -373,138 +374,14 @@
                               </a>
                             </span>
                           </td>
-                        </tr>
+                        </tr> -->
                       </tbody>
-                      <!-- Modal Add Category -->
-                      <div class="modal fade none-border" id="add-category">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h4 class="modal-title">
-                                <strong
-                                  >Tambah Data Dokumen Sertifikasi
-                                  Asesor</strong
-                                >
-                              </h4>
-                            </div>
-                            <div class="modal-body">
-                              <form>
-                                <div class="row">
-                                  <div class="col-md-12">
-                                    <label class="control-label">Insial</label>
-                                    <input
-                                      class="form-control form-white"
-                                      type="text"
-                                      name="category-tahun"
-                                    />
-                                  </div>
-                                  <div class="col-md-12">
-                                    <label class="control-label">Skema</label>
-                                    <select
-                                      class="form-control form-white"
-                                      data-placeholder="Jenis SK"
-                                      name="category-jenis_sk"
-                                    >
-                                      <option value="bidang1">
-                                        Database Programming Supervisor
-                                      </option>
-                                      <option value="bidang2">
-                                        Network Administrator Muda
-                                      </option>
-                                      <option value="bidang3">
-                                        Programmer
-                                      </option>
-                                      <option value="bidang4">
-                                        Teknisi Madya Jaringan Komputer
-                                      </option>
-                                      <option value="bidang5">
-                                        Pengoperasian Peralatan Kelistrikan Dan
-                                        Elektronika Berbasis Programmable Logic
-                                        Controller (PLC)
-                                      </option>
-                                      <option value="bidang6">
-                                        Plate Welder
-                                      </option>
-                                      <option value="bidang7">
-                                        Pengoperasian Instrumentasi Proses
-                                        Kontrol
-                                      </option>
-                                      <option value="bidang8">
-                                        Teknisi Akuntansi Pratama
-                                      </option>
-                                      <option value="bidang9">
-                                        Welding Inspector Standar
-                                      </option>
-                                    </select>
-                                  </div>
-
-                                  <div class="col-md-12">
-                                    <label class="control-label"
-                                      >Tanggal Habis Berlaku</label
-                                    >
-                                    <div class="row">
-                                      <div class="col-md-8">
-                                        <div class="example">
-                                          <div class="input-group">
-                                            <input
-                                              type="text"
-                                              class="form-control datepicker-autoclose"
-                                              placeholder="mm/dd/yyyy"
-                                            />
-                                            <span class="input-group-append"
-                                              ><span class="input-group-text"
-                                                ><i
-                                                  class="mdi mdi-calendar-check"
-                                                ></i></span
-                                            ></span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-12">
-                                    <label class="control-label"
-                                      >Upload SK</label
-                                    >
-                                    <div class="form-group row">
-                                      <div class="card">
-                                        <div class="button-icon">
-                                          <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
-                                          <input
-                                            type="file"
-                                            class="form-control-file"
-                                            id="exampleFormControlFile1"
-                                          />
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
-                            <div class="modal-footer">
-                              <button
-                                type="button"
-                                class="btn btn-default waves-effect"
-                                data-dismiss="modal"
-                              >
-                                Tutup
-                              </button>
-                              <button
-                                type="button"
-                                class="btn btn-danger waves-effect waves-light save-category"
-                                data-dismiss="modal"
-                              >
-                                Simpan
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- END MODAL -->
 
                       <!-- Modal Add Edit -->
-                      <div class="modal fade none-border" id="add-edit">
+                      <div
+                        class="modal fade none-border modal_tambah_data_jadwal_asesment"
+                        id="add-edit"
+                      >
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
@@ -517,14 +394,21 @@
                             <div class="modal-body">
                               <form>
                                 <div class="row">
+                                  <!-- Inisial Input -->
                                   <div class="col-md-12">
                                     <label class="control-label">Inisial</label>
                                     <input
-                                      class="form-control form-white"
+                                      class="form-control form-white inisial_atd"
                                       type="text"
-                                      name="category-tahun"
+                                      name="inisial"
+                                      value="ATD"
                                     />
+                                    <div
+                                      class="text-danger error_inisial_atd"
+                                    ></div>
                                   </div>
+
+                                  <!-- Bidang Input -->
                                   <div class="col-md-12">
                                     <label class="control-label">Bidang</label>
                                     <select
@@ -532,38 +416,55 @@
                                       data-placeholder="Jenis SK"
                                       name="category-jenis_sk"
                                     >
-                                      <option value="bidang1">
+                                      <option
+                                        value="Database Programming Supervisor"
+                                      >
                                         Database Programming Supervisor
                                       </option>
-                                      <option value="bidang2">
+                                      <option
+                                        value="Network Administrator Muda"
+                                      >
                                         Network Administrator Muda
                                       </option>
-                                      <option value="bidang3">
+                                      <option value="Programmer">
                                         Programmer
                                       </option>
-                                      <option value="bidang4">
+                                      <option
+                                        value="Teknisi Madya Jaringan Komputer"
+                                      >
                                         Teknisi Madya Jaringan Komputer
                                       </option>
-                                      <option value="bidang5">
+                                      <option
+                                        value="Pengoperasian Peralatan Kelistrikan Dan
+                                        Elektronika Berbasis Programmable Logic
+                                        Controller (PLC)"
+                                      >
                                         Pengoperasian Peralatan Kelistrikan Dan
                                         Elektronika Berbasis Programmable Logic
                                         Controller (PLC)
                                       </option>
-                                      <option value="bidang6">
+                                      <option value="Plate Welder">
                                         Plate Welder
                                       </option>
-                                      <option value="bidang7">
+                                      <option
+                                        value="Pengoperasian Instrumentasi Proses Kontrol"
+                                      >
                                         Pengoperasian Instrumentasi Proses
                                         Kontrol
                                       </option>
-                                      <option value="bidang8">
+                                      <option value="Teknisi Akuntansi Pratama">
                                         Teknisi Akuntansi Pratama
                                       </option>
-                                      <option value="bidang9">
+                                      <option value="Welding Inspector Standar">
                                         Welding Inspector Standar
                                       </option>
                                     </select>
+                                    <div
+                                      class="text-danger error_category-jenis_sk"
+                                    ></div>
                                   </div>
+
+                                  <!-- Tanggal Berlaku Input -->
                                   <div class="col-md-12">
                                     <label class="control-label"
                                       >Tanggal Berlaku</label
@@ -574,20 +475,27 @@
                                           <div class="input-group">
                                             <input
                                               type="text"
-                                              class="form-control datepicker-autoclose"
+                                              class="form-control tanggal_dibuka"
+                                              name="tanggal_berlaku"
                                               placeholder="mm/dd/yyyy"
                                             />
-                                            <span class="input-group-append"
-                                              ><span class="input-group-text"
+                                            <span class="input-group-append">
+                                              <span class="input-group-text"
                                                 ><i
                                                   class="mdi mdi-calendar-check"
-                                                ></i></span
-                                            ></span>
+                                                ></i
+                                              ></span>
+                                            </span>
                                           </div>
+                                          <div
+                                            class="text-danger error_tanggal_berlaku"
+                                          ></div>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
+
+                                  <!-- Tanggal Habis Berlaku Input -->
                                   <div class="col-md-12">
                                     <label class="control-label"
                                       >Tanggal Habis Berlaku</label
@@ -598,36 +506,44 @@
                                           <div class="input-group">
                                             <input
                                               type="text"
-                                              class="form-control datepicker-autoclose"
+                                              class="form-control tanggal_ditutup"
+                                              name="tanggal_habis_berlaku"
                                               placeholder="mm/dd/yyyy"
                                             />
-                                            <span class="input-group-append"
-                                              ><span class="input-group-text"
+                                            <span class="input-group-append">
+                                              <span class="input-group-text"
                                                 ><i
                                                   class="mdi mdi-calendar-check"
-                                                ></i></span
-                                            ></span>
+                                                ></i
+                                              ></span>
+                                            </span>
                                           </div>
+                                          <div
+                                            class="text-danger error_tanggal_habis_berlaku"
+                                          ></div>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
+
+                                  <!-- Upload SK Input -->
                                   <div class="col-md-12">
                                     <label class="control-label"
                                       >Upload SK</label
                                     >
-                                    <!-- <div class="form-group row"> -->
-                                    <!-- <div class="card"> -->
                                     <div class="button-icon">
-                                      <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
                                       <input
                                         type="file"
                                         class="form-control-file"
                                         id="exampleFormControlFile1"
+                                        accept="application/pdf"
+                                        onchange="wajib_pdf(this)"
+                                        name="upload_sk"
                                       />
                                     </div>
-                                    <!-- </div> -->
-                                    <!-- </div> -->
+                                    <div
+                                      class="text-danger error_upload_sk"
+                                    ></div>
                                   </div>
                                 </div>
                               </form>
@@ -642,8 +558,7 @@
                               </button>
                               <button
                                 type="button"
-                                class="btn btn-info waves-effect waves-light save-category"
-                                onclick="simpan_data()"
+                                class="btn btn-info waves-effect waves-light simpan_edit_atd"
                               >
                                 Simpan
                               </button>
@@ -651,6 +566,7 @@
                           </div>
                         </div>
                       </div>
+
                       <!-- END MODAL -->
                     </table>
                   </div>
@@ -780,6 +696,118 @@
         // For example, if you update the table, you might clear the interval:
         // clearInterval(intervalId);
       }, 3000); // 3000 milliseconds = 3 seconds
+
+      $(".simpan_edit_atd").on("click", function () {
+        var isValid = true;
+
+        var inisial = $("input[name='inisial']").val();
+        if (inisial === "") {
+          $(".error_inisial_atd")
+            .text("Masukkan inisial terlebih dahulu")
+            .show();
+          isValid = false;
+        } else {
+          $(".error_inisial_atd").text("").hide();
+        }
+
+        var category_jenis_sk = $("select[name='category-jenis_sk']").val();
+        if (category_jenis_sk === "") {
+          $(".error_category-jenis_sk")
+            .text("Pilih bidang terlebih dahulu")
+            .show();
+          isValid = false;
+        } else {
+          $(".error_category-jenis_sk").text("").hide();
+        }
+
+        var tanggal_berlaku = $("input[name='tanggal_berlaku']").val();
+        if (tanggal_berlaku === "") {
+          $(".error_tanggal_berlaku")
+            .text("Masukkan tanggal berlaku terlebih dahulu")
+            .show();
+          isValid = false;
+        } else {
+          $(".error_tanggal_berlaku").text("").hide();
+        }
+
+        var tanggal_habis_berlaku = $(
+          "input[name='tanggal_habis_berlaku']"
+        ).val();
+        if (tanggal_habis_berlaku === "") {
+          $(".error_tanggal_habis_berlaku")
+            .text("Masukkan tanggal habis berlaku terlebih dahulu")
+            .show();
+          isValid = false;
+        } else {
+          $(".error_tanggal_habis_berlaku").text("").hide();
+        }
+
+        var upload_sk = $("input[name='upload_sk']").val();
+        var fileInput = document.getElementById("exampleFormControlFile1");
+        var fileName = fileInput.files[0]
+          ? fileInput.files[0].name
+          : "No file selected";
+        if (upload_sk === "") {
+          $(".error_upload_sk").text("Upload SK terlebih dahulu").show();
+          isValid = false;
+        } else {
+          $(".error_upload_sk").text("").hide();
+        }
+
+        if (isValid) {
+          swal(
+            {
+              title: "Pastikan Data Data Telah benar?",
+              type: "warning",
+              showCancelButton: !0,
+              confirmButtonColor: "#7066e0",
+              confirmButtonText: "Ya, Lanjutkan Simpan",
+              closeOnConfirm: !1,
+            },
+            function () {
+              swal("Berhasil !!", "Data Berhasil Di Simpan", "success");
+              $("#id_1_atd").remove();
+              var row_upload_batch = `
+        <tr id="id_1_atd">
+          <td>${inisial}</td>
+          <td>MET.000.0070322015</td>
+          <td>${category_jenis_sk}</td>
+          <td>${tanggal_berlaku}</td>
+          <td><a href="ttd.pdf">${fileName}</td>
+          <td>
+            <span>
+              <button class="badge bg-green" data-toggle="modal" data-target="#add-edit" data-placement="top" title="Edit">
+                <i class="fa fa-pencil m-r-5" style="color: white"></i>
+              </button>
+              <button class="badge bg-red" data-placement="top" onclick="confirmDelete(this)">
+                <i class="fa fa-trash-o" style="color: white"></i>
+              </button>
+              <a href="./file.xlsx" class="badge bg-unduh" data-placement="top" id="downloadLink" download="downloaded_file.txt" onclick="confirmDownload(event, this)">
+                <i class="fa fa-download" style="color: white"></i>
+              </a>
+            </span>
+          </td>
+        </tr>`;
+              $(".row_batch_jadwal_assesmen").append(row_upload_batch);
+              $(".modal_tambah_data_jadwal_asesment").modal("hide");
+            }
+          );
+        }
+      });
+      // Initialize datepicker with today's date
+      $(".tanggal_dibuka")
+        .datepicker({
+          autoclose: true,
+          format: "dd-mm-yyyy",
+        })
+        .datepicker("setDate", "06-08-2027");
+
+      $(".tanggal_ditutup")
+        .datepicker({
+          autoclose: true,
+          format: "dd-mm-yyyy",
+        })
+        .datepicker("setDate", "06-08-2027");
     </script>
   </body>
 </html>

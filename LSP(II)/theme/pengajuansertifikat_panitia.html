@@ -272,8 +272,9 @@
                           type="file"
                           class="form-control input_file_batch_jadwal_panitia"
                           id="exampleFormControlFile1"
-                          accept="pdf"
-                          onchange="wajib_pdf(this)"
+                          accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                          style="height: 50% !important"
+                          onchange="wajib_excel(this)"
                         />
                         <div
                           class="text-danger error_upload_batch_jadwal_pantia"
@@ -808,7 +809,7 @@
         );
         if (input_file_batch_jadwal_panitia === "") {
           error_upload_batch_jadwal_pantia.text(
-            "upload file pdf terlebih dahulu"
+            "upload file Excel terlebih dahulu"
           );
           return "";
         } else {

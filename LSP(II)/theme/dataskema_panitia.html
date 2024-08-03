@@ -42,17 +42,7 @@
         </svg>
       </div>
     </div>
-    <!--*******************
-        Preloader end
-    ********************-->
-
-    <!--**********************************
-        Main wrapper start
-    ***********************************-->
     <div id="main-wrapper">
-      <!--**********************************
-            Nav header start
-        ***********************************-->
       <div class="nav-header text-center">
         <!-- <a href="index.html"> -->
         <span class="brand-title">
@@ -64,13 +54,6 @@
           />
         </span>
       </div>
-      <!--**********************************
-              Nav header end
-          ***********************************-->
-
-      <!--**********************************
-              Header start
-          ***********************************-->
       <div class="header">
         <div class="header-content clearfix">
           <div class="nav-control">
@@ -109,13 +92,6 @@
           </div>
         </div>
       </div>
-      <!--**********************************
-            Nav header end
-        ***********************************-->
-
-      <!--**********************************
-            Header start
-        ***********************************-->
       <div class="nk-sidebar">
         <div class="nk-nav-scroll">
           <ul class="metismenu" id="menu">
@@ -196,21 +172,9 @@
           </ul>
         </div>
       </div>
-      <!--**********************************
-            Sidebar end
-        ***********************************-->
-
-      <!--**********************************
-            Content body start
-        ***********************************-->
       <div class="content-body">
         <div class="row page-titles mx-0">
-          <div class="col p-md-0">
-            <!-- <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
-                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
-                    </ol> -->
-          </div>
+          <div class="col p-md-0"></div>
         </div>
         <!-- row -->
 
@@ -220,13 +184,10 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Data Skema</h4>
-                  <!-- <div class="col-auto">
-                                    <button class="btn btn-dark mb-2">Tambah</button>
-                                </div> -->
                   <a
                     href="index_panitia.html"
                     data-toggle="modal"
-                    data-target="#add-category"
+                    data-target="#tambah_data_skema"
                     class="btn btn-dark mb-2"
                     ><i class="ti-plus f-s-12 m-r-5"></i> Tambah</a
                   >
@@ -242,8 +203,8 @@
                           <th>Aksi</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
+                      <tbody class="row_data_panitia">
+                        <tr class="row_1_data_panitia">
                           <td>Database Programming Supervisor</td>
                           <td>
                             Skema sertifikasi Supervisor Pemrogram Database
@@ -266,7 +227,7 @@
                               <button
                                 class="badge bg-green"
                                 data-toggle="modal"
-                                data-target="#add-edit"
+                                data-target="#update_data_skema"
                                 data-placement="top"
                                 title="Edit"
                               >
@@ -285,228 +246,135 @@
                                   style="color: white"
                                 ></i>
                               </button>
-                              <!-- <a
-                                href="./file.xlsx"
-                                class="badge bg-unduh"
-                                data-placement="top"
-                                id="downloadLink"
-                                download="downloaded_file.txt"
-                                onclick="confirmDownload(event, this)"
-                              >
-                                <i
-                                  class="fa fa-download"
-                                  style="color: white"
-                                ></i>
-                              </a> -->
                             </span>
                           </td>
                         </tr>
                       </tbody>
-                      <!-- Modal Add Category -->
-                      <div class="modal fade none-border" id="add-category">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h4 class="modal-title">
-                                <strong>Tambah Data Skema</strong>
-                              </h4>
-                            </div>
-                            <div class="modal-body">
-                              <form>
-                                <div class="row">
-                                  <!-- <div class="col-md-12">
-                                    <label class="control-label">Icon</label>
-                                    <div class="form-group row">
-                                      <div class="card">
-                                        <div class="button-icon">
-                                          <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button>
-                                          <input
-                                            type="file"
-                                            class="form-control-file"
-                                            id="exampleFormControlFile1"
-                                          />
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div> -->
-                                  <div class="col-md-12">
-                                    <label class="control-label">Skema</label>
-                                    <input
-                                      class="form-control form-white"
-                                      placeholder="Masukkan Nama Skema"
-                                      type="text"
-                                      name="category-skema"
-                                    />
-                                  </div>
-                                  <div class="col-md-12">
-                                    <label class="control-label"
-                                      >Deskripsi</label
-                                    >
-                                    <input
-                                      class="form-control form-white"
-                                      placeholder="Masukkan Deskripsi"
-                                      type="text"
-                                      name="category-deskripsi"
-                                    />
-                                  </div>
-                                  <!-- <div class="col-md-6">
-                                                                <label class="control-label">Choose Category Color</label>
-                                                                <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
-                                                                    <option value="success">Success</option>
-                                                                    <option value="danger">Danger</option>
-                                                                    <option value="info">Info</option>
-                                                                    <option value="pink">Pink</option>
-                                                                    <option value="primary">Primary</option>
-                                                                    <option value="warning">Warning</option>
-                                                                </select>
-                                                            </div> -->
-                                </div>
-                              </form>
-                            </div>
-                            <div class="modal-footer">
-                              <button
-                                type="button"
-                                class="btn btn-danger waves-effect"
-                                data-dismiss="modal"
-                              >
-                                Tutup
-                              </button>
-                              <button
-                                type="button"
-                                class="btn btn-info waves-effect waves-light save-category"
-                                onclick="simpan_data()"
-                              >
-                                Simpan
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- END MODAL -->
-
-                      <!-- Modal Add Edit -->
-                      <div class="modal fade none-border" id="add-edit">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h4 class="modal-title">
-                                <strong>Edit Data Skema</strong>
-                              </h4>
-                            </div>
-                            <div class="modal-body">
-                              <form>
-                                <div class="row">
-                                  <!-- <div class="col-md-12">
-                                    <label class="control-label">Icon</label>
-                                    <div class="form-group row">
-                                      <div class="card">
-                                        <div class="button-icon">
-                                          <input
-                                            type="file"
-                                            class="form-control-file"
-                                            id="exampleFormControlFile1"
-                                          />
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div> -->
-                                  <div class="col-md-12">
-                                    <label class="control-label">Skema</label>
-                                    <input
-                                      class="form-control form-white"
-                                      placeholder="Masukkan Nama Skema"
-                                      type="text"
-                                      name="category-skema"
-                                    />
-                                  </div>
-                                  <div class="col-md-12">
-                                    <label class="control-label"
-                                      >Deskripsi</label
-                                    >
-                                    <input
-                                      class="form-control form-white"
-                                      placeholder="Masukkan Deskripsi"
-                                      type="text"
-                                      name="category-deskripsi"
-                                    />
-                                  </div>
-                                  <!-- <div class="col-md-6">
-                                                                <label class="control-label">Choose Category Color</label>
-                                                                <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
-                                                                    <option value="success">Success</option>
-                                                                    <option value="danger">Danger</option>
-                                                                    <option value="info">Info</option>
-                                                                    <option value="pink">Pink</option>
-                                                                    <option value="primary">Primary</option>
-                                                                    <option value="warning">Warning</option>
-                                                                </select>
-                                                            </div> -->
-                                </div>
-                              </form>
-                            </div>
-                            <div class="modal-footer">
-                              <button
-                                type="button"
-                                class="btn btn-danger waves-effect"
-                                data-dismiss="modal"
-                              >
-                                Tutup
-                              </button>
-                              <button
-                                type="button"
-                                class="btn btn-info waves-effect waves-light save-category"
-                                onclick="simpan_data()"
-                              >
-                                Simpan
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- END MODAL -->
-
-                      <!-- <tfoot>
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                <th>Start date</th>
-                                                <th>Salary</th>
-                                            </tr>
-                                        </tfoot> -->
                     </table>
+                  </div>
+                  <!-- Modal Add Category -->
+                  <div class="modal fade none-border" id="update_data_skema">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title">
+                            <strong>Edit Data Skema</strong>
+                          </h4>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <label class="control-label">Skema</label>
+                                <input
+                                  class="form-control form-white update_nama_skema"
+                                  placeholder="Masukkan Nama Skema"
+                                  type="text"
+                                  name="category-skema"
+                                  value="Database Programming Supervisor"
+                                />
+                                <div
+                                  class="text-danger error_update_nama_skema"
+                                ></div>
+                              </div>
+                              <div class="col-md-12">
+                                <label class="control-label">Deskripsi</label>
+                                <input
+                                  class="form-control form-white update_deskripsi"
+                                  placeholder="Masukkan Deskripsi"
+                                  type="text"
+                                  name="category-deskripsi"
+                                  value="Skema sertifikasi Supervisor Pemrogram Database (Database Programmer Supervisor) adalah skema Kemasan yang digunakan mengacu pada Standar Kompetensi Kerja Nasional Indonesia berdasarkan Keputusan Menteri Ketenagakerjaan Republik Indonesia Nomor 282 tahun 2016 tentang Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori Informasi dan Komunikasi Golongan Pokok Aktivitas Pemrograman, Konsultasi Komputer dan Kegiatan Yang Berhubungan Dengan Itu (YBDI) Bidang Software Development Subbidang Pemrograman dan Buku Daftar Unit Kompetensi Okupasi Dalam Kerangka Kualifikasi Nasional Indonesia Bidang Teknologi Informasi dan Komunikasi (TIK), Kominfo 2018."
+                                />
+                                <div
+                                  class="text-danger error_update_deskripsi"
+                                ></div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-danger waves-effect"
+                            data-dismiss="modal"
+                          >
+                            Tutup
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-info waves-effect waves-light update_data_deskripsi"
+                          >
+                            Simpan
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade none-border" id="tambah_data_skema">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title">
+                            <strong>Tambah Data Skema</strong>
+                          </h4>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <label class="control-label">Skema</label>
+                                <input
+                                  class="form-control form-white tambah_nama_skema"
+                                  placeholder="Masukkan Nama Skema"
+                                  type="text"
+                                  name="category-skema"
+                                />
+                                <div
+                                  class="text-danger error_tambah_nama_skema"
+                                ></div>
+                              </div>
+                              <div class="col-md-12">
+                                <label class="control-label">Deskripsi</label>
+                                <input
+                                  class="form-control form-white tambah_deskripsi"
+                                  placeholder="Masukkan Deskripsi"
+                                  type="text"
+                                  name="category-deskripsi"
+                                />
+                                <div
+                                  class="text-danger error_tambah_deskripsi"
+                                ></div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-danger waves-effect"
+                            data-dismiss="modal"
+                          >
+                            Tutup
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-info waves-effect waves-light simpan_data_skema"
+                          >
+                            Simpan
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- #/ container -->
       </div>
-      <!--**********************************
-            Content body end
-        ***********************************-->
-
-      <!--**********************************
-            Footer start
-        ***********************************-->
-      <!-- <div class="footer">
-            <div class="copyright">
-                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
-            </div>
-        </div> -->
-      <!--**********************************
-            Footer end
-        ***********************************-->
+      <!-- #/ container -->
     </div>
-    <!--**********************************
-        Main wrapper end
-    ***********************************-->
-
-    <!--**********************************
-        Scripts
-    ***********************************-->
     <script src="plugins/common/common.min.js"></script>
     <script src="js/custom.min.js"></script>
     <script src="js/settings.js"></script>
@@ -519,5 +387,122 @@
     <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
     <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
     <script src="./js/custom_new.js"></script>
+    <script>
+      $(".simpan_data_skema").on("click", function () {
+        var isValid = true;
+
+        var skema = $(".tambah_nama_skema").val();
+        if (skema === "") {
+          $(".error_tambah_nama_skema").text(
+            "Masukkan nama skema terlebih dahulu"
+          );
+          isValid = false;
+        } else {
+          $(".error_tambah_nama_skema").text("");
+        }
+
+        var deskripsi = $(".tambah_deskripsi").val();
+        if (deskripsi === "") {
+          $(".error_tambah_deskripsi").text(
+            "Masukkan deskripsi terlebih dahulu"
+          );
+          isValid = false;
+        } else {
+          $(".error_tambah_deskripsi").text("");
+        }
+
+        if (isValid) {
+          swal(
+            {
+              title: "Pastikan Data Telah Benar?",
+              type: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#7066e0",
+              confirmButtonText: "Ya, Lanjutkan Simpan",
+              closeOnConfirm: false,
+            },
+            function () {
+              swal("Berhasil !!", "Data Berhasil Di Simpan", "success");
+              var row_data_skema = `
+                <tr class="row_data_skema">
+                  <td>${skema}</td>
+                  <td>${deskripsi}</td>
+                  <td>
+                    <span>
+                      <button class="badge bg-green" data-toggle="modal" data-target="#edit-skema" data-placement="top" title="Edit">
+                        <i class="fa fa-pencil m-r-5" style="color: white"></i>
+                      </button>
+                    </span>
+                  </td>
+                </tr>`;
+              $(".row_data_panitia").append(row_data_skema);
+
+              // Close the modal
+              $("#tambah_data_skema").modal("hide");
+            }
+          );
+        }
+      });
+
+      $(".update_data_deskripsi").on("click", function () {
+        console.log("testing");
+        var skema = $(".update_nama_skema").val();
+        var isValid = true;
+
+        if (skema === "") {
+          $(".error_update_nama_skema").text(
+            "Masukkan nama skema terlebih dahulu"
+          );
+          isValid = false;
+        } else {
+          $(".error_update_nama_skema").text("");
+        }
+
+        var deskripsi = $(".update_deskripsi").val();
+        if (deskripsi === "") {
+          $(".error_update_deskripsi").text(
+            "Masukkan deskripsi terlebih dahulu"
+          );
+          isValid = false;
+        } else {
+          $(".error_update_deskripsi").text("");
+        }
+
+        if (isValid) {
+          swal(
+            {
+              title: "Pastikan Data Telah Benar?",
+              type: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#7066e0",
+              confirmButtonText: "Ya, Lanjutkan Simpan",
+              closeOnConfirm: false,
+            },
+            function () {
+              // Add your logic to save data here
+              swal("Berhasil !!", "Data Berhasil Di Simpan", "success");
+              $(".row_1_data_panitia").remove();
+              // Example: Add a new row to a table (if needed)
+              var row_data_skema = `
+                <tr class="row_data_skema">
+                  <td>${skema}</td>
+                  <td>${deskripsi}</td>
+                  <td>
+                    <span>
+                      <button class="badge bg-green" data-toggle="modal" data-target="#update_data_skema" data-placement="top" title="Edit">
+                        <i class="fa fa-pencil m-r-5" style="color: white"></i>
+                      </button>
+                    </span>
+                  </td>
+                </tr>`;
+              $(".row_data_panitia").append(row_data_skema);
+
+              // Close the modal
+              $("#update_data_skema").modal("hide");
+            }
+          );
+        }
+      });
+    </script>
   </body>
 </html>
