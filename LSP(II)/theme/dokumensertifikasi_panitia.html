@@ -285,7 +285,7 @@
                           <td>MET.000.0070322015</td>
                           <td>Database Programming Supervisor</td>
                           <td id="tanggal_berlaku_supervisor">
-                            06 Agustus 2024
+                            02 Agustus 2024
                           </td>
                           <td><a href="ttd.pdf">ttd.pdf</a></td>
                           <td>
@@ -479,7 +479,7 @@
                                   </div>
 
                                   <!-- Tanggal Berlaku Input -->
-                                  <div class="col-md-12">
+                                  <!-- <div class="col-md-12">
                                     <label class="control-label"
                                       >Tanggal Berlaku</label
                                     >
@@ -507,7 +507,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                  </div>
+                                  </div> -->
 
                                   <!-- Tanggal Habis Berlaku Input -->
                                   <div class="col-md-12">
@@ -744,15 +744,7 @@
           $(".error_category-jenis_sk").text("").hide();
         }
 
-        var tanggal_berlaku = $("input[name='tanggal_berlaku']").val();
-        if (tanggal_berlaku === "") {
-          $(".error_tanggal_berlaku")
-            .text("Masukkan tanggal berlaku terlebih dahulu")
-            .show();
-          isValid = false;
-        } else {
-          $(".error_tanggal_berlaku").text("").hide();
-        }
+       
 
         var tanggal_habis_berlaku = $(
           "input[name='tanggal_habis_berlaku']"
@@ -796,7 +788,7 @@
           <td>${inisial}</td>
           <td>MET.000.0070322015</td>
           <td>${category_jenis_sk}</td>
-          <td>${tanggal_berlaku}</td>
+          <td id="tanggal_berlaku_supervisor">${tanggal_habis_berlaku}</td>
           <td><a href="ttd.pdf">${fileName}</td>
           <td>
             <span>
@@ -819,19 +811,12 @@
         }
       });
       // Initialize datepicker with today's date
-      $(".tanggal_dibuka")
-        .datepicker({
-          autoclose: true,
-          format: "dd-mm-yyyy",
-        })
-        .datepicker("setDate", "06-08-2027");
-
       $(".tanggal_ditutup")
         .datepicker({
           autoclose: true,
           format: "dd-mm-yyyy",
         })
-        .datepicker("setDate", "06-08-2027");
+        .datepicker("setDate", "02-08-2024");
     </script>
   </body>
 </html>

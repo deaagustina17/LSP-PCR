@@ -246,13 +246,6 @@
           </ul>
         </div>
       </div>
-      <!--**********************************
-            Sidebar end
-        ***********************************-->
-
-      <!--**********************************
-            Content body start
-        ***********************************-->
       <div class="content-body">
         <div class="container-fluid">
           <div class="row mb-3">
@@ -410,38 +403,39 @@
                             style="height: 50% !important"
                             style="height: 50% !important"
                           >
-                          <option value="">Pilih Asesor</option>
-                          <option value="AGN">AGN</option>
-                          <option value="AGS">AGS</option>
-                          <option value="ATD">ATD</option>
-                          <option value="ARW">ARW</option>
-                          <option value="AYU">AYU</option>
-                          <option value="CYN">CYN</option>
-                          <option value="DNS">DNS</option>
-                          <option value="EDL">EDL</option>
-                          <option value="HAZ">HAZ</option>
-                          <option value="HMD">HMD</option>
-                          <option value="HDN">HDN</option>
-                          <option value="HRY">HRY</option>
-                          <option value="JJJ">JJJ</option>
-                          <option value="JNS">JNS</option>
-                          <option value="JUP">JUP</option>
-                          <option value="MEL">MEL</option>
-                          <option value="MPZ">MPZ</option>
-                          <option value="MMN">MMN</option>
-                          <option value="MUZ">MUZ</option>
-                          <option value="NHD">NHD</option>
-                          <option value="NOP">NOP</option>
-                          <option value="RMT">RMT</option>
-                          <option value="RMT">RNS</option>
-                          <option value="RPS">RPS</option>
-                          <option value="SRH">SRH</option>
-                          <option value="TAF">TAF</option>
-                          <option value="TNR">TNR</option>
-                          <option value="ULI">ULI</option>
-                          <option value="WIN">WIN</option>
-                          <option value="YEF">YEF</option>
-                          <option value="YUL">YUL</option>
+                            <option value="">Pilih Asesor</option>
+                            <option value="AGN">AGN</option>
+                            <option value="AGS">AGS</option>
+                            <option value="ATD">ATD</option>
+                            <option value="ARW">ARW</option>
+                            <option value="AYU">AYU</option>
+                            <option value="CYN">CYN</option>
+                            <option value="DNS">DNS</option>
+                            <option value="EDL">EDL</option>
+                            <option value="HAZ">HAZ</option>
+                            <option value="HMD">HMD</option>
+                            <option value="HDN">HDN</option>
+                            <option value="HRY">HRY</option>
+                            <option value="JJJ">JJJ</option>
+                            <option value="JNS">JNS</option>
+                            <option value="JUP">JUP</option>
+                            <option value="MEL">MEL</option>
+                            <option value="MPZ">MPZ</option>
+                            <option value="MMN">MMN</option>
+                            <option value="MUZ">MUZ</option>
+                            <option value="NHD">NHD</option>
+                            <option value="NOP">NOP</option>
+                            <option value="RMT">RMT</option>
+                            <option value="RMT">RNS</option>
+                            <option value="RPS">RPS</option>
+                            <option value="SGP">SGP</option>
+                            <option value="SRH">SRH</option>
+                            <option value="TAF">TAF</option>
+                            <option value="TNR">TNR</option>
+                            <option value="ULI">ULI</option>
+                            <option value="WIN">WIN</option>
+                            <option value="YEF">YEF</option>
+                            <option value="YUL">YUL</option>
                           </select>
                         </div>
                         <div class="col-1">
@@ -481,8 +475,8 @@
                             <tr class="row_1_dea_agustina">
                               <td>1</td>
                               <td>Teknisi Madya Jaringan Komputer</td>
-                              <td>Nia Novalia</td>
-                              <td>DNS</td>
+                              <td>Awang Badriya</td>
+                              <td>CYN</td>
                               <td>Selasa</td>
                               <td>26 Maret 2024</td>
                               <td>14.00</td>
@@ -699,7 +693,7 @@
                                       </div>
                                       <div class="col-md-12">
                                         <label class="control-label"
-                                          >Tanggal SK</label
+                                          >Tanggal</label
                                         >
                                         <div class="row">
                                           <div class="col-md-8">
@@ -741,7 +735,7 @@
                                               <input
                                                 type="text"
                                                 class="form-control"
-                                                value="13:14"
+                                                value="14:00"
                                                 name="category-waktu"
                                               />
                                               <span class="input-group-append"
@@ -830,7 +824,7 @@
                                           >Bidang</label
                                         >
                                         <select
-                                          class="form-control form-white bidang_assesor"
+                                          class="form-control form-white bidang_assesor_edit"
                                           data-placeholder="Bidang"
                                           name="category-bidang_1"
                                         >
@@ -849,8 +843,8 @@
                                             Programmer
                                           </option>
                                           <option
-                                            selected
                                             value="Teknisi Madya Jaringan Komputer"
+                                            selected
                                           >
                                             Teknisi Madya Jaringan Komputer
                                           </option>
@@ -891,6 +885,16 @@
                                           name="category-asesi_1"
                                         >
                                           <option value="">Select Asesi</option>
+                                          <option
+                                            value="Awang Badriya"
+                                            selected
+                                          >
+                                            Awang Badriya
+                                          </option>
+                                          <option value="Muhammad Ababil">
+                                            Muhammad Ababil
+                                          </option>
+
                                           <!-- Add options here -->
                                         </select>
                                         <div
@@ -902,25 +906,16 @@
                                           >Asesor</label
                                         >
                                         <select
-                                          class="form-control form-white"
+                                          class="form-control form-white edit_pilih_assesor"
                                           data-placeholder="Jenis SK"
                                           name="category-asesor_1"
                                         >
-                                          <option value="">
-                                            Select Asesor
+                                          <option value="">Pilih Asesor</option>
+                                          <option value="CYN" selected>
+                                            CYN
                                           </option>
-                                          <option value="AGN">AGN</option>
-                                          <option value="ATD">ATD</option>
-                                          <option value="ARW">ARW</option>
-                                          <option value="AYU">AYU</option>
-                                          <option value="DNS" selected>
-                                            DNS
-                                          </option>
-                                          <option value="EDL">EDL</option>
-                                          <option value="HAZ">HAZ</option>
-                                          <option value="HMD">HMD</option>
-                                          <option value="HDN">HDN</option>
-                                          <option value="HRY">HRY</option>
+                                          <option value="NOP">NOP</option>
+                                          <option value="YUL">YUL</option>
                                         </select>
                                         <div
                                           class="text-danger error_input_asesor_1"
@@ -928,7 +923,7 @@
                                       </div>
                                       <div class="col-md-12">
                                         <label class="control-label"
-                                          >Tanggal SK</label
+                                          >Tanggal</label
                                         >
                                         <div class="row">
                                           <div class="col-md-8">
@@ -936,7 +931,7 @@
                                               <div class="input-group">
                                                 <input
                                                   type="text"
-                                                  class="form-control datepicker-autoclose"
+                                                  class="form-control datepicker-autoclose tanggal_asesmen"
                                                   placeholder="mm/dd/yyyy"
                                                   name="category-tanggal-sk_1"
                                                 />
@@ -972,7 +967,7 @@
                                               <input
                                                 type="text"
                                                 class="form-control"
-                                                value="13:14"
+                                                value="14:00"
                                                 name="category-waktu_1"
                                               />
                                               <span class="input-group-append">
@@ -1169,6 +1164,7 @@
           $selectAssesor.append(
             '<option value="Lely Freti">Lely Freti</option>'
           );
+          pilih_asesor.append('<option value="SGP">SGP</option>');
           pilih_asesor.append('<option value="RMT">RMT</option>');
           pilih_asesor.append('<option value="ULI">ULI</option>');
           pilih_asesor.append('<option value="HAZ">HAZ</option>');
@@ -1513,18 +1509,105 @@
         });
       });
 
-      var $selectAssesor = $(".edit_select_asesor");
+      // bidang assesor edit_asesor
+      $(".bidang_assesor_edit").on("change", function () {
+        var bidang = $(this).val();
+        var $selectAssesor = $(".edit_select_asesor");
+        var pilih_asesor = $(".edit_pilih_assesor");
 
-      // Clear previous options
-      $selectAssesor.empty();
+        // Clear previous options
+        $selectAssesor.empty();
+        pilih_asesor.empty();
 
-      // Add default option
-      $selectAssesor.append(
-        '<option value="Miftahul Ajmy">Miftahul Ajmy</option>'
-      );
-      $selectAssesor.append(
-        '<option value="Dea Agustina" selected>Nia Novalia</option>'
-      );
+        // Add default option
+        $selectAssesor.append('<option value="">Pilih Asesi</option>');
+        pilih_asesor.append('<option vaklue="">Pilih Asesor</option>');
+
+        // Add options based on selected bidang
+        if (bidang === "Database Programming Supervisor") {
+          $selectAssesor.append(
+            '<option value="Dea Agustina">Dea Agustina</option>'
+          );
+          $selectAssesor.append(
+            '<option value="Miftahul Ajmy">Miftahul Ajmy</option>'
+          );
+          pilih_asesor.append('<option value="ATD">ATD</option>');
+          pilih_asesor.append('<option value="DNS">DNS</option>');
+          pilih_asesor.append('<option value="MEL">MEL</option>');
+          pilih_asesor.append('<option value="JNS">JNS</option>');
+        } else if (bidang === "Network Administrator Muda") {
+          $selectAssesor.append(
+            '<option value="Nia Novalia">Nia Novalia</option>'
+          );
+          $selectAssesor.append(
+            '<option value="Lely Freti">Lely Freti</option>'
+          );
+          pilih_asesor.append('<option value="SGP">SGP</option>');
+          pilih_asesor.append('<option value="RMT">RMT</option>');
+          pilih_asesor.append('<option value="ULI">ULI</option>');
+          pilih_asesor.append('<option value="HAZ">HAZ</option>');
+        } else if (bidang === "Programmer") {
+          $selectAssesor.append(
+            '<option value="Haluke Alberta">Haluke Alberta</option>'
+          );
+          $selectAssesor.append('<option value="Nadiyah">Nadiyah</option>');
+          pilih_asesor.append('<option value="RPS">RPS</option>');
+          pilih_asesor.append('<option value="IDI">IDI</option>');
+          pilih_asesor.append('<option value="SRH">SRH</option>');
+          pilih_asesor.append('<option value="MMN">MMN</option>');
+          pilih_asesor.append('<option value="WIN">WIN</option>');
+        } else if (bidang === "Teknisi Madya Jaringan Komputer") {
+          $selectAssesor.append(
+            '<option value="Awang Badriya">Awang Badriya</option>'
+          );
+          $selectAssesor.append(
+            '<option value="Muhammad Ababil">Muhammad Ababil</option>'
+          );
+          pilih_asesor.append('<option value="CYN">CYN</option>');
+          pilih_asesor.append('<option value="NOP">NOP</option>');
+          pilih_asesor.append('<option value="YUL">YUL</option>');
+        } else if (
+          bidang ===
+          "Pengoperasian Peralatan Kelistrikan Dan Elektronika Berbasis Programmable Logic Controller (PLC)"
+        ) {
+          $selectAssesor.append('<option value="Novendi">Novendi</option>');
+          $selectAssesor.append(
+            '<option value="Mardiansyah">Mardiansyah</option>'
+          );
+          pilih_asesor.append('<option value="TNR">TNR</option>');
+          pilih_asesor.append('<option value="MUZ">MUZ</option>');
+          pilih_asesor.append('<option value="AGN">AGN</option>');
+          pilih_asesor.append('<option value="HDN">HDN</option>');
+          pilih_asesor.append('<option value="JJJ">JJJ</option>');
+          pilih_asesor.append('<option value="EDL">EDL</option>');
+        } else if (bidang === "Plate Welder") {
+          $selectAssesor.append('<option value="Alvin">Alvin</option>');
+          $selectAssesor.append('<option value="Septiady">Septiady</option>');
+          pilih_asesor.append('<option value="JUP">JUP</option>');
+          pilih_asesor.append('<option value="AGS">AGS</option>');
+          pilih_asesor.append('<option value="RNS">RNS</option>');
+        } else if (bidang === "Pengoperasian Instrumentasi Proses Kontrol") {
+          $selectAssesor.append('<option value="Boby">Boby</option>');
+          $selectAssesor.append('<option value="Hartanto">Hartanto</option>');
+          pilih_asesor.append('<option value="NHD">NHD</option>');
+          pilih_asesor.append('<option value="EDL">EDL</option>');
+        } else if (bidang === "Teknisi Akuntansi Pratama") {
+          $selectAssesor.append('<option value="Taufik">Taufik</option>');
+          $selectAssesor.append('<option value="Amelia">Amelia</option>');
+          pilih_asesor.append('<option value="NHD">YEF</option>');
+          pilih_asesor.append('<option value="EDL">TAF</option>');
+        } else if (bidang === "bidang9") {
+          $selectAssesor.append('<option value="Putri">Putri</option>');
+          $selectAssesor.append('<option value="Kartika">Kartika</option>');
+        }
+      });
+      //tanggal_asesmen
+      $(".tanggal_asesmen")
+        .datepicker({
+          autoclose: true,
+          format: "dd-mm-yyyy",
+        })
+        .datepicker("setDate", "26 03 2024");
     </script>
   </body>
 </html>
