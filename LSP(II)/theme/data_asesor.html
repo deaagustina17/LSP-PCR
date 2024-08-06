@@ -179,14 +179,14 @@
                 <span class="nav-text">Laporan Asesmen</span>
               </a>
             </li> -->
-            <li>
+            <!-- <li>
               <a
                 href="dokumensertifikasiasesor_asesor.html"
                 aria-expanded="false"
               >
                 <span class="nav-text">Dokumen Sertifikasi Asesor</span>
               </a>
-            </li>
+            </li> -->
             <li>
               <a href="banding_asesor.html" aria-expanded="false">
                 <span class="nav-text">Banding Atas Keputusan Sertifikasi</span>
@@ -513,10 +513,110 @@
                           </tbody>
                         </table>
                       </div>
-                      <button
-                        class="btn btn-success mb-3 button_tambah_pengalaman_pelatihan1"
-                        type="button"
-                      >
+                      <h5>d. Dokumen Sertifikasi Asesor</h5>
+                      <div class="table-responsive">
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>Skema</th>
+                              <th>Tanggal Habis Berlaku</th>
+                              <th>Upload</th>
+                              <th>Aksi</th>
+                            </tr>
+                          </thead>
+                          <tbody class="row_pengalaman_pelatihan1">
+                            <tr>
+                              <td>
+                                <div class="col-lg-12">
+                                  <select
+                                    class="form-control form-white bidang_assesor"
+                                    data-placeholder="Bidang"
+                                    name="category-bidang"
+                                  >
+                                    <option value="">Pilih Bidang</option>
+                                    <option
+                                      value="Database Programming Supervisor"
+                                    >
+                                      Database Programming Supervisor
+                                    </option>
+                                    <option value="Network Administrator Muda">
+                                      Network Administrator Muda
+                                    </option>
+                                    <option value="Programmer">
+                                      Programmer
+                                    </option>
+                                    <option
+                                      value="Teknisi Madya Jaringan Komputer"
+                                    >
+                                      Teknisi Madya Jaringan Komputer
+                                    </option>
+                                    <option
+                                      value="Pengoperasian Peralatan Kelistrikan
+                                          Dan Elektronika Berbasis
+                                          Programmable Logic Controller (PLC)"
+                                    >
+                                      Pengoperasian Peralatan Kelistrikan Dan
+                                      Elektronika Berbasis Programmable Logic
+                                      Controller (PLC)
+                                    </option>
+                                    <option value="Plate Welder">
+                                      Plate Welder
+                                    </option>
+                                    <option
+                                      value="Pengoperasian Instrumentasi Proses
+                                          Kontrol"
+                                    >
+                                      Pengoperasian Instrumentasi Proses Kontrol
+                                    </option>
+                                    <option value="Teknisi Akuntansi Pratama">
+                                      Teknisi Akuntansi Pratama
+                                    </option>
+                                    <!-- <option value="bidang9">
+                                            Welding Inspector Standar
+                                          </option> -->
+                                  </select>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-lg-12">
+                                  <div class="input-group">
+                                    <input
+                                      type="text"
+                                      class="form-control datepicker-autoclose"
+                                      id="datepicker-autoclose"
+                                      placeholder="mm/dd/yyyy"
+                                    />
+                                    <span class="input-group-append"
+                                      ><span class="input-group-text"
+                                        ><i
+                                          class="mdi mdi-calendar-check"
+                                        ></i></span
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="text-danger error_input_tgl_lahir"
+                                  ></div>
+                                </div>
+                              </td>
+
+                              <td>
+                                <div class="button-icon">
+                                  <input
+                                    type="file"
+                                    class="form-control"
+                                    id="exampleFormControlFile1"
+                                    accept="image/*"
+                                  />
+                                </div>
+                              </td>
+                              <td>
+                                <button class="btn btn-danger">Hapus</button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <button class="btn btn-success mb-3" type="button">
                         Tambah Pengalaman Pelatihan
                       </button>
                     </form>
