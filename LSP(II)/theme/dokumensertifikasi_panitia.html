@@ -287,7 +287,7 @@
                           <td id="tanggal_berlaku_supervisor">
                             02 Agustus 2024
                           </td>
-                          <td><a href="ttd.pdf">ttd.pdf</a></td>
+                          <td><a href="">ttd.pdf</a></td>
                           <td>
                             <span>
                               <button
@@ -410,7 +410,9 @@
 
                                   <!-- Nomor Regis Input -->
                                   <div class="col-md-12">
-                                    <label class="control-label">Nomor Registrasi</label>
+                                    <label class="control-label"
+                                      >Nomor Registrasi</label
+                                    >
                                     <input
                                       class="form-control form-white nomor_atd"
                                       type="text"
@@ -726,9 +728,7 @@
 
         var nomor = $("input[name='nomor']").val();
         if (nomor === "") {
-          $(".error_nomor_atd")
-            .text("Masukkan nomor terlebih dahulu")
-            .show();
+          $(".error_nomor_atd").text("Masukkan nomor terlebih dahulu").show();
           isValid = false;
         } else {
           $(".error_nomor_atd").text("").hide();
@@ -743,8 +743,6 @@
         } else {
           $(".error_category-jenis_sk").text("").hide();
         }
-
-       
 
         var tanggal_habis_berlaku = $(
           "input[name='tanggal_habis_berlaku']"
@@ -789,7 +787,7 @@
           <td>MET.000.0070322015</td>
           <td>${category_jenis_sk}</td>
           <td id="tanggal_berlaku_supervisor">${tanggal_habis_berlaku}</td>
-          <td><a href="ttd.pdf">${fileName}</td>
+          <td><a href="tandatangan_admin.pdf">${fileName}</td>
           <td>
             <span>
               <button class="badge bg-green" data-toggle="modal" data-target="#add-edit" data-placement="top" title="Edit">
