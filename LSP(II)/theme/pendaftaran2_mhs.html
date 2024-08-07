@@ -198,7 +198,7 @@
         <div class="container-fluid">
           <div class="card">
             <div class="container-xxl flex-grow-1 container-p-y">
-              <div class="row">
+              <div class="row mx-1">
                 <div class="col-md-12">
                   <ul class="nav nav-pills flex-column flex-md-row mb-3">
                     <li class="nav-item">
@@ -228,30 +228,37 @@
                           <h5>Asesmen Mandiri</h5>
                           <div class="col-lg-12">
                             <div class="table-responsive">
+                              <table style="border-collapse: collapse; width: 100%;" class="border">
+                                <tr>
+                                  <th style="border: none;" align="justify" rowspan="2" width="25%">Unit Kompetensi:</th>
+                                    <th style="border: none;" align="justify">Kode Unit</th>
+                                    <th style="border: none;" align="justify">:</th>
+                                    <th style="border: none;" align="justify">J.620100.009.01</th>
+                                </tr>
+                                <tr>
+                                    <th style="border: none;" align="justify">Judul Unit</th>
+                                    <th style="border: none;" align="justify">:</th>
+                                    <th style="border: none;" align="justify">Menggunakan spesifikasi
+                                      program</th>
+                                </tr>
+                            </table>
                               <table
-                                class="table table-bordered table-striped verticle-middle"
+                                class="table table-bordered table-striped verticle-middle border" border="1"
                               >
                                 <thead>
-                                  <tr>
-                                    <th rowspan="2">Unit Kompetensi:</th>
-                                    <th colspan="2">
-                                      Kode Unit: J.620100.009.01
-                                    </th>
-                                  </tr>
-                                  <tr>
-                                    <th>
-                                      Judul Unit: Menggunakan spesifikasi
-                                      program
-                                    </th>
-                                  </tr>
-
                                   <tr>
                                     <th>
                                       Dapatkah saya membuat dokumen kode program
                                     </th>
                                     <th>K</th>
                                     <th>BK</th>
-                                    <th>Bukti Relavan</th>
+                                    <th width="20%" align="center" style="width: 20%;text-align: center; vertical-align: middle; 
+                                    padding: 10px;">Bukti Relavan
+                                      <br> <input type="checkbox" id="transkip_multi" name="options" value="transkip_multi" onclick="handleMultiCheckbox(this, 'transkip', 'sertifikat')">
+                                      <span class="mx-1">Transkip</span>
+                                      <input type="checkbox" id="sertifikat_multi" name="options" value="sertifikat_multi" onclick="handleMultiCheckbox(this, 'sertifikat', 'transkip')">
+                                      <span class="mx-1">Sertifikat</span> 
+                                    </th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -290,15 +297,11 @@
                                         </label>
                                       </div>
                                     </td>
-                                    <td>
-                                      <div class="col-lg-12">
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                          id="val-buktirelavan"
-                                          name="val-buktirelavan"
-                                        />
-                                      </div>
+                                    <td width="20%" align="center">
+                                        <input type="checkbox" id="transkip" name="option" value="HTML" onclick="onlyOne(this)">
+                                        <span class="mx-1">Transkip</span>
+                                         <input type="checkbox" id="sertifikat" name="option" value="CSS" onclick="onlyOne(this)">
+                                         <span class="mx-1">Sertifikat</span>
                                     </td>
                                   </tr>
 
@@ -339,16 +342,12 @@
                                         </label>
                                       </div>
                                     </td>
-                                    <td>
-                                      <div class="col-lg-12">
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                          id="val-buktirelavan"
-                                          name="val-buktirelavan"
-                                        />
-                                      </div>
-                                    </td>
+                                    <td width="20%" align="center">
+                                      <input type="checkbox" id="transkip" name="option1" value="HTML" onclick="onlyOne1(this)">
+                                      <span class="mx-1">Transkip</span>
+                                       <input type="checkbox" id="sertifikat" name="option1" value="CSS" onclick="onlyOne1(this)">
+                                       <span class="mx-1">Sertifikat</span>
+                                  </td>
                                   </tr>
 
                                   <tr>
@@ -389,22 +388,191 @@
                                         </label>
                                       </div>
                                     </td>
-                                    <td>
-                                      <div class="col-lg-12">
-                                        <input
-                                          type="text"
-                                          class="form-control"
-                                          id="val-buktirelavan"
-                                          name="val-buktirelavan"
-                                        />
-                                      </div>
-                                    </td>
+                                    <td width="20%" align="center">
+                                      <input type="checkbox" id="transkip" name="option2" value="HTML" onclick="onlyOne2(this)">
+                                      <span class="mx-1">Transkip</span>
+                                       <input type="checkbox" id="sertifikat" name="option2" value="CSS" onclick="onlyOne2(this)">
+                                       <span class="mx-1">Sertifikat</span>
+                                  </td>
                                   </tr>
                                 </tbody>
                               </table>
                             </div>
                           </div>
                           <br />
+                          <div class="col-lg-12">
+                            <div class="table-responsive">
+                              <table style="border-collapse: collapse; width: 100%;" class="border">
+                                <tr>
+                                    <th style="border: none;" align="justify" rowspan="2" width="25%">Unit Kompetensi:</th>
+                                    <th style="border: none;" align="justify">Kode Unit</th>
+                                    <th style="border: none;" align="justify">:</th>
+                                    <th style="border: none;" align="justify">J.620100.009.01</th>
+                                </tr>
+                                <tr>
+                                    <th style="border: none;" align="justify">Judul Unit</th>
+                                    <th style="border: none;" align="justify">:</th>
+                                    <th style="border: none;" align="justify">Menulis Kode dengan Prinsip sesuai Guidelines dan Best Practices</th>
+                                </tr>
+                            </table>
+                              <table
+                                class="table table-bordered table-striped verticle-middle border" border="1"
+                              >
+                                <thead>
+                                  <tr>
+                                    <th>
+                                      Dapatkah saya membuat dokumen kode program
+                                    </th>
+                                    <th>K</th>
+                                    <th>BK</th>
+                                    <th width="20%" align="center" style="width: 20%;text-align: center; vertical-align: middle; 
+                                    padding: 10px;">Bukti Relavan
+                                      <br> <input type="checkbox" id="transkip_multi" name="options" value="transkip_multi" onclick="handleMultiCheckbox(this, 'transkip', 'sertifikat')">
+                                      <span class="mx-1">Transkip</span>
+                                      <input type="checkbox" id="sertifikat_multi" name="options" value="sertifikat_multi" onclick="handleMultiCheckbox(this, 'sertifikat', 'transkip')">
+                                      <span class="mx-1">Sertifikat</span> 
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      1. Elemen: Menggunakan metode pengembangan
+                                      program <br />
+                                      ● Kriteria Unjuk Kerja: <br />
+                                      1.1 Metode pengembangan aplikasi (software
+                                      development) didefinisikan. <br />
+                                      1.2 Metode pengembangan aplikasi (software
+                                      development) dipilih sesuai kebutuhan.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox1"
+                                            checked
+                                            name="checkbox1"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox2"
+                                            name="checkbox2"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td width="20%" align="center">
+                                        <input type="checkbox" id="transkip" name="option" value="HTML" onclick="onlyOne(this)">
+                                        <span class="mx-1">Transkip</span>
+                                         <input type="checkbox" id="sertifikat" name="option" value="CSS" onclick="onlyOne(this)">
+                                         <span class="mx-1">Sertifikat</span>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      2. Elemen: Menggunakan diagram program dan
+                                      deskripsi program <br />
+                                      ● Kriteria Unjuk Kerja: <br />
+                                      2.1. Diagram program dengan metodologi
+                                      pengembangan sistem didefinisikan. <br />
+                                      2.2. Metode pemodelan, diagram objek dan
+                                      diagram komponen digunakan pada
+                                      implementasi program sesuai dengan
+                                      spesifikasi.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox3"
+                                            checked
+                                            name="checkbox3"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox4"
+                                            name="checkbox4"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td width="20%" align="center">
+                                      <input type="checkbox" id="transkip" name="option1" value="HTML" onclick="onlyOne1(this)">
+                                      <span class="mx-1">Transkip</span>
+                                       <input type="checkbox" id="sertifikat" name="option1" value="CSS" onclick="onlyOne1(this)">
+                                       <span class="mx-1">Sertifikat</span>
+                                  </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      3. Elemen: Menerapkan hasil pemodelan ke
+                                      dalam pengembangan program <br />
+                                      ● Kriteria Unjuk Kerja: <br />
+                                      3.1. Hasil pemodelan yang mendukung
+                                      kemampuan metodologi dipilih sesuai
+                                      spesifikasi. <br />
+                                      3.2. Hasil pemrograman (Integrated
+                                      Development Environment-IDE) yang
+                                      mendukung kemampuan metodologi bahasa
+                                      pemrograman dipilih sesuai spesifikasi.
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox5"
+                                            checked
+                                            name="checkbox5"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div class="form-check mb-3">
+                                        <label class="form-check-label">
+                                          <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            id="checkbox6"
+                                            name="checkbox6"
+                                          />
+                                        </label>
+                                      </div>
+                                    </td>
+                                    <td width="20%" align="center">
+                                      <input type="checkbox" id="transkip" name="option2" value="HTML" onclick="onlyOne2(this)">
+                                      <span class="mx-1">Transkip</span>
+                                       <input type="checkbox" id="sertifikat" name="option2" value="CSS" onclick="onlyOne2(this)">
+                                       <span class="mx-1">Sertifikat</span>
+                                  </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+
                           <div class="col-lg-12">
                             <div class="table-responsive">
                               <table
@@ -2213,80 +2381,91 @@
                   </div>
                 </div>
 
-                <div class="card-body">
+                <div class="col-12">
+                  <b>Rekomendasi Untuk Asesi :</b><br />
+                  <input
+                    type="radio"
+                    id="html"
+                    name="fav_language"
+                    value="HTML"
+                  />
+                  <label for="dapat">Asesmen dapat dilanjutkan</label>
+
+                  <input
+                    type="radio"
+                    id="css"
+                    name="fav_language"
+                    value="CSS"
+                  />
+                  <label for="tidak_dapat"
+                    >Asesmen tidak dapat dilanjutkan</label
+                  >
+                </div>
+                <div class="col-lg-6 mt-1">
                   <div class="form-group row">
-                    <label class="col-sm-2 col-form-label"
-                      >Tanda Tangan Asesi <span class="text-danger">*</span>
-                    </label>
+                    <label class="col-sm-4 col-form-label"
+                      >Tanda Tangan Asesi</label
+                    >
                     <div class="button-icon">
                       <input
                         type="file"
-                        class="form-control-file"
-                        id="exampleFormControlFile_asesi"
-                        accept="pdf"
-                        onchange="wajib_pdf(this)"
+                        class="form-control border"
+                        id="exampleFormControlFile1"
+                        accept="application/pdf, image/*"
+                        onchange="wajib_pdf_ditampilkan(this)"
                       />
-                      <div
-                        id="error_exampleFormControlFile_asesi"
-                        class="text-danger"
-                      ></div>
                     </div>
-
-                    <label class="col-sm-2 col-form-label">Tanggal</label>
-                    <div class="col-md-4">
-                      <div class="example">
-                        <div class="input-group">
-                          <input
-                            type="text"
-                            class="form-control datepicker-autoclose"
-                            placeholder="mm/dd/yyyy"
-                          />
-                          <span class="input-group-append"
-                            ><span class="input-group-text"
-                              ><i class="mdi mdi-calendar-check"></i></span
-                          ></span>
-                        </div>
+                  </div>
+                  <div id="fileViewer" style="margin-top: 2px"></div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Tanggal</label>
+                    <div class="col-sm-8 input-group">
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control datepicker-autoclose"
+                          placeholder="mm/dd/yyyy"
+                        />
+                        <span class="input-group-append"
+                          ><span class="input-group-text"
+                            ><i class="mdi mdi-calendar-check"></i></span
+                        ></span>
                       </div>
                     </div>
                   </div>
+                </div>
+                <div class="col-lg-6">
                   <div class="form-group row">
-                    <label class="col-sm-2 col-form-label"
+                    <label class="col-sm-4 col-form-label"
                       >Tanda Tangan Asesor</label
                     >
-                    <div class="form-check mb-3">
-                      <label class="form-check-label">
-                        <input
-                          type="checkbox"
-                          class="form-check-input"
-                          value=""
-                        />Silahkan melakukan penceklisan</label
-                      >
-                    </div>
-
-                    <label class="col-sm-2 col-form-label">Tanggal</label>
-                    <div class="col-md-4">
-                      <div class="example">
-                        <div class="input-group">
-                          <input
-                            type="text"
-                            class="form-control datepicker-autoclose"
-                            placeholder="mm/dd/yyyy"
-                          />
-                          <span class="input-group-append"
-                            ><span class="input-group-text"
-                              ><i class="mdi mdi-calendar-check"></i></span
-                          ></span>
-                        </div>
+                    <div class="col-sm-8 input-group">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" />
+                        <label class="form-check-label"
+                          >Silahkan melakukan penceklisan</label
+                        >
                       </div>
                     </div>
                   </div>
-                  <div class="card-content">
-                    <div class="sweetalert m-t-30">
-                      <button
-                        class="btn btn-dark mb-2 btn sweet-message kirimpendaftaran2"
-                      >
-                        Kirim
-                      </button>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Tanggal</label>
+                    <div class="col-sm-8 input-group">
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control datepicker-autoclose"
+                          placeholder="mm/dd/yyyy"
+                        />
+                        <span class="input-group-append"
+                          ><span class="input-group-text"
+                            ><i class="mdi mdi-calendar-check"></i></span
+                        ></span>
+                      </div>
                     </div>
                   </div>
                 </div>

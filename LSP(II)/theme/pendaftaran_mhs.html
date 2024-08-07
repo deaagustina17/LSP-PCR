@@ -100,13 +100,6 @@
           />
         </span>
       </div>
-      <!--**********************************
-            Nav header end
-        ***********************************-->
-
-      <!--**********************************
-            Header start
-        ***********************************-->
       <div class="header">
         <div class="header-content clearfix">
           <div class="nav-control">
@@ -145,13 +138,6 @@
           </div>
         </div>
       </div>
-      <!--**********************************
-            Header end ti-comment-alt
-        ***********************************-->
-
-      <!--**********************************
-            Sidebar start
-        ***********************************-->
       <div class="nk-sidebar">
         <div class="nk-nav-scroll">
           <ul class="metismenu" id="menu">
@@ -184,13 +170,6 @@
           </ul>
         </div>
       </div>
-      <!--**********************************
-            Sidebar end
-        ***********************************-->
-
-      <!--**********************************
-            Content body start
-        ***********************************-->
       <div class="content-body">
         <div class="container-fluid">
           <div class="card">
@@ -682,27 +661,103 @@
                           ini.
                         </h6>
                         <h5>Tujuan</h5>
-                        <ul class="list-icons">
-                          <li>
-                            <i class="fa fa-chevron-right"></i>Sertifikasi
-                          </li>
-                          <li>
-                            <i class="fa fa-chevron-right"></i>Sertifikasi Ulang
-                          </li>
-                          <li>
-                            <i class="fa fa-chevron-right"></i>Pengakuan
-                            Kompetensi Terkini (PKT)
-                          </li>
-                          <li>
-                            <i class="fa fa-chevron-right"></i>Asesmen Pengakuan
-                            Kompetensi Terkini (PKT)
-                          </li>
-                          <li>
-                            <i class="fa fa-chevron-right"></i>Rekognisi
-                            Pembelajaran Lampau
-                          </li>
-                          <li><i class="fa fa-chevron-right"></i>Lainnya</li>
-                        </ul>
+                        <div class="row">
+                          <div class="col-4">
+                            <input
+                              disa
+                              type="checkbox"
+                              id="Sertifikasi"
+                              name="option"
+                              value="Tempat Kerja"
+                              onclick="onlyOne(this)"
+                            />
+                            <label for="Sertifikasi" class="mx-2"
+                              >Sertifikasi</label
+                            >
+                          </div>
+                          <div class="col-4">
+                            <input
+                              disabled
+                              type="checkbox"
+                              id="Sertifikasi Ulang"
+                              name="option"
+                              value="Sertifikasi Ulang"
+                              onclick="onlyOne(this)"
+                            />
+                            <label for="Sertifikasi Ulang" class="mx-2"
+                              >Sertifikasi Ulang</label
+                            >
+                          </div>
+                          <div class="col-4">
+                            <input
+                              disabled
+                              type="checkbox"
+                              id="Pengakuan Kompetensi Terkini (PKT)"
+                              name="option"
+                              value="Pengakuan Kompetensi Terkini (PKT)"
+                              onclick="onlyOne(this)"
+                            />
+                            <label
+                              for="Pengakuan Kompetensi Terkini (PKT)"
+                              class="mx-2"
+                              >Pengakuan Kompetensi Terkini (PKT)</label
+                            >
+                          </div>
+                          <div class="col-4">
+                            <input
+                              disabled
+                              type="checkbox"
+                              id="Asesmen Pengakuan Kompetensi Terkini (PKT)"
+                              name="option"
+                              value="Asesmen Pengakuan Kompetensi Terkini (PKT)"
+                              onclick="onlyOne(this)"
+                            />
+                            <label
+                              for="Asesmen Pengakuan Kompetensi Terkini (PKT)"
+                              class="mx-2"
+                              >Asesmen Pengakuan Kompetensi Terkini (PKT)</label
+                            >
+                          </div>
+                          <div class="col-4">
+                            <input
+                              disabled
+                              type="checkbox"
+                              id="Rekognisi Pembelajaran Lampau"
+                              name="option"
+                              value="Rekognisi Pembelajaran Lampau"
+                              onclick="onlyOne(this)"
+                            />
+                            <label
+                              for="Rekognisi Pembelajaran Lampau"
+                              class="mx-2"
+                              >Rekognisi Pembelajaran Lampau</label
+                            >
+                          </div>
+                          <div class="col-4">
+                            <input
+                              disabled
+                              type="checkbox"
+                              id="Lainnya"
+                              name="option"
+                              value="Lainnya"
+                              onclick="onlyOne(this)"
+                            />
+                            <label for="Lainnya" class="mx-2">Lainnya</label>
+                          </div>
+                          <div class="col-4">
+                            <input
+                              disabled
+                              type="checkbox"
+                              id="Sertifikasi"
+                              name="option"
+                              value="Tempat Kerja"
+                              onclick="onlyOne(this)"
+                            />
+                            <label for="Sertifikasi" class="mx-2"
+                              >Sertifikasi</label
+                            >
+                          </div>
+                        </div>
                         <h5>Daftar Unit Kompetensi sesuai kemasan:</h5>
                         <div class="col-lg-12">
                           <div class="table-responsive">
@@ -728,8 +783,9 @@
                                   <td>
                                     <select
                                       class="form-control"
-                                      id="val-pos"
-                                      name="val-pos"
+                                      id="val-pos-1"
+                                      name="val-pos-1"
+                                      disabled
                                     >
                                       <option value="001">SKKNI</option>
                                       <option value="002">
@@ -751,8 +807,9 @@
                                   <td>
                                     <select
                                       class="form-control"
-                                      id="val-pos"
-                                      name="val-pos"
+                                      id="val-pos-2"
+                                      name="val-pos-2"
+                                      disabled
                                     >
                                       <option value="001">SKKNI</option>
                                       <option value="002">
@@ -771,8 +828,9 @@
                                   <td>
                                     <select
                                       class="form-control"
-                                      id="val-pos"
-                                      name="val-pos"
+                                      id="val-pos-3"
+                                      name="val-pos-3"
+                                      disabled
                                     >
                                       <option value="001">SKKNI</option>
                                       <option value="002">
@@ -794,8 +852,9 @@
                                   <td>
                                     <select
                                       class="form-control"
-                                      id="val-pos"
-                                      name="val-pos"
+                                      id="val-pos-4"
+                                      name="val-pos-4"
+                                      disabled
                                     >
                                       <option value="001">SKKNI</option>
                                       <option value="002">
@@ -818,8 +877,9 @@
                                   <td>
                                     <select
                                       class="form-control"
-                                      id="val-pos"
-                                      name="val-pos"
+                                      id="val-pos-5"
+                                      name="val-pos-5"
+                                      disabled
                                     >
                                       <option value="001">SKKNI</option>
                                       <option value="002">
@@ -841,8 +901,9 @@
                                   <td>
                                     <select
                                       class="form-control"
-                                      id="val-pos"
-                                      name="val-pos"
+                                      id="val-pos-6"
+                                      name="val-pos-6"
+                                      disabled
                                     >
                                       <option value="001">SKKNI</option>
                                       <option value="002">
@@ -864,8 +925,9 @@
                                   <td>
                                     <select
                                       class="form-control"
-                                      id="val-pos"
-                                      name="val-pos"
+                                      id="val-pos-7"
+                                      name="val-pos-7"
+                                      disabled
                                     >
                                       <option value="001">SKKNI</option>
                                       <option value="002">
@@ -884,8 +946,9 @@
                                   <td>
                                     <select
                                       class="form-control"
-                                      id="val-pos"
-                                      name="val-pos"
+                                      id="val-pos-8"
+                                      name="val-pos-8"
+                                      disabled
                                     >
                                       <option value="001">SKKNI</option>
                                       <option value="002">
@@ -904,8 +967,9 @@
                                   <td>
                                     <select
                                       class="form-control"
-                                      id="val-pos"
-                                      name="val-pos"
+                                      id="val-pos-9"
+                                      name="val-pos-9"
+                                      disabled
                                     >
                                       <option value="001">SKKNI</option>
                                       <option value="002">
@@ -926,8 +990,9 @@
                                   <td>
                                     <select
                                       class="form-control"
-                                      id="val-pos"
-                                      name="val-pos"
+                                      id="val-pos-10"
+                                      name="val-pos-10"
+                                      disabled
                                     >
                                       <option value="001">SKKNI</option>
                                       <option value="002">
@@ -946,8 +1011,9 @@
                                   <td>
                                     <select
                                       class="form-control"
-                                      id="val-pos"
-                                      name="val-pos"
+                                      id="val-pos-11"
+                                      name="val-pos-11"
+                                      disabled
                                     >
                                       <option value="001">SKKNI</option>
                                       <option value="002">
@@ -966,8 +1032,9 @@
                                   <td>
                                     <select
                                       class="form-control"
-                                      id="val-pos"
-                                      name="val-pos"
+                                      id="val-pos-12"
+                                      name="val-pos-12"
+                                      disabled
                                     >
                                       <option value="001">SKKNI</option>
                                       <option value="002">
@@ -986,8 +1053,9 @@
                                   <td>
                                     <select
                                       class="form-control"
-                                      id="val-pos"
-                                      name="val-pos"
+                                      id="val-pos-13"
+                                      name="val-pos-13"
+                                      disabled
                                     >
                                       <option value="001">SKKNI</option>
                                       <option value="002">
@@ -1006,8 +1074,9 @@
                                   <td>
                                     <select
                                       class="form-control"
-                                      id="val-pos"
-                                      name="val-pos"
+                                      id="val-pos-14"
+                                      name="val-pos-14"
+                                      disabled
                                     >
                                       <option value="001">SKKNI</option>
                                       <option value="002">
@@ -1026,8 +1095,9 @@
                                   <td>
                                     <select
                                       class="form-control"
-                                      id="val-pos"
-                                      name="val-pos"
+                                      id="val-pos-15"
+                                      name="val-pos-15"
+                                      disabled
                                     >
                                       <option value="001">SKKNI</option>
                                       <option value="002">
@@ -1059,30 +1129,68 @@
                           <div class="table-responsive">
                             <table
                               class="table table-bordered table-striped verticle-middle"
+                              style="border-collapse: collapse; width: 100%"
                             >
                               <thead>
                                 <tr>
-                                  <th rowspan="2">No.</th>
-                                  <th rowspan="2">Bukti Persyaratan Dasar</th>
-                                  <th colspan="4">Ada</th>
-                                  <!-- <th rowspan="2">Tidak Ada</th> -->
+                                  <th
+                                    rowspan="2"
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
+                                    No.
+                                  </th>
+                                  <th
+                                    rowspan="2"
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
+                                    Bukti Persyaratan Dasar
+                                  </th>
+                                  <th
+                                    colspan="4"
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
+                                    Ada
+                                  </th>
                                 </tr>
                                 <tr>
-                                  <th rowspan="3">Memenuhi Syarat</th>
-                                  <th rowspan="3">Tidak Memenuhi Syarat</th>
-                                  <th rowspan="2">Tidak Ada</th>
+                                  <th
+                                    rowspan="3"
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
+                                    Memenuhi Syarat
+                                  </th>
+                                  <th
+                                    rowspan="3"
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
+                                    Tidak Memenuhi Syarat
+                                  </th>
+                                  <th
+                                    rowspan="2"
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
+                                    Tidak Ada
+                                  </th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr>
-                                  <td>1</td>
-                                  <td>
+                                  <td
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
+                                    1
+                                  </td>
+                                  <td
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
                                     Mahasiswa D3 dan D4 Jurusan Teknologi
                                     Informasi Politeknik Caltex Riau yang telah
                                     lulus mata kuliah Basis Data Dasar, Basis
                                     Data Lanjut dengan nilai minimal C, atau
                                   </td>
-                                  <td>
+                                  <td
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
                                     <div class="form-check mb-3">
                                       <label class="form-check-label">
                                         <input
@@ -1090,11 +1198,14 @@
                                           class="form-check-input"
                                           id="checkbox1"
                                           name="checkbox1"
+                                          disabled
                                         />
                                       </label>
                                     </div>
                                   </td>
-                                  <td>
+                                  <td
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
                                     <div class="form-check mb-3">
                                       <label class="form-check-label">
                                         <input
@@ -1102,11 +1213,14 @@
                                           class="form-check-input"
                                           id="checkbox2"
                                           name="checkbox2"
+                                          disabled
                                         />
                                       </label>
                                     </div>
                                   </td>
-                                  <td>
+                                  <td
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
                                     <div class="form-check mb-3">
                                       <label class="form-check-label">
                                         <input
@@ -1114,6 +1228,7 @@
                                           class="form-check-input"
                                           id="checkbox3"
                                           name="checkbox3"
+                                          disabled
                                         />
                                       </label>
                                     </div>
@@ -1121,14 +1236,22 @@
                                 </tr>
 
                                 <tr>
-                                  <td>2</td>
-                                  <td>
+                                  <td
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
+                                    2
+                                  </td>
+                                  <td
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
                                     Memiliki Sertifikat Pelatihan berbasis
                                     kompetensi pada jabatan Database Programmer
                                     Supervisor yang dikeluarkan oleh Politeknik
                                     Caltex Riau, atau
                                   </td>
-                                  <td>
+                                  <td
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
                                     <div class="form-check mb-3">
                                       <label class="form-check-label">
                                         <input
@@ -1136,11 +1259,14 @@
                                           class="form-check-input"
                                           id="checkbox4"
                                           name="checkbox4"
+                                          disabled
                                         />
                                       </label>
                                     </div>
                                   </td>
-                                  <td>
+                                  <td
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
                                     <div class="form-check mb-3">
                                       <label class="form-check-label">
                                         <input
@@ -1148,11 +1274,14 @@
                                           class="form-check-input"
                                           id="checkbox5"
                                           name="checkbox5"
+                                          disabled
                                         />
                                       </label>
                                     </div>
                                   </td>
-                                  <td>
+                                  <td
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
                                     <div class="form-check mb-3">
                                       <label class="form-check-label">
                                         <input
@@ -1160,14 +1289,21 @@
                                           class="form-check-input"
                                           id="checkbox6"
                                           name="checkbox6"
+                                          disabled
                                         />
                                       </label>
                                     </div>
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td>3</td>
-                                  <td>
+                                  <td
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
+                                    3
+                                  </td>
+                                  <td
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
                                     Tenaga kerja pada jabatan Supervisor
                                     Pemrogram Database (Database Programmer
                                     Supervisor) dari industri mitra Politeknik
@@ -1176,38 +1312,47 @@
                                     berkelanjutan dan telah mendapatkan
                                     pembekalan dari Politeknik Caltex Riau.
                                   </td>
-                                  <td>
+                                  <td
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
                                     <div class="form-check mb-3">
                                       <label class="form-check-label">
                                         <input
                                           type="checkbox"
                                           class="form-check-input"
-                                          id="checkbox4"
-                                          name="checkbox4"
+                                          id="checkbox7"
+                                          name="checkbox7"
+                                          disabled
                                         />
                                       </label>
                                     </div>
                                   </td>
-                                  <td>
+                                  <td
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
                                     <div class="form-check mb-3">
                                       <label class="form-check-label">
                                         <input
                                           type="checkbox"
                                           class="form-check-input"
-                                          id="checkbox5"
-                                          name="checkbox5"
+                                          id="checkbox8"
+                                          name="checkbox8"
+                                          disabled
                                         />
                                       </label>
                                     </div>
                                   </td>
-                                  <td>
+                                  <td
+                                    style="border: 1px solid #ddd; padding: 8px"
+                                  >
                                     <div class="form-check mb-3">
                                       <label class="form-check-label">
                                         <input
                                           type="checkbox"
                                           class="form-check-input"
-                                          id="checkbox6"
-                                          name="checkbox6"
+                                          id="checkbox9"
+                                          name="checkbox9"
+                                          disabled
                                         />
                                       </label>
                                     </div>
@@ -1219,94 +1364,152 @@
                         </div>
                       </form>
                     </div>
-                    <div class="form-group row">
-                      <label class="col-sm-2 col-form-label"
-                        >Tanda Tangan Asesi<span class="text-danger"
-                          >*</span
-                        ></label
-                      >
-                      <div class="button-icon">
+                    <div class="row">
+                      <div class="col-lg-12 mb-4">
+                        <div class="row">
+                          <div class="col-6">
+                            <label class="col-form-label mx-1"
+                              >Silahkan melakukan upload tanskrip nilai dan
+                              sertifikat pendukung</label
+                            >
+                          </div>
+                          <div class="col-6">
+                            <input
+                              type="file"
+                              class="form-control w-50"
+                              id="exampleFormControlFile1"
+                              accept=".pdf,.zip,.rar"
+                              onchange="wajib_pdf_zip_rar(this)"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <b>Rekomendasi (diisi oleh LSP) :</b><br />
+                        <h6
+                          >Berdasarkan ketentuan persyaratan dasar, maka
+                          pemohon:</h6
+                        >
                         <input
-                          type="file"
-                          class="form-control-file"
-                          id="exampleFormControlFile_asesi"
-                          accept="pdf"
-                          onchange="wajib_pdf(this)"
+                        disabled
+                          type="radio"
+                          id="html"
+                          name="fav_language"
+                          value="HTML"
                         />
-                        <div
-                          id="error_exampleFormControlFile_asesi"
-                          class="error-message"
-                        ></div>
+                        <label for="dapat"
+                          >Diterima sebagai peserta sertifikasi</label
+                        >
+
+                        <input
+                        disabled
+                          type="radio"
+                          id="css"
+                          name="fav_language"
+                          value="CSS"
+                        />
+                        <label for="tidak_dapat"
+                          >Tidak Diterima sebagai peserta sertifikasi</label
+                        >
+                      </div>
+                      <div class="col-12 mb-2">
+                        Catatan
+                        <div class="row">
+                          <div class="col-4">
+                            <textarea id="w3review" name="w3review" rows="4" cols="20" class="form-control"
+                            disabled>
+                            </textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="col-form-label mx-1"
+                              >Tanda Tangan Asesi</label
+                            >
+                          </div>
+                          <div class="col-8">
+                            <div class="button-icon">
+                              <input
+                                type="file"
+                                class="form-control"
+                                id="exampleFormControlFile1"
+                                accept="application/pdf, image/*"
+                                onchange="wajib_pdf_ditampilkan(this)"
+                              />
+                            </div>
+                            <div id="fileViewer" style="margin-top: 2px"></div>
+                          </div>
+                        </div>
                       </div>
 
-                      <label class="col-sm-2 col-form-label">Tanggal</label>
-                      <div class="col-md-4">
-                        <div class="example">
-                          <div class="input-group">
-                            <input
-                              type="text"
-                              class="form-control datepicker-autoclose"
-                              placeholder="mm/dd/yyyy"
-                            />
-                            <span class="input-group-append"
-                              ><span class="input-group-text"
-                                ><i class="mdi mdi-calendar-check"></i></span
-                            ></span>
+                      <div class="col-lg-6">
+                        <div class="form-group row">
+                          <label class="col-sm-4 col-form-label">Tanggal</label>
+                          <div class="col-sm-8 input-group">
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                class="form-control datepicker-autoclose"
+                                placeholder="mm/dd/yyyy"
+                              />
+                              <span class="input-group-append"
+                                ><span class="input-group-text"
+                                  ><i class="mdi mdi-calendar-check"></i></span
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group row">
+                          <label class="col-sm-4 col-form-label"
+                            >Tanda Tangan Admin</label
+                          >
+                          <div class="col-sm-8 input-group">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" />
+                              <label class="form-check-label"
+                                >Silahkan melakukan penceklisan</label
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group row">
+                          <label class="col-sm-4 col-form-label">Tanggal</label>
+                          <div class="col-sm-8 input-group">
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                class="form-control datepicker-autoclose"
+                                placeholder="mm/dd/yyyy"
+                              />
+                              <span class="input-group-append"
+                                ><span class="input-group-text"
+                                  ><i class="mdi mdi-calendar-check"></i></span
+                              ></span>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    <div class="form-group row">
-                      <label class="col-sm-2 col-form-label"
-                        >Tanda Tangan Admin</label
-                      >
-                      <div class="form-check mb-3">
-                        <label class="form-check-label">
-                          <input
-                            type="checkbox"
-                            class="form-check-input"
-                            value=""
-                          />Silahkan melakukan penceklisan</label
-                        >
-                      </div>
-
-                      <label class="col-sm-2 col-form-label">Tanggal</label>
-                      <div class="col-md-4">
-                        <div class="example">
-                          <div class="input-group">
-                            <input
-                              type="text"
-                              class="form-control datepicker-autoclose"
-                              placeholder="mm/dd/yyyy"
-                            />
-                            <span class="input-group-append"
-                              ><span class="input-group-text"
-                                ><i class="mdi mdi-calendar-check"></i></span
-                            ></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- <div class="form-group row">
-                                            <div class="col-lg-8 ml-auto">
-                                                <a href="pendaftaran2_mhs.html" class="btn btn-primary">Daftar</a>
-                                            </div>
-                                        </div>     -->
-
-                  <div class="card-body">
-                    <div class="card-content">
-                      <div class="sweetalert m-t-30">
-                        <button
-                          class="btn btn-dark mb-2 btn sweet-confirm"
-                          type="button"
-                        >
-                          Daftar
-                        </button>
-                        <!-- <button class="btn btn-dark mb-2 btn sweet-confirm">
+                    <div class="card-body">
+                      <div class="card-content">
+                        <div class="sweetalert m-t-30">
+                          <button
+                            class="btn btn-dark mb-2 btn sweet-confirm"
+                            type="button"
+                          >
+                            Daftar
+                          </button>
+                          <!-- <button class="btn btn-dark mb-2 btn sweet-confirm">
                           Daftar
                         </button> -->
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1317,29 +1520,6 @@
         </div>
       </div>
     </div>
-    <!--**********************************
-            Content body end
-        ***********************************-->
-
-    <!--**********************************
-            Footer start
-        ***********************************-->
-    <!-- <div class="footer">
-            <div class="copyright">
-                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
-            </div>
-        </div> -->
-    <!--**********************************
-            Footer end
-        ***********************************-->
-    <!-- </div> -->
-    <!--**********************************
-        Main wrapper end
-    ***********************************-->
-
-    <!--**********************************
-        Scripts
-    ***********************************-->
     <script src="plugins/common/common.min.js"></script>
     <script src="js/custom.min.js"></script>
     <script src="js/settings.js"></script>

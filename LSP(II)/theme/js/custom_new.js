@@ -155,8 +155,6 @@ $(".tambah_dokumen_sertifikasi_asesor").on("click", function () {
                                     <input
                                       type="text"
                                       class="form-control datepicker-autoclose"
-                                      id="datepicker-autoclose"
-                                      placeholder="mm/dd/yyyy"
                                     />
                                     <span class="input-group-append"
                                       ><span class="input-group-text"
@@ -535,8 +533,48 @@ function onlyOne(checkbox) {
   checkboxes.forEach((item) => {
     if (item !== checkbox) item.checked = false;
   });
+  var checkboxes = document.getElementsByName("options");
+  checkboxes.forEach((item) => {
+    if (item !== checkbox) item.checked = false;
+  });
+}
+function onlyOne1(checkbox) {
+  var checkboxes = document.getElementsByName("option1");
+  checkboxes.forEach((item) => {
+    if (item !== checkbox) item.checked = false;
+  });
+  var checkboxes = document.getElementsByName("options");
+  checkboxes.forEach((item) => {
+    if (item !== checkbox) item.checked = false;
+  });
 }
 
+function onlyOne2(checkbox) {
+  var checkboxes = document.getElementsByName("option2");
+  checkboxes.forEach((item) => {
+    if (item !== checkbox) item.checked = false;
+  });
+  var checkboxes = document.getElementsByName("options");
+  checkboxes.forEach((item) => {
+    if (item !== checkbox) item.checked = false;
+  });
+}
+// buat hanya satu yang di checkbox
+function handleMultiCheckbox(multiCheckbox, checkType, uncheckType) {
+  // Ambil semua checkbox dengan id sesuai 'checkType' dan 'uncheckType'
+  const checkboxesToCheck = document.querySelectorAll(`input[id^=${checkType}]`);
+  const checkboxesToUncheck = document.querySelectorAll(`input[id^=${uncheckType}]`);
+
+  // Atur checkbox yang sesuai dengan checkType
+  checkboxesToCheck.forEach(checkbox => {
+      checkbox.checked = multiCheckbox.checked;
+  });
+
+  // Atur checkbox yang sesuai dengan uncheckType
+  checkboxesToUncheck.forEach(checkbox => {
+      checkbox.checked = false;
+  });
+}
 // wajib pdf yang di tampilkan ttdnya
 function wajib_pdf_ditampilkan(input) {
   var file = input.files[0];
@@ -558,5 +596,19 @@ function wajib_pdf_ditampilkan(input) {
   } else {
     alert("Hanya Boleh Upload Image atau PDF");
     $(input).val("");
+  }
+}
+
+function wajib_pdf_zip_rar(input) {
+  var input_ktp = $(input).val();
+  var fileExtension = input_ktp.split(".").pop().toLowerCase();
+  
+  // Array ekstensi file yang diperbolehkan
+  var allowedExtensions = ["pdf", "zip", "rar"];
+  
+  // Memeriksa apakah ekstensi file yang diupload ada dalam daftar yang diperbolehkan
+  if (!allowedExtensions.includes(fileExtension)) {
+      alert("Pastikan file yang diupload adalah PDF, ZIP, atau RAR");
+      $(input).val("");  // Menghapus file yang diupload jika ekstensi tidak sesuai
   }
 }
