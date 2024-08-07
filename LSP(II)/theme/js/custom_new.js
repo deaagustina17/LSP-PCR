@@ -93,6 +93,108 @@ $(".button_tambah_pengalaman_pelatihan").on("click", function () {
 $(document).on("click", ".button_hapus_pengalaman_pelatihan", function () {
   $(this).closest("tr").remove();
 });
+
+// bagian d tambah dokumen sertifikasi asesor
+
+$(".tambah_dokumen_sertifikasi_asesor").on("click", function () {
+  var row_pelatihan = ` <tr>
+                              <td>
+                                <div class="col-lg-12">
+                                  <select
+                                    class="form-control form-white bidang_assesor"
+                                    data-placeholder="Bidang"
+                                    name="category-bidang"
+                                  >
+                                    <option value="">Pilih Bidang</option>
+                                    <option
+                                      value="Database Programming Supervisor"
+                                    >
+                                      Database Programming Supervisor
+                                    </option>
+                                    <option value="Network Administrator Muda">
+                                      Network Administrator Muda
+                                    </option>
+                                    <option value="Programmer">
+                                      Programmer
+                                    </option>
+                                    <option
+                                      value="Teknisi Madya Jaringan Komputer"
+                                    >
+                                      Teknisi Madya Jaringan Komputer
+                                    </option>
+                                    <option
+                                      value="Pengoperasian Peralatan Kelistrikan
+                                          Dan Elektronika Berbasis
+                                          Programmable Logic Controller (PLC)"
+                                    >
+                                      Pengoperasian Peralatan Kelistrikan Dan
+                                      Elektronika Berbasis Programmable Logic
+                                      Controller (PLC)
+                                    </option>
+                                    <option value="Plate Welder">
+                                      Plate Welder
+                                    </option>
+                                    <option
+                                      value="Pengoperasian Instrumentasi Proses
+                                          Kontrol"
+                                    >
+                                      Pengoperasian Instrumentasi Proses Kontrol
+                                    </option>
+                                    <option value="Teknisi Akuntansi Pratama">
+                                      Teknisi Akuntansi Pratama
+                                    </option>
+                                    <!-- <option value="bidang9">
+                                            Welding Inspector Standar
+                                          </option> -->
+                                  </select>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="col-lg-12">
+                                  <div class="input-group">
+                                    <input
+                                      type="text"
+                                      class="form-control datepicker-autoclose"
+                                      id="datepicker-autoclose"
+                                      placeholder="mm/dd/yyyy"
+                                    />
+                                    <span class="input-group-append"
+                                      ><span class="input-group-text"
+                                        ><i
+                                          class="mdi mdi-calendar-check"
+                                        ></i></span
+                                    ></span>
+                                  </div>
+                                  <div
+                                    class="text-danger error_input_tgl_lahir"
+                                  ></div>
+                                </div>
+                              </td>
+
+                              <td>
+                                <div class="button-icon">
+                                  <input
+                                    type="file"
+                                    class="form-control"
+                                    id="exampleFormControlFile1"
+                                    accept="image/*"
+                                  />
+                                </div>
+                              </td>
+                              <td>
+                                <button
+                                  class="btn btn-danger hapus_dokumen_sertifikasi_asesor"
+                                  type="button"
+                                >
+                                  Hapus
+                                </button>
+                              </td>
+                            </tr>`;
+  $(".row_tambah_dokumen_sertifikasi_asesor").append(row_pelatihan);
+});
+$(document).on("click", ".hapus_dokumen_sertifikasi_asesor", function () {
+  $(this).closest("tr").remove();
+});
 // $(".button_hapus_pengalaman_pelatihan").on("click", function(){
 //   $(this).closest("tr").remove();
 // })
@@ -426,3 +528,35 @@ $(".datepicker-autoclose")
     format: "dd-mm-yyyy",
   })
   .datepicker("setDate", today);
+
+// buat hanya satu yang di checkbox
+function onlyOne(checkbox) {
+  var checkboxes = document.getElementsByName("option");
+  checkboxes.forEach((item) => {
+    if (item !== checkbox) item.checked = false;
+  });
+}
+
+// wajib pdf yang di tampilkan ttdnya
+function wajib_pdf_ditampilkan(input) {
+  var file = input.files[0];
+  var fileViewer = document.getElementById("fileViewer");
+  fileViewer.innerHTML = ""; // Clear previous content
+
+  if (file.type === "application/pdf") {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      fileViewer.innerHTML = `<iframe src="${e.target.result}" width="100%" height="500px"></iframe>`;
+    };
+    reader.readAsDataURL(file);
+  } else if (file.type.startsWith("image/")) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      fileViewer.innerHTML = `<img src="${e.target.result}" alt="Uploaded Image" style="max-width: 50%; height: 50%;" />`;
+    };
+    reader.readAsDataURL(file);
+  } else {
+    alert("Hanya Boleh Upload Image atau PDF");
+    $(input).val("");
+  }
+}

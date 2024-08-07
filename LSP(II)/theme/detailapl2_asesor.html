@@ -2246,62 +2246,56 @@
 
                 <div class="card-body">
                   <div class="form-group row">
-                    <label class="col-sm-2 col-form-label"
-                      >Tanda Tangan Asesi</label
-                    >
-                    <div class="button-icon">
-                      <input
-                        type="file"
-                        class="form-control-file"
-                        id="exampleFormControlFile1"
-                      />
-                    </div>
-
-                    <label class="col-sm-2 col-form-label">Tanggal</label>
-                    <div class="col-md-4">
-                      <div class="example">
-                        <div class="input-group">
-                          <input
-                            type="text"
-                            class="form-control datepicker-autoclose"
-                            placeholder="mm/dd/yyyy"
-                          />
-                          <span class="input-group-append"
-                            ><span class="input-group-text"
-                              ><i class="mdi mdi-calendar-check"></i></span
-                          ></span>
-                        </div>
+                    <div class="col-6">
+                      <label class="col-form-label">Tanda Tangan Asesi</label>
+                      <div class="button-icon">
+                        <input
+                          type="file"
+                          class="form-control-file"
+                          accept="application/pdf, image/*"
+                          onchange="wajib_pdf_ditampilkan(this)"
+                        />
+                        <div id="fileViewer" style="margin-top: 20px"></div>
                       </div>
                     </div>
-                  </div>
-                  <div class="form-group row">
-                    <label class="col-sm-2 col-form-label"
-                      >Tanda Tangan Asesor</label
-                    >
-                    <div class="form-check mb-3">
-                      <label class="form-check-label">
+                    <div class="col-lg-6">
+                      <label class="col-form-label">Tanggal</label>
+                      <div class="input-group">
                         <input
-                          type="checkbox"
-                          class="form-check-input"
-                          value=""
-                        />Silahkan melakukan penceklisan</label
-                      >
+                          type="text"
+                          class="form-control datepicker-autoclose"
+                          placeholder="mm/dd/yyyy"
+                        />
+                        <span class="input-group-append"
+                          ><span class="input-group-text"
+                            ><i class="mdi mdi-calendar-check"></i></span
+                        ></span>
+                      </div>
                     </div>
-
-                    <label class="col-sm-2 col-form-label">Tanggal</label>
-                    <div class="col-md-4">
-                      <div class="example">
-                        <div class="input-group">
+                    <div class="col-6">
+                      <label class="col-form-label">Tanda Tangan Asesor</label>
+                      <div class="form-check mb-3">
+                        <label class="form-check-label">
                           <input
-                            type="text"
-                            class="form-control mydatepicker"
-                            placeholder="mm/dd/yyyy"
-                          />
-                          <span class="input-group-append"
-                            ><span class="input-group-text"
-                              ><i class="mdi mdi-calendar-check"></i></span
-                          ></span>
-                        </div>
+                            type="checkbox"
+                            class="form-check-input"
+                            value=""
+                          />Silahkan melakukan penceklisan</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <label class="col-form-label">Tanggal</label>
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control datepicker-autoclose"
+                          placeholder="mm/dd/yyyy"
+                        />
+                        <span class="input-group-append"
+                          ><span class="input-group-text"
+                            ><i class="mdi mdi-calendar-check"></i></span
+                        ></span>
                       </div>
                     </div>
                   </div>
@@ -2319,29 +2313,6 @@
         </div>
       </div>
     </div>
-    <!--**********************************
-          Content body end
-      ***********************************-->
-
-    <!--**********************************
-          Footer start
-      ***********************************-->
-    <!-- <div class="footer">
-          <div class="copyright">
-              <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
-          </div>
-      </div> -->
-    <!--**********************************
-          Footer end
-      ***********************************-->
-    <!-- </div> -->
-    <!--**********************************
-      Main wrapper end
-  ***********************************-->
-
-    <!--**********************************
-      Scripts
-  ***********************************-->
     <script src="plugins/common/common.min.js"></script>
     <script src="js/custom.min.js"></script>
     <script src="js/settings.js"></script>
@@ -2373,6 +2344,7 @@
     <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
 
     <script src="./js/plugins-init/form-pickers-init.js"></script>
+    <script src="./js/custom_new.js"></script>
 
     <script>
       document.querySelector(".sweet-message").onclick = function () {

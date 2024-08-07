@@ -50,6 +50,10 @@
       href="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.css"
       rel="stylesheet"
     />
+    <link
+      href="./plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
+      rel="stylesheet"
+    />
     <!-- Daterange picker plugins css -->
     <link
       href="./plugins/timepicker/bootstrap-timepicker.min.css"
@@ -120,7 +124,6 @@
           <div class="header-right">
             <ul class="clearfix">
               <li class="icons dropdown">
-                Hi, Panitia LSp (Panitia)
                 <div
                   class="user-img c-pointer position-relative"
                   data-toggle="dropdown"
@@ -255,14 +258,14 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="detailpendaftaran2_panitia.html"
+                      <a class="nav-link" href="editpendaftaran2_panitia.html"
                         ><i class="bx bx-bell me-1"></i>APL 02</a
                       >
                     </li>
                     <li class="nav-item">
                       <a
                         class="nav-link"
-                        href="detailpersetujuanasesmen_panitia.html"
+                        href="editpersetujuanasesmen_panitia.html"
                         ><i class="bx bx-bell me-1"></i>FR.AK.01</a
                       >
                     </li>
@@ -539,7 +542,6 @@
                             <label class="col-lg-4 col-form-label" for="val-ktp"
                               >Upload KTP<span class="text-danger">*</span>
                             </label>
-                            &nbsp;&nbsp;&nbsp;&nbsp;
                             <div class="card">
                               <div class="button-icon">
                                 <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
@@ -561,7 +563,6 @@
                                 >*</span
                               >
                             </label>
-                            &nbsp;&nbsp;&nbsp;&nbsp;
                             <div class="card">
                               <div class="button-icon">
                                 <!-- <button type="button" class="btn mb-1 btn-rounded btn-success"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Upload</button> -->
@@ -689,27 +690,96 @@
                           ini.
                         </h6>
                         <h5>Tujuan</h5>
-                        <ul class="list-icons">
-                          <li>
-                            <i class="fa fa-chevron-right"></i>Sertifikasi
-                          </li>
-                          <li>
-                            <i class="fa fa-chevron-right"></i>Sertifikasi Ulang
-                          </li>
-                          <li>
-                            <i class="fa fa-chevron-right"></i>Pengakuan
-                            Kompetensi Terkini (PKT)
-                          </li>
-                          <li>
-                            <i class="fa fa-chevron-right"></i>Asesmen Pengakuan
-                            Kompetensi Terkini (PKT)
-                          </li>
-                          <li>
-                            <i class="fa fa-chevron-right"></i>Rekognisi
-                            Pembelajaran Lampau
-                          </li>
-                          <li><i class="fa fa-chevron-right"></i>Lainnya</li>
-                        </ul>
+                        <div class="row">
+                          <div class="col-4">
+                            <input
+                              type="checkbox"
+                              id="Sertifikasi"
+                              name="option"
+                              value="Tempat Kerja"
+                              onclick="onlyOne(this)"
+                            />
+                            <label for="Sertifikasi" class="mx-2"
+                              >Sertifikasi</label
+                            >
+                          </div>
+                          <div class="col-4">
+                            <input
+                              type="checkbox"
+                              id="Sertifikasi Ulang"
+                              name="option"
+                              value="Sertifikasi Ulang"
+                              onclick="onlyOne(this)"
+                            />
+                            <label for="Sertifikasi Ulang" class="mx-2"
+                              >Sertifikasi Ulang</label
+                            >
+                          </div>
+                          <div class="col-4">
+                            <input
+                              type="checkbox"
+                              id="Pengakuan Kompetensi Terkini (PKT)"
+                              name="option"
+                              value="Pengakuan Kompetensi Terkini (PKT)"
+                              onclick="onlyOne(this)"
+                            />
+                            <label
+                              for="Pengakuan Kompetensi Terkini (PKT)"
+                              class="mx-2"
+                              >Pengakuan Kompetensi Terkini (PKT)</label
+                            >
+                          </div>
+                          <div class="col-4">
+                            <input
+                              type="checkbox"
+                              id="Asesmen Pengakuan Kompetensi Terkini (PKT)"
+                              name="option"
+                              value="Asesmen Pengakuan Kompetensi Terkini (PKT)"
+                              onclick="onlyOne(this)"
+                            />
+                            <label
+                              for="Asesmen Pengakuan Kompetensi Terkini (PKT)"
+                              class="mx-2"
+                              >Asesmen Pengakuan Kompetensi Terkini (PKT)</label
+                            >
+                          </div>
+                          <div class="col-4">
+                            <input
+                              type="checkbox"
+                              id="Rekognisi Pembelajaran Lampau"
+                              name="option"
+                              value="Rekognisi Pembelajaran Lampau"
+                              onclick="onlyOne(this)"
+                            />
+                            <label
+                              for="Rekognisi Pembelajaran Lampau"
+                              class="mx-2"
+                              >Rekognisi Pembelajaran Lampau</label
+                            >
+                          </div>
+                          <div class="col-4">
+                            <input
+                              type="checkbox"
+                              id="Lainnya"
+                              name="option"
+                              value="Lainnya"
+                              onclick="onlyOne(this)"
+                            />
+                            <label for="Lainnya" class="mx-2">Lainnya</label>
+                          </div>
+                          <div class="col-4">
+                            <input
+                              type="checkbox"
+                              id="Sertifikasi"
+                              name="option"
+                              value="Tempat Kerja"
+                              onclick="onlyOne(this)"
+                            />
+                            <label for="Sertifikasi" class="mx-2"
+                              >Sertifikasi</label
+                            >
+                          </div>
+                        </div>
                         <h5>Daftar Unit Kompetensi sesuai kemasan:</h5>
                         <div class="col-lg-12">
                           <div class="table-responsive">
@@ -956,7 +1026,12 @@
                               <tbody>
                                 <tr>
                                   <td>1</td>
-                                  <td>Mahasiswa D3 dan D4 Jurusan Teknologi Informasi Politeknik Caltex Riau yang telah lulus mata kuliah Basis Data Dasar, Basis Data Lanjut dengan nilai minimal C, atau</td>
+                                  <td>
+                                    Mahasiswa D3 dan D4 Jurusan Teknologi
+                                    Informasi Politeknik Caltex Riau yang telah
+                                    lulus mata kuliah Basis Data Dasar, Basis
+                                    Data Lanjut dengan nilai minimal C, atau
+                                  </td>
                                   <td>
                                     <div class="form-check mb-3">
                                       <label class="form-check-label">
@@ -997,7 +1072,12 @@
 
                                 <tr>
                                   <td>2</td>
-                                  <td>Memiliki Sertifikat Pelatihan berbasis kompetensi pada jabatan Database Programmer Supervisor   yang dikeluarkan oleh Politeknik Caltex Riau, atau</td>
+                                  <td>
+                                    Memiliki Sertifikat Pelatihan berbasis
+                                    kompetensi pada jabatan Database Programmer
+                                    Supervisor yang dikeluarkan oleh Politeknik
+                                    Caltex Riau, atau
+                                  </td>
                                   <td>
                                     <div class="form-check mb-3">
                                       <label class="form-check-label">
@@ -1037,7 +1117,15 @@
                                 </tr>
                                 <tr>
                                   <td>3</td>
-                                  <td>Tenaga kerja pada jabatan Supervisor Pemrogram Database (Database Programmer Supervisor) dari industri mitra Politeknik Caltex Riau (ber MOU) yang telah berpengalaman minimal 2 tahun secara berkelanjutan dan telah mendapatkan pembekalan dari Politeknik Caltex Riau.</td>
+                                  <td>
+                                    Tenaga kerja pada jabatan Supervisor
+                                    Pemrogram Database (Database Programmer
+                                    Supervisor) dari industri mitra Politeknik
+                                    Caltex Riau (ber MOU) yang telah
+                                    berpengalaman minimal 2 tahun secara
+                                    berkelanjutan dan telah mendapatkan
+                                    pembekalan dari Politeknik Caltex Riau.
+                                  </td>
                                   <td>
                                     <div class="form-check mb-3">
                                       <label class="form-check-label">
@@ -1081,81 +1169,77 @@
                         </div>
                       </form>
                     </div>
-                    <div class="form-group row">
-                      <label class="col-sm-2 col-form-label"
-                        >Tanda Tangan Asesi<span class="text-danger"
-                          >*</span
-                        ></label
-                      >
-                      <div class="button-icon">
-                        <input
-                          type="file"
-                          class="form-control-file"
-                          id="exampleFormControlFile_asesi"
-                          accept="pdf"
-                          onchange="wajib_pdf(this)"
-                        />
-                        <div
-                          id="error_exampleFormControlFile_asesi"
-                          class="error-message"
-                        ></div>
-                      </div>
-
-                      <label class="col-sm-2 col-form-label">Tanggal</label>
-                      <div class="col-md-4">
-                        <div class="example">
-                          <div class="input-group">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form-group row">
+                          <label class="col-form-label mx-1"
+                            >Tanda Tangan Asesi</label
+                          >
+                          <div class="button-icon">
                             <input
-                              type="text"
-                              class="form-control datepicker-autoclose"
-                              placeholder="mm/dd/yyyy"
+                              type="file"
+                              class="form-control"
+                              id="exampleFormControlFile1"
+                              accept="application/pdf, image/*"
+                              onchange="wajib_pdf_ditampilkan(this)"
                             />
-                            <span class="input-group-append"
-                              ><span class="input-group-text"
-                                ><i class="mdi mdi-calendar-check"></i></span
-                            ></span>
+                          </div>
+                        </div>
+                        <div id="fileViewer" style="margin-top: 2px"></div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group row">
+                          <label class="col-sm-4 col-form-label">Tanggal</label>
+                          <div class="col-sm-8 input-group">
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                class="form-control datepicker-autoclose"
+                                placeholder="mm/dd/yyyy"
+                              />
+                              <span class="input-group-append"
+                                ><span class="input-group-text"
+                                  ><i class="mdi mdi-calendar-check"></i></span
+                              ></span>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-
-                    <div class="form-group row">
-                      <label class="col-sm-2 col-form-label"
-                        >Tanda Tangan Admin</label
-                      >
-                      <div class="form-check mb-3">
-                        <label class="form-check-label">
-                          <input
-                            type="checkbox"
-                            class="form-check-input"
-                            value=""
-                          />Silahkan melakukan penceklisan</label
-                        >
+                      <div class="col-lg-6">
+                        <div class="form-group row">
+                          <label class="col-sm-4 col-form-label"
+                            >Tanda Tangan Admin</label
+                          >
+                          <div class="col-sm-8 input-group">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" />
+                              <label class="form-check-label"
+                                >Silahkan melakukan penceklisan</label
+                              >
+                            </div>
+                          </div>
+                        </div>
                       </div>
-
-                      <label class="col-sm-2 col-form-label">Tanggal</label>
-                      <div class="col-md-4">
-                        <div class="example">
-                          <div class="input-group">
-                            <input
-                              type="text"
-                              class="form-control datepicker-autoclose"
-                              placeholder="mm/dd/yyyy"
-                            />
-                            <span class="input-group-append"
-                              ><span class="input-group-text"
-                                ><i class="mdi mdi-calendar-check"></i></span
-                            ></span>
+                      <div class="col-lg-6">
+                        <div class="form-group row">
+                          <label class="col-sm-4 col-form-label">Tanggal</label>
+                          <div class="col-sm-8 input-group">
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                class="form-control datepicker-autoclose"
+                                placeholder="mm/dd/yyyy"
+                              />
+                              <span class="input-group-append"
+                                ><span class="input-group-text"
+                                  ><i class="mdi mdi-calendar-check"></i></span
+                              ></span>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <!-- <div class="form-group row">
-                                            <div class="col-lg-8 ml-auto">
-                                                <a href="pendaftaran2_mhs.html" class="btn btn-primary">Daftar</a>
-                                            </div>
-                                        </div>     -->
 
                   <div class="card-body">
                     <div class="card-content">
@@ -1211,12 +1295,23 @@
     <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
     <script src="./plugins/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
     <script src="./plugins/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+    <!-- Date picker plugins css -->
+    <link
+      href="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
     <!-- Date Picker Plugin JavaScript -->
     <script src="./plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
     <!-- Date range Plugin JavaScript -->
     <script src="./plugins/timepicker/bootstrap-timepicker.min.js"></script>
     <script src="./plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <script src="js/custom_new.js"></script>
+
+    <script src="./js/plugins-init/form-pickers-init.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.min.js"></script>
+    <script src="./plugins/sweetalert/js/sweetalert.init.js"></script>
+
+    <script src="./js/custom_new.js"></script>
+
     <script src="./js/plugins-init/form-pickers-init.js"></script>
     <script>
       document.querySelector(".sweet-message").onclick = function () {

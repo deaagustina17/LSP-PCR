@@ -57,101 +57,27 @@
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
     <style>
-      .container {
-        max-width: 1200px;
-        margin: 20px auto;
-        /* padding: 0 20px; */
-      }
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
 
-      .logo {
-        float: left;
-        margin-right: 20px;
-      }
-
-      .logo img {
-        width: 100px;
-      }
-
-      .nav {
-        float: right;
-      }
-
-      .nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      .nav li {
-        display: inline-block;
-        margin-left: 20px;
-      }
-
-      .nav a {
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-      }
-
-      .content {
-        background-color: #fff;
-        padding: 20px;
-        border: 1px solid #ffffff;
-        box-shadow: 3px 3px 8px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 20px;
-
-        margin-top: 10px;
-      }
-
-      .left-column {
-        float: left;
-        width: 50%;
-      }
-
-      .right-column {
-        float: right;
-        width: 50%;
-      }
-
-      .image {
-        /* width: 10px; */
-        height: 350px;
-      }
-
-      .info {
-        margin-top: 20px;
-      }
-
-      .info h2 {
-        color: #333;
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
-
-      .button {
-        background-color: #4285f4;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        display: block;
-        margin-top: 20px;
+        background-color: #699bf7;
+        /* color: white; */
         text-align: center;
       }
-
-      .button:hover {
-        background-color: #357ae8;
-        color: #fff;
+      .custom_nav_link:hover,
+      .custom_nav_link.active {
+        /* background-color: #a81818b6 !important; */
+        color: #699bf7 !important;
       }
-
-      .clear {
-        clear: both;
+      .custom_nav_link {
+        /* background-color: #a81818b6 !important; */
+        color: #000000 !important;
       }
-      .responsive {
-        width: 100%;
-        height: auto;
-      }
+      /* .nav-item,
+      .nav-linkactive; */
     </style>
   </head>
 
@@ -229,288 +155,325 @@
       </header>
       <!-- end header section -->
     </div>
-
-    <!-- skema -->
-    <!-- 1 -->
     <br /><br /><br /><br />
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="content">
-            <div class="left-column">
-              <br />
-              <img src="images/logo_lsp1.png" class="responsive" width="auto" />
-            </div>
-            <div class="right-column">
-              <h2>Database Programming Supervisor</h2>
-              <div style="text-align: justify">
-                <p>
-                  Skema sertifikasi Supervisor Pemrogram Database (Database
-                  Programmer Supervisor) adalah skema Kemasan yang digunakan
-                  mengacu pada Standar Kompetensi Kerja Nasional Indonesia
-                  berdasarkan Keputusan Menteri Ketenagakerjaan Republik
-                  Indonesia Nomor 282 tahun 2016 tentang Penetapan Standar
-                  Kompetensi Kerja Nasional Indonesia Kategori Informasi dan
-                  Komunikasi Golongan Pokok Aktivitas Pemrograman, Konsultasi
-                  Komputer dan Kegiatan Yang Berhubungan Dengan Itu (YBDI)
-                  Bidang Software Development Subbidang Pemrograman dan Buku
-                  Daftar Unit Kompetensi Okupasi Dalam Kerangka Kualifikasi
-                  Nasional Indonesia Bidang Teknologi Informasi dan Komunikasi
-                  (TIK), Kominfo 2018.
-                </p>
-                <div class="d-flex justify-content-start">
-                  <a href="masuk.html" class="button" role="button">Daftar</a>
-                </div>
-              </div>
-            </div>
 
-            <div class="clear"></div>
+    <div class="card" style="width: 18rem">
+      <img
+        class="card-img-top"
+        src="images/database.jpg"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Database Programing Supervisor</h5>
+        <p class="card-text" style="text-align: justify !important">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col-6">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a
+              class="nav-item nav-link custom_nav_link active"
+              id="nav-home-tab"
+              data-toggle="tab"
+              href="#nav-home"
+              role="tab"
+              aria-controls="nav-home"
+              aria-selected="true"
+            >
+              <i class="fa fa-bolt mx-2"></i>Uji Komptensi</a
+            >
+            <a
+              class="nav-item nav-link custom_nav_link"
+              id="nav-profile-tab"
+              data-toggle="tab"
+              href="#nav-profile"
+              role="tab"
+              aria-controls="nav-profile"
+              aria-selected="false"
+              ><i class="fa fa-bolt mx-2"></i> Persyaratan</a
+            >
+            <a
+              class="nav-item nav-link custom_nav_link"
+              id="nav-contact-tab"
+              data-toggle="tab"
+              href="#nav-contact"
+              role="tab"
+              aria-controls="nav-contact"
+              aria-selected="false"
+            >
+              <i class="fa fa-bolt mx-2"></i>Masa Berlaku</a
+            >
+            <a
+              class="nav-item nav-link custom_nav_link"
+              id="nav-contact-tab"
+              data-toggle="tab"
+              href="#nav-contact"
+              role="tab"
+              aria-controls="nav-contact"
+              aria-selected="false"
+            >
+              <i class="fa fa-bolt mx-2"></i>Kewajiban Pemegang Sertifikat</a
+            >
+          </div>
+        </nav>
+        <div
+          class="tab-content"
+          style="text-align: justify"
+          id="nav-tabContent"
+        >
+          <div
+            class="tab-pane fade show active"
+            id="nav-home"
+            role="tabpanel"
+            aria-labelledby="nav-home-tab"
+          >
+            <div
+              class="table-responsive"
+              style="height: 300px; overflow-y: auto"
+            >
+              <table
+                class="table table-striped table-bordered zero-configuration small-text"
+                style="height: 20px !important"
+              >
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Kode Unit</th>
+                    <th>Judul Unit</th>
+                    <th>Standar Komptensi</th>
+                    <th>Download Lampiran</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>J.63OPR00.001.2P</td>
+                    <td>Menganalisis tools</td>
+                    <td>SKKNI 321- 2026</td>
+                    <td>
+                      <a href="ttd.pdf" target="_blank"
+                        >lampiran_skkni_3121_2016.pdf</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>J.63OPR00.001.2P</td>
+                    <td>
+                      Melakukan Identifikasi library, komponen atau framework
+                      yang diperlukan
+                    </td>
+                    <td>SKKNI 321- 2026</td>
+                    <td>
+                      <a href="ttd.pdf" target="_blank"
+                        >lampiran_skkni_3121_2016.pdf</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>J.63OPR00.001.2P</td>
+                    <td>Menggunakan Struktur Data</td>
+                    <td>SKKNI 321- 2026</td>
+                    <td>
+                      <a href="ttd.pdf" target="_blank"
+                        >lampiran_skkni_3121_2016.pdf</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>J.63OPR00.001.2P</td>
+                    <td>
+                      Mengimplementasikan Rancangan Entitas dan Keterkaitan
+                      Antar Entitas
+                    </td>
+                    <td>SKKNI 321- 2026</td>
+                    <td>
+                      <a href="ttd.pdf" target="_blank"
+                        >lampiran_skkni_3121_2016.pdf</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>J.63OPR00.001.2P</td>
+                    <td>
+                      Menyusun fungsi, file atau sumber daya pemrograman yang
+                      lain dalam organisasi yang rapi
+                    </td>
+                    <td>SKKNI 321- 2026</td>
+                    <td>
+                      <a href="ttd.pdf" target="_blank"
+                        >lampiran_skkni_3121_2016.pdf</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>J.63OPR00.001.2P</td>
+                    <td>
+                      Menulis kode dengan prinsip sesuai guidelines dan best
+                      practices
+                    </td>
+                    <td>SKKNI 321- 2026</td>
+                    <td>
+                      <a href="ttd.pdf" target="_blank"
+                        >lampiran_skkni_3121_2016.pdf</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>J.63OPR00.001.2P</td>
+                    <td>Menggunakan library atau komponen pre-existing</td>
+                    <td>SKKNI 321- 2026</td>
+                    <td>
+                      <a href="ttd.pdf" target="_blank"
+                        >lampiran_skkni_3121_2016.pdf</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>J.63OPR00.001.2P</td>
+                    <td>Menggunakan SQL</td>
+                    <td>SKKNI 321- 2026</td>
+                    <td>
+                      <a href="ttd.pdf" target="_blank"
+                        >lampiran_skkni_3121_2016.pdf</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>J.63OPR00.001.2P</td>
+                    <td>Menerapkan akses basis data</td>
+                    <td>SKKNI 321- 2026</td>
+                    <td>
+                      <a href="ttd.pdf" target="_blank"
+                        >lampiran_skkni_3121_2016.pdf</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>J.63OPR00.001.2P</td>
+                    <td>Mengimplementasikan algoritma pemrograman</td>
+                    <td>SKKNI 321- 2026</td>
+                    <td>
+                      <a href="ttd.pdf" target="_blank"
+                        >lampiran_skkni_3121_2016.pdf</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>11</td>
+                    <td>J.63OPR00.001.2P</td>
+                    <td>Membuat dokumen kode program</td>
+                    <td>SKKNI 321- 2026</td>
+                    <td>
+                      <a href="ttd.pdf" target="_blank"
+                        >lampiran_skkni_3121_2016.pdf</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>J.63OPR00.001.2P</td>
+                    <td>Membuat dokumen kode program</td>
+                    <td>SKKNI 321- 2026</td>
+                    <td>
+                      <a href="ttd.pdf" target="_blank"
+                        >lampiran_skkni_3121_2016.pdf</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>13</td>
+                    <td>J.63OPR00.001.2P</td>
+                    <td>Menerapkan source code versioning</td>
+                    <td>SKKNI 321- 2026</td>
+                    <td>
+                      <a href="ttd.pdf" target="_blank"
+                        >lampiran_skkni_3121_2016.pdf</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td>J.63OPR00.001.2P</td>
+                    <td>Melakukan profiling program</td>
+                    <td>SKKNI 321- 2026</td>
+                    <td>
+                      <a href="ttd.pdf" target="_blank"
+                        >lampiran_skkni_3121_2016.pdf</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>15</td>
+                    <td>J.63OPR00.001.2P</td>
+                    <td>Menerapkan code review</td>
+                    <td>SKKNI 321- 2026</td>
+                    <td>
+                      <a href="ttd.pdf" target="_blank"
+                        >lampiran_skkni_3121_2016.pdf</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim
+            Lorem sint. Veniam sint duis incididunt do esse magna mollit
+            excepteur laborum qui. Id id reprehenderit sit est eu aliqua
+            occaecat quis et velit excepteur laborum mollit dolore eiusmod.
+            Ipsum dolor in occaecat commodo et voluptate minim reprehenderit
+            mollit pariatur. Deserunt non laborum enim et cillum eu deserunt
+            excepteur ea incididunt minim occaecat.
+          </div>
+          <div
+            class="tab-pane fade"
+            id="nav-profile"
+            role="tabpanel"
+            aria-labelledby="nav-profile-tab"
+          >
+            Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim
+            Lorem sint. Veniam sint duis incididunt do esse magna mollit
+            excepteur laborum qui. Id id reprehenderit sit est eu aliqua
+            occaecat quis et velit excepteur laborum mollit dolore eiusmod.
+            Ipsum dolor in occaecat commodo et voluptate minim reprehenderit
+            mollit pariatur. Deserunt non laborum enim et cillum eu deserunt
+            excepteur ea incididunt minim occaecat.
+          </div>
+          <div
+            class="tab-pane fade"
+            id="nav-contact"
+            role="tabpanel"
+            aria-labelledby="nav-contact-tab"
+          >
+            Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim
+            Lorem sint. Veniam sint duis incididunt do esse magna mollit
+            excepteur laborum qui. Id id reprehenderit sit est eu aliqua
+            occaecat quis et velit excepteur laborum mollit dolore eiusmod.
+            Ipsum dolor in occaecat commodo et voluptate minim reprehenderit
+            mollit pariatur. Deserunt non laborum enim et cillum eu deserunt
+            excepteur ea incididunt minim occaecat.
           </div>
         </div>
       </div>
-    </div>
-    <!--2-->
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="content">
-            <div class="right-column">
-              <br />
-              <img src="images/logo_lsp1.png" class="responsive" />
-            </div>
-            <div class="left-column">
-              <h2>Network Administrator Muda</h2>
-              <div style="text-align: justify">
-                <p>
-                  Skema sertifikasi Network Administrator Muda (Junior Network
-                  Administrator) adalah skema Kemasan yang digunakan mengacu
-                  pada Standar Kompetensi Kerja Nasional Indonesia berdasarkan
-                  Keputusan Menteri Ketenagakerjaan Republik Indonesia Nomor 321
-                  tahun 2016 tentang Penetapan Standar Kompetensi Kerja Nasional
-                  Indonesia Kategori Informasi dan Komunikasi Golongan Pokok
-                  Telekomunikasi Bidang Jaringan Komputer dan Buku Daftar Unit
-                  Kompetensi Okupasi Dalam Kerangka Kualifikasi Nasional
-                  Indonesia Bidang Teknologi Informasi dan Komunikasi (TIK),
-                  Kominfo 2018.
-                </p>
-                <div class="d-flex justify-content-start">
-                  <a href="masuk.html" class="button" role="button">Daftar</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="clear"></div>
-          </div>
-        </div>
+    </div> -->
+    <footer class="text-white footer py-2">
+      <div class="container text-center">
+        <small>Copyright &copy; Your Website</small>
       </div>
-    </div>
-
-    <!-- 3 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="content">
-            <div class="left-column">
-              <br />
-              <img src="images/logo_lsp1.png" class="responsive" />
-            </div>
-            <div class="right-column">
-              <h2>Programmer</h2>
-              <div style="text-align: justify">
-                <p>
-                  Skema sertifikasi Pemrogram (Programmer) adalah skema yang
-                  mengacu pada Standar Kompetensi Kerja Nasional Indonesia
-                  berdasarkan Keputusan Menteri Ketenagakerjaan Republik
-                  Indonesia Nomor 282 tahun 2016 tentang Penetapan Standar
-                  Kompetensi Kerja Nasional Indonesia Kategori Informasi dan
-                  Komunikasi Golongan Pokok Aktivitas Pemrograman, Konsultasi
-                  Komputer dan Kegiatan Yang Berhubungan Dengan Itu (YBDI)
-                  Bidang Software Development Subbidang Pemrograman dan Buku
-                  Daftar Unit Kompetensi Okupasi Dalam Kerangka Kualifikasi
-                  Nasional Indonesia Bidang Teknologi Informasi dan Komunikasi
-                  (TIK)
-                </p>
-                <div class="d-flex justify-content-start">
-                  <a href="masuk.html" class="button" role="button">Daftar</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="clear"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 4 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="content">
-            <div class="right-column">
-              <br />
-              <img src="images/logo_lsp1.png" class="responsive" />
-            </div>
-            <div class="left-column">
-              <h2>Teknisi Madya Jaringan Komputer</h2>
-              <div style="text-align: justify">
-                <p>
-                  Skema sertifikasi Teknisi Madya Jaringan Komputer adalah skema
-                  Kemasan yang digunakan mengacu pada Standar Kompetensi Kerja
-                  Nasional Indonesia berdasarkan Keputusan Menteri
-                  Ketenagakerjaan Republik Indonesia Nomor 321 tahun 2016
-                  tentang Penetapan Standar Kompetensi Kerja Nasional Indonesia
-                  Kategori Informasi dan Komunikasi Golongan Pokok
-                  Telekomunikasi Bidang Jaringan Komputer dan Buku Daftar Unit
-                  Kompetensi Okupasi Dalam Kerangka Kualifikasi Nasional
-                  Indonesia Bidang Teknologi Informasi dan Komunikasi (TIK)
-                </p>
-                <div class="d-flex justify-content-start">
-                  <a href="masuk.html" class="button" role="button">Daftar</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="clear"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 5 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="content">
-            <div class="left-column">
-              <br />
-              <img src="images/logo_lsp1.png" class="responsive" />
-            </div>
-            <div class="right-column">
-              <h2>
-                Pengoperasian Peralatan Kelistrikan Dan Elektronika Berbasis
-                Programmable Logic Controller (PLC)
-              </h2>
-              <div style="text-align: justify">
-                <p>
-                  Skema sertifikasi Pengoperasian Peralatan Kelistrikan Dan
-                  Elektronika Berbasis Programmable Logic Controller (PLC)
-                  adalah skema yang pada Standar Kompetensi Kerja Nasional
-                  Indonesia berdasarkan Keputusan Menteri Perindustrian Republik
-                  Indonesia Nomor 49 Tahun 2018 tentang Penetapan Kerangka
-                  Kualifikasi Nasional Indonesia Bidang Otomasi industri.
-                </p>
-                <div class="d-flex justify-content-start">
-                  <a href="masuk.html" class="button" role="button">Daftar</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="clear"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 6 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="content">
-            <div class="right-column">
-              <br />
-              <img src="images/logo_lsp1.png" class="responsive" />
-            </div>
-            <div class="left-column">
-              <h2>Plate Welder</h2>
-              <div style="text-align: justify">
-                <p>
-                  Skema sertifikasi Plate Welder adalah skema yang digunakan
-                  mengacu kepada keputusan Menteri Ketenagakerjaan Republik
-                  Indonesia Nomor 98 Tahun 2018 tentang penetapan Standar
-                  kompetensi Kerja Nasional Indonesia (SKKNI) Kategori Golongan
-                  Pokok Industri Logam Dasar Bidang Jasa Pembuatan Barang Barang
-                  Dari Logam Sub Bidang Pengelasan, dan Peraturan Menteri
-                  Perindustrian Republik Indonesia Nomor 50 Tahun 2018 tentang
-                  penerapan kerangka kualifikasi nasional Indonesia (KKNI)
-                  bidang jasa pembuatan barang – barang dari logam subbidang
-                  pengelasan.
-                </p>
-                <div class="d-flex justify-content-start">
-                  <a href="masuk.html" class="button" role="button">Daftar</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="clear"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 7 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="content">
-            <div class="left-column">
-              <br />
-              <img src="images/logo_lsp1.png" class="responsive" />
-            </div>
-            <div class="right-column">
-              <h2>Pengoperasian Instrumentasi Proses Kontrol</h2>
-              <div style="text-align: justify">
-                <p>
-                  Skema sertifikasi kompetensi kerja pengoperasian alat ukur
-                  merupakan skema sertifikasi yang telah dikembangkan
-                  berdasarkan kebutuhan industri dan regulasi. Skema sertifikasi
-                  yang dirumuskan adalah skema sertifikasi klaster, yang terdiri
-                  dari tiga unit kompetensi dan sudah diidentifikasi atas
-                  kebutuhan industri pada pekerjaan teknisi Instrumentasi
-                  Tingkat 2 dan Pengawas.
-                </p>
-                <div class="d-flex justify-content-start">
-                  <a href="masuk.html" class="button" role="button">Daftar</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="clear"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 8 -->
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="content">
-            <div class="right-column">
-              <br />
-              <img src="images/logo_lsp1.png" class="responsive" />
-            </div>
-            <div class="left-column">
-              <h2>Teknisi Akuntansi Pratama</h2>
-              <div style="text-align: justify">
-                <p>
-                  Skema sertifikasi Teknisi Akuntansi Pratama adalah skema
-                  digunakan mengacu pada Standar Kompetensi Kerja Nasional
-                  Indonesia berdasarkan Keputusan Menteri Tenaga Kerja dan
-                  Transmigrasi Republik Indonesia Nomor 182 tahun 2013 Tentang
-                  Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori
-                  Jasa Profesional, Ilmiah dan Teknis Golongan Pokok Jasa Hukum
-                  dan Akuntansi Golongan Jasa Akuntansi, Pembukuan dan
-                  Pemeriksaan, Konsultasi Pajak Kelompok Usaha Teknisi
-                  Akuntansi.
-                </p>
-                <div class="d-flex justify-content-start">
-                  <a href="masuk.html" class="button" role="button">Daftar</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="clear"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    </footer>
     <!-- jQery -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <!-- bootstrap js -->

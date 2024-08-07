@@ -294,7 +294,39 @@
                                     >TUK</label
                                   >
                                 </td>
-                                <td>Sewaktu/Tempat Kerja/Mandiri*</td>
+                                <td>
+                                  <input
+                                    type="checkbox"
+                                    id="Sewaktu"
+                                    name="option"
+                                    value="Sewaktu"
+                                    onclick="onlyOne(this)"
+                                  />
+                                  <label for="Sewaktu" class="mx-2"
+                                    >Sewaktu</label
+                                  >
+                                  <input
+                                    type="checkbox"
+                                    id="tempat_kerja"
+                                    name="option"
+                                    value="Tempat Kerja"
+                                    checked
+                                    onclick="onlyOne(this)"
+                                  />
+                                  <label for="tempat_kerja" class="mx-2"
+                                    >Tempat Kerja</label
+                                  >
+                                  <input
+                                    type="checkbox"
+                                    id="Mandiri"
+                                    name="option"
+                                    value="Mandiri"
+                                    onclick="onlyOne(this)"
+                                  />
+                                  <label for="Mandiri" class="mx-2"
+                                    >Mandiri*</label
+                                  >
+                                </td>
                               </tr>
                               <tr>
                                 <td colspan="2">
@@ -541,22 +573,20 @@
                                         <label class="col-sm-4 col-form-label"
                                           >Tanda Tangan Asesi</label
                                         >
-                                        <!-- <div class="col-sm-8 input-group">
-                                        <div class="input-group-prepend"><span class="input-group-text">Upload</span>
-                                        </div>
-                                        <div class="custom-file">
-                                          <input type="file" class="custom-file-input">
-                                          <label class="custom-file-label">Choose file</label>
-                                        </div>
-                                      </div> -->
                                         <div class="button-icon">
                                           <input
                                             type="file"
-                                            class="form-control-file"
+                                            class="form-control"
                                             id="exampleFormControlFile1"
+                                            accept="application/pdf, image/*"
+                                            onchange="wajib_pdf_ditampilkan(this)"
                                           />
                                         </div>
                                       </div>
+                                      <div
+                                        id="fileViewer"
+                                        style="margin-top: 2px"
+                                      ></div>
                                     </div>
                                     <div class="col-lg-6">
                                       <div class="form-group row">
