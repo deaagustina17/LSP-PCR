@@ -258,7 +258,7 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="editpendaftaran2_panitia.html"
+                      <a class="nav-link" href="detailpendaftaran2_panitia.html"
                         ><i class="bx bx-bell me-1"></i>APL 02</a
                       >
                     </li>
@@ -275,12 +275,31 @@
                                 >
                               </li> -->
                   </ul>
-                  <a
-                    href="pendaftaran_panitia.html"
-                    class="list-group-item border-0 p-r-0"
-                    ><i class="fa fa-chevron-left font-18 align-middle mr-2"></i
-                    >Kembali</a
-                  >
+                  <div class="row">
+                    <div class="col-6">
+                      <a
+                        href="pendaftaran_panitia.html"
+                        class="list-group-item border-0 p-r-0"
+                        ><i
+                          class="fa fa-chevron-left font-18 align-middle mr-2"
+                        ></i
+                        >Kembali</a
+                      >
+                    </div>
+                    <div class="col-6">
+                      <a
+                        href="./ttd.pdf"
+                        class="btn btn-primary float-right mx-2"
+                        data-placement="top"
+                        id="downloadLink"
+                        data-toggle="tooltip"
+                        title="Klik untuk mengunduh file PDF"
+                        onclick="confirmDownload(event, this)"
+                      >
+                        <i class="fa fa-download" style="color: white"></i>
+                      </a>
+                    </div>
+                  </div>
 
                   <div class="card">
                     <div class="card-body">
