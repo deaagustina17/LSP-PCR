@@ -264,7 +264,7 @@
                                     onclick="onlyOne(this)"
                                   />
                                   <label for="Mandiri" class="mx-2"
-                                    >Mandiri*</label
+                                    >Mandiri</label
                                   >
                                 </td>
                               </tr>
@@ -505,98 +505,80 @@
                                   </div>
                                 </td>
                               </tr>
-                              <tr>
-                                <td colspan="3">
-                                  <div class="row">
-                                    <div class="col-lg-6">
-                                      <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label"
-                                          >Tanda Tangan Asesi</label
-                                        >
-                                        <div class="button-icon">
-                                          <input
-                                            type="file"
-                                            class="form-control border"
-                                            id="exampleFormControlFile1"
-                                            accept="application/pdf, image/*"
-                                            onchange="wajib_pdf_ditampilkan(this)"
-                                          />
-                                        </div>
-                                      </div>
-                                      <div
-                                        id="fileViewer"
-                                        class="border"
-                                        style="margin-top: 2px"
-                                      ></div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                      <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label"
-                                          >Tanggal</label
-                                        >
-                                        <div class="col-sm-8 input-group">
-                                          <div class="input-group">
-                                            <input
-                                              type="text"
-                                              class="form-control datepicker-autoclose"
-                                              placeholder="mm/dd/yyyy"
-                                            />
-                                            <span class="input-group-append"
-                                              ><span class="input-group-text"
-                                                ><i
-                                                  class="mdi mdi-calendar-check"
-                                                ></i></span
-                                            ></span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                      <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label"
-                                          >Tanda Tangan Asesor</label
-                                        >
-                                        <div class="col-sm-8 input-group">
-                                          <div class="form-check">
-                                            <input
-                                              class="form-check-input"
-                                              type="checkbox"
-                                            />
-                                            <label class="form-check-label"
-                                              >Silahkan melakukan
-                                              penceklisan</label
-                                            >
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                      <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label"
-                                          >Tanggal</label
-                                        >
-                                        <div class="col-sm-8 input-group">
-                                          <div class="input-group">
-                                            <input
-                                              type="text"
-                                              class="form-control datepicker-autoclose"
-                                              placeholder="mm/dd/yyyy"
-                                            />
-                                            <span class="input-group-append"
-                                              ><span class="input-group-text"
-                                                ><i
-                                                  class="mdi mdi-calendar-check"
-                                                ></i></span
-                                            ></span>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </td>
-                              </tr>
                             </tbody>
                           </table>
+                        </div>
+                        <div class="col-lg-6 mt-1">
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label"
+                              >Tanda Tangan Asesi</label
+                            >
+                            <div class="button-icon">
+                              <input
+                                type="file"
+                                class="form-control border"
+                                id="exampleFormControlFile1"
+                                accept="application/pdf, image/*"
+                                onchange="wajib_pdf_ditampilkan(this)"
+                              />
+                            </div>
+                          </div>
+                          <div id="fileViewer" style="margin-top: 2px"></div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Tanggal</label>
+                            <div class="col-sm-8 input-group">
+                              <div class="input-group">
+                                <input
+                                  type="text"
+                                  class="form-control datepicker-autoclose"
+                                />
+                                <span class="input-group-append"
+                                  ><span class="input-group-text"
+                                    ><i class="mdi mdi-calendar-check"></i></span
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label"
+                              >Tanda Tangan Asesor</label
+                            >
+                            <div class="col-sm-8 input-group">
+                              <div class="form-check">
+                                <input
+                                disabled
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  disabled
+                                />
+                                <label class="form-check-label"
+                                  >Silahkan melakukan penceklisan</label
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group row">
+                            <label class="col-sm-4 col-form-label">Tanggal</label>
+                            <div class="col-sm-8 input-group">
+                              <div class="input-group">
+                                <input
+                                  disabled
+                                  type="text"
+                                  class="form-control datepicker-autoclose"
+                                />
+                                <span class="input-group-append"
+                                  ><span class="input-group-text"
+                                    ><i class="mdi mdi-calendar-check"></i></span
+                                ></span>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                         <div class="form-group row">
                           <div class="col-lg-2 ml-1">

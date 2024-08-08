@@ -1169,24 +1169,92 @@
                         </div>
                       </form>
                     </div>
+                    
                     <div class="row">
-                      <div class="col-lg-6">
-                        <div class="form-group row">
-                          <label class="col-form-label mx-1"
-                            >Tanda Tangan Asesi</label
-                          >
-                          <div class="button-icon">
+                      <div class="col-lg-12 mb-4">
+                        <div class="row">
+                          <div class="col-6">
+                            <label class="col-form-label mx-1"
+                              >Silahkan melakukan upload tanskrip nilai dan
+                              sertifikat pendukung</label
+                            >
+                          </div>
+                          <div class="col-6">
                             <input
                               type="file"
-                              class="form-control"
+                              class="form-control w-50"
                               id="exampleFormControlFile1"
-                              accept="application/pdf, image/*"
-                              onchange="wajib_pdf_ditampilkan(this)"
+                              accept=".pdf,.zip,.rar"
+                              onchange="wajib_pdf_zip_rar(this)"
                             />
                           </div>
                         </div>
-                        <div id="fileViewer" style="margin-top: 2px"></div>
                       </div>
+                      <div class="col-12">
+                        <b>Rekomendasi (diisi oleh LSP) :</b><br />
+                        <h6>
+                          Berdasarkan ketentuan persyaratan dasar, maka pemohon:
+                        </h6>
+                        <input
+                          
+                          type="radio"
+                          id="html"
+                          name="fav_language"
+                          value="HTML"
+                        />
+                        <label for="dapat"
+                          >Diterima sebagai peserta sertifikasi</label
+                        >
+
+                        <input
+                          
+                          type="radio"
+                          id="css"
+                          name="fav_language"
+                          value="CSS"
+                        />
+                        <label for="tidak_dapat"
+                          >Tidak Diterima sebagai peserta sertifikasi</label
+                        >
+                      </div>
+                      <div class="col-12 mb-2">
+                        Catatan
+                        <div class="row">
+                          <div class="col-4">
+                            <textarea
+                              id="w3review"
+                              name="w3review"
+                              rows="4"
+                              cols="20"
+                              class="form-control"
+                              
+                            >
+                            </textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="row">
+                          <div class="col-4">
+                            <label class="col-form-label mx-1"
+                              >Tanda Tangan Asesi</label
+                            >
+                          </div>
+                          <div class="col-8">
+                            <div class="button-icon">
+                              <input
+                                type="file"
+                                class="form-control"
+                                id="exampleFormControlFile1"
+                                accept="application/pdf, image/*"
+                                onchange="wajib_pdf_ditampilkan(this)"
+                              />
+                            </div>
+                            <div id="fileViewer" style="margin-top: 2px"></div>
+                          </div>
+                        </div>
+                      </div>
+
                       <div class="col-lg-6">
                         <div class="form-group row">
                           <label class="col-sm-4 col-form-label">Tanggal</label>
@@ -1195,7 +1263,7 @@
                               <input
                                 type="text"
                                 class="form-control datepicker-autoclose"
-                                placeholder="mm/dd/yyyy"
+                               
                               />
                               <span class="input-group-append"
                                 ><span class="input-group-text"
@@ -1207,7 +1275,7 @@
                       </div>
                       <div class="col-lg-6">
                         <div class="form-group row">
-                          <label class="col-sm-4 col-form-label"
+                          <label class="col-sm-4 col-form-label "
                             >Tanda Tangan Admin</label
                           >
                           <div class="col-sm-8 input-group">
@@ -1226,9 +1294,10 @@
                           <div class="col-sm-8 input-group">
                             <div class="input-group">
                               <input
+                              
                                 type="text"
                                 class="form-control datepicker-autoclose"
-                                placeholder="mm/dd/yyyy"
+                                
                               />
                               <span class="input-group-append"
                                 ><span class="input-group-text"
@@ -1238,14 +1307,14 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> 
                   </div>
 
                   <div class="card-body">
                     <div class="card-content">
                       <div class="sweetalert m-t-30">
                         <button class="btn btn-dark mb-2 btn sweet-confirm">
-                          Approved
+                          Kirim
                         </button>
                       </div>
                     </div>
@@ -1341,7 +1410,7 @@
             closeOnConfirm: !1,
           },
           function () {
-            swal("Berhasil !!", "Data berhasil di approve", "success");
+            swal("Berhasil !!", "Data berhasil di kirim", "success");
           }
         );
       };
