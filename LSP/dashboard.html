@@ -59,7 +59,20 @@
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
+    <link href="./css/sweetalert.css" rel="stylesheet" />
     <style>
+      #captchaContainer {
+        margin-bottom: 10px;
+      }
+
+      #captchaCanvas {
+        border: 1px solid #ccc;
+      }
+
+      #captchaMessage {
+        color: red;
+      }
+
       .container {
         max-width: 1200px;
         margin: 20px auto;
@@ -170,8 +183,6 @@
         /* background-color: #a81818b6 !important; */
         color: #000000 !important;
       }
-      /* .nav-item,
-      .nav-linkactive; */
     </style>
   </head>
 
@@ -230,25 +241,12 @@
                     <i class="fa fa-user" aria-hidden="true"></i>
                     <span> Masuk </span>
                   </a>
-                  <!-- <a href="">
-                  <i class="fa fa-user" aria-hidden="true"></i>
-                  <span>
-                    Sign Up
-                  </span>
-                </a> -->
-                  <!-- <form class="form-inline">
-                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                  </button>
-                </form> -->
                 </div>
               </div>
             </nav>
           </div>
         </div>
       </header>
-      <!-- end header section -->
-      <!-- slider section -->
       <div
         id="carouselExampleControls"
         class="carousel slide"
@@ -320,7 +318,7 @@
             </div>
           </div>
         </div>
-  
+
         <div class="col-md-3 mb-4">
           <div class="card" style="width: 100%">
             <img
@@ -338,7 +336,7 @@
             </div>
           </div>
         </div>
-  
+
         <div class="col-md-3 mb-4">
           <div class="card" style="width: 100%">
             <img
@@ -394,11 +392,11 @@
                 Elektronika Berbasis Programmable Logic Controller (PLC) adalah
                 skema yang pada............
               </p>
-              <a href="plc.html" class="btn btn-primary">Selengkapnya</a>
+              <a href="plc.html" class="btn btn-primary"> Selengkapnya</a>
             </div>
           </div>
         </div>
-  
+
         <div class="col-md-3 mb-4">
           <div class="card" style="width: 100%">
             <img
@@ -418,7 +416,7 @@
             </div>
           </div>
         </div>
-  
+
         <div class="col-md-3 mb-4">
           <div class="card" style="width: 100%">
             <img
@@ -435,7 +433,9 @@
                 merupakan skema sertifikasi yang telah dikembangkan berdasarkan
                 kebutuhan ............
               </p>
-              <a href="pengoperasian.html" class="btn btn-primary">Selengkapnya</a>
+              <a href="pengoperasian.html" class="btn btn-primary"
+                >Selengkapnya</a
+              >
             </div>
           </div>
         </div>
@@ -459,504 +459,213 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="container">
-        <div class="row">
-          <div class="col-xl-12">
-            <div class="content">
-              <div class="left-column">
-                <br />
-                <img src="images/logo_lsp1.png" class="image" />
-              </div>
-              <div class="right-column">
-                <h2>Database Programming Supervisor</h2>
-                <div style="text-align: justify">
-                  <p>
-                    Skema sertifikasi Supervisor Pemrogram Database (Database
-                    Programmer Supervisor) adalah skema Kemasan yang digunakan
-                    mengacu pada Standar Kompetensi Kerja Nasional Indonesia
-                    berdasarkan Keputusan Menteri Ketenagakerjaan Republik
-                    Indonesia Nomor 282 tahun 2016 tentang Penetapan Standar
-                    Kompetensi Kerja Nasional Indonesia Kategori Informasi dan
-                    Komunikasi Golongan Pokok Aktivitas Pemrograman, Konsultasi
-                    Komputer dan Kegiatan Yang Berhubungan Dengan Itu (YBDI)
-                    Bidang Software Development Subbidang Pemrograman dan Buku
-                    Daftar Unit Kompetensi Okupasi Dalam Kerangka Kualifikasi
-                    Nasional Indonesia Bidang Teknologi Informasi dan Komunikasi
-                    (TIK), Kominfo 2018.
-                  </p>
-                  <div class="d-flex justify-content-start">
-                    <a href="masuk.html" class="button" role="button">Daftar</a>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="clear"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-12">
-            <div class="content">
-              <div class="right-column">
-                <br />
-                <img src="images/logo_lsp1.png" class="image" />
-              </div>
-              <div class="left-column">
-                <h2>Network Administrator Muda</h2>
-                <div style="text-align: justify">
-                  <p>
-                    Skema sertifikasi Network Administrator Muda (Junior Network
-                    Administrator) adalah skema Kemasan yang digunakan mengacu
-                    pada Standar Kompetensi Kerja Nasional Indonesia berdasarkan
-                    Keputusan Menteri Ketenagakerjaan Republik Indonesia Nomor 321
-                    tahun 2016 tentang Penetapan Standar Kompetensi Kerja Nasional
-                    Indonesia Kategori Informasi dan Komunikasi Golongan Pokok
-                    Telekomunikasi Bidang Jaringan Komputer dan Buku Daftar Unit
-                    Kompetensi Okupasi Dalam Kerangka Kualifikasi Nasional
-                    Indonesia Bidang Teknologi Informasi dan Komunikasi (TIK),
-                    Kominfo 2018.
-                  </p>
-                  <div class="d-flex justify-content-start">
-                    <a href="masuk.html" class="button" role="button">Daftar</a>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="clear"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-12">
-            <div class="content">
-              <div class="left-column">
-                <br />
-                <img src="images/logo_lsp1.png" class="image" />
-              </div>
-              <div class="right-column">
-                <h2>Programmer</h2>
-                <div style="text-align: justify">
-                  <p>
-                    Skema sertifikasi Pemrogram (Programmer) adalah skema yang
-                    mengacu pada Standar Kompetensi Kerja Nasional Indonesia
-                    berdasarkan Keputusan Menteri Ketenagakerjaan Republik
-                    Indonesia Nomor 282 tahun 2016 tentang Penetapan Standar
-                    Kompetensi Kerja Nasional Indonesia Kategori Informasi dan
-                    Komunikasi Golongan Pokok Aktivitas Pemrograman, Konsultasi
-                    Komputer dan Kegiatan Yang Berhubungan Dengan Itu (YBDI)
-                    Bidang Software Development Subbidang Pemrograman dan Buku
-                    Daftar Unit Kompetensi Okupasi Dalam Kerangka Kualifikasi
-                    Nasional Indonesia Bidang Teknologi Informasi dan Komunikasi
-                    (TIK)
-                  </p>
-                  <div class="d-flex justify-content-start">
-                    <a href="masuk.html" class="button" role="button">Daftar</a>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="clear"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-12">
-            <div class="content">
-              <div class="right-column">
-                <br />
-                <img src="images/logo_lsp1.png" class="image" />
-              </div>
-              <div class="left-column">
-                <h2>Teknisi Madya Jaringan Komputer</h2>
-                <div style="text-align: justify">
-                  <p>
-                    Skema sertifikasi Teknisi Madya Jaringan Komputer adalah skema
-                    Kemasan yang digunakan mengacu pada Standar Kompetensi Kerja
-                    Nasional Indonesia berdasarkan Keputusan Menteri
-                    Ketenagakerjaan Republik Indonesia Nomor 321 tahun 2016
-                    tentang Penetapan Standar Kompetensi Kerja Nasional Indonesia
-                    Kategori Informasi dan Komunikasi Golongan Pokok
-                    Telekomunikasi Bidang Jaringan Komputer dan Buku Daftar Unit
-                    Kompetensi Okupasi Dalam Kerangka Kualifikasi Nasional
-                    Indonesia Bidang Teknologi Informasi dan Komunikasi (TIK)
-                  </p>
-                  <div class="d-flex justify-content-start">
-                    <a href="masuk.html" class="button" role="button">Daftar</a>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="clear"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-12">
-            <div class="content">
-              <div class="left-column">
-                <br />
-                <img src="images/logo_lsp1.png" class="image" />
-              </div>
-              <div class="right-column">
-                <h2>
-                  Pengoperasian Peralatan Kelistrikan Dan Elektronika Berbasis
-                  Programmable Logic Controller (PLC)
-                </h2>
-                <div style="text-align: justify">
-                  <p>
-                    Skema sertifikasi Pengoperasian Peralatan Kelistrikan Dan
-                    Elektronika Berbasis Programmable Logic Controller (PLC)
-                    adalah skema yang pada Standar Kompetensi Kerja Nasional
-                    Indonesia berdasarkan Keputusan Menteri Perindustrian Republik
-                    Indonesia Nomor 49 Tahun 2018 tentang Penetapan Kerangka
-                    Kualifikasi Nasional Indonesia Bidang Otomasi industri.
-                  </p>
-                  <div class="d-flex justify-content-start">
-                    <a href="masuk.html" class="button" role="button">Daftar</a>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="clear"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-12">
-            <div class="content">
-              <div class="right-column">
-                <br />
-                <img src="images/logo_lsp1.png" class="image" />
-              </div>
-              <div class="left-column">
-                <h2>Plate Welder</h2>
-                <div style="text-align: justify">
-                  <p>
-                    Skema sertifikasi Plate Welder adalah skema yang digunakan
-                    mengacu kepada keputusan Menteri Ketenagakerjaan Republik
-                    Indonesia Nomor 98 Tahun 2018 tentang penetapan Standar
-                    kompetensi Kerja Nasional Indonesia (SKKNI) Kategori Golongan
-                    Pokok Industri Logam Dasar Bidang Jasa Pembuatan Barang Barang
-                    Dari Logam Sub Bidang Pengelasan, dan Peraturan Menteri
-                    Perindustrian Republik Indonesia Nomor 50 Tahun 2018 tentang
-                    penerapan kerangka kualifikasi nasional Indonesia (KKNI)
-                    bidang jasa pembuatan barang – barang dari logam subbidang
-                    pengelasan.
-                  </p>
-                  <div class="d-flex justify-content-start">
-                    <a href="masuk.html" class="button" role="button">Daftar</a>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="clear"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-12">
-            <div class="content">
-              <div class="left-column">
-                <br />
-                <img src="images/logo_lsp1.png" class="image" />
-              </div>
-              <div class="right-column">
-                <h2>Pengoperasian Instrumentasi Proses Kontrol</h2>
-                <div style="text-align: justify">
-                  <p>
-                    Skema sertifikasi kompetensi kerja pengoperasian alat ukur
-                    merupakan skema sertifikasi yang telah dikembangkan
-                    berdasarkan kebutuhan industri dan regulasi. Skema sertifikasi
-                    yang dirumuskan adalah skema sertifikasi klaster, yang terdiri
-                    dari tiga unit kompetensi dan sudah diidentifikasi atas
-                    kebutuhan industri pada pekerjaan teknisi Instrumentasi
-                    Tingkat 2 dan Pengawas.
-                  </p>
-                  <div class="d-flex justify-content-start">
-                    <a href="masuk.html" class="button" role="button">Daftar</a>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="clear"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-12">
-            <div class="content">
-              <div class="right-column">
-                <br />
-                <img src="images/logo_lsp1.png" class="image" />
-              </div>
-              <div class="left-column">
-                <h2>Teknisi Akuntansi Pratama</h2>
-                <div style="text-align: justify">
-                  <p>
-                    Skema sertifikasi Teknisi Akuntansi Pratama adalah skema
-                    digunakan mengacu pada Standar Kompetensi Kerja Nasional
-                    Indonesia berdasarkan Keputusan Menteri Tenaga Kerja dan
-                    Transmigrasi Republik Indonesia Nomor 182 tahun 2013 Tentang
-                    Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori
-                    Jasa Profesional, Ilmiah dan Teknis Golongan Pokok Jasa Hukum
-                    dan Akuntansi Golongan Jasa Akuntansi, Pembukuan dan
-                    Pemeriksaan, Konsultasi Pajak Kelompok Usaha Teknisi
-                    Akuntansi.
-                  </p>
-                  <div class="d-flex justify-content-start">
-                    <a href="masuk.html" class="button" role="button">Daftar</a>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="clear"></div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- end client section -->
-
-      <!-- contact section -->
-      <section class="contact_section layout_padding-bottom">
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <!-- container hubungi kami -->
         <div class="container">
-          <br /><br />
-          <h2>Hubungi Kami</h2>
-          <br /><br />
-          <!-- <div class="heading_container">
-        <h2>
-          Get In Touch
-        </h2>
-      </div> -->
-          <div class="row">
-            <div class="col-md-5">
-              <div class="form_container">
-                <form action="">
-                  <div>
-                    <input type="text" placeholder="Nama Lengkap" />
+          <ul class="breadcrumb">
+            <li><a href="https://pcr.ac.id/">PCR</a> > &nbsp;</li>
+            <li class="active">Kontak Politeknik Caltex Riau</li>
+          </ul>
+          <div class="row margin-bottom-40">
+            <div class="col-md-12 col-sm-12">
+              <h1>Kontak Politeknik Caltex Riau</h1>
+              <div class="content-page">
+                <div class="row margin-bottom-30">
+                  <div class="col-md-12">
+                    <div class="content-page">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div
+                            id="map"
+                            class="gmaps margin-bottom-40"
+                            style="height: 400px"
+                          >
+                            <iframe
+                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6212550990226!2d101.42253991475341!3d0.5694660995845442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5ab67086f2e89%3A0x65a24264fec306bb!2sPoliteknik+Caltex+Riau!5e0!3m2!1sen!2s!4v1469156562766"
+                              width="100%"
+                              height="400"
+                              frameborder="0"
+                              style="border: 0"
+                              allowfullscreen=""
+                            ></iframe>
+                          </div>
+                        </div>
+                        <div class="col-md-9 col-sm-9" id="pertanyaan">
+                          <h2>Pertanyaan dan Saran</h2>
+
+                          <form
+                            action="dashboard.html"
+                            enctype="multipart/form-data"
+                            method="post"
+                            accept-charset="utf-8"
+                          >
+                            <div class="form-group">
+                              <label for="contacts-name">Name</label>
+                              <input
+                                type="text"
+                                name="nama"
+                                class="form-control"
+                                id="contacts-name"
+                                value=""
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label for="contacts-email">Email</label>
+                              <input
+                                type="email"
+                                name="email"
+                                class="form-control"
+                                id="contacts-email"
+                                value=""
+                              />
+                            </div>
+                            <div class="form-group">
+                              <label for="contacts-message">Message</label>
+                              <textarea
+                                class="form-control"
+                                name="pesan"
+                                rows="5"
+                                id="contacts-message"
+                              ></textarea>
+                            </div>
+
+                            <div class="form-group">
+                              <div
+                                class="g-recaptcha"
+                                data-sitekey="6LeW7icUAAAAABJaqvb5_0s9J5AvdJX37Wmd1S2b"
+                                data-theme="light"
+                                data-type="image"
+                                data-size="normal"
+                              ></div>
+                            </div>
+                            <button
+                              type="button"
+                              class="btn btn-primary"
+                              data-confirm="Yakin Ingin Mengirim Data"
+                              onclick="simpan_data()"
+                            >
+                              <i class="icon-ok"></i> Kirim
+                              <i class="fa fa-paper-plane"></i>
+                            </button>
+                            <button type="button" class="btn btn-default">
+                              Cancel
+                            </button>
+                          </form>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 sidebar2">
+                          <h2>Kontak Kami</h2>
+                          <address>
+                            <strong>Politeknik Caltex Riau</strong><br />
+                            Jl. Umban Sari (Patin) No. 1 Rumbai <br />
+                            Pekanbaru-Riau<br />
+                            28265<br /><br />
+                            <img
+                              src="https://pcr.ac.id/assets/images/icons/telp.png"
+                              width="15"
+                            />
+                            &nbsp;(0761) - 53939 atau 0811 758 0101<br />
+                            <img
+                              src="https://pcr.ac.id/assets/images/icons/fax.png"
+                              width="15"
+                            />
+                            &nbsp;(0761) - 554224<br />
+                            <img
+                              src="https://pcr.ac.id/assets/images/icons/mail2.png"
+                              width="15"
+                            />
+                            &nbsp;<a href="mailto:pcr@pcr.ac.id"
+                              >pcr@pcr.ac.id</a
+                            ><br />
+                          </address>
+                          <address>
+                            <strong>Bagian Akademik dan Kemahasiswaan</strong
+                            ><br />
+                            <img
+                              src="https://pcr.ac.id/assets/images/icons/telp.png"
+                              width="15"
+                            />
+                            &nbsp;+62761 53939<br />
+                          </address>
+                          <address>
+                            <strong>Bagian Penerimaan Mahasiswa Baru</strong
+                            ><br />
+                            <img
+                              src="https://pcr.ac.id/assets/images/icons/phone.png"
+                              width="10"
+                            />
+                            &nbsp;+6281 1758 0101<br />
+                          </address>
+                          <address>
+                            <strong>Bagian Kerja Sama dan Pusat Karir</strong
+                            ><br />
+                            <img
+                              src="https://pcr.ac.id/assets/images/icons/phone.png"
+                              width="10"
+                            />
+                            &nbsp;+6281 1757 4101<br />
+                          </address>
+                          <address>
+                            <strong>Cooperation and Career Center</strong><br />
+                            <img
+                              src="https://pcr.ac.id/assets/images/icons/phone.png"
+                              width="10"
+                            />
+                            &nbsp;+6281 1757 4101<br />
+                          </address>
+                          <address>
+                            <strong>Our Social Media</strong><br />
+                            <ul class="social-icons margin-bottom-40">
+                              <li>
+                                <a
+                                  href="https://www.facebook.com/Politeknik.Caltex.Riau"
+                                  data-original-title="facebook"
+                                  class="facebook"
+                                ></a>
+                              </li>
+                              <li>
+                                <a
+                                  href="https://www.instagram.com/politeknikcaltexriau/"
+                                  data-original-title="instagram"
+                                  class="instagram"
+                                ></a>
+                              </li>
+                              <li>
+                                <a
+                                  href="https://twitter.com/PolicaltexRiau"
+                                  data-original-title="twitter"
+                                  class="twitter"
+                                ></a>
+                              </li>
+                              <li>
+                                <a
+                                  href="https://www.youtube.com/channel/UC_xsN7_lBMY_m_C8a_34uZg"
+                                  data-original-title="youtube"
+                                  class="youtube"
+                                ></a>
+                              </li>
+                            </ul>
+                          </address>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </form>
-              </div>
-            </div>
-
-            <div class="col-md-5">
-              <div class="form_container">
-                <form action="">
-                  <div>
-                    <input type="text" placeholder="Email" />
-                  </div>
-                </form>
-              </div>
-            </div>
-
-            <div class="col-md-1">
-              <div class="form_container">
-                <div class="ukuran-ikon">
-                  <span class="mdi mdi-map-marker-outline"></span>
                 </div>
-              </div>
-            </div>
-            <div class="col-md-1">
-              <div class="form_container">
-                <p>Jl. Umbansari (Patin) No.1 Rumbai, Pekanbaru, Riau 28265</p>
-              </div>
-            </div>
-
-            <div class="col-md-10">
-              <div class="form_container">
-                <form action="">
-                  <div>
-                    <input type="text" placeholder="Isi" />
-                  </div>
-
-                  <div class="btn_box">
-                    <button>Kirim</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-
-            <div class="col-md-1">
-              <div class="form_container">
-                <div class="ukuran-ikon">
-                  <span class="mdi mdi-email"></span>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-1">
-              <div class="form_container">
-                <p>lsp@pcr.ac.id</p>
-              </div>
-            </div>
-          </div>
-          <br /><br />
-        </div>
-      </section>
-    </div>
-    <!-- end contact section -->
-
-    <!-- info section -->
-    <!-- <section class="info_section ">
-    <div class="container">
-      <div class="info_top">
-        <div class="info_logo">
-          <a href="">
-            <img src="images/logo.png" alt="">
-          </a>
-        </div>
-        <div class="info_form">
-          <form action="">
-            <input type="email" placeholder="Your email">
-            <button>
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </div>
-      <div class="info_bottom layout_padding2">
-        <div class="row info_main_row">
-          <div class="col-md-6 col-lg-3">
-            <h5>
-              Address
-            </h5>
-            <div class="info_contact">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Location
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +01 1234567890
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope"></i>
-                <span>
-                  demo@gmail.com
-                </span>
-              </a>
-            </div>
-            <div class="social_box">
-              <a href="">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="info_links">
-              <h5>
-                Useful link
-              </h5>
-              <div class="info_links_menu">
-                <a class="active" href="dashboard.html">
-                  Home
-                </a>
-                <a href="about.html">
-                  About
-                </a>
-                <a href="treatment.html">
-                  Treatment
-                </a>
-                <a href="doctor.html">
-                  Doctors
-                </a>
-                <a href="testimonial.html">
-                  Testimonial
-                </a>
-                <a href="contact.html">
-                  Contact us
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="info_post">
-              <h5>
-                LATEST POSTS
-              </h5>
-              <div class="post_box">
-                <div class="img-box">
-                  <img src="images/post1.jpg" alt="">
-                </div>
-                <p>
-                  Normal
-                  distribution
-                </p>
-              </div>
-              <div class="post_box">
-                <div class="img-box">
-                  <img src="images/post2.jpg" alt="">
-                </div>
-                <p>
-                  Normal
-                  distribution
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="info_post">
-              <h5>
-                News
-              </h5>
-              <div class="post_box">
-                <div class="img-box">
-                  <img src="images/post3.jpg" alt="">
-                </div>
-                <p>
-                  Normal
-                  distribution
-                </p>
-              </div>
-              <div class="post_box">
-                <div class="img-box">
-                  <img src="images/post4.png" alt="">
-                </div>
-                <p>
-                  Normal
-                  distribution
-                </p>
               </div>
             </div>
           </div>
         </div>
+        <!-- end hubungi kami -->
       </div>
     </div>
-  </section> -->
-    <!-- end info_section -->
-
     <!-- footer section -->
     <footer class="text-white footer py-2">
-      <div class="container text-center">
-        <img src="./images/bnsp_png.png" style="color: white" width="80px" />
-        <small>Copyright &copy; Your Website</small>
+      <div class="text-center">
+        <img src="./images/bnsp_png.png" style="color: white" height="20px" />
+        <img src="./images/logo_pcr.png" style="color: white" height="20px" />
+        <small>Copyright &copy; Lsp@pcr.id</small>
       </div>
     </footer>
     <!-- <footer class="footer_section">
@@ -975,6 +684,7 @@
     <!-- footer section -->
 
     <!-- jQery -->
+    <script src="js/custom.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <!-- bootstrap js -->
     <script src="js/bootstrap.js"></script>
@@ -990,5 +700,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
     <!-- custom js -->
     <script src="js/custom.js"></script>
+    <script src="./js/js/sweetalert.min.js"></script>
+    <script src="./js/js/sweetalert.init.js"></script>
   </body>
 </html>
