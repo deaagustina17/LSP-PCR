@@ -183,6 +183,25 @@
         /* background-color: #a81818b6 !important; */
         color: #000000 !important;
       }
+  .custom-prev-icon {
+    background-color: rgba(255, 87, 51, 0.5); /* Ubah warna latar belakang prev */
+    border-radius: 50%; /* Tambahkan efek bulat jika diinginkan */
+  }
+
+  .custom-prev-icon::before {
+    border-width: 2px;
+    border-color: #ffffff; /* Ubah warna panah prev */
+  }
+
+  .custom-next-icon {
+    background-color: rgba(51, 153, 255, 0.5); /* Ubah warna latar belakang next */
+    border-radius: 50%;
+  }
+
+  .custom-next-icon::before {
+    border-width: 2px;
+    border-color: #ffffff; /* Ubah warna panah next */
+  }
     </style>
   </head>
 
@@ -279,7 +298,7 @@
             <img class="d-block w-100" src="..." alt="Third slide">
         </div> -->
         </div>
-        <a
+        <!-- <a
           class="carousel-control-prev"
           href="#carouselExampleControls"
           role="button"
@@ -296,7 +315,34 @@
         >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
-        </a>
+        </a> -->
+        <a
+  class="carousel-control-prev"
+  href="#carouselExampleControls"
+  role="button"
+  data-slide="prev"
+>
+  <span
+    class="carousel-control-prev-icon"
+    style="background-color: rgba(0, 0, 0, 0.5); border-radius: 50%; border-color: #000000;"
+    aria-hidden="true"
+  ></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a
+  class="carousel-control-next"
+  href="#carouselExampleControls"
+  role="button"
+  data-slide="next"
+>
+  <span
+    class="carousel-control-next-icon"
+    style="background-color: rgba(0, 0, 0, 0.5); border-radius: 50%; border-color: #000000;"
+    aria-hidden="true"
+  ></span>
+  <span class="sr-only">Next</span>
+</a>
+
       </div>
       <!-- end slider section -->
       <br />

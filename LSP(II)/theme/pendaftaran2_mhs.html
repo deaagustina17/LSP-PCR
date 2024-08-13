@@ -248,7 +248,7 @@
                                   >
                                     Menganalisis tools
                                   </th>
-                                  <th
+                                  <!-- <th
                                     width="30%"
                                     align="center"
                                     style="
@@ -273,7 +273,7 @@
                                       value="sertifikat_multi"
                                       onclick="handleMultiCheckbox(this, 'sertifikat', 'transkrip')"
                                     /><span class="mx-1">Sertifikat</span>
-                                  </th>
+                                  </th> -->
                                   <!-- <th style="border: none;" align="justify">:</th>
                                     <th style="border: none;" align="justify">J.620100.009.01</th> -->
                                 </tr>
@@ -304,6 +304,23 @@
                                       "
                                     >
                                       Bukti Relavan
+
+                                      <br />
+                                      <input
+                                        type="checkbox"
+                                        id="transkrip_multi"
+                                        name="options"
+                                        value="transkrip_multi"
+                                        onclick="handleMultiCheckbox(this, 'transkrip', 'sertifikat')"
+                                      />
+                                      <span class="mx-1">Transkrip Nilai</span>
+                                      <input
+                                        type="checkbox"
+                                        id="sertifikat_multi"
+                                        name="options"
+                                        value="sertifikat_multi"
+                                        onclick="handleMultiCheckbox(this, 'sertifikat', 'transkrip')"
+                                      /><span class="mx-1">Sertifikat</span>
                                     </th>
                                   </tr>
                                 </thead>
